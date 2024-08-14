@@ -1,0 +1,51 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "aaa83647-0912-4ce8-8e50-bcf9c03f3bbe")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 118.11 71.12)
+		(size 45.72 30.48)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "77424844-b48b-42bc-9283-6b649eec379f")
+		(property "Sheetname" "ADC"
+			(at 118.11 70.4084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADC.kicad_sch"
+			(at 118.11 102.1846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "AD4030"
+				(path "/aaa83647-0912-4ce8-8e50-bcf9c03f3bbe"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

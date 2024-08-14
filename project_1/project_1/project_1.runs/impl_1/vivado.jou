@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Sat Aug 10 17:10:54 2024
-# Process ID: 17378
+# Start of session at: Sun Aug 11 16:34:09 2024
+# Process ID: 24574
 # Current directory: /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.runs/impl_1
 # Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.runs/impl_1/design_1_wrapper.vdi
 # Journal file: /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.runs/impl_1/vivado.jou
-# Running On: archlinux, OS: Linux, CPU Frequency: 3200.261 MHz, CPU Physical cores: 4, Host memory: 16373 MB
+# Running On: archlinux, OS: Linux, CPU Frequency: 3192.912 MHz, CPU Physical cores: 4, Host memory: 16373 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
