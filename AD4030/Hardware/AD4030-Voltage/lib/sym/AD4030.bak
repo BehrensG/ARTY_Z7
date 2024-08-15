@@ -32,7 +32,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ad4030-24-4032-24.pdf"
-			(at -3.81 -20.32 90)
+			(at -1.016 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
