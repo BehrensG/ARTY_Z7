@@ -1,0 +1,8 @@
+verilog xil_defaultlib --include "/opt/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../ThreadX.gen/sources_1/bd/ThreadX/ipshared/ec67/hdl" --include "../../../../ThreadX.gen/sources_1/bd/ThreadX/ipshared/aed8/hdl" \
+"../../../../ThreadX.gen/sources_1/bd/ThreadX/ip/ThreadX_processing_system7_0_0/sim/ThreadX_processing_system7_0_0.v" \
+"../../../../ThreadX.gen/sources_1/bd/ThreadX/ip/ThreadX_auto_pc_0/sim/ThreadX_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -7,7 +7,7 @@
 	(lib_symbols)
 	(sheet
 		(at 53.34 68.58)
-		(size 27.94 19.05)
+		(size 27.94 20.32)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -27,7 +27,7 @@
 			)
 		)
 		(property "Sheetfile" "DIFF.kicad_sch"
-			(at 53.34 88.2146 0)
+			(at 53.34 89.4846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35,25 +35,35 @@
 				(justify left top)
 			)
 		)
-		(pin "GAIN_x10-100" input
-			(at 81.28 73.66 0)
+		(pin "GAIN_x3" input
+			(at 81.28 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "4d56373c-1eda-48c6-9d2e-8d28d9c54ef6")
+			(uuid "14efef3b-600c-4ac1-85aa-064debd2e6b2")
 		)
-		(pin "V_OUTPUT" output
-			(at 81.28 80.01 0)
+		(pin "Gain_x10-x100" input
+			(at 81.28 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "252b4582-fd5f-4a98-919e-44dd05a2add1")
+			(uuid "a7cdd574-d5d7-42d7-b37e-54906f8e0f7e")
+		)
+		(pin "V_OUT" output
+			(at 81.28 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "27fb3b3a-7f12-41df-9a41-cb9e0790c0ef")
 		)
 		(instances
 			(project "AD4030-Voltage"
@@ -64,8 +74,8 @@
 		)
 	)
 	(sheet
-		(at 96.52 67.31)
-		(size 40.64 20.32)
+		(at 92.71 68.58)
+		(size 30.48 20.32)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -76,7 +86,7 @@
 		)
 		(uuid "cfc38c8d-3c9b-4f41-9734-05b81b218479")
 		(property "Sheetname" "ADC"
-			(at 96.52 66.5984 0)
+			(at 92.71 67.8684 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -85,13 +95,23 @@
 			)
 		)
 		(property "Sheetfile" "ADC.kicad_sch"
-			(at 96.52 88.2146 0)
+			(at 92.71 89.4846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
+		)
+		(pin "V_OUT" input
+			(at 92.71 71.12 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "7994d090-bb24-4ada-b6b1-0b35c5853abd")
 		)
 		(instances
 			(project "AD4030-Voltage"

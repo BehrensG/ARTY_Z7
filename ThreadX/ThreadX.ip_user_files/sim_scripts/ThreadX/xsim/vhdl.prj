@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../../ThreadX.gen/sources_1/bd/ThreadX/ip/ThreadX_axi_gpio_0_0/sim/ThreadX_axi_gpio_0_0.vhd" \
+"../../../../ThreadX.gen/sources_1/bd/ThreadX/ip/ThreadX_rst_ps7_0_100M_0/sim/ThreadX_rst_ps7_0_100M_0.vhd" \
+"../../../../ThreadX.gen/sources_1/bd/ThreadX/sim/ThreadX.vhd" \
+
+# Do not sort compile order
+nosort
