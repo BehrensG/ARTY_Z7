@@ -3977,12 +3977,6 @@
 		(uuid "6bcafd95-907d-4e97-a61e-82838e77caf1")
 	)
 	(junction
-		(at 191.77 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6c3d1902-601f-4cba-a325-5c24fcc17026")
-	)
-	(junction
 		(at 30.48 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4095,6 +4089,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "babc1d2b-f998-4958-914d-ec0fcfbf7180")
+	)
+	(junction
+		(at 193.04 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bb99d58d-db72-4939-ab67-c530e0c457ed")
 	)
 	(junction
 		(at 139.7 262.89)
@@ -4230,7 +4230,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 130.81) (xy 170.18 130.81)
+			(xy 181.61 130.81) (xy 166.37 130.81)
 		)
 		(stroke
 			(width 0)
@@ -5030,7 +5030,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 115.57) (xy 181.61 115.57)
+			(xy 166.37 115.57) (xy 181.61 115.57)
 		)
 		(stroke
 			(width 0)
@@ -5130,7 +5130,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 127) (xy 191.77 130.81)
+			(xy 193.04 127) (xy 193.04 130.81)
 		)
 		(stroke
 			(width 0)
@@ -5920,7 +5920,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 119.38) (xy 191.77 115.57)
+			(xy 193.04 119.38) (xy 193.04 115.57)
 		)
 		(stroke
 			(width 0)
@@ -6130,7 +6130,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 130.81) (xy 181.61 130.81)
+			(xy 193.04 130.81) (xy 181.61 130.81)
 		)
 		(stroke
 			(width 0)
@@ -6350,6 +6350,16 @@
 	)
 	(wire
 		(pts
+			(xy 193.04 115.57) (xy 205.74 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8e9ead2-e5c5-4cc2-b7c1-fc37907d17fd")
+	)
+	(wire
+		(pts
 			(xy 379.73 119.38) (xy 382.27 119.38)
 		)
 		(stroke
@@ -6380,7 +6390,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 115.57) (xy 191.77 115.57)
+			(xy 181.61 115.57) (xy 193.04 115.57)
 		)
 		(stroke
 			(width 0)
@@ -6507,16 +6517,6 @@
 			(type default)
 		)
 		(uuid "ed968c54-4989-4379-9691-0e6d04f4e8a4")
-	)
-	(wire
-		(pts
-			(xy 191.77 115.57) (xy 205.74 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "edfdc2d5-db34-4536-b973-17a39732cb8f")
 	)
 	(wire
 		(pts
@@ -6846,7 +6846,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 191.77 123.19 0)
+		(at 193.04 123.19 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6855,7 +6855,7 @@
 		(fields_autoplaced yes)
 		(uuid "1123a6a6-0d58-47c0-b5e2-d3d8fedae9a5")
 		(property "Reference" "R232"
-			(at 194.31 121.9199 0)
+			(at 195.58 121.9199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6864,7 +6864,7 @@
 			)
 		)
 		(property "Value" "120/0.1%"
-			(at 194.31 124.4599 0)
+			(at 195.58 124.4599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6873,7 +6873,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 189.992 123.19 90)
+			(at 191.262 123.19 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6882,7 +6882,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 191.77 123.19 0)
+			(at 193.04 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6891,7 +6891,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 191.77 123.19 0)
+			(at 193.04 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7395,7 +7395,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 170.18 119.38 0)
+		(at 166.37 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7404,7 +7404,7 @@
 		(fields_autoplaced yes)
 		(uuid "288af0eb-a5ec-4497-921c-e4f2a7263a5d")
 		(property "Reference" "C221"
-			(at 173.99 118.1099 0)
+			(at 170.18 118.1099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7413,7 +7413,7 @@
 			)
 		)
 		(property "Value" "470p"
-			(at 173.99 120.6499 0)
+			(at 170.18 120.6499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7422,7 +7422,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 171.1452 123.19 0)
+			(at 167.3352 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7431,7 +7431,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 170.18 119.38 0)
+			(at 166.37 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7440,7 +7440,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 170.18 119.38 0)
+			(at 166.37 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13389,7 +13389,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 170.18 127 0)
+		(at 166.37 127 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13398,7 +13398,7 @@
 		(fields_autoplaced yes)
 		(uuid "c93b28e3-c328-41aa-9e7d-e15ed39f05a9")
 		(property "Reference" "C220"
-			(at 173.99 125.7299 0)
+			(at 170.18 125.7299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13407,7 +13407,7 @@
 			)
 		)
 		(property "Value" "470p"
-			(at 173.99 128.2699 0)
+			(at 170.18 128.2699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13416,7 +13416,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 171.1452 130.81 0)
+			(at 167.3352 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13425,7 +13425,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 170.18 127 0)
+			(at 166.37 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13434,7 +13434,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 170.18 127 0)
+			(at 166.37 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
