@@ -2281,7 +2281,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:QFN-16-1EP_4x4mm_P0.65mm_EP2.5x2.5mm_ThermalVias"
-			(at 3.81 -14.605 0)
+			(at -30.734 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
