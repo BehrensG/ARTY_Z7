@@ -276,7 +276,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
 			(at 20.32 190.5 0)
 			(effects
 				(font
@@ -340,7 +340,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
 			(at 41.91 190.5 0)
 			(effects
 				(font

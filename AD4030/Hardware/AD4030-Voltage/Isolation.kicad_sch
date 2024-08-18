@@ -5165,7 +5165,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0832b36b-bb92-4a69-ac89-47ee9c374822")
-		(property "Reference" "#PWR0406"
+		(property "Reference" "#PWR0411"
 			(at 147.32 99.06 0)
 			(effects
 				(font
@@ -5216,7 +5216,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0406")
+					(reference "#PWR0411")
 					(unit 1)
 				)
 			)
@@ -5232,7 +5232,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0c56747b-3075-47bf-bd98-21374a4a9e1b")
-		(property "Reference" "C406"
+		(property "Reference" "C402"
 			(at 25.4 147.3199 0)
 			(effects
 				(font
@@ -5250,7 +5250,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 22.5552 152.4 0)
 			(effects
 				(font
@@ -5286,7 +5286,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "C406")
+					(reference "C402")
 					(unit 1)
 				)
 			)
@@ -5317,7 +5317,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 182.88 113.538 90)
 			(effects
 				(font
@@ -5369,7 +5369,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0ff97003-d074-4f9d-b4d1-4dd0b4fdfa32")
-		(property "Reference" "#PWR0405"
+		(property "Reference" "#PWR0408"
 			(at 114.3 121.92 0)
 			(effects
 				(font
@@ -5420,7 +5420,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0405")
+					(reference "#PWR0408")
 					(unit 1)
 				)
 			)
@@ -5436,7 +5436,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "11899b7d-ffdb-4e3e-8db5-bb141e3499ae")
-		(property "Reference" "#PWR0415"
+		(property "Reference" "#PWR0404"
 			(at 27.94 161.29 0)
 			(effects
 				(font
@@ -5486,7 +5486,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0415")
+					(reference "#PWR0404")
 					(unit 1)
 				)
 			)
@@ -5517,7 +5517,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 182.88 128.778 90)
 			(effects
 				(font
@@ -5569,7 +5569,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1514ac37-7a87-4f46-97ce-4b06aca2334a")
-		(property "Reference" "#PWR0402"
+		(property "Reference" "#PWR0407"
 			(at 124.46 99.06 0)
 			(effects
 				(font
@@ -5620,7 +5620,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0402")
+					(reference "#PWR0407")
 					(unit 1)
 				)
 			)
@@ -5636,7 +5636,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1a25eb07-b879-4498-984e-447f0440b0a8")
-		(property "Reference" "C405"
+		(property "Reference" "C401"
 			(at 25.4 119.3799 0)
 			(effects
 				(font
@@ -5654,7 +5654,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 22.5552 124.46 0)
 			(effects
 				(font
@@ -5690,7 +5690,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "C405")
+					(reference "C401")
 					(unit 1)
 				)
 			)
@@ -5721,7 +5721,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 182.88 64.008 90)
 			(effects
 				(font
@@ -5773,7 +5773,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "27de66b3-9835-4d90-a116-5d03bddd68db")
-		(property "Reference" "C404"
+		(property "Reference" "C407"
 			(at 270.51 119.3799 0)
 			(effects
 				(font
@@ -5791,7 +5791,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 267.6652 124.46 0)
 			(effects
 				(font
@@ -5827,7 +5827,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "C404")
+					(reference "C407")
 					(unit 1)
 				)
 			)
@@ -5843,7 +5843,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b0170a5-db69-486f-918c-a20433d8003a")
-		(property "Reference" "#PWR0412"
+		(property "Reference" "#PWR0414"
 			(at 260.35 118.11 0)
 			(effects
 				(font
@@ -5893,7 +5893,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0412")
+					(reference "#PWR0414")
 					(unit 1)
 				)
 			)
@@ -5909,7 +5909,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b567046-e3e2-4e49-990c-e2085347cb88")
-		(property "Reference" "C401"
+		(property "Reference" "C406"
 			(at 257.81 147.3199 0)
 			(effects
 				(font
@@ -5927,7 +5927,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 254.9652 152.4 0)
 			(effects
 				(font
@@ -5963,7 +5963,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "C401")
+					(reference "C406")
 					(unit 1)
 				)
 			)
@@ -5994,7 +5994,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 182.88 123.698 90)
 			(effects
 				(font
@@ -6046,7 +6046,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "540148b3-1f69-4194-82d1-6d4f3a7f9073")
-		(property "Reference" "#PWR0409"
+		(property "Reference" "#PWR0413"
 			(at 207.01 132.08 0)
 			(effects
 				(font
@@ -6097,7 +6097,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0409")
+					(reference "#PWR0413")
 					(unit 1)
 				)
 			)
@@ -6113,7 +6113,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b0f8a45-b137-4a6e-8918-da9eae209a2b")
-		(property "Reference" "#PWR0416"
+		(property "Reference" "#PWR0402"
 			(at 27.94 133.35 0)
 			(effects
 				(font
@@ -6163,7 +6163,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0416")
+					(reference "#PWR0402")
 					(unit 1)
 				)
 			)
@@ -6179,7 +6179,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b352143-7149-40eb-b425-47088bc67678")
-		(property "Reference" "C407"
+		(property "Reference" "C403"
 			(at 38.1 119.3799 0)
 			(effects
 				(font
@@ -6197,7 +6197,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 35.2552 124.46 0)
 			(effects
 				(font
@@ -6233,7 +6233,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "C407")
+					(reference "C403")
 					(unit 1)
 				)
 			)
@@ -6249,7 +6249,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68992b80-1a27-4dfe-a381-437e3edc3db6")
-		(property "Reference" "#PWR0408"
+		(property "Reference" "#PWR0412"
 			(at 157.48 121.92 0)
 			(effects
 				(font
@@ -6300,7 +6300,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0408")
+					(reference "#PWR0412")
 					(unit 1)
 				)
 			)
@@ -6316,7 +6316,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6926b8ec-d29a-4aa3-a066-9148ac2113f1")
-		(property "Reference" "C402"
+		(property "Reference" "C408"
 			(at 270.51 147.3199 0)
 			(effects
 				(font
@@ -6334,7 +6334,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 267.6652 152.4 0)
 			(effects
 				(font
@@ -6370,7 +6370,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "C402")
+					(reference "C408")
 					(unit 1)
 				)
 			)
@@ -6386,7 +6386,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6c182506-aa52-404d-8abc-2e7f2d5e3dae")
-		(property "Reference" "C408"
+		(property "Reference" "C404"
 			(at 38.1 147.3199 0)
 			(effects
 				(font
@@ -6404,7 +6404,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 35.2552 152.4 0)
 			(effects
 				(font
@@ -6440,7 +6440,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "C408")
+					(reference "C404")
 					(unit 1)
 				)
 			)
@@ -6471,7 +6471,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 182.88 118.618 90)
 			(effects
 				(font
@@ -6523,7 +6523,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7213bd6f-cc0c-4197-bbfc-3b4678e074de")
-		(property "Reference" "#PWR0403"
+		(property "Reference" "#PWR0406"
 			(at 114.3 82.55 0)
 			(effects
 				(font
@@ -6574,7 +6574,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0403")
+					(reference "#PWR0406")
 					(unit 1)
 				)
 			)
@@ -6590,7 +6590,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c8546e4-a753-4997-9a56-f328fe00b151")
-		(property "Reference" "#PWR0418"
+		(property "Reference" "#PWR0401"
 			(at 27.94 118.11 0)
 			(effects
 				(font
@@ -6640,7 +6640,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0418")
+					(reference "#PWR0401")
 					(unit 1)
 				)
 			)
@@ -6656,7 +6656,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "957e65d4-7260-4a60-a65b-4cfcc4827a57")
-		(property "Reference" "#PWR0414"
+		(property "Reference" "#PWR0403"
 			(at 27.94 146.05 0)
 			(effects
 				(font
@@ -6706,7 +6706,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0414")
+					(reference "#PWR0403")
 					(unit 1)
 				)
 			)
@@ -6737,7 +6737,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 182.88 74.168 90)
 			(effects
 				(font
@@ -6914,7 +6914,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 182.88 108.458 90)
 			(effects
 				(font
@@ -7091,7 +7091,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 182.88 69.088 90)
 			(effects
 				(font
@@ -7143,7 +7143,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d14db917-47e8-4f6d-a0ef-3da0343b8abf")
-		(property "Reference" "#PWR0407"
+		(property "Reference" "#PWR0409"
 			(at 147.32 59.69 0)
 			(effects
 				(font
@@ -7194,7 +7194,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0407")
+					(reference "#PWR0409")
 					(unit 1)
 				)
 			)
@@ -7210,7 +7210,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d3bc1ebc-7592-443b-95f9-1096536d2dd3")
-		(property "Reference" "#PWR0401"
+		(property "Reference" "#PWR0405"
 			(at 124.46 59.69 0)
 			(effects
 				(font
@@ -7261,7 +7261,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0401")
+					(reference "#PWR0405")
 					(unit 1)
 				)
 			)
@@ -7292,7 +7292,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 182.88 84.328 90)
 			(effects
 				(font
@@ -7344,7 +7344,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d763526c-5c16-40de-b51e-6f5ef31ab790")
-		(property "Reference" "#PWR0404"
+		(property "Reference" "#PWR0410"
 			(at 157.48 82.55 0)
 			(effects
 				(font
@@ -7395,7 +7395,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0404")
+					(reference "#PWR0410")
 					(unit 1)
 				)
 			)
@@ -7411,7 +7411,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e3c77a2d-26ab-441d-99b4-1d23f8b10a63")
-		(property "Reference" "#PWR0410"
+		(property "Reference" "#PWR0416"
 			(at 260.35 146.05 0)
 			(effects
 				(font
@@ -7461,7 +7461,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0410")
+					(reference "#PWR0416")
 					(unit 1)
 				)
 			)
@@ -7495,7 +7495,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical"
 			(at 218.44 127 0)
 			(effects
 				(font
@@ -7589,7 +7589,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
 			(at 218.44 69.85 0)
 			(effects
 				(font
@@ -7659,7 +7659,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f3d43d30-c605-4ac2-978f-b0b0b59b3ea4")
-		(property "Reference" "#PWR0413"
+		(property "Reference" "#PWR0415"
 			(at 260.35 133.35 0)
 			(effects
 				(font
@@ -7709,7 +7709,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0413")
+					(reference "#PWR0415")
 					(unit 1)
 				)
 			)
@@ -7740,7 +7740,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 182.88 103.378 90)
 			(effects
 				(font
@@ -7807,7 +7807,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 182.88 79.248 90)
 			(effects
 				(font
@@ -7859,7 +7859,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fbcdca1a-ca24-4369-8619-28ec50d7a8dd")
-		(property "Reference" "C403"
+		(property "Reference" "C405"
 			(at 257.81 119.3799 0)
 			(effects
 				(font
@@ -7877,7 +7877,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 254.9652 124.46 0)
 			(effects
 				(font
@@ -7913,7 +7913,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "C403")
+					(reference "C405")
 					(unit 1)
 				)
 			)
@@ -7929,7 +7929,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ff521e3e-6c3b-45a7-a54e-c37542768bf1")
-		(property "Reference" "#PWR0411"
+		(property "Reference" "#PWR0417"
 			(at 260.35 161.29 0)
 			(effects
 				(font
@@ -7979,7 +7979,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "#PWR0411")
+					(reference "#PWR0417")
 					(unit 1)
 				)
 			)
