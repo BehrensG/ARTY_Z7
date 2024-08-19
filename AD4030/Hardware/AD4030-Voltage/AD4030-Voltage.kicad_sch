@@ -110,6 +110,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 71.12) (xy 167.64 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34486bbd-f5a2-4708-ab17-a1c26283ddf9")
+	)
+	(wire
+		(pts
 			(xy 154.94 63.5) (xy 167.64 63.5)
 		)
 		(stroke
@@ -584,6 +594,16 @@
 			)
 			(uuid "27bec2cb-d898-47c0-a4d0-ea5c79bf663b")
 		)
+		(pin "CLK_100MHz" input
+			(at 167.64 71.12 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "14a092ff-cad2-4fc7-bf01-21cbf747c6d1")
+		)
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559"
@@ -721,6 +741,16 @@
 				(justify right)
 			)
 			(uuid "a34bb9da-133a-45c3-800a-cf0dea14632c")
+		)
+		(pin "CLK_100MHz" output
+			(at 154.94 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "95ddede0-4bb4-40ed-ac5d-bf386455ad5f")
 		)
 		(instances
 			(project "AD4030-Voltage"
