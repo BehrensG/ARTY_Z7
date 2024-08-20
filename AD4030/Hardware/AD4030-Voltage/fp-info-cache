@@ -1,4 +1,4 @@
-23540700335610631
+23547588349590038
 AD4030
 05-08-1797_ADI
 
@@ -6,6 +6,34 @@ AD4030-24BBCZ
 0
 64
 64
+AD4030
+1710072
+
+
+0
+2
+2
+AD4030
+POWERDI123_DIO
+
+DFLS240-7 
+0
+2
+2
+AD4030
+TCK-133
+
+TCK-133 
+0
+2
+2
+AD4030
+XAL4030
+
+XAL4030-472MEC 
+0
+2
+2
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
