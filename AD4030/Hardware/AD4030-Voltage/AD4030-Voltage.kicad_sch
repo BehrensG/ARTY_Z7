@@ -416,7 +416,7 @@
 				(justify left top)
 			)
 		)
-		(pin "GAIN_x3" input
+		(pin "GAIN_x20" input
 			(at 109.22 76.2 0)
 			(effects
 				(font
@@ -426,7 +426,7 @@
 			)
 			(uuid "14efef3b-600c-4ac1-85aa-064debd2e6b2")
 		)
-		(pin "Gain_x10-x100" input
+		(pin "Gain_x10" input
 			(at 109.22 73.66 0)
 			(effects
 				(font
@@ -524,7 +524,7 @@
 			)
 			(uuid "6d618b66-16a4-4c27-ae34-eb4ce92d1d59")
 		)
-		(pin "Gain_x10-x100" output
+		(pin "Gain_x10" output
 			(at 167.64 82.55 180)
 			(effects
 				(font
@@ -534,7 +534,7 @@
 			)
 			(uuid "441fa22d-a20f-4391-9544-3891c75e25bf")
 		)
-		(pin "GAIN_x3" output
+		(pin "GAIN_x20" output
 			(at 167.64 85.09 180)
 			(effects
 				(font

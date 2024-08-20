@@ -4741,7 +4741,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 139.7) (xy 264.16 148.59)
+			(xy 264.16 138.43) (xy 264.16 148.59)
 		)
 		(stroke
 			(width 0)
@@ -9463,7 +9463,7 @@
 	)
 	(symbol
 		(lib_id "power:+2V5")
-		(at 264.16 139.7 0)
+		(at 264.16 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9472,7 +9472,7 @@
 		(fields_autoplaced yes)
 		(uuid "ca03e850-6bb0-4b77-9bab-60d91a758e11")
 		(property "Reference" "#PWR0305"
-			(at 264.16 143.51 0)
+			(at 264.16 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9481,7 +9481,7 @@
 			)
 		)
 		(property "Value" "+2V5"
-			(at 264.16 134.62 0)
+			(at 264.16 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9489,7 +9489,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 264.16 139.7 0)
+			(at 264.16 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9498,7 +9498,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 264.16 139.7 0)
+			(at 264.16 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9507,7 +9507,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+2V5\""
-			(at 264.16 139.7 0)
+			(at 264.16 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)

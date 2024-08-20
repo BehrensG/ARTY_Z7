@@ -1,0 +1,158 @@
+Circuit: * Z:\home\grzegorz\git\ARTY_Z7\AD4030\Hardware\AD4030-Voltage\sim\AD4030-Voltage.asc
+
+C16: Increased Cpar to 3.3e-016
+C11: Increased Cpar to 3.3e-016
+WARNING: Node N022 is floating.
+WARNING: Node NC_01 is floating.
+WARNING: Node NC_02 is floating.
+
+Instance "m:u11:4": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:u11:3": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:u5:4": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:u5:3": Length shorter than recommended for a level 1 MOSFET.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+vernier = 0.5
+vernier = 0.25
+Gmin = 3.08405
+vernier = 0.125
+vernier = 0.166667
+Gmin = 2.33946
+vernier = 0.0833333
+vernier = 0.0416667
+vernier = 0.0208333
+Gmin = 2.12276
+vernier = 0.0104167
+vernier = 0.0138889
+Gmin = 2.07366
+vernier = 0.0185185
+vernier = 0.0246913
+Gmin = 1.98387
+vernier = 0.0329218
+Gmin = 1.84651
+vernier = 0.0438957
+vernier = 0.0585276
+Gmin = 1.6422
+vernier = 0.0780367
+vernier = 0.104049
+Gmin = 1.36459
+vernier = 0.0520245
+vernier = 0.0260122
+Gmin = 1.23112
+vernier = 0.0130061
+vernier = 0.00650306
+vernier = 0.00325153
+vernier = 0.00162576
+Gmin = 1.23261
+vernier = 0.000812882
+vernier = 0.000406441
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 21.2121%
+Source Step = 28.7879%
+Source Step = 31.6288%
+Source Step = 33.5227%
+Source Step = 35.4167%
+Source Step = 37.3106%
+Source Step = 39.2045%
+vernier = 0.09375
+Source Step = 41.6667%
+Source Step = 44.5076%
+Source Step = 47.3485%
+Source Step = 50.1894%
+vernier = 0.0234375
+Source Step = 49.9408%
+Source Step = 49.9852%
+Source Step = 50.0296%
+Source Step = 50.074%
+Source Step = 50.1184%
+vernier = 0.00219727
+Source Step = 50.1761%
+Source Step = 50.2427%
+Source Step = 50.3092%
+Source Step = 50.3758%
+Source Step = 50.4424%
+vernier = 0.0032959
+Source Step = 50.5256%
+Source Step = 50.6255%
+Source Step = 50.7254%
+Source Step = 50.8253%
+Source Step = 50.9251%
+vernier = 0.00494385
+Source Step = 51.045%
+Source Step = 51.1948%
+Source Step = 51.3446%
+Source Step = 51.4944%
+Source Step = 51.6443%
+vernier = 0.00741577
+Source Step = 51.8165%
+Source Step = 52.0413%
+Source Step = 52.266%
+Source Step = 52.4907%
+Source Step = 52.7154%
+vernier = 0.0111237
+Source Step = 52.9626%
+Source Step = 53.2997%
+Source Step = 53.6368%
+Source Step = 53.9739%
+Source Step = 54.3109%
+vernier = 0.0166855
+Source Step = 54.6649%
+Source Step = 55.1705%
+Source Step = 55.6761%
+Source Step = 56.1817%
+Source Step = 56.6873%
+Source Step = 57.193%
+vernier = 0.0250282
+Source Step = 57.9514%
+Source Step = 58.7098%
+Source Step = 59.4683%
+Source Step = 60.2267%
+Source Step = 60.9851%
+vernier = 0.0375423
+Source Step = 62.0849%
+Source Step = 63.2225%
+Source Step = 64.3601%
+Source Step = 65.4978%
+Source Step = 66.6354%
+vernier = 0.0563135
+Source Step = 68.2281%
+Source Step = 69.9346%
+Source Step = 71.6411%
+Source Step = 73.3476%
+Source Step = 75.054%
+vernier = 0.0844703
+Source Step = 77.3578%
+Source Step = 79.9175%
+Source Step = 82.4772%
+Source Step = 85.0369%
+Source Step = 87.5966%
+vernier = 0.126705
+Source Step = 90.9242%
+Source Step = 94.7638%
+Source Step = 98.6033%
+Source stepping succeeded in finding the operating point.
+
+
+Date: Tue Aug 20 05:16:41 2024
+Total elapsed time: 12.004 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 9906
+traniter = 4185
+tranpoints = 1450
+accept = 1343
+rejected = 107
+matrix size = 633
+fillins = 1410
+solver = Normal
+Thread vector: 79.3/30.2[8] 34.6/14.6[8] 11.6/11.7[1] 5.8/4.7[4]  2592/500
+Matrix Compiler1: 103.11 KB object code size  48.5/24.3/[15.1]
+Matrix Compiler2: 72.53 KB object code size  19.1/19.7/[9.0]
+
