@@ -3,103 +3,105 @@
     with args -log ThreadX_auto_pc_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ThreadX_auto_pc_0.tcl
 
 
-****** Vivado v2023.1 (64-bit)
-  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
-  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
-  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Fri Aug 23 02:17:46 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source ThreadX_auto_pc_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2064.430 ; gain = 122.023 ; free physical = 3144 ; free virtual = 39051
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1438.879 ; gain = 86.836 ; free physical = 186 ; free virtual = 42242
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ThreadX_auto_pc_0
 Command: synth_design -top ThreadX_auto_pc_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Device 21-9227] Part: xc7z010clg400-1 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 6461
+INFO: [Synth 8-7075] Helper process launched with PID 183224
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2799.254 ; gain = 378.770 ; free physical = 244 ; free virtual = 35128
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2204.617 ; gain = 412.715 ; free physical = 167 ; free virtual = 37930
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'ThreadX_auto_pc_0' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ip/ThreadX_auto_pc_0/synth/ThreadX_auto_pc_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_axi_protocol_converter' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4807]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4225]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_aw_channel' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3970]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_cmd_translator' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3463]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_incr_cmd' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3091]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_incr_cmd' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3091]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_wrap_cmd' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2901]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_wrap_cmd' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2901]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_cmd_translator' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3463]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_wr_cmd_fsm' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3223]
-INFO: [Synth 8-226] default block is never used [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3277]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_wr_cmd_fsm' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3223]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_aw_channel' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3970]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_b_channel' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3605]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_simple_fifo' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_simple_fifo' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized0' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized0' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_b_channel' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3605]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_ar_channel' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4081]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3333]
-INFO: [Synth 8-226] default block is never used [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3395]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3333]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_ar_channel' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4081]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_r_channel' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3810]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized1' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized1' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized2' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized2' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s_r_channel' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3810]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_28_axi_register_slice' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_axi_protocol_converter' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4704]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_aw_channel' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4360]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_cmd_translator' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3720]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_incr_cmd' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3216]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_incr_cmd' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3216]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_wrap_cmd' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2982]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_wrap_cmd' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2982]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_cmd_translator' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3720]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3392]
+INFO: [Synth 8-226] default block is never used [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3446]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3392]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_aw_channel' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4360]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_b_channel' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3906]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized0' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized0' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_b_channel' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3906]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_ar_channel' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4516]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3546]
+INFO: [Synth 8-226] default block is never used [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3608]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3546]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_ar_channel' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4516]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_r_channel' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4155]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized1' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized1' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized2' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized2' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_r_channel' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4155]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axi_register_slice' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
 INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized0' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized0' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized1' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized1' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized2' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized2' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_28_axi_register_slice' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
-WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_28_axi_register_slice' is unconnected for instance 'SI_REG' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4392]
-WARNING: [Synth 8-7023] instance 'SI_REG' of module 'axi_register_slice_v2_1_28_axi_register_slice' has 93 connections declared, but only 92 given [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4392]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_28_axi_register_slice__parameterized0' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized0' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized0' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized1' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized1' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized2' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized2' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axi_register_slice' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_31_axi_register_slice' is unconnected for instance 'SI_REG' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4871]
+WARNING: [Synth 8-7023] instance 'SI_REG' of module 'axi_register_slice_v2_1_31_axi_register_slice' has 93 connections declared, but only 92 given [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4871]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axi_register_slice__parameterized0' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
 INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized3' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized3' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized4' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized4' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized5' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized5' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized6' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_28_axic_register_slice__parameterized6' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_28_axi_register_slice__parameterized0' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
-WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_28_axi_register_slice' is unconnected for instance 'MI_REG' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4647]
-WARNING: [Synth 8-7023] instance 'MI_REG' of module 'axi_register_slice_v2_1_28_axi_register_slice' has 93 connections declared, but only 92 given [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4647]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_b2s' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4225]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_28_axi_protocol_converter' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4807]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized3' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized3' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized4' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized4' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized5' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized5' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized6' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized6' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axi_register_slice__parameterized0' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_31_axi_register_slice' is unconnected for instance 'MI_REG' [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5126]
+WARNING: [Synth 8-7023] instance 'MI_REG' of module 'axi_register_slice_v2_1_31_axi_register_slice' has 93 connections declared, but only 92 given [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5126]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4704]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_axi_protocol_converter' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
 INFO: [Synth 8-6155] done synthesizing module 'ThreadX_auto_pc_0' (0#1) [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ip/ThreadX_auto_pc_0/synth/ThreadX_auto_pc_0.v:53]
-WARNING: [Synth 8-6014] Unused sequential element state_r1_reg was removed.  [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3383]
-WARNING: [Synth 8-6014] Unused sequential element s_arlen_r_reg was removed.  [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/8c02/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3384]
-WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_28_axic_register_slice__parameterized6 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_28_axic_register_slice__parameterized6 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_28_axic_register_slice__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_28_axic_register_slice__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_28_axic_register_slice__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_28_axic_register_slice__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_28_axic_register_slice__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_28_axic_register_slice__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-6014] Unused sequential element state_r1_reg was removed.  [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3596]
+WARNING: [Synth 8-6014] Unused sequential element s_arlen_r_reg was removed.  [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3597]
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_31_axic_register_slice__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_31_axic_register_slice__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_31_axic_register_slice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_31_axic_register_slice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_31_axic_register_slice__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_31_axic_register_slice__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_31_axic_register_slice__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_31_axic_register_slice__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_bid[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_rid[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
@@ -164,9 +166,9 @@ WARNING: [Synth 8-7129] Port s_axi_arqos[2] in module axi_infrastructure_v1_1_0_
 WARNING: [Synth 8-7129] Port s_axi_arqos[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_arqos[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_28_axi_register_slice__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_28_axic_register_slice__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_28_axic_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_31_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_31_axic_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_31_axic_register_slice__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awregion[3] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
@@ -180,32 +182,32 @@ WARNING: [Synth 8-7129] Port s_axi_arregion[2] in module axi_infrastructure_v1_1
 WARNING: [Synth 8-7129] Port s_axi_arregion[1] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_arregion[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_28_axi_register_slice is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_arlen[7] in module axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_arlen[6] in module axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_arlen[5] in module axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_arlen[4] in module axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_arlen[3] in module axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_arlen[2] in module axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_arlen[1] in module axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_arlen[0] in module axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm is either unconnected or has no load
-WARNING: [Synth 8-7129] Port axlen[7] in module axi_protocol_converter_v2_1_28_b2s_wrap_cmd is either unconnected or has no load
-WARNING: [Synth 8-7129] Port axlen[6] in module axi_protocol_converter_v2_1_28_b2s_wrap_cmd is either unconnected or has no load
-WARNING: [Synth 8-7129] Port axlen[5] in module axi_protocol_converter_v2_1_28_b2s_wrap_cmd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_31_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[7] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[6] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[5] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[4] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[3] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[2] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[1] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[0] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axlen[7] in module axi_protocol_converter_v2_1_31_b2s_wrap_cmd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axlen[6] in module axi_protocol_converter_v2_1_31_b2s_wrap_cmd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axlen[5] in module axi_protocol_converter_v2_1_31_b2s_wrap_cmd is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2979.129 ; gain = 558.645 ; free physical = 125 ; free virtual = 34886
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2401.555 ; gain = 609.652 ; free physical = 298 ; free virtual = 37631
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2985.066 ; gain = 564.582 ; free physical = 122 ; free virtual = 34883
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2401.555 ; gain = 609.652 ; free physical = 298 ; free virtual = 37631
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2985.066 ; gain = 564.582 ; free physical = 122 ; free virtual = 34883
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2401.555 ; gain = 609.652 ; free physical = 298 ; free virtual = 37631
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2985.066 ; gain = 0.000 ; free physical = 122 ; free virtual = 34883
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2401.555 ; gain = 0.000 ; free physical = 297 ; free virtual = 37630
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -216,31 +218,31 @@ Parsing XDC File [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.runs/ThreadX_auto_p
 Finished Parsing XDC File [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.runs/ThreadX_auto_pc_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3087.910 ; gain = 0.000 ; free physical = 361 ; free virtual = 34865
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2517.031 ; gain = 0.000 ; free physical = 277 ; free virtual = 37607
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3087.910 ; gain = 0.000 ; free physical = 359 ; free virtual = 34863
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2517.031 ; gain = 0.000 ; free physical = 277 ; free virtual = 37608
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 319 ; free virtual = 34841
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2517.031 ; gain = 725.129 ; free physical = 240 ; free virtual = 37581
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 319 ; free virtual = 34841
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 240 ; free virtual = 37581
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.runs/ThreadX_auto_pc_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 319 ; free virtual = 34841
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 240 ; free virtual = 37581
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_28_b2s_wr_cmd_fsm'
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -249,7 +251,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_p
          SM_CMD_ACCEPTED |                               10 |                               10
             SM_DONE_WAIT |                               00 |                               11
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_28_b2s_wr_cmd_fsm'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -258,9 +260,9 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
          SM_CMD_ACCEPTED |                               10 |                               10
                  SM_DONE |                               00 |                               11
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 318 ; free virtual = 34840
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 245 ; free virtual = 37588
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -312,28 +314,28 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-INFO: [Synth 8-3936] Found unconnected internal register 'gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1731]
-INFO: [Synth 8-3936] Found unconnected internal register 'gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/87d1/hdl/axi_register_slice_v2_1_vl_rfs.v:1731]
+INFO: [Synth 8-3936] Found unconnected internal register 'gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
+INFO: [Synth 8-3936] Found unconnected internal register 'gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 198 ; free virtual = 34728
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 236 ; free virtual = 37578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 986 ; free virtual = 35513
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 1224 ; free virtual = 38349
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 982 ; free virtual = 35516
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 1225 ; free virtual = 38349
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 989 ; free virtual = 35521
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 1227 ; free virtual = 38351
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -351,37 +353,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 5039 ; free virtual = 39569
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 2564 ; free virtual = 39697
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 5039 ; free virtual = 39569
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 2564 ; free virtual = 39697
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 5038 ; free virtual = 39567
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 2564 ; free virtual = 39697
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 5038 ; free virtual = 39567
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 2564 ; free virtual = 39697
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 5038 ; free virtual = 39567
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 2564 ; free virtual = 39696
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 5038 ; free virtual = 39567
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 2564 ; free virtual = 39696
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -429,31 +431,33 @@ Report Cell Usage:
 |11    |FDSE    |    16|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 5038 ; free virtual = 39567
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2525.035 ; gain = 733.133 ; free physical = 2564 ; free virtual = 39696
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 72 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 3087.910 ; gain = 564.582 ; free physical = 5038 ; free virtual = 39567
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 3087.910 ; gain = 667.426 ; free physical = 5038 ; free virtual = 39567
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2525.035 ; gain = 617.656 ; free physical = 2566 ; free virtual = 39699
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2525.043 ; gain = 733.133 ; free physical = 2566 ; free virtual = 39699
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3087.910 ; gain = 0.000 ; free physical = 5310 ; free virtual = 39838
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2525.043 ; gain = 0.000 ; free physical = 2916 ; free virtual = 40043
 INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3087.910 ; gain = 0.000 ; free physical = 5320 ; free virtual = 39845
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2581.062 ; gain = 0.000 ; free physical = 4329 ; free virtual = 41453
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: e4c1f31f
+Synth Design complete | Checksum: 32bae37a
 INFO: [Common 17-83] Releasing license: Synthesis
-85 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+86 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:53 . Memory (MB): peak = 3087.910 ; gain = 983.793 ; free physical = 5319 ; free virtual = 39845
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2503.376; main = 2266.597; forked = 318.110
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4045.680; main = 3087.914; forked = 957.766
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:01 . Memory (MB): peak = 2581.062 ; gain = 1121.371 ; free physical = 4333 ; free virtual = 41457
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1872.516; main = 1634.241; forked = 319.664
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3526.762; main = 2581.066; forked = 1001.723
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2605.074 ; gain = 0.000 ; free physical = 4333 ; free virtual = 41457
 INFO: [Common 17-1381] The checkpoint '/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.runs/ThreadX_auto_pc_0_synth_1/ThreadX_auto_pc_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ThreadX_auto_pc_0, cache-ID = 2943f9a9bd9817ee
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ThreadX_auto_pc_0, cache-ID = 9c5faa24eda63c5c
 INFO: [Coretcl 2-1174] Renamed 23 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2605.074 ; gain = 0.000 ; free physical = 4333 ; free virtual = 41459
 INFO: [Common 17-1381] The checkpoint '/home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.runs/ThreadX_auto_pc_0_synth_1/ThreadX_auto_pc_0.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file ThreadX_auto_pc_0_utilization_synth.rpt -pb ThreadX_auto_pc_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 15 19:13:00 2024...
+INFO: [Vivado 12-24828] Executing command : report_utilization -file ThreadX_auto_pc_0_utilization_synth.rpt -pb ThreadX_auto_pc_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 23 02:19:06 2024...

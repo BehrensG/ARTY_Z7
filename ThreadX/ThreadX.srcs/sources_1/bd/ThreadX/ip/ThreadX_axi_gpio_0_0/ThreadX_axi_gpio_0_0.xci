@@ -4,12 +4,12 @@
     "xci_name": "ThreadX_axi_gpio_0_0",
     "cell_name": "axi_gpio_0",
     "component_reference": "xilinx.com:ip:axi_gpio:2.0",
-    "ip_revision": "30",
+    "ip_revision": "33",
     "gen_directory": "../../../../../../ThreadX.gen/sources_1/bd/ThreadX/ip/ThreadX_axi_gpio_0_0",
     "parameters": {
       "component_parameters": {
         "C_TRI_DEFAULT": [ { "value": "0xFFFFFFFF", "resolve_type": "user", "format": "bitString", "enabled": false, "usage": "all" } ],
-        "C_GPIO_WIDTH": [ { "value": "4", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_GPIO_WIDTH": [ { "value": "4", "value_src": "user", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "C_GPIO2_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "C_IS_DUAL": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_ALL_INPUTS": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
@@ -22,7 +22,7 @@
         "USE_BOARD_FLOW": [ { "value": "true", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "GPIO_BOARD_INTERFACE": [ { "value": "leds_4bits", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "GPIO2_BOARD_INTERFACE": [ { "value": "Custom", "resolve_type": "user", "usage": "all" } ],
-        "C_ALL_OUTPUTS": [ { "value": "1", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_ALL_OUTPUTS": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "C_ALL_OUTPUTS_2": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ]
       },
       "model_parameters": {
@@ -47,6 +47,7 @@
         "BASE_BOARD_PART": [ { "value": "digilentinc.com:arty-z7-10:part0:1.1" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z010" } ],
+        "NEXTGEN_VERSAL": [ { "value": "0" } ],
         "PACKAGE": [ { "value": "clg400" } ],
         "PREFHDL": [ { "value": "VHDL" } ],
         "SILICON_REVISION": [ { "value": "" } ],
@@ -57,12 +58,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "30" } ],
+        "IPREVISION": [ { "value": "33" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../ThreadX.gen/sources_1/bd/ThreadX/ip/ThreadX_axi_gpio_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2023.1" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
@@ -212,7 +213,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Channel_1_GPIO_DATA": {
+                    "CH1_DATA": {
                       "bit_offset": 0,
                       "bit_width": 4,
                       "display_name": "Channel_1_GPIO_DATA",
@@ -231,7 +232,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Channel_1_GPIO_TRI": {
+                    "CH1_TRI": {
                       "bit_offset": 0,
                       "bit_width": 4,
                       "display_name": "Channel_1_GPIO_DATA",
@@ -250,7 +251,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Channel_2_GPIO_DATA": {
+                    "CH2_DATA": {
                       "bit_offset": 0,
                       "bit_width": 32,
                       "display_name": "Channel_2_GPIO_DATA",
@@ -269,7 +270,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Channel_2_GPIO_TRI": {
+                    "CH2_TRI": {
                       "bit_offset": 0,
                       "bit_width": 32,
                       "display_name": "Channel_2_GPIO_DATA",
@@ -288,7 +289,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Global_Interrupt_Enable": {
+                    "INT_EN": {
                       "bit_offset": 31,
                       "bit_width": 1,
                       "display_name": "Global_Interrupt_Enable",
@@ -307,7 +308,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Channel_1_Interrupt_Enable": {
+                    "CH1_INT_EN": {
                       "bit_offset": 0,
                       "bit_width": 1,
                       "display_name": "Channel_1_Interrupt_Enable",
@@ -315,7 +316,7 @@
                       "is_volatile": true,
                       "access": "read-write"
                     },
-                    "Channel_2_Interrupt_Enable": {
+                    "CH2_INT_EN": {
                       "bit_offset": 1,
                       "bit_width": 1,
                       "display_name": "Channel_2_Interrupt_Enable",
@@ -334,7 +335,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Channel_1_Interrupt_Status": {
+                    "CH1_INT_S": {
                       "bit_offset": 0,
                       "bit_width": 1,
                       "display_name": "Channel_1_Interrupt_Status",
@@ -342,7 +343,7 @@
                       "is_volatile": true,
                       "access": "read-write"
                     },
-                    "Channel_2_Interrupt_Status": {
+                    "CH2_INT_S": {
                       "bit_offset": 1,
                       "bit_width": 1,
                       "display_name": "Channel_2_Interrupt_Status",

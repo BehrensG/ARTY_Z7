@@ -1,14 +1,24 @@
 #-----------------------------------------------------------
-# Vivado v2023.1 (64-bit)
-# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
-# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
-# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Aug 15 19:17:00 2024
-# Process ID: 7301
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Aug 23 02:19:44 2024
+# Process ID: 183706
 # Current directory: /home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.runs/synth_1
 # Command line: vivado -log ThreadX_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ThreadX_wrapper.tcl
 # Log file: /home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.runs/synth_1/ThreadX_wrapper.vds
 # Journal file: /home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.runs/synth_1/vivado.jou
-# Running On: archlinux, OS: Linux, CPU Frequency: 3048.426 MHz, CPU Physical cores: 4, Host memory: 16373 MB
+# Running On        :archlinux
+# Platform          :unknown
+# Operating System  :unknown
+# Processor Detail  :Intel(R) Core(TM) i7-3630QM CPU @ 2.40GHz
+# CPU Frequency     :3293.620 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16373 MB
+# Swap memory       :34359 MB
+# Total Virtual     :50732 MB
+# Available Virtual :46382 MB
 #-----------------------------------------------------------
 source ThreadX_wrapper.tcl -notrace

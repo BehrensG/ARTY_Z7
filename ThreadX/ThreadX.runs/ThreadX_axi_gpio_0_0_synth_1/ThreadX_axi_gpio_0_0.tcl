@@ -55,20 +55,6 @@ if {$::dispatch::connected} {
   }
 }
 
-proc create_report { reportName command } {
-  set status "."
-  append status $reportName ".fail"
-  if { [file exists $status] } {
-    eval file delete [glob $status]
-  }
-  send_msg_id runtcl-4 info "Executing : $command"
-  set retval [eval catch { $command } msg]
-  if { $retval != 0 } {
-    set fp [open $status w]
-    close $fp
-    send_msg_id runtcl-5 warning "$msg"
-  }
-}
 OPTRACE "ThreadX_axi_gpio_0_0_synth_1" START { ROLLUP_AUTO }
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
@@ -160,7 +146,7 @@ set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef ThreadX_axi_gpio_0_0.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "ThreadX_axi_gpio_0_0_synth_1_synth_report_utilization_0" "report_utilization -file ThreadX_axi_gpio_0_0_utilization_synth.rpt -pb ThreadX_axi_gpio_0_0_utilization_synth.pb"
+generate_parallel_reports -reports { "report_utilization -file ThreadX_axi_gpio_0_0_utilization_synth.rpt -pb ThreadX_axi_gpio_0_0_utilization_synth.pb"  } 
 OPTRACE "synth reports" END { }
 
 if { [catch {

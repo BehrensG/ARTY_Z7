@@ -3882,12 +3882,6 @@
 		(uuid "617e6c97-0c55-42c2-943a-bad6888c50f3")
 	)
 	(junction
-		(at 220.98 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7eac4a83-55a3-44da-9eab-b8112047bb64")
-	)
-	(junction
 		(at 218.44 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4408,16 +4402,6 @@
 			(type default)
 		)
 		(uuid "626a3a78-bd1f-42fa-855b-323048a4ee88")
-	)
-	(wire
-		(pts
-			(xy 220.98 88.9) (xy 226.06 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "635c3cc6-fae9-409b-8230-1a239c387198")
 	)
 	(wire
 		(pts
@@ -5191,7 +5175,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 88.9) (xy 214.63 88.9)
+			(xy 214.63 88.9) (xy 226.06 88.9)
 		)
 		(stroke
 			(width 0)
@@ -5231,7 +5215,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 88.9) (xy 220.98 90.17)
+			(xy 214.63 88.9) (xy 214.63 90.17)
 		)
 		(stroke
 			(width 0)
@@ -5651,7 +5635,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 112.7252 74.93 0)
 			(effects
 				(font
@@ -6592,7 +6576,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 220.98 97.79 0)
+		(at 214.63 97.79 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6601,7 +6585,7 @@
 		(fields_autoplaced yes)
 		(uuid "2db803b1-efd0-4e4d-8c99-3a835b4cbcf3")
 		(property "Reference" "#PWR0334"
-			(at 220.98 104.14 0)
+			(at 214.63 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6610,7 +6594,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 220.98 102.87 0)
+			(at 214.63 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6618,7 +6602,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 220.98 97.79 0)
+			(at 214.63 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6627,7 +6611,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 97.79 0)
+			(at 214.63 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6636,7 +6620,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 220.98 97.79 0)
+			(at 214.63 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10128,7 +10112,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 220.98 93.98 0)
+		(at 214.63 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10137,7 +10121,7 @@
 		(fields_autoplaced yes)
 		(uuid "e26544a4-b519-45c8-9611-2fbefccf0216")
 		(property "Reference" "C316"
-			(at 224.79 92.7099 0)
+			(at 218.44 92.7099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10146,7 +10130,7 @@
 			)
 		)
 		(property "Value" "1u"
-			(at 224.79 95.2499 0)
+			(at 218.44 95.2499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10155,7 +10139,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 221.9452 97.79 0)
+			(at 215.5952 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10164,7 +10148,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 220.98 93.98 0)
+			(at 214.63 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10173,7 +10157,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 220.98 93.98 0)
+			(at 214.63 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10223,7 +10207,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 112.7252 85.09 0)
 			(effects
 				(font

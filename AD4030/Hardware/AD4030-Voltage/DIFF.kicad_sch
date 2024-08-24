@@ -8014,7 +8014,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 94.742 116.84 90)
 			(effects
 				(font
@@ -12770,7 +12770,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 94.742 101.6 90)
 			(effects
 				(font
@@ -14742,7 +14742,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Trim")
-		(at 137.16 135.89 0)
+		(at 137.16 135.89 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14751,21 +14751,21 @@
 		(fields_autoplaced yes)
 		(uuid "b00b04b1-494e-4576-b138-6d441106e7f7")
 		(property "Reference" "C223"
-			(at 140.97 134.3659 0)
+			(at 140.97 134.8739 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "JR500"
-			(at 140.97 136.9059 0)
+			(at 140.97 137.4139 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_Trimmer_Voltronics_JR"
@@ -16714,7 +16714,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6_HandSoldering"
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
 			(at 341.63 123.19 0)
 			(effects
 				(font
@@ -17372,7 +17372,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6_HandSoldering"
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
 			(at 278.13 115.57 0)
 			(effects
 				(font

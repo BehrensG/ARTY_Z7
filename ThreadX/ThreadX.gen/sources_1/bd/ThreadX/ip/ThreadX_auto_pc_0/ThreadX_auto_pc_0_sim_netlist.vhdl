@@ -1,8 +1,8 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
--- Date        : Thu Aug 15 19:13:00 2024
+-- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+-- Date        : Fri Aug 23 02:19:06 2024
 -- Host        : archlinux running 64-bit unknown
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ip/ThreadX_auto_pc_0/ThreadX_auto_pc_0_sim_netlist.vhdl
@@ -15,7 +15,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_incr_cmd is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd is
   port (
     next_pending_r : out STD_LOGIC;
     sel_first_reg_0 : out STD_LOGIC;
@@ -36,10 +36,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_incr_cmd is
     \axlen_cnt_reg[5]_1\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_incr_cmd : entity is "axi_protocol_converter_v2_1_28_b2s_incr_cmd";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_incr_cmd;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd : entity is "axi_protocol_converter_v2_1_31_b2s_incr_cmd";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_incr_cmd is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd is
   signal \axaddr_incr[11]_i_1_n_0\ : STD_LOGIC;
   signal \^axaddr_incr_reg[11]_0\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \axaddr_incr_reg[11]_i_4_n_1\ : STD_LOGIC;
@@ -664,7 +664,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_incr_cmd_2 is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd_2 is
   port (
     incr_next_pending : out STD_LOGIC;
     sel_first_reg_0 : out STD_LOGIC;
@@ -690,10 +690,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_incr_cmd_2 is
     m_axi_arready : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_incr_cmd_2 : entity is "axi_protocol_converter_v2_1_28_b2s_incr_cmd";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_incr_cmd_2;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd_2 : entity is "axi_protocol_converter_v2_1_31_b2s_incr_cmd";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd_2;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_incr_cmd_2 is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd_2 is
   signal \axaddr_incr[0]_i_1__0_n_0\ : STD_LOGIC;
   signal \axaddr_incr[10]_i_1__0_n_0\ : STD_LOGIC;
   signal \axaddr_incr[11]_i_2__0_n_0\ : STD_LOGIC;
@@ -1320,7 +1320,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is
   port (
     D : out STD_LOGIC_VECTOR ( 3 downto 0 );
     axaddr_offset : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -1369,10 +1369,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm is
     aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm : entity is "axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm : entity is "axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is
   signal \^fsm_sequential_state_reg[1]_1\ : STD_LOGIC;
   signal \^fsm_sequential_state_reg[1]_2\ : STD_LOGIC;
   signal \^q\ : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -1959,7 +1959,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo is
   port (
     sel : out STD_LOGIC;
     addr : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -1976,10 +1976,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo is
     shandshake_r : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo : entity is "axi_protocol_converter_v2_1_28_b2s_simple_fifo";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo : entity is "axi_protocol_converter_v2_1_31_b2s_simple_fifo";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo is
   signal \^addr\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^bresp_cnt_reg[1]\ : STD_LOGIC;
   signal \cnt_read[0]_i_1_n_0\ : STD_LOGIC;
@@ -2413,7 +2413,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized0\ is
+entity \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized0\ is
   port (
     areset_d1_reg : out STD_LOGIC;
     mhandshake : out STD_LOGIC;
@@ -2432,10 +2432,10 @@ entity \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parame
     \cnt_read_reg[1]_0\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized0\ : entity is "axi_protocol_converter_v2_1_28_b2s_simple_fifo";
-end \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized0\;
+  attribute ORIG_REF_NAME of \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized0\ : entity is "axi_protocol_converter_v2_1_31_b2s_simple_fifo";
+end \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized0\;
 
-architecture STRUCTURE of \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized0\ is
+architecture STRUCTURE of \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized0\ is
   signal bvalid_i_i_2_n_0 : STD_LOGIC;
   signal cnt_read : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \cnt_read[0]_i_1_n_0\ : STD_LOGIC;
@@ -2571,7 +2571,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized1\ is
+entity \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized1\ is
   port (
     s_ready_i_reg : out STD_LOGIC;
     \cnt_read_reg[2]_0\ : out STD_LOGIC;
@@ -2588,10 +2588,10 @@ entity \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parame
     areset_d1 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized1\ : entity is "axi_protocol_converter_v2_1_28_b2s_simple_fifo";
-end \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized1\;
+  attribute ORIG_REF_NAME of \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized1\ : entity is "axi_protocol_converter_v2_1_31_b2s_simple_fifo";
+end \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized1\;
 
-architecture STRUCTURE of \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized1\ is
+architecture STRUCTURE of \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized1\ is
   signal \cnt_read[0]_i_1_n_0\ : STD_LOGIC;
   signal \cnt_read[1]_i_1__0_n_0\ : STD_LOGIC;
   signal \cnt_read[2]_i_1_n_0\ : STD_LOGIC;
@@ -3319,7 +3319,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized2\ is
+entity \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized2\ is
   port (
     \cnt_read_reg[4]_0\ : out STD_LOGIC;
     \cnt_read_reg[4]_1\ : out STD_LOGIC;
@@ -3333,10 +3333,10 @@ entity \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parame
     areset_d1 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized2\ : entity is "axi_protocol_converter_v2_1_28_b2s_simple_fifo";
-end \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized2\;
+  attribute ORIG_REF_NAME of \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized2\ : entity is "axi_protocol_converter_v2_1_31_b2s_simple_fifo";
+end \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized2\;
 
-architecture STRUCTURE of \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized2\ is
+architecture STRUCTURE of \ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized2\ is
   signal \cnt_read[0]_i_1__0_n_0\ : STD_LOGIC;
   signal \cnt_read[1]_i_1_n_0\ : STD_LOGIC;
   signal \cnt_read[2]_i_1__0_n_0\ : STD_LOGIC;
@@ -3698,7 +3698,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wr_cmd_fsm is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm is
   port (
     D : out STD_LOGIC_VECTOR ( 3 downto 0 );
     axaddr_offset : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -3747,10 +3747,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wr_cmd_fsm is
     aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wr_cmd_fsm : entity is "axi_protocol_converter_v2_1_28_b2s_wr_cmd_fsm";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wr_cmd_fsm;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm : entity is "axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wr_cmd_fsm is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm is
   signal \^fsm_sequential_state_reg[0]_1\ : STD_LOGIC;
   signal \^fsm_sequential_state_reg[0]_2\ : STD_LOGIC;
   signal \^q\ : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -4404,7 +4404,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wrap_cmd is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd is
   port (
     next_pending_r_0 : out STD_LOGIC;
     sel_first : out STD_LOGIC;
@@ -4433,10 +4433,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wrap_cmd is
     \axaddr_wrap_reg[11]_1\ : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wrap_cmd : entity is "axi_protocol_converter_v2_1_28_b2s_wrap_cmd";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wrap_cmd;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd : entity is "axi_protocol_converter_v2_1_31_b2s_wrap_cmd";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wrap_cmd is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd is
   signal \axaddr_wrap[11]_i_6_n_0\ : STD_LOGIC;
   signal \^axaddr_wrap_reg[11]_0\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \axaddr_wrap_reg[11]_i_3_n_1\ : STD_LOGIC;
@@ -4980,7 +4980,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wrap_cmd_3 is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd_3 is
   port (
     sel_first_reg_0 : out STD_LOGIC;
     \axaddr_wrap_reg[3]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -5013,10 +5013,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wrap_cmd_3 is
     \axaddr_wrap_reg[11]_1\ : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wrap_cmd_3 : entity is "axi_protocol_converter_v2_1_28_b2s_wrap_cmd";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wrap_cmd_3;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd_3 : entity is "axi_protocol_converter_v2_1_31_b2s_wrap_cmd";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd_3;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wrap_cmd_3 is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd_3 is
   signal \axaddr_wrap[11]_i_6__0_n_0\ : STD_LOGIC;
   signal \^axaddr_wrap_reg[11]_0\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \axaddr_wrap_reg[11]_i_3__0_n_1\ : STD_LOGIC;
@@ -5574,11 +5574,10 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice is
+entity ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice is
   port (
     s_ready_i_reg_0 : out STD_LOGIC;
     si_rs_arvalid : out STD_LOGIC;
-    \aresetn_d_reg[1]_inv_0\ : out STD_LOGIC;
     \axaddr_incr_reg[3]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     Q : out STD_LOGIC_VECTOR ( 53 downto 0 );
     \axaddr_wrap_reg[3]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -5599,8 +5598,8 @@ entity ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice is
     s_ready_i_reg_1 : in STD_LOGIC;
     s_ready_i0 : in STD_LOGIC;
     aclk : in STD_LOGIC;
+    m_valid_i_reg_0 : in STD_LOGIC;
     m_valid_i0 : in STD_LOGIC;
-    \aresetn_d_reg[1]_inv_1\ : in STD_LOGIC;
     \m_axi_araddr[11]\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
     \m_axi_araddr[11]_0\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
     \axaddr_incr_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -5617,12 +5616,11 @@ entity ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice is
     \m_payload_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice : entity is "axi_register_slice_v2_1_28_axic_register_slice";
-end ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice : entity is "axi_register_slice_v2_1_31_axic_register_slice";
+end ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice is
   signal \^q\ : STD_LOGIC_VECTOR ( 53 downto 0 );
-  signal \^aresetn_d_reg[1]_inv_0\ : STD_LOGIC;
   signal \axaddr_incr[3]_i_4__0_n_0\ : STD_LOGIC;
   signal \axaddr_incr[3]_i_5__0_n_0\ : STD_LOGIC;
   signal \axaddr_incr[3]_i_6__0_n_0\ : STD_LOGIC;
@@ -5754,8 +5752,6 @@ architecture STRUCTURE of ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_regi
   signal \skid_buffer_reg_n_0_[9]\ : STD_LOGIC;
   signal \wrap_boundary_axaddr_r[3]_i_2__0_n_0\ : STD_LOGIC;
   signal \NLW_axaddr_incr_reg[11]_i_3__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
-  attribute inverted : string;
-  attribute inverted of \aresetn_d_reg[1]_inv\ : label is "yes";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \axaddr_incr_reg[11]_i_3__0\ : label is 35;
   attribute ADDER_THRESHOLD of \axaddr_incr_reg[3]_i_2__0\ : label is 35;
@@ -5819,21 +5815,9 @@ architecture STRUCTURE of ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_regi
   attribute SOFT_HLUTNM of \wrap_second_len_r[3]_i_2__0\ : label is "soft_lutpair21";
 begin
   Q(53 downto 0) <= \^q\(53 downto 0);
-  \aresetn_d_reg[1]_inv_0\ <= \^aresetn_d_reg[1]_inv_0\;
   \m_payload_i_reg[6]_0\ <= \^m_payload_i_reg[6]_0\;
   s_ready_i_reg_0 <= \^s_ready_i_reg_0\;
   si_rs_arvalid <= \^si_rs_arvalid\;
-\aresetn_d_reg[1]_inv\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => aclk,
-      CE => '1',
-      D => \aresetn_d_reg[1]_inv_1\,
-      Q => \^aresetn_d_reg[1]_inv_0\,
-      R => '0'
-    );
 \axaddr_incr[3]_i_11__0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"6A"
@@ -7232,7 +7216,7 @@ m_valid_i_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => m_valid_i0,
       Q => \^si_rs_arvalid\,
-      R => \^aresetn_d_reg[1]_inv_0\
+      R => m_valid_i_reg_0
     );
 \next_pending_r_i_3__0\: unisim.vcomponents.LUT5
     generic map(
@@ -7811,11 +7795,12 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice_0 is
+entity ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice_0 is
   port (
     s_ready_i_reg_0 : out STD_LOGIC;
     \aresetn_d_reg[0]_0\ : out STD_LOGIC;
     m_valid_i_reg_0 : out STD_LOGIC;
+    \aresetn_d_reg[1]_inv_0\ : out STD_LOGIC;
     S : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \m_payload_i_reg[61]_0\ : out STD_LOGIC_VECTOR ( 53 downto 0 );
     \axaddr_wrap_reg[3]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -7830,9 +7815,7 @@ entity ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice_0 is
     \m_payload_i_reg[1]_1\ : out STD_LOGIC;
     \m_payload_i_reg[2]_1\ : out STD_LOGIC;
     m_axi_awaddr : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    \aresetn_d_reg[0]_1\ : out STD_LOGIC;
     aclk : in STD_LOGIC;
-    m_valid_i_reg_1 : in STD_LOGIC;
     aresetn : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 11 downto 0 );
     \m_axi_awaddr[11]\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
@@ -7852,11 +7835,13 @@ entity ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice_0 is
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice_0 : entity is "axi_register_slice_v2_1_28_axic_register_slice";
-end ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice_0;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice_0 : entity is "axi_register_slice_v2_1_31_axic_register_slice";
+end ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice_0;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice_0 is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice_0 is
+  signal \aresetn_d[1]_inv_i_1_n_0\ : STD_LOGIC;
   signal \^aresetn_d_reg[0]_0\ : STD_LOGIC;
+  signal \^aresetn_d_reg[1]_inv_0\ : STD_LOGIC;
   signal \aresetn_d_reg_n_0_[0]\ : STD_LOGIC;
   signal \axaddr_incr[3]_i_4_n_0\ : STD_LOGIC;
   signal \axaddr_incr[3]_i_5_n_0\ : STD_LOGIC;
@@ -7938,6 +7923,8 @@ architecture STRUCTURE of ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_regi
   signal \skid_buffer_reg_n_0_[9]\ : STD_LOGIC;
   signal \wrap_boundary_axaddr_r[3]_i_2_n_0\ : STD_LOGIC;
   signal \NLW_axaddr_incr_reg[11]_i_3_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  attribute inverted : string;
+  attribute inverted of \aresetn_d_reg[1]_inv\ : label is "yes";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \axaddr_incr_reg[11]_i_3\ : label is 35;
   attribute ADDER_THRESHOLD of \axaddr_incr_reg[3]_i_2\ : label is 35;
@@ -7999,6 +7986,7 @@ architecture STRUCTURE of ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_regi
   attribute SOFT_HLUTNM of \m_payload_i[9]_i_1\ : label is "soft_lutpair71";
 begin
   \aresetn_d_reg[0]_0\ <= \^aresetn_d_reg[0]_0\;
+  \aresetn_d_reg[1]_inv_0\ <= \^aresetn_d_reg[1]_inv_0\;
   \m_payload_i_reg[5]_0\ <= \^m_payload_i_reg[5]_0\;
   \m_payload_i_reg[61]_0\(53 downto 0) <= \^m_payload_i_reg[61]_0\(53 downto 0);
   m_valid_i_reg_0 <= \^m_valid_i_reg_0\;
@@ -8010,7 +7998,7 @@ begin
         port map (
       I0 => \aresetn_d_reg_n_0_[0]\,
       I1 => aresetn,
-      O => \aresetn_d_reg[0]_1\
+      O => \aresetn_d[1]_inv_i_1_n_0\
     );
 \aresetn_d_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -8021,6 +8009,17 @@ begin
       CE => '1',
       D => aresetn,
       Q => \aresetn_d_reg_n_0_[0]\,
+      R => '0'
+    );
+\aresetn_d_reg[1]_inv\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => aclk,
+      CE => '1',
+      D => \aresetn_d[1]_inv_i_1_n_0\,
+      Q => \^aresetn_d_reg[1]_inv_0\,
       R => '0'
     );
 \axaddr_incr[3]_i_11\: unisim.vcomponents.LUT3
@@ -9421,7 +9420,7 @@ m_valid_i_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => m_valid_i0,
       Q => \^m_valid_i_reg_0\,
-      R => m_valid_i_reg_1
+      R => \^aresetn_d_reg[1]_inv_0\
     );
 next_pending_r_i_4: unisim.vcomponents.LUT5
     generic map(
@@ -10019,7 +10018,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice__parameterized1\ is
+entity \ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice__parameterized1\ is
   port (
     m_valid_i_reg_0 : out STD_LOGIC;
     s_ready_i_reg_0 : out STD_LOGIC;
@@ -10034,10 +10033,10 @@ entity \ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice__parame
     \skid_buffer_reg[1]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice__parameterized1\ : entity is "axi_register_slice_v2_1_28_axic_register_slice";
-end \ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice__parameterized1\;
+  attribute ORIG_REF_NAME of \ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice__parameterized1\ : entity is "axi_register_slice_v2_1_31_axic_register_slice";
+end \ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice__parameterized1\;
 
-architecture STRUCTURE of \ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice__parameterized1\ is
+architecture STRUCTURE of \ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice__parameterized1\ is
   signal \m_payload_i[0]_i_1__1_n_0\ : STD_LOGIC;
   signal \m_payload_i[10]_i_1__1_n_0\ : STD_LOGIC;
   signal \m_payload_i[11]_i_1__1_n_0\ : STD_LOGIC;
@@ -10522,7 +10521,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice__parameterized2\ is
+entity \ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice__parameterized2\ is
   port (
     m_valid_i_reg_0 : out STD_LOGIC;
     s_ready_i_reg_0 : out STD_LOGIC;
@@ -10537,10 +10536,10 @@ entity \ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice__parame
     \skid_buffer_reg[33]_0\ : in STD_LOGIC_VECTOR ( 33 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice__parameterized2\ : entity is "axi_register_slice_v2_1_28_axic_register_slice";
-end \ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice__parameterized2\;
+  attribute ORIG_REF_NAME of \ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice__parameterized2\ : entity is "axi_register_slice_v2_1_31_axic_register_slice";
+end \ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice__parameterized2\;
 
-architecture STRUCTURE of \ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice__parameterized2\ is
+architecture STRUCTURE of \ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice__parameterized2\ is
   signal \m_payload_i[0]_i_1__2_n_0\ : STD_LOGIC;
   signal \m_payload_i[10]_i_1__2_n_0\ : STD_LOGIC;
   signal \m_payload_i[11]_i_1__2_n_0\ : STD_LOGIC;
@@ -11981,7 +11980,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_b_channel is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_b_channel is
   port (
     si_rs_bvalid : out STD_LOGIC;
     cnt_read : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -11998,10 +11997,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_b_channel is
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_b_channel : entity is "axi_protocol_converter_v2_1_28_b2s_b_channel";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_b_channel;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_b_channel : entity is "axi_protocol_converter_v2_1_31_b2s_b_channel";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_b_channel;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_b_channel is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_b_channel is
   signal bid_fifo_0_n_4 : STD_LOGIC;
   signal bid_fifo_0_n_5 : STD_LOGIC;
   signal \bresp_cnt[7]_i_3_n_0\ : STD_LOGIC;
@@ -12027,7 +12026,7 @@ architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_b
   attribute SOFT_HLUTNM of \bresp_cnt[7]_i_2\ : label is "soft_lutpair125";
 begin
   si_rs_bvalid <= \^si_rs_bvalid\;
-bid_fifo_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo
+bid_fifo_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo
      port map (
       Q(7 downto 0) => bresp_cnt_reg(7 downto 0),
       SR(0) => s_bresp_acc0,
@@ -12202,7 +12201,7 @@ bid_fifo_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_sim
       Q => bresp_cnt_reg(7),
       R => s_bresp_acc0
     );
-bresp_fifo_0: entity work.\ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized0\
+bresp_fifo_0: entity work.\ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized0\
      port map (
       aclk => aclk,
       areset_d1 => areset_d1,
@@ -12299,7 +12298,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_cmd_translator is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator is
   port (
     next_pending_r : out STD_LOGIC;
     next_pending_r_0 : out STD_LOGIC;
@@ -12342,10 +12341,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_cmd_translator is
     \axaddr_wrap_reg[11]_0\ : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_cmd_translator : entity is "axi_protocol_converter_v2_1_28_b2s_cmd_translator";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_cmd_translator;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator : entity is "axi_protocol_converter_v2_1_31_b2s_cmd_translator";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_cmd_translator is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator is
   signal s_axburst_eq0 : STD_LOGIC;
   signal s_axburst_eq1 : STD_LOGIC;
 begin
@@ -12359,7 +12358,7 @@ begin
       I2 => s_axburst_eq0,
       O => s_axburst_eq1_reg_0
     );
-incr_cmd_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_incr_cmd
+incr_cmd_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd
      port map (
       Q(1 downto 0) => Q(1 downto 0),
       S(3 downto 0) => S(3 downto 0),
@@ -12405,7 +12404,7 @@ sel_first_reg: unisim.vcomponents.FDRE
       Q => sel_first_reg_0,
       R => '0'
     );
-wrap_cmd_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wrap_cmd
+wrap_cmd_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd
      port map (
       D(3 downto 0) => D(3 downto 0),
       E(0) => E(0),
@@ -12439,7 +12438,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_cmd_translator_1 is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator_1 is
   port (
     sel_first_reg_0 : out STD_LOGIC;
     sel_first_reg_1 : out STD_LOGIC;
@@ -12485,10 +12484,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_cmd_translator_1 is
     \axaddr_incr_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_cmd_translator_1 : entity is "axi_protocol_converter_v2_1_28_b2s_cmd_translator";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_cmd_translator_1;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator_1 : entity is "axi_protocol_converter_v2_1_31_b2s_cmd_translator";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator_1;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_cmd_translator_1 is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator_1 is
   signal incr_next_pending : STD_LOGIC;
   signal s_axburst_eq0 : STD_LOGIC;
   signal s_axburst_eq1 : STD_LOGIC;
@@ -12510,7 +12509,7 @@ begin
       I4 => s_axburst_eq1,
       O => m_axi_arready_0
     );
-incr_cmd_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_incr_cmd_2
+incr_cmd_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd_2
      port map (
       Q(1 downto 0) => Q(1 downto 0),
       aclk => aclk,
@@ -12571,7 +12570,7 @@ sel_first_reg: unisim.vcomponents.FDRE
       Q => sel_first_reg_0,
       R => '0'
     );
-wrap_cmd_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wrap_cmd_3
+wrap_cmd_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd_3
      port map (
       D(3 downto 0) => D(3 downto 0),
       E(0) => E(0),
@@ -12609,7 +12608,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_r_channel is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_r_channel is
   port (
     \cnt_read_reg[2]\ : out STD_LOGIC;
     \cnt_read_reg[4]\ : out STD_LOGIC;
@@ -12627,10 +12626,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_r_channel is
     areset_d1 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_r_channel : entity is "axi_protocol_converter_v2_1_28_b2s_r_channel";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_r_channel;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_r_channel : entity is "axi_protocol_converter_v2_1_31_b2s_r_channel";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_r_channel;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_r_channel is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_r_channel is
   signal r_push_r : STD_LOGIC;
   signal rd_data_fifo_0_n_0 : STD_LOGIC;
   signal rd_data_fifo_0_n_3 : STD_LOGIC;
@@ -12749,7 +12748,7 @@ r_rlast_r_reg: unisim.vcomponents.FDRE
       Q => trans_in(0),
       R => '0'
     );
-rd_data_fifo_0: entity work.\ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized1\
+rd_data_fifo_0: entity work.\ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized1\
      port map (
       aclk => aclk,
       areset_d1 => areset_d1,
@@ -12765,7 +12764,7 @@ rd_data_fifo_0: entity work.\ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2
       s_ready_i_reg => rd_data_fifo_0_n_0,
       si_rs_rready => si_rs_rready
     );
-transaction_fifo_0: entity work.\ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_simple_fifo__parameterized2\
+transaction_fifo_0: entity work.\ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized2\
      port map (
       \FSM_sequential_state_reg[0]\ => rd_data_fifo_0_n_3,
       aclk => aclk,
@@ -12783,7 +12782,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axi_register_slice is
+entity ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axi_register_slice is
   port (
     s_ready_i_reg : out STD_LOGIC;
     s_ready_i_reg_0 : out STD_LOGIC;
@@ -12872,22 +12871,19 @@ entity ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axi_register_slice is
     \m_payload_i_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axi_register_slice : entity is "axi_register_slice_v2_1_28_axi_register_slice";
-end ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axi_register_slice;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axi_register_slice : entity is "axi_register_slice_v2_1_31_axi_register_slice";
+end ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axi_register_slice;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axi_register_slice is
-  signal \ar.ar_pipe_n_2\ : STD_LOGIC;
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axi_register_slice is
   signal \aw.aw_pipe_n_1\ : STD_LOGIC;
-  signal \aw.aw_pipe_n_104\ : STD_LOGIC;
+  signal \aw.aw_pipe_n_3\ : STD_LOGIC;
 begin
-\ar.ar_pipe\: entity work.ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice
+\ar.ar_pipe\: entity work.ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice
      port map (
       \FSM_sequential_state_reg[1]\ => \FSM_sequential_state_reg[1]\,
       O(3 downto 0) => O(3 downto 0),
       Q(53 downto 0) => \m_payload_i_reg[61]_0\(53 downto 0),
       aclk => aclk,
-      \aresetn_d_reg[1]_inv_0\ => \ar.ar_pipe_n_2\,
-      \aresetn_d_reg[1]_inv_1\ => \aw.aw_pipe_n_104\,
       \axaddr_incr_reg[3]\(3 downto 0) => \axaddr_incr_reg[3]\(3 downto 0),
       \axaddr_incr_reg[3]_0\(3 downto 0) => \axaddr_incr_reg[3]_1\(3 downto 0),
       \axaddr_wrap_reg[3]\(3 downto 0) => \axaddr_wrap_reg[3]_0\(3 downto 0),
@@ -12909,6 +12905,7 @@ begin
       \m_payload_i_reg[6]_1\(6 downto 0) => \m_payload_i_reg[6]_0\(6 downto 0),
       \m_payload_i_reg[7]_0\(3 downto 0) => \m_payload_i_reg[7]\(3 downto 0),
       m_valid_i0 => m_valid_i0,
+      m_valid_i_reg_0 => \aw.aw_pipe_n_3\,
       next_pending_r_reg => next_pending_r_reg_0,
       s_axi_araddr(31 downto 0) => s_axi_araddr(31 downto 0),
       s_axi_arburst(1 downto 0) => s_axi_arburst(1 downto 0),
@@ -12922,7 +12919,7 @@ begin
       sel_first_1 => sel_first_1,
       si_rs_arvalid => si_rs_arvalid
     );
-\aw.aw_pipe\: entity work.ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice_0
+\aw.aw_pipe\: entity work.ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice_0
      port map (
       D(6 downto 0) => D(6 downto 0),
       E(0) => E(0),
@@ -12932,7 +12929,7 @@ begin
       aclk => aclk,
       aresetn => aresetn,
       \aresetn_d_reg[0]_0\ => \aw.aw_pipe_n_1\,
-      \aresetn_d_reg[0]_1\ => \aw.aw_pipe_n_104\,
+      \aresetn_d_reg[1]_inv_0\ => \aw.aw_pipe_n_3\,
       axaddr_incr(11 downto 0) => axaddr_incr(11 downto 0),
       \axaddr_incr_reg[3]\(3 downto 0) => \axaddr_incr_reg[3]_0\(3 downto 0),
       \axaddr_wrap_reg[3]\(3 downto 0) => \axaddr_wrap_reg[3]\(3 downto 0),
@@ -12948,7 +12945,6 @@ begin
       \m_payload_i_reg[5]_0\ => \m_payload_i_reg[5]\,
       \m_payload_i_reg[61]_0\(53 downto 0) => \m_payload_i_reg[61]\(53 downto 0),
       m_valid_i_reg_0 => si_rs_awvalid,
-      m_valid_i_reg_1 => \ar.ar_pipe_n_2\,
       next_pending_r_reg => next_pending_r_reg,
       s_axi_awaddr(31 downto 0) => s_axi_awaddr(31 downto 0),
       s_axi_awburst(1 downto 0) => s_axi_awburst(1 downto 0),
@@ -12962,12 +12958,12 @@ begin
       sel_first_0 => sel_first_0,
       \wrap_second_len_r_reg[3]\(1 downto 0) => \wrap_second_len_r_reg[3]\(1 downto 0)
     );
-\b.b_pipe\: entity work.\ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice__parameterized1\
+\b.b_pipe\: entity work.\ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice__parameterized1\
      port map (
       aclk => aclk,
       \m_payload_i_reg[13]_0\(13 downto 0) => \m_payload_i_reg[13]\(13 downto 0),
       m_valid_i_reg_0 => m_valid_i_reg,
-      m_valid_i_reg_1 => \ar.ar_pipe_n_2\,
+      m_valid_i_reg_1 => \aw.aw_pipe_n_3\,
       \out\(11 downto 0) => \out\(11 downto 0),
       s_axi_bready => s_axi_bready,
       s_ready_i_reg_0 => si_rs_bready,
@@ -12976,12 +12972,12 @@ begin
       si_rs_bvalid => si_rs_bvalid,
       \skid_buffer_reg[1]_0\(1 downto 0) => \skid_buffer_reg[1]\(1 downto 0)
     );
-\r.r_pipe\: entity work.\ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axic_register_slice__parameterized2\
+\r.r_pipe\: entity work.\ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice__parameterized2\
      port map (
       aclk => aclk,
       \m_payload_i_reg[46]_0\(46 downto 0) => \m_payload_i_reg[46]\(46 downto 0),
       m_valid_i_reg_0 => m_valid_i_reg_0,
-      m_valid_i_reg_1 => \ar.ar_pipe_n_2\,
+      m_valid_i_reg_1 => \aw.aw_pipe_n_3\,
       m_valid_i_reg_2 => m_valid_i_reg_1,
       s_axi_rready => s_axi_rready,
       s_ready_i_reg_0 => si_rs_rready,
@@ -12995,7 +12991,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_ar_channel is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_ar_channel is
   port (
     sel_first : out STD_LOGIC;
     sel_first_reg : out STD_LOGIC;
@@ -13036,10 +13032,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_ar_channel is
     D : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_ar_channel : entity is "axi_protocol_converter_v2_1_28_b2s_ar_channel";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_ar_channel;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_ar_channel : entity is "axi_protocol_converter_v2_1_31_b2s_ar_channel";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_ar_channel;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_ar_channel is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_ar_channel is
   signal \^fsm_sequential_state_reg[1]\ : STD_LOGIC;
   signal \^q\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal ar_cmd_fsm_0_n_0 : STD_LOGIC;
@@ -13106,7 +13102,7 @@ begin
   r_push <= \^r_push\;
   sel_first <= \^sel_first\;
   sel_first_reg <= \^sel_first_reg\;
-ar_cmd_fsm_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_rd_cmd_fsm
+ar_cmd_fsm_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm
      port map (
       D(3) => ar_cmd_fsm_0_n_0,
       D(2) => ar_cmd_fsm_0_n_1,
@@ -13190,7 +13186,7 @@ ar_cmd_fsm_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_r
       \wrap_second_len_r_reg[3]_0\(3 downto 0) => \wrap_cmd_0/wrap_second_len_r\(3 downto 0),
       \wrap_second_len_r_reg[3]_1\ => \wrap_second_len_r_reg[3]\
     );
-cmd_translator_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_cmd_translator_1
+cmd_translator_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator_1
      port map (
       D(3 downto 0) => \wrap_cmd_0/axaddr_offset\(3 downto 0),
       E(0) => ar_cmd_fsm_0_n_20,
@@ -13371,7 +13367,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_aw_channel is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_aw_channel is
   port (
     sel_first_0 : out STD_LOGIC;
     sel_first : out STD_LOGIC;
@@ -13404,10 +13400,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_aw_channel is
     D : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_aw_channel : entity is "axi_protocol_converter_v2_1_28_b2s_aw_channel";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_aw_channel;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_aw_channel : entity is "axi_protocol_converter_v2_1_31_b2s_aw_channel";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_aw_channel;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_aw_channel is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_aw_channel is
   signal \^fsm_sequential_state_reg[0]\ : STD_LOGIC;
   signal \^q\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal aw_cmd_fsm_0_n_10 : STD_LOGIC;
@@ -13454,7 +13450,7 @@ begin
   Q(1 downto 0) <= \^q\(1 downto 0);
   sel_first <= \^sel_first\;
   sel_first_0 <= \^sel_first_0\;
-aw_cmd_fsm_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_wr_cmd_fsm
+aw_cmd_fsm_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm
      port map (
       D(3 downto 2) => wrap_cnt(3 downto 2),
       D(1) => aw_cmd_fsm_0_n_2,
@@ -13517,7 +13513,7 @@ aw_cmd_fsm_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_w
       \wrap_second_len_r_reg[3]_0\(3 downto 0) => \wrap_cmd_0/wrap_second_len_r\(3 downto 0),
       \wrap_second_len_r_reg[3]_1\ => \wrap_second_len_r_reg[3]\
     );
-cmd_translator_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_cmd_translator
+cmd_translator_0: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator
      port map (
       D(3 downto 0) => \wrap_cmd_0/axaddr_offset\(3 downto 0),
       E(0) => aw_cmd_fsm_0_n_22,
@@ -13706,7 +13702,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s is
   port (
     s_axi_rvalid : out STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
@@ -13748,10 +13744,10 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s is
     aresetn : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s : entity is "axi_protocol_converter_v2_1_28_b2s";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s;
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s : entity is "axi_protocol_converter_v2_1_31_b2s";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s is
   signal \RD.ar_channel_0_n_1\ : STD_LOGIC;
   signal \RD.ar_channel_0_n_10\ : STD_LOGIC;
   signal \RD.ar_channel_0_n_11\ : STD_LOGIC;
@@ -13907,7 +13903,7 @@ architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s i
   signal si_rs_rresp : STD_LOGIC_VECTOR ( 1 downto 0 );
 begin
   s_axi_arready <= \^s_axi_arready\;
-\RD.ar_channel_0\: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_ar_channel
+\RD.ar_channel_0\: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_ar_channel
      port map (
       D(6) => SI_REG_n_176,
       D(5) => SI_REG_n_177,
@@ -13998,7 +13994,7 @@ begin
       si_rs_arvalid => si_rs_arvalid,
       \wrap_second_len_r_reg[3]\ => SI_REG_n_160
     );
-\RD.r_channel_0\: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_r_channel
+\RD.r_channel_0\: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_r_channel
      port map (
       D(11 downto 0) => s_arid_r(11 downto 0),
       aclk => aclk,
@@ -14017,7 +14013,7 @@ begin
       r_rlast => r_rlast,
       si_rs_rready => si_rs_rready
     );
-SI_REG: entity work.ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axi_register_slice
+SI_REG: entity work.ThreadX_auto_pc_0_axi_register_slice_v2_1_31_axi_register_slice
      port map (
       D(6) => SI_REG_n_165,
       D(5) => SI_REG_n_166,
@@ -14190,7 +14186,7 @@ SI_REG: entity work.ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axi_register_sl
       \skid_buffer_reg[46]\(0) => si_rs_rlast,
       \wrap_second_len_r_reg[3]\(1 downto 0) => \aw_cmd_fsm_0/state\(1 downto 0)
     );
-\WR.aw_channel_0\: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_aw_channel
+\WR.aw_channel_0\: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_aw_channel
      port map (
       D(6) => SI_REG_n_165,
       D(5) => SI_REG_n_166,
@@ -14253,7 +14249,7 @@ SI_REG: entity work.ThreadX_auto_pc_0_axi_register_slice_v2_1_28_axi_register_sl
       si_rs_awvalid => si_rs_awvalid,
       \wrap_second_len_r_reg[3]\ => SI_REG_n_157
     );
-\WR.b_channel_0\: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s_b_channel
+\WR.b_channel_0\: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_b_channel
      port map (
       aclk => aclk,
       areset_d1 => areset_d1,
@@ -14294,7 +14290,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter is
+entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -14390,62 +14386,62 @@ entity ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter i
     m_axi_rready : out STD_LOGIC
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 32;
   attribute C_AXI_ARUSER_WIDTH : integer;
-  attribute C_AXI_ARUSER_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 1;
+  attribute C_AXI_ARUSER_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
-  attribute C_AXI_AWUSER_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 1;
+  attribute C_AXI_AWUSER_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 1;
   attribute C_AXI_BUSER_WIDTH : integer;
-  attribute C_AXI_BUSER_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 1;
+  attribute C_AXI_BUSER_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 32;
+  attribute C_AXI_DATA_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 32;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 12;
+  attribute C_AXI_ID_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 12;
   attribute C_AXI_RUSER_WIDTH : integer;
-  attribute C_AXI_RUSER_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 1;
+  attribute C_AXI_RUSER_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 1;
   attribute C_AXI_SUPPORTS_READ : integer;
-  attribute C_AXI_SUPPORTS_READ of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 1;
+  attribute C_AXI_SUPPORTS_READ of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 1;
   attribute C_AXI_SUPPORTS_USER_SIGNALS : integer;
-  attribute C_AXI_SUPPORTS_USER_SIGNALS of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 0;
+  attribute C_AXI_SUPPORTS_USER_SIGNALS of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 0;
   attribute C_AXI_SUPPORTS_WRITE : integer;
-  attribute C_AXI_SUPPORTS_WRITE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 1;
+  attribute C_AXI_SUPPORTS_WRITE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 1;
   attribute C_AXI_WUSER_WIDTH : integer;
-  attribute C_AXI_WUSER_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 1;
+  attribute C_AXI_WUSER_WIDTH of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 1;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is "zynq";
+  attribute C_FAMILY of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is "zynq";
   attribute C_IGNORE_ID : integer;
-  attribute C_IGNORE_ID of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 0;
+  attribute C_IGNORE_ID of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 0;
   attribute C_M_AXI_PROTOCOL : integer;
-  attribute C_M_AXI_PROTOCOL of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 2;
+  attribute C_M_AXI_PROTOCOL of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 2;
   attribute C_S_AXI_PROTOCOL : integer;
-  attribute C_S_AXI_PROTOCOL of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 1;
+  attribute C_S_AXI_PROTOCOL of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 1;
   attribute C_TRANSLATION_MODE : integer;
-  attribute C_TRANSLATION_MODE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 2;
+  attribute C_TRANSLATION_MODE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is "yes";
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_28_axi_protocol_converter";
+  attribute ORIG_REF_NAME of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_31_axi_protocol_converter";
   attribute P_AXI3 : integer;
-  attribute P_AXI3 of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 1;
+  attribute P_AXI3 of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 1;
   attribute P_AXI4 : integer;
-  attribute P_AXI4 of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 0;
+  attribute P_AXI4 of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 0;
   attribute P_AXILITE : integer;
-  attribute P_AXILITE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 2;
+  attribute P_AXILITE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 2;
   attribute P_AXILITE_SIZE : string;
-  attribute P_AXILITE_SIZE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is "3'b010";
+  attribute P_AXILITE_SIZE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is "3'b010";
   attribute P_CONVERSION : integer;
-  attribute P_CONVERSION of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 2;
+  attribute P_CONVERSION of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 2;
   attribute P_DECERR : string;
-  attribute P_DECERR of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is "2'b11";
+  attribute P_DECERR of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is "2'b11";
   attribute P_INCR : string;
-  attribute P_INCR of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is "2'b01";
+  attribute P_INCR of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is "2'b01";
   attribute P_PROTECTION : integer;
-  attribute P_PROTECTION of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is 1;
+  attribute P_PROTECTION of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 1;
   attribute P_SLVERR : string;
-  attribute P_SLVERR of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter : entity is "2'b10";
-end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter;
+  attribute P_SLVERR of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is "2'b10";
+end ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter;
 
-architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter is
+architecture STRUCTURE of ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter is
   signal \<const0>\ : STD_LOGIC;
   signal \^m_axi_wready\ : STD_LOGIC;
   signal \^s_axi_wdata\ : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -14558,7 +14554,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\gen_axilite.gen_b2s_conv.axilite_b2s\: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_b2s
+\gen_axilite.gen_b2s_conv.axilite_b2s\: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_b2s
      port map (
       Q(22 downto 20) => m_axi_awprot(2 downto 0),
       Q(19 downto 0) => m_axi_awaddr(31 downto 12),
@@ -14676,11 +14672,11 @@ entity ThreadX_auto_pc_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of ThreadX_auto_pc_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of ThreadX_auto_pc_0 : entity is "ThreadX_auto_pc_0,axi_protocol_converter_v2_1_28_axi_protocol_converter,{}";
+  attribute CHECK_LICENSE_TYPE of ThreadX_auto_pc_0 : entity is "ThreadX_auto_pc_0,axi_protocol_converter_v2_1_31_axi_protocol_converter,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of ThreadX_auto_pc_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of ThreadX_auto_pc_0 : entity is "axi_protocol_converter_v2_1_28_axi_protocol_converter,Vivado 2023.1";
+  attribute X_CORE_INFO of ThreadX_auto_pc_0 : entity is "axi_protocol_converter_v2_1_31_axi_protocol_converter,Vivado 2024.1";
 end ThreadX_auto_pc_0;
 
 architecture STRUCTURE of ThreadX_auto_pc_0 is
@@ -14761,7 +14757,7 @@ architecture STRUCTURE of ThreadX_auto_pc_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of aclk : signal is "xilinx.com:signal:clock:1.0 CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN ThreadX_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN ThreadX_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 RST RST";
   attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of m_axi_arready : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARREADY";
@@ -14824,7 +14820,7 @@ architecture STRUCTURE of ThreadX_auto_pc_0 is
   attribute X_INTERFACE_INFO of s_axi_wid : signal is "xilinx.com:interface:aximm:1.0 S_AXI WID";
   attribute X_INTERFACE_INFO of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S_AXI WSTRB";
 begin
-inst: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_28_axi_protocol_converter
+inst: entity work.ThreadX_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter
      port map (
       aclk => aclk,
       aresetn => aresetn,
