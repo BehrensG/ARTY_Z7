@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.1
-| Date         : Fri Aug 23 02:21:40 2024
+| Date         : Sun Aug 25 17:53:00 2024
 | Host         : archlinux
 | Design       : design_1
 | Device       : xc7z010-clg400-1--

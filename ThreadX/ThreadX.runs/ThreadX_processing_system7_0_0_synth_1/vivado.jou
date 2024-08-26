@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Fri Aug 23 02:17:45 2024
-# Process ID: 183167
+# Start of session at: Sun Aug 25 17:49:53 2024
+# Process ID: 16551
 # Current directory: /home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.runs/ThreadX_processing_system7_0_0_synth_1
 # Command line: vivado -log ThreadX_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ThreadX_processing_system7_0_0.tcl
 # Log file: /home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.runs/ThreadX_processing_system7_0_0_synth_1/ThreadX_processing_system7_0_0.vds
@@ -13,12 +13,12 @@
 # Platform          :unknown
 # Operating System  :unknown
 # Processor Detail  :Intel(R) Core(TM) i7-3630QM CPU @ 2.40GHz
-# CPU Frequency     :3192.853 MHz
+# CPU Frequency     :3226.442 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :16373 MB
 # Swap memory       :34359 MB
 # Total Virtual     :50732 MB
-# Available Virtual :45982 MB
+# Available Virtual :46109 MB
 #-----------------------------------------------------------
 source ThreadX_processing_system7_0_0.tcl -notrace

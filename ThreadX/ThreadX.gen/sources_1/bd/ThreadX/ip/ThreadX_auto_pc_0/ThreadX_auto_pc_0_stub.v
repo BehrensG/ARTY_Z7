@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
 // Date        : Fri Aug 23 02:19:06 2024
 // Host        : archlinux running 64-bit unknown
-// Command     : write_verilog -force -mode synth_stub
-//               /home/grzegorz/git/ARTY_Z7/ThreadX/ThreadX.gen/sources_1/bd/ThreadX/ip/ThreadX_auto_pc_0/ThreadX_auto_pc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top ThreadX_auto_pc_0 -prefix
+//               ThreadX_auto_pc_0_ ThreadX_auto_pc_0_stub.v
 // Design      : ThreadX_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

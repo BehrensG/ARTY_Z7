@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Fri Aug 23 02:17:18 2024
+--Date        : Sun Aug 25 17:49:21 2024
 --Host        : archlinux running 64-bit unknown
 --Command     : generate_target ThreadX_wrapper.bd
 --Design      : ThreadX_wrapper

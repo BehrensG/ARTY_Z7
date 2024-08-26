@@ -5957,7 +5957,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "12f7c2af-009d-4691-a0ac-459829a739bf")
-		(property "Reference" "J405"
+		(property "Reference" "J402"
 			(at 161.29 114.2999 0)
 			(effects
 				(font
@@ -6026,7 +6026,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "J405")
+					(reference "J402")
 					(unit 1)
 				)
 			)
