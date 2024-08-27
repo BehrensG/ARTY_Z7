@@ -4223,6 +4223,12 @@
 		(uuid "6892c7c6-8b45-4709-934f-8dc40676b5d7")
 	)
 	(junction
+		(at 31.75 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6de9c9b0-ca72-49a7-a617-b054ec148687")
+	)
+	(junction
 		(at 224.79 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4641,6 +4647,16 @@
 			(type default)
 		)
 		(uuid "1dc56ec8-cfee-4d21-8762-7d416a20f688")
+	)
+	(wire
+		(pts
+			(xy 31.75 45.72) (xy 31.75 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e141d9a-6ccc-431b-b4d2-0fa298be52a1")
 	)
 	(wire
 		(pts
@@ -6442,7 +6458,7 @@
 				)
 			)
 		)
-		(property "Value" "XFL4020-472MEC"
+		(property "Value" "1239AS-H-4R7M"
 			(at 52.07 133.35 90)
 			(effects
 				(font
@@ -6450,7 +6466,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Coilcraft_XxL4020"
+		(property "Footprint" "Inductor_SMD:L_1008_2520Metric_Pad1.43x2.20mm_HandSolder"
 			(at 52.07 135.89 0)
 			(effects
 				(font
@@ -7635,7 +7651,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47u/25V"
+		(property "Value" "2u2"
 			(at 224.79 33.0199 0)
 			(effects
 				(font
@@ -7644,7 +7660,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 221.9452 35.56 0)
 			(effects
 				(font
@@ -7749,6 +7765,71 @@
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/f42c105e-3e32-408a-b35b-b6040745c080"
 					(reference "L503")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDS")
+		(at 31.75 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "37a94050-0f52-4175-81cb-08f9aed60b6e")
+		(property "Reference" "#PWR0531"
+			(at 31.75 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDS"
+			(at 31.75 51.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 31.75 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDS\" , signal ground"
+			(at 31.75 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0d335177-a0f4-4781-a87f-f49654252bd9")
+		)
+		(instances
+			(project "AD4030-Voltage"
+				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/f42c105e-3e32-408a-b35b-b6040745c080"
+					(reference "#PWR0531")
 					(unit 1)
 				)
 			)
@@ -7894,7 +7975,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4b3153a3-4826-4dfa-bf1b-8b7d2d73314e")
-		(property "Reference" "C517"
+		(property "Reference" "C516"
 			(at 238.76 147.32 0)
 			(effects
 				(font
@@ -7948,7 +8029,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/f42c105e-3e32-408a-b35b-b6040745c080"
-					(reference "C517")
+					(reference "C516")
 					(unit 1)
 				)
 			)
@@ -8232,7 +8313,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b282352-f773-42eb-9290-c816d4889fed")
-		(property "Reference" "#PWR0527"
+		(property "Reference" "#PWR0526"
 			(at 236.22 146.05 0)
 			(effects
 				(font
@@ -8282,7 +8363,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/f42c105e-3e32-408a-b35b-b6040745c080"
-					(reference "#PWR0527")
+					(reference "#PWR0526")
 					(unit 1)
 				)
 			)
@@ -8507,7 +8588,7 @@
 				)
 			)
 		)
-		(property "Value" "BLM31PG330SN1L"
+		(property "Value" "FBMJ2125HM330-T"
 			(at 198.0819 63.5 90)
 			(effects
 				(font
@@ -8515,7 +8596,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder"
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 198.12 69.088 90)
 			(effects
 				(font
@@ -8836,7 +8917,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6e03bba6-7e3c-4be7-831b-5e8b8fdb6756")
-		(property "Reference" "U508"
+		(property "Reference" "U507"
 			(at 224.79 135.89 0)
 			(effects
 				(font
@@ -8893,7 +8974,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/f42c105e-3e32-408a-b35b-b6040745c080"
-					(reference "U508")
+					(reference "U507")
 					(unit 1)
 				)
 			)
@@ -9018,7 +9099,7 @@
 				)
 			)
 		)
-		(property "Value" "BLM31PG330SN1L"
+		(property "Value" "FBMJ2125HM330-T"
 			(at 198.0819 101.6 90)
 			(effects
 				(font
@@ -9026,7 +9107,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder"
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 198.12 107.188 90)
 			(effects
 				(font
@@ -10103,7 +10184,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9a8433c4-e8c4-434a-b677-c88547fc633c")
-		(property "Reference" "#PWR0526"
+		(property "Reference" "#PWR0527"
 			(at 237.49 25.4 0)
 			(effects
 				(font
@@ -10153,7 +10234,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/f42c105e-3e32-408a-b35b-b6040745c080"
-					(reference "#PWR0526")
+					(reference "#PWR0527")
 					(unit 1)
 				)
 			)
@@ -11536,7 +11617,7 @@
 				)
 			)
 		)
-		(property "Value" "XFL4020-472MEC"
+		(property "Value" "1239AS-H-4R7M"
 			(at 130.81 127 90)
 			(effects
 				(font
@@ -11544,7 +11625,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Coilcraft_XxL4020"
+		(property "Footprint" "Inductor_SMD:L_1008_2520Metric_Pad1.43x2.20mm_HandSolder"
 			(at 130.81 129.54 0)
 			(effects
 				(font
@@ -11596,7 +11677,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d77dc1ca-59d1-46a0-ab71-39515c22a27e")
-		(property "Reference" "C516"
+		(property "Reference" "C517"
 			(at 241.3 30.4799 0)
 			(effects
 				(font
@@ -11650,7 +11731,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/f42c105e-3e32-408a-b35b-b6040745c080"
-					(reference "C516")
+					(reference "C517")
 					(unit 1)
 				)
 			)
@@ -11674,7 +11755,7 @@
 				)
 			)
 		)
-		(property "Value" "XFL4020-472MEC"
+		(property "Value" "1239AS-H-4R7M"
 			(at 129.54 152.4 90)
 			(effects
 				(font
@@ -11682,7 +11763,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Coilcraft_XxL4020"
+		(property "Footprint" "Inductor_SMD:L_1008_2520Metric_Pad1.43x2.20mm_HandSolder"
 			(at 129.54 149.86 0)
 			(effects
 				(font
@@ -11742,7 +11823,7 @@
 				)
 			)
 		)
-		(property "Value" "XFL4020-472MEC"
+		(property "Value" "1239AS-H-4R7M"
 			(at 96.52 146.05 90)
 			(effects
 				(font
@@ -11750,7 +11831,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Coilcraft_XxL4020"
+		(property "Footprint" "Inductor_SMD:L_1008_2520Metric_Pad1.43x2.20mm_HandSolder"
 			(at 96.52 148.59 0)
 			(effects
 				(font

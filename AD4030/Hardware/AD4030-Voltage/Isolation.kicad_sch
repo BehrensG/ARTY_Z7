@@ -722,7 +722,7 @@
 				)
 			)
 		)
-		(symbol "Connector_Generic:Conn_02x06_Top_Bottom"
+		(symbol "Connector_Generic:Conn_02x06_Odd_Even"
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
@@ -736,7 +736,7 @@
 					)
 				)
 			)
-			(property "Value" "Conn_02x06_Top_Bottom"
+			(property "Value" "Conn_02x06_Odd_Even"
 				(at 1.27 -10.16 0)
 				(effects
 					(font
@@ -762,7 +762,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, double row, 02x06, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -789,7 +789,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_02x06_Top_Bottom_1_1"
+			(symbol "Conn_02x06_Odd_Even_1_1"
 				(rectangle
 					(start -1.27 -7.493)
 					(end 0 -7.747)
@@ -952,7 +952,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 -2.54 180)
+					(at 7.62 -5.08 180)
 					(length 3.81)
 					(name "Pin_10"
 						(effects
@@ -970,7 +970,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 -5.08 180)
+					(at -5.08 -7.62 0)
 					(length 3.81)
 					(name "Pin_11"
 						(effects
@@ -1006,7 +1006,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at 7.62 5.08 180)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -1024,7 +1024,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 2.54 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -1042,7 +1042,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at 7.62 2.54 180)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -1060,7 +1060,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -5.08 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -1078,7 +1078,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -7.62 0)
+					(at 7.62 0 180)
 					(length 3.81)
 					(name "Pin_6"
 						(effects
@@ -1096,7 +1096,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 5.08 180)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_7"
 						(effects
@@ -1114,7 +1114,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 2.54 180)
+					(at 7.62 -2.54 180)
 					(length 3.81)
 					(name "Pin_8"
 						(effects
@@ -1132,7 +1132,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 0 180)
+					(at -5.08 -5.08 0)
 					(length 3.81)
 					(name "Pin_9"
 						(effects
@@ -7121,6 +7121,104 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_02x06_Odd_Even")
+		(at 227.33 93.98 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8619306e-f524-4d0a-bd23-c1660e011a02")
+		(property "Reference" "J404"
+			(at 226.06 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PMOD"
+			(at 226.06 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Horizontal"
+			(at 227.33 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 227.33 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 227.33 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "61e3451a-fd88-469e-80f7-0422dd34bc32")
+		)
+		(pin "6"
+			(uuid "5833eb7b-9b00-4d8c-ac4c-6c1685ca0a8b")
+		)
+		(pin "5"
+			(uuid "072d4230-e492-4d73-b6e2-fd88170ca970")
+		)
+		(pin "9"
+			(uuid "f3618729-0211-41b8-9eac-bfd1f651f41b")
+		)
+		(pin "10"
+			(uuid "ed3ab430-3c53-42ae-aeaa-ad851287e865")
+		)
+		(pin "1"
+			(uuid "a6eb6f0e-5423-4612-8c21-207d98b5d314")
+		)
+		(pin "11"
+			(uuid "9193b295-88dd-4c8b-9e1f-eed6d82a25a2")
+		)
+		(pin "7"
+			(uuid "3ff9a5ea-b2ab-4e59-9dee-1e208e5e8699")
+		)
+		(pin "2"
+			(uuid "b34a435f-3af2-419c-a70b-a96bd3cc9f6a")
+		)
+		(pin "12"
+			(uuid "e8a25784-d127-48cf-8d28-7289b5d150ec")
+		)
+		(pin "8"
+			(uuid "b5a3bf75-0189-4ecc-844b-07f401fe6d11")
+		)
+		(pin "3"
+			(uuid "542d5cb7-feb3-4b90-8d45-be4ec5825a49")
+		)
+		(instances
+			(project "AD4030-Voltage"
+				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
+					(reference "J404")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "AD4030:VIO")
 		(at 50.8 176.53 0)
 		(unit 1)
@@ -7248,104 +7346,6 @@
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
 					(reference "#PWR0418")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x06_Top_Bottom")
-		(at 224.79 68.58 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "93205d86-47e3-436e-855d-45da56726276")
-		(property "Reference" "J403"
-			(at 225.806 55.118 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PMOD"
-			(at 226.06 57.404 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Horizontal"
-			(at 224.79 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 224.79 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, double row, 02x06, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 224.79 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "0a505dc0-0ed0-4f2a-add5-6dc6968bae3a")
-		)
-		(pin "7"
-			(uuid "94d962ce-08be-4495-b933-1d64a672b1aa")
-		)
-		(pin "9"
-			(uuid "7808a164-1636-4fb5-b32a-95eb5462958e")
-		)
-		(pin "8"
-			(uuid "c52bf326-fa63-4dfb-bb2e-f28077f82d04")
-		)
-		(pin "4"
-			(uuid "c79a13e3-0a30-4726-b654-1b855e64e2a3")
-		)
-		(pin "5"
-			(uuid "51a9d048-498e-4de7-9b76-210547c97c69")
-		)
-		(pin "3"
-			(uuid "0a3b17a3-802e-47c5-8edd-a107d38d024f")
-		)
-		(pin "6"
-			(uuid "70404ad4-3429-4c42-af7e-f9d85f75efbb")
-		)
-		(pin "11"
-			(uuid "b1c28995-8305-47c8-b5e7-333476551256")
-		)
-		(pin "1"
-			(uuid "d595e798-61e0-46c0-ba87-216e574f7c20")
-		)
-		(pin "10"
-			(uuid "80706fa5-567d-4282-b409-e7cabc4fab10")
-		)
-		(pin "12"
-			(uuid "ffd33d0a-9419-4017-9444-0effb6c732f5")
-		)
-		(instances
-			(project ""
-				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "J403")
 					(unit 1)
 				)
 			)
@@ -7546,6 +7546,104 @@
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
 					(reference "#PWR0420")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x06_Odd_Even")
+		(at 227.33 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a18dcab3-7cba-4f50-9996-953a0c1ddf43")
+		(property "Reference" "J403"
+			(at 226.06 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PMOD"
+			(at 226.06 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Horizontal"
+			(at 227.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 227.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 227.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "2e8345a2-40ee-44ea-bd1e-d551c808da55")
+		)
+		(pin "6"
+			(uuid "d50361b4-fba6-4546-b011-9d86a6bf0048")
+		)
+		(pin "5"
+			(uuid "c2058e02-cbbd-46bb-af32-522bbb11b9d4")
+		)
+		(pin "9"
+			(uuid "c2dc4355-6886-43e9-9b35-a876f76a94ab")
+		)
+		(pin "10"
+			(uuid "bcad6e58-4e62-4413-b63d-bba85ceb8d54")
+		)
+		(pin "1"
+			(uuid "ba26ccfb-1bdb-4d06-a803-5b1ac35b294d")
+		)
+		(pin "11"
+			(uuid "62bf54cc-d878-4a99-bea2-1cff3cc8a098")
+		)
+		(pin "7"
+			(uuid "36a2f55c-e08a-40b4-a83b-c3a96c168b39")
+		)
+		(pin "2"
+			(uuid "246d650a-5bcc-4f4c-bccd-58e203f10b6f")
+		)
+		(pin "12"
+			(uuid "c88c3816-e784-480b-9b89-e3bdd653bdbb")
+		)
+		(pin "8"
+			(uuid "11c73db9-ebc3-4278-b2d0-a02975c75911")
+		)
+		(pin "3"
+			(uuid "20ba4047-4ccd-4b70-aead-8b9ae4120bf1")
+		)
+		(instances
+			(project ""
+				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
+					(reference "J403")
 					(unit 1)
 				)
 			)
@@ -8523,104 +8621,6 @@
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
 					(reference "J401")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x06_Top_Bottom")
-		(at 224.79 93.98 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f026e337-cd28-42d6-aaa8-4caa9169c717")
-		(property "Reference" "J404"
-			(at 226.06 81.534 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PMOD"
-			(at 226.06 83.566 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Horizontal"
-			(at 224.79 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 224.79 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, double row, 02x06, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 224.79 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f9037f91-07bb-4ef5-99fd-e47442075a59")
-		)
-		(pin "7"
-			(uuid "26347364-caf2-4858-b922-b14394f54a99")
-		)
-		(pin "9"
-			(uuid "ebb9d220-3658-49b9-8fa1-1bf54c03e53a")
-		)
-		(pin "8"
-			(uuid "073342af-27e8-43d5-bfa9-21778cb4e672")
-		)
-		(pin "4"
-			(uuid "4569cf20-c6e8-4305-9b55-5848b354302c")
-		)
-		(pin "5"
-			(uuid "e35e798f-2037-4af2-b18a-849ebcd7a94f")
-		)
-		(pin "3"
-			(uuid "a248ceae-cf49-4676-aa43-8e636059dc8e")
-		)
-		(pin "6"
-			(uuid "6da29277-edf6-4eac-b43e-571d7ca28fbc")
-		)
-		(pin "11"
-			(uuid "4d605600-4943-47ff-9b9d-d40c16b9b12a")
-		)
-		(pin "1"
-			(uuid "00359a88-a4e1-410d-a65e-2ec45f7050bd")
-		)
-		(pin "10"
-			(uuid "e8ec0003-4852-430e-882d-b03df1d09172")
-		)
-		(pin "12"
-			(uuid "19795a80-e6a1-4a1e-aeb7-db4df8b7090c")
-		)
-		(instances
-			(project "AD4030-Voltage"
-				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/c043c7b2-3c43-41f1-9746-1c7b8c419471"
-					(reference "J404")
 					(unit 1)
 				)
 			)
