@@ -6619,7 +6619,7 @@
 	(footprint "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "25f092c8-5f9a-4d40-b340-6edad252ab38")
-		(at 316.1085 -18.485)
+		(at 179.578 99.568)
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R404"
@@ -6832,11 +6832,11 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "2736be87-8755-49e7-8e64-bed65f95bc96")
-		(at 139.565 79.248 180)
+		(at 139.057 79.248 180)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C504"
-			(at 0 -1.85 360)
+			(at 0 -1.85 0)
 			(layer "F.SilkS")
 			(uuid "ff68ba57-9831-427e-989a-34c177b84cf5")
 			(effects
@@ -6847,7 +6847,7 @@
 			)
 		)
 		(property "Value" "10u/25V"
-			(at 0 1.85 360)
+			(at 0 1.85 0)
 			(layer "F.Fab")
 			(uuid "2d1efac5-5cf1-4bdf-a1b5-3ccda9c317df")
 			(effects
@@ -7002,7 +7002,7 @@
 			(uuid "622bce4e-a099-41a8-b3c8-f4c6dc0143f0")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "312cbdc5-7bf9-4dfc-950a-21fcfba6ca69")
 			(effects
@@ -17698,11 +17698,11 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "631fe894-1f6b-48b7-b856-d06507a851d8")
-		(at 139.819 72.009 180)
+		(at 139.311 72.009 180)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C505"
-			(at 0 -1.85 360)
+			(at 0 -1.85 0)
 			(layer "F.SilkS")
 			(uuid "252eb41d-cfd1-4f0a-8a39-5db5f9950855")
 			(effects
@@ -17713,7 +17713,7 @@
 			)
 		)
 		(property "Value" "10u/25V"
-			(at 0 1.85 360)
+			(at 0 1.85 0)
 			(layer "F.Fab")
 			(uuid "e6ad9530-66ff-4a8f-9450-09d67314734e")
 			(effects
@@ -17868,7 +17868,7 @@
 			(uuid "63ad3c9d-7cad-4ed0-a3e6-9fe9f16fd35b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "56f89fca-d918-42a3-8316-8703056d2525")
 			(effects
@@ -19914,7 +19914,7 @@
 		(descr "DE/UE Package; 12-Lead Plastic DFN (4mm x 3mm) (see Linear Technology DFN_12_05-08-1695.pdf)")
 		(tags "DFN 0.5")
 		(property "Reference" "U504"
-			(at 0 -3.05 360)
+			(at 0 -3.05 0)
 			(layer "F.SilkS")
 			(uuid "e28c91c7-a274-4f97-b168-8f40502b7805")
 			(effects
@@ -19925,7 +19925,7 @@
 			)
 		)
 		(property "Value" "LT1763CDE-ADJ"
-			(at 0 3.05 360)
+			(at 0 3.05 0)
 			(layer "F.Fab")
 			(uuid "924ba717-d843-438d-98b5-8a0bf971061f")
 			(effects
@@ -20831,7 +20831,7 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "6d801ab7-5ff6-4103-bdd1-9061339b25bd")
-		(at 120.777 69.85 -90)
+		(at 118.872 65.024 -90)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C514"
@@ -21470,7 +21470,7 @@
 	(footprint "Capacitor_Tantalum_SMD:CP_EIA-7343-43_Kemet-X_Pad2.25x2.55mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "78e226fe-8eb8-41ff-907a-02a753a4d424")
-		(at 150.622 75.692 -90)
+		(at 150.114 75.692 -90)
 		(descr "Tantalum Capacitor SMD Kemet-X (7343-43 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor tantalum")
 		(property "Reference" "C508"
@@ -21916,7 +21916,7 @@
 	(footprint "Capacitor_Tantalum_SMD:CP_EIA-7343-43_Kemet-X_Pad2.25x2.55mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "7908e019-688a-4f68-a0cf-0470004b4dbf")
-		(at 129.032 75.565 90)
+		(at 128.524 75.565 90)
 		(descr "Tantalum Capacitor SMD Kemet-X (7343-43 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor tantalum")
 		(property "Reference" "C509"
@@ -24983,11 +24983,11 @@
 	(footprint "Package_SON:WSON-12-1EP_3x3mm_P0.5mm_EP1.5x2.5mm_ThermalVias"
 		(layer "F.Cu")
 		(uuid "8cf4b6c4-6199-4a3b-917e-2cefb1d472eb")
-		(at 139.573 75.819 180)
+		(at 139.065 75.819 180)
 		(descr "WSON, 12 Pin (https://www.ti.com/lit/ds/symlink/tps63710.pdf#page=33), generated with kicad-footprint-generator ipc_noLead_generator.py")
 		(tags "WSON NoLead")
 		(property "Reference" "U501"
-			(at 0 -2.45 360)
+			(at 0 -2.45 0)
 			(layer "F.SilkS")
 			(uuid "98f5b6d1-95e6-46e0-a4ce-97794cca3bca")
 			(effects
@@ -24998,7 +24998,7 @@
 			)
 		)
 		(property "Value" "TPS65133DPDR"
-			(at 0 2.45 360)
+			(at 0 2.45 0)
 			(layer "F.Fab")
 			(uuid "3e2553b3-97d8-41c8-8207-098bf38e5194")
 			(effects
@@ -25009,7 +25009,7 @@
 			)
 		)
 		(property "Footprint" "Package_SON:WSON-12-1EP_3x3mm_P0.5mm_EP1.5x2.5mm_ThermalVias"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0f9e09a7-b4bf-4816-9ea0-16fc445cb5a4")
@@ -25021,7 +25021,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps65133.pdf?ts=1724434561817&ref_url=https%253A%252F%252Fwww.google.com%252F"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "87eaadd5-004f-48d5-8582-3b0e1535487b")
@@ -25033,7 +25033,7 @@
 			)
 		)
 		(property "Description" "TPS65133 ±5-V, 250-mA Dual-Output Power Supply"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "78bd9f63-944c-414e-8a81-d07f83ba1750")
@@ -25171,7 +25171,7 @@
 			(uuid "6d74ad64-d781-4e12-86e1-ae45520efe94")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "43a955ef-67c0-41d3-a893-3cfac863ee67")
 			(effects
@@ -25442,7 +25442,7 @@
 		(descr "DCDC-Converter, TRACO, TSR 1-xxxx")
 		(tags "DCDC-Converter TRACO TSR-1")
 		(property "Reference" "U508"
-			(at -1.5 -6.71 360)
+			(at -1.5 -6.71 0)
 			(layer "F.SilkS")
 			(uuid "e42d0665-a2bc-48d3-8fd8-32fdaf0123a0")
 			(effects
@@ -25453,7 +25453,7 @@
 			)
 		)
 		(property "Value" "TSR_1-2450"
-			(at 2.5 3.25 360)
+			(at 2.5 3.25 0)
 			(layer "F.Fab")
 			(uuid "4d756023-499c-42a4-8ed6-581ececb625a")
 			(effects
@@ -25658,7 +25658,7 @@
 			(uuid "269ba53a-af59-48ac-8b9f-2596b7f9bcca")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 3 -3 360)
+			(at 3 -3 0)
 			(layer "F.Fab")
 			(uuid "f7a397b1-32fa-4528-83dd-8bef38a4ff2a")
 			(effects
@@ -28541,7 +28541,7 @@
 		(descr "DE/UE Package; 12-Lead Plastic DFN (4mm x 3mm) (see Linear Technology DFN_12_05-08-1695.pdf)")
 		(tags "DFN 0.5")
 		(property "Reference" "U506"
-			(at 0 -3.05 360)
+			(at 0 -3.05 0)
 			(layer "F.SilkS")
 			(uuid "dc466767-389d-496b-9dfc-b0ca7192288a")
 			(effects
@@ -28552,7 +28552,7 @@
 			)
 		)
 		(property "Value" "LT1763IDE-3.3"
-			(at 0 3.05 360)
+			(at 0 3.05 0)
 			(layer "F.Fab")
 			(uuid "c583ae90-e194-4112-b3a7-233c6e679f5f")
 			(effects
@@ -31368,7 +31368,7 @@
 	(footprint "Inductor_SMD:L_Coilcraft_XxL4020"
 		(layer "F.Cu")
 		(uuid "b37ff222-c644-4379-9326-ddce48e1c732")
-		(at 133.985 78.105 -90)
+		(at 133.477 78.105 -90)
 		(descr "L_Coilcraft_XxL4020 https://www.coilcraft.com/pdfs/xfl4020.pdf")
 		(tags "L Coilcraft XxL4020")
 		(property "Reference" "L502"
@@ -37703,7 +37703,7 @@
 	(footprint "Inductor_SMD:L_Coilcraft_XxL4020"
 		(layer "F.Cu")
 		(uuid "d74a06e7-4258-4302-a0cd-f5d9ccebb079")
-		(at 133.985 73.152 90)
+		(at 133.477 73.152 90)
 		(descr "L_Coilcraft_XxL4020 https://www.coilcraft.com/pdfs/xfl4020.pdf")
 		(tags "L Coilcraft XxL4020")
 		(property "Reference" "L505"
@@ -39132,7 +39132,7 @@
 	(footprint "Inductor_SMD:L_Coilcraft_XxL4020"
 		(layer "F.Cu")
 		(uuid "e69d118f-0d6d-468b-9b86-777cd7dc04f2")
-		(at 145.542 73.279 90)
+		(at 145.034 73.279 90)
 		(descr "L_Coilcraft_XxL4020 https://www.coilcraft.com/pdfs/xfl4020.pdf")
 		(tags "L Coilcraft XxL4020")
 		(property "Reference" "L506"
@@ -43584,7 +43584,7 @@
 	(footprint "Inductor_SMD:L_Coilcraft_XxL4020"
 		(layer "F.Cu")
 		(uuid "fbd781c4-f45a-4b71-b865-16d8ba3b03a8")
-		(at 145.542 78.105 90)
+		(at 145.034 78.105 90)
 		(descr "L_Coilcraft_XxL4020 https://www.coilcraft.com/pdfs/xfl4020.pdf")
 		(tags "L Coilcraft XxL4020")
 		(property "Reference" "L501"
@@ -48071,7 +48071,7 @@
 	(footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 		(layer "B.Cu")
 		(uuid "d115410f-ccfc-4f27-b5ae-7cd166fc97b7")
-		(at 123.317 77.851 180)
+		(at 122.809 77.851 180)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C513"
