@@ -5258,7 +5258,7 @@
 		(uuid "363586aa-291e-4dfc-b32a-8f514ff6c4c7")
 	)
 	(label "CONN_SDO1"
-		(at 133.35 63.5 0)
+		(at 133.35 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5280,7 +5280,7 @@
 		(uuid "4366f2cd-0bd0-43bf-9321-57faea9d16d7")
 	)
 	(label "CONN_SDO3"
-		(at 133.35 68.58 0)
+		(at 133.35 71.12 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5335,7 +5335,7 @@
 		(uuid "7cb269b2-2bed-4a22-b458-9d8ca3b9748e")
 	)
 	(label "CONN_SDO0"
-		(at 133.35 60.96 0)
+		(at 133.35 63.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5401,7 +5401,7 @@
 		(uuid "b94001e5-ed28-4039-ab82-8ef0fd6c5658")
 	)
 	(label "CONN_SDO2"
-		(at 133.35 66.04 0)
+		(at 133.35 68.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5412,7 +5412,7 @@
 		(uuid "bcc7ba90-155a-491e-a8fc-b89756877f2c")
 	)
 	(label "CONN_BUSY"
-		(at 133.35 71.12 0)
+		(at 133.35 73.66 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5434,7 +5434,7 @@
 		(uuid "d1af2dee-56d3-4416-8778-e4e0f9e0dcd7")
 	)
 	(label "CONN_100MHz"
-		(at 133.35 73.66 0)
+		(at 133.35 60.96 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5480,7 +5480,7 @@
 	)
 	(hierarchical_label "CLK_100MHz"
 		(shape input)
-		(at 71.12 76.2 180)
+		(at 71.12 63.5 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5492,7 +5492,7 @@
 	)
 	(hierarchical_label "ADC_SDO0"
 		(shape input)
-		(at 71.12 63.5 180)
+		(at 71.12 66.04 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5528,7 +5528,7 @@
 	)
 	(hierarchical_label "ADC_SDO3"
 		(shape input)
-		(at 71.12 71.12 180)
+		(at 71.12 73.66 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5540,7 +5540,7 @@
 	)
 	(hierarchical_label "ADC_SDO1"
 		(shape input)
-		(at 71.12 66.04 180)
+		(at 71.12 68.58 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5552,7 +5552,7 @@
 	)
 	(hierarchical_label "ADC_SDO2"
 		(shape input)
-		(at 71.12 68.58 180)
+		(at 71.12 71.12 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5600,7 +5600,7 @@
 	)
 	(hierarchical_label "ADC_BUSY"
 		(shape input)
-		(at 71.12 73.66 180)
+		(at 71.12 76.2 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
