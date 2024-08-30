@@ -221,10 +221,6 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.46,
-          "drill": 0.2
-        },
-        {
           "diameter": 0.5,
           "drill": 0.2
         },
@@ -489,6 +485,23 @@
       },
       {
         "bus_width": 12,
+        "clearance": 0.508,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "+24V voltage",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.127,
+        "via_diameter": 0.5,
+        "via_drill": 0.2,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
         "clearance": 0.127,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -514,6 +527,26 @@
       {
         "netclass": "Low voltage",
         "pattern": "+1V8"
+      },
+      {
+        "netclass": "+24V voltage",
+        "pattern": "Net-(J501-Pin_1)"
+      },
+      {
+        "netclass": "+24V voltage",
+        "pattern": "Net-(Q501-D)"
+      },
+      {
+        "netclass": "+24V voltage",
+        "pattern": "Net-(D501-K)"
+      },
+      {
+        "netclass": "+24V voltage",
+        "pattern": "Net-(U502-Vin)"
+      },
+      {
+        "netclass": "+24V voltage",
+        "pattern": "Net-(U503-+VIN)"
       }
     ]
   },
