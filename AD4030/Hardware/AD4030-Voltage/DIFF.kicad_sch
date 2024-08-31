@@ -877,7 +877,7 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
+			(property "Reference" "RN"
 				(at 0 4.826 0)
 				(effects
 					(font
@@ -7304,7 +7304,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "12c472b0-f75d-4754-8768-d7c88229c284")
-		(property "Reference" "U205"
+		(property "Reference" "RN205"
 			(at 210.82 128.2699 90)
 			(effects
 				(font
@@ -7379,7 +7379,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U205")
+					(reference "RN205")
 					(unit 4)
 				)
 			)
@@ -7660,7 +7660,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "178d3576-6bde-4de5-b963-f657489c58b8")
-		(property "Reference" "U202"
+		(property "Reference" "RN202"
 			(at 99.06 81.2799 90)
 			(effects
 				(font
@@ -7735,7 +7735,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U202")
+					(reference "RN202")
 					(unit 1)
 				)
 			)
@@ -7823,7 +7823,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1daee0c9-6446-42ac-9380-5f78ae60194c")
-		(property "Reference" "U208"
+		(property "Reference" "RN208"
 			(at 322.58 105.41 0)
 			(effects
 				(font
@@ -7896,7 +7896,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U208")
+					(reference "RN208")
 					(unit 2)
 				)
 			)
@@ -7988,7 +7988,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "91"
+		(property "Value" "91/.1%"
 			(at 99.06 118.1099 0)
 			(effects
 				(font
@@ -8184,7 +8184,7 @@
 		(dnp no)
 		(uuid "2a239bd1-3da5-4c36-a5ee-501900ef522e")
 		(property "Reference" "K201"
-			(at 231.14 105.4101 0)
+			(at 231.14 103.124 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8193,7 +8193,7 @@
 			)
 		)
 		(property "Value" "UMS05-1A80-75D"
-			(at 231.14 102.8701 0)
+			(at 231.394 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8488,7 +8488,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "307b1f49-3b81-474f-bcc0-825eb5082ab0")
-		(property "Reference" "U209"
+		(property "Reference" "RN209"
 			(at 347.98 93.98 0)
 			(effects
 				(font
@@ -8561,7 +8561,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U209")
+					(reference "RN209")
 					(unit 2)
 				)
 			)
@@ -9113,7 +9113,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3ce2f944-0738-4627-8567-14fc64153457")
-		(property "Reference" "U202"
+		(property "Reference" "RN202"
 			(at 99.06 134.6199 90)
 			(effects
 				(font
@@ -9188,7 +9188,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U202")
+					(reference "RN202")
 					(unit 4)
 				)
 			)
@@ -9271,7 +9271,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3f46ef1c-2f46-4b1b-8717-8bec36157ded")
-		(property "Reference" "U202"
+		(property "Reference" "RN202"
 			(at 99.06 124.4599 90)
 			(effects
 				(font
@@ -9346,7 +9346,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U202")
+					(reference "RN202")
 					(unit 3)
 				)
 			)
@@ -10408,7 +10408,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "572f4329-3a12-4fb3-a4af-a67ae316e1d8")
-		(property "Reference" "U206"
+		(property "Reference" "RN206"
 			(at 231.14 73.66 0)
 			(effects
 				(font
@@ -10481,7 +10481,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U206")
+					(reference "RN206")
 					(unit 1)
 				)
 			)
@@ -11044,7 +11044,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64698937-f16e-4119-a1dd-dee6c22154d9")
-		(property "Reference" "U208"
+		(property "Reference" "RN208"
 			(at 322.58 93.98 0)
 			(effects
 				(font
@@ -11117,7 +11117,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U208")
+					(reference "RN208")
 					(unit 1)
 				)
 			)
@@ -11133,7 +11133,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64ffd216-ffd8-45e5-9c1e-2e57155ba43f")
-		(property "Reference" "U209"
+		(property "Reference" "RN209"
 			(at 347.98 133.35 0)
 			(effects
 				(font
@@ -11206,7 +11206,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U209")
+					(reference "RN209")
 					(unit 4)
 				)
 			)
@@ -11427,7 +11427,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6a9808c2-6f4c-4a53-bc32-1bf2b2220181")
-		(property "Reference" "U208"
+		(property "Reference" "RN208"
 			(at 322.58 133.35 0)
 			(effects
 				(font
@@ -11500,7 +11500,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U208")
+					(reference "RN208")
 					(unit 4)
 				)
 			)
@@ -11860,7 +11860,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7421b664-9feb-470e-9ffe-9e9717a8844b")
-		(property "Reference" "U202"
+		(property "Reference" "RN202"
 			(at 99.06 91.4399 90)
 			(effects
 				(font
@@ -11935,7 +11935,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U202")
+					(reference "RN202")
 					(unit 2)
 				)
 			)
@@ -12151,7 +12151,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "813027ba-1d89-4133-804e-67ac114f0ad7")
-		(property "Reference" "U205"
+		(property "Reference" "RN205"
 			(at 195.58 128.2699 90)
 			(effects
 				(font
@@ -12226,7 +12226,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U205")
+					(reference "RN205")
 					(unit 3)
 				)
 			)
@@ -12309,7 +12309,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "831a5093-0221-4f8b-9ed0-c49f498aa06b")
-		(property "Reference" "U202"
+		(property "Reference" "RN202"
 			(at 208.788 256.286 0)
 			(effects
 				(font
@@ -12384,7 +12384,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U202")
+					(reference "RN202")
 					(unit 5)
 				)
 			)
@@ -12612,7 +12612,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "91"
+		(property "Value" "91/.1%"
 			(at 99.06 102.8699 0)
 			(effects
 				(font
@@ -12673,7 +12673,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "89b7cf03-7bb2-4790-b9d6-9b0113daf040")
-		(property "Reference" "U209"
+		(property "Reference" "RN209"
 			(at 337.82 93.98 0)
 			(effects
 				(font
@@ -12746,7 +12746,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U209")
+					(reference "RN209")
 					(unit 1)
 				)
 			)
@@ -12828,7 +12828,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8cd462f2-ae67-4217-a565-14bf5564d087")
-		(property "Reference" "U207"
+		(property "Reference" "RN207"
 			(at 285.75 265.43 0)
 			(effects
 				(font
@@ -12901,7 +12901,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U207")
+					(reference "RN207")
 					(unit 3)
 				)
 			)
@@ -12917,7 +12917,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8de167f1-948d-4acb-b8f9-b390d1af64c0")
-		(property "Reference" "U208"
+		(property "Reference" "RN208"
 			(at 322.58 120.65 0)
 			(effects
 				(font
@@ -12990,7 +12990,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U208")
+					(reference "RN208")
 					(unit 3)
 				)
 			)
@@ -13339,7 +13339,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "93e1e97b-73e0-4d36-8013-1b29f5ae6a80")
-		(property "Reference" "U208"
+		(property "Reference" "RN208"
 			(at 254.762 256.286 0)
 			(effects
 				(font
@@ -13414,7 +13414,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U208")
+					(reference "RN208")
 					(unit 5)
 				)
 			)
@@ -13498,7 +13498,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9b6f864f-7b5f-4408-917b-dc02d5357df4")
-		(property "Reference" "U207"
+		(property "Reference" "RN207"
 			(at 273.05 82.55 0)
 			(effects
 				(font
@@ -13571,7 +13571,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U207")
+					(reference "RN207")
 					(unit 1)
 				)
 			)
@@ -13586,7 +13586,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9ca69323-f5e4-4c38-a242-9961e8ff0c2d")
-		(property "Reference" "U206"
+		(property "Reference" "RN206"
 			(at 220.218 256.286 0)
 			(effects
 				(font
@@ -13661,7 +13661,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U206")
+					(reference "RN206")
 					(unit 5)
 				)
 			)
@@ -13742,7 +13742,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a0928d08-6892-4a73-b069-e67894f8be3e")
-		(property "Reference" "U209"
+		(property "Reference" "RN209"
 			(at 265.938 256.286 0)
 			(effects
 				(font
@@ -13817,7 +13817,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U209")
+					(reference "RN209")
 					(unit 5)
 				)
 			)
@@ -14220,7 +14220,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aa13bbf6-2752-495e-9932-a704232520bd")
-		(property "Reference" "U207"
+		(property "Reference" "RN207"
 			(at 285.75 255.27 0)
 			(effects
 				(font
@@ -14293,7 +14293,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U207")
+					(reference "RN207")
 					(unit 2)
 				)
 			)
@@ -14509,7 +14509,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af9628ab-7067-4a71-86eb-cd2ffcddfda3")
-		(property "Reference" "U205"
+		(property "Reference" "RN205"
 			(at 195.58 87.6299 90)
 			(effects
 				(font
@@ -14584,7 +14584,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U205")
+					(reference "RN205")
 					(unit 1)
 				)
 			)
@@ -15147,7 +15147,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c56bdfc0-1542-4216-a249-38d722ade9ad")
-		(property "Reference" "U207"
+		(property "Reference" "RN207"
 			(at 273.05 132.08 0)
 			(effects
 				(font
@@ -15220,7 +15220,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U207")
+					(reference "RN207")
 					(unit 4)
 				)
 			)
@@ -15372,7 +15372,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c94ac2d0-9cb9-4d72-8202-f8c38c25bbe7")
-		(property "Reference" "U206"
+		(property "Reference" "RN206"
 			(at 231.14 82.55 0)
 			(effects
 				(font
@@ -15445,7 +15445,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U206")
+					(reference "RN206")
 					(unit 2)
 				)
 			)
@@ -15802,7 +15802,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cce08e99-c02e-4d4e-b8e2-b5a689afd0cb")
-		(property "Reference" "U206"
+		(property "Reference" "RN206"
 			(at 231.14 123.19 0)
 			(effects
 				(font
@@ -15875,7 +15875,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U206")
+					(reference "RN206")
 					(unit 3)
 				)
 			)
@@ -15891,7 +15891,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ce7ca2ec-d556-48ab-ba71-b176a5f5b761")
-		(property "Reference" "U205"
+		(property "Reference" "RN205"
 			(at 210.82 87.6299 90)
 			(effects
 				(font
@@ -15966,7 +15966,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U205")
+					(reference "RN205")
 					(unit 2)
 				)
 			)
@@ -16490,7 +16490,7 @@
 				)
 			)
 		)
-		(property "Value" "LMH6611"
+		(property "Value" "LMH6611MK"
 			(at 343.154 112.014 0)
 			(effects
 				(font
@@ -16769,7 +16769,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e2a26ec4-4a03-4bd7-aa79-f6082db7d75c")
-		(property "Reference" "U209"
+		(property "Reference" "RN209"
 			(at 337.82 133.35 0)
 			(effects
 				(font
@@ -16842,7 +16842,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U209")
+					(reference "RN209")
 					(unit 3)
 				)
 			)
@@ -17147,7 +17147,7 @@
 				)
 			)
 		)
-		(property "Value" "LMH6611"
+		(property "Value" "LMH6611MK"
 			(at 279.654 104.394 0)
 			(effects
 				(font
@@ -17352,7 +17352,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ee530df6-fed8-441a-b50a-08a7d0b44be1")
-		(property "Reference" "U207"
+		(property "Reference" "RN207"
 			(at 243.078 256.286 0)
 			(effects
 				(font
@@ -17427,7 +17427,7 @@
 		(instances
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U207")
+					(reference "RN207")
 					(unit 5)
 				)
 			)
@@ -17511,7 +17511,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f052e87a-3e35-4869-8bed-b1d9b971a23d")
-		(property "Reference" "U206"
+		(property "Reference" "RN206"
 			(at 231.14 132.08 0)
 			(effects
 				(font
@@ -17584,7 +17584,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U206")
+					(reference "RN206")
 					(unit 4)
 				)
 			)
@@ -17731,7 +17731,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fb04dbf5-f280-44a3-979b-e26cee8129bb")
-		(property "Reference" "U205"
+		(property "Reference" "RN205"
 			(at 231.648 256.286 0)
 			(effects
 				(font
@@ -17806,7 +17806,7 @@
 		(instances
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/3bc08f1b-cd51-4945-94b2-c6f7f3a0b515"
-					(reference "U205")
+					(reference "RN205")
 					(unit 5)
 				)
 			)
