@@ -2383,7 +2383,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at -0.762 13.716 0)
+			(at 11.43 6.858 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2392,7 +2392,7 @@
 			)
 		)
 		(property "Value" "ADG1436YCPZ"
-			(at -6.604 11.684 0)
+			(at 5.588 4.826 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2421,7 +2421,7 @@
 			)
 		)
 		(property "Description" "1.5 Ω On Resistance, ±15 V/12 V/±5 V, iCMOS, Dual SPDT Switch"
-			(at 1.016 -0.508 0)
+			(at 1.27 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)

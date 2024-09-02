@@ -344,7 +344,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Package_SON:WSON-12-1EP_3x3mm_P0.5mm_EP1.5x2.5mm_ThermalVias"
+			(property "Footprint" "AD4030:DPD12_TEX"
 				(at 0 0 0)
 				(effects
 					(font
@@ -11763,7 +11763,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SON:WSON-12-1EP_3x3mm_P0.5mm_EP1.5x2.5mm_ThermalVias"
+		(property "Footprint" "AD4030:DPD12_TEX"
 			(at 66.04 143.51 0)
 			(effects
 				(font
