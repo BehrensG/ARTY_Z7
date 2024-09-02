@@ -6669,7 +6669,7 @@
 		)
 		(uuid "b8438caa-4b27-4f2c-ae16-f636e08fe88a")
 	)
-	(text "VCQQ 2V5 = R503 (10k5)/ R504 (10k)\nVCQQ 1V8 = R503 (4k7)/ R504 (10k)"
+	(text "VCCQ 2V5 = R503 (10k5)/ R504 (10k)\nVCCQ 1V8 = R503 (4k7)/ R504 (10k)"
 		(exclude_from_sim no)
 		(at 244.856 17.526 0)
 		(effects
@@ -11481,7 +11481,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "10u/25V"
 			(at 160.02 38.0999 0)
 			(effects
 				(font
