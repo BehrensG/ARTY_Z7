@@ -5563,7 +5563,7 @@
 		)
 		(uuid "34039fd2-a628-43cc-9bb4-8acaa7ced5e2")
 	)
-	(label "CONN_GAIN_x100"
+	(label "CONN_GAIN_x10B"
 		(at 139.7 73.66 180)
 		(fields_autoplaced yes)
 		(effects
@@ -5585,7 +5585,7 @@
 		)
 		(uuid "363b7f07-852c-45da-adfa-c1236a815058")
 	)
-	(label "CONN_GAIN_x10"
+	(label "CONN_GAIN_x10A"
 		(at 139.7 71.12 180)
 		(fields_autoplaced yes)
 		(effects
@@ -5827,7 +5827,7 @@
 		)
 		(uuid "c6ce5c8d-796c-445d-971c-3032ead703e3")
 	)
-	(label "CONN_GAIN_x10"
+	(label "CONN_GAIN_x10A"
 		(at 278.13 57.15 180)
 		(fields_autoplaced yes)
 		(effects
@@ -5860,7 +5860,7 @@
 		)
 		(uuid "d6fd7f5a-1a31-4389-959f-f2e75120f5be")
 	)
-	(label "CONN_GAIN_x100"
+	(label "CONN_GAIN_x10B"
 		(at 196.85 57.15 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5882,7 +5882,7 @@
 		)
 		(uuid "e3fec7da-40c0-40e9-a8c2-8f960b5e3bed")
 	)
-	(hierarchical_label "GAIN_x100"
+	(hierarchical_label "GAIN_x10B"
 		(shape output)
 		(at 85.09 73.66 180)
 		(fields_autoplaced yes)
@@ -5930,7 +5930,7 @@
 		)
 		(uuid "5c724fd7-2658-4a65-870f-c6cdfe1ad1f5")
 	)
-	(hierarchical_label "Gain_x10"
+	(hierarchical_label "Gain_x10A"
 		(shape output)
 		(at 85.09 71.12 180)
 		(fields_autoplaced yes)
