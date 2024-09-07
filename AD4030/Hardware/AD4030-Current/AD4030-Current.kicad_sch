@@ -461,7 +461,7 @@
 			)
 			(uuid "14709f3c-4114-4bbc-91a8-daec47aa10ad")
 		)
-		(pin "GAIN_x10B" output
+		(pin "Gain_x10B" output
 			(at 173.99 74.93 180)
 			(effects
 				(font

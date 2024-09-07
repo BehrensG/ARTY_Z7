@@ -3167,126 +3167,6 @@
 				)
 			)
 		)
-		(symbol "power:+5VA"
-			(power)
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+5VA"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+5VA\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+5VA_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+5VA_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "power:+9V"
 			(power)
 			(pin_numbers hide)
@@ -7307,6 +7187,72 @@
 		)
 	)
 	(symbol
+		(lib_id "AD4030:+5V4")
+		(at 81.28 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "431a2b66-18aa-47cf-be7d-56d7390daccb")
+		(property "Reference" "#PWR0204"
+			(at 81.28 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V4"
+			(at 81.28 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.28 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bab8da27-f7be-4562-b118-147c44950efd")
+		)
+		(instances
+			(project "AD4030-Current"
+				(path "/8c00fb7d-8cfe-468b-9ed3-32d6000462dd/0fe1e8e6-94f3-423b-8365-cd8c8da34f38"
+					(reference "#PWR0204")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "AD4030:LTC6655LN")
 		(at 218.44 138.43 0)
 		(unit 1)
@@ -7544,72 +7490,6 @@
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/cfc38c8d-3c9b-4f41-9734-05b81b218479"
 					(reference "C306")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5VA")
-		(at 16.51 177.8 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4dc2de71-dd8f-408c-a08d-f738d9f9435d")
-		(property "Reference" "#PWR0201"
-			(at 16.51 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5VA"
-			(at 16.51 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 16.51 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 16.51 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5VA\""
-			(at 16.51 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5f3a5a03-c850-4dba-8a50-0f05e9c7f69e")
-		)
-		(instances
-			(project "AD4030-Current"
-				(path "/8c00fb7d-8cfe-468b-9ed3-32d6000462dd/0fe1e8e6-94f3-423b-8365-cd8c8da34f38"
-					(reference "#PWR0201")
 					(unit 1)
 				)
 			)
@@ -8269,78 +8149,6 @@
 			(project "AD4030-Voltage"
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/cfc38c8d-3c9b-4f41-9734-05b81b218479"
 					(reference "C314")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5VA")
-		(at 81.28 60.96 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6370c05f-a8f6-4a00-9a0a-e80d26590b9d")
-		(property "Reference" "#PWR0309"
-			(at 81.28 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5VA"
-			(at 81.28 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 81.28 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 81.28 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5VA\""
-			(at 81.28 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f7c6739e-b10b-4fe6-ba2b-03e492e711e1")
-		)
-		(instances
-			(project ""
-				(path "/8c00fb7d-8cfe-468b-9ed3-32d6000462dd/0fe1e8e6-94f3-423b-8365-cd8c8da34f38"
-					(reference "#PWR0309")
-					(unit 1)
-				)
-			)
-			(project ""
-				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/cfc38c8d-3c9b-4f41-9734-05b81b218479"
-					(reference "#PWR0309")
 					(unit 1)
 				)
 			)
@@ -10475,6 +10283,72 @@
 			(project ""
 				(path "/af28bfe6-a5ae-47dd-9259-97a6edcec559/cfc38c8d-3c9b-4f41-9734-05b81b218479"
 					(reference "C317")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AD4030:+5V4")
+		(at 16.51 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d8d8a41e-f457-4ef1-bb5c-0507d10c672f")
+		(property "Reference" "#PWR0205"
+			(at 16.51 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V4"
+			(at 16.51 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.51 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 16.51 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a02c6dd5-8627-478f-b124-4a5d405f819a")
+		)
+		(instances
+			(project "AD4030-Current"
+				(path "/8c00fb7d-8cfe-468b-9ed3-32d6000462dd/0fe1e8e6-94f3-423b-8365-cd8c8da34f38"
+					(reference "#PWR0205")
 					(unit 1)
 				)
 			)

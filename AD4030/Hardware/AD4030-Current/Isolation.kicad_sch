@@ -5882,7 +5882,7 @@
 		)
 		(uuid "e3fec7da-40c0-40e9-a8c2-8f960b5e3bed")
 	)
-	(hierarchical_label "GAIN_x10B"
+	(hierarchical_label "Gain_x10B"
 		(shape output)
 		(at 85.09 73.66 180)
 		(fields_autoplaced yes)
