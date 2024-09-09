@@ -47,6 +47,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 80.01) (xy 173.99 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "467f569f-39ee-45dc-a947-231010a59087")
+	)
+	(wire
+		(pts
 			(xy 167.64 59.69) (xy 173.99 59.69)
 		)
 		(stroke
@@ -54,6 +64,16 @@
 			(type default)
 		)
 		(uuid "5feea0b6-40ae-4705-bb44-089c4454dce8")
+	)
+	(wire
+		(pts
+			(xy 127 77.47) (xy 173.99 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "726a3668-5ceb-41f6-ba8d-76f0f09a7395")
 	)
 	(wire
 		(pts
@@ -323,7 +343,7 @@
 			)
 			(uuid "5307b34b-1d64-46b6-9d4c-40f9981c1e1a")
 		)
-		(pin "LP_FILTER" input
+		(pin "LP_Filter" input
 			(at 127 80.01 0)
 			(effects
 				(font
@@ -520,6 +540,26 @@
 				(justify left)
 			)
 			(uuid "26f1cea9-49d1-4d79-8b36-1a7e346f5cf8")
+		)
+		(pin "LP_Filter" output
+			(at 173.99 80.01 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1b48768e-01ce-4474-8a0a-95959472f975")
+		)
+		(pin "Gain_x10C" output
+			(at 173.99 77.47 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "159055b4-d7f4-40c4-9836-318b9b0a833f")
 		)
 		(instances
 			(project "AD4030-Current"
