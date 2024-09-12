@@ -4127,16 +4127,20 @@
 		(uuid "dc291771-c4e5-4d7a-aa72-f1467126cc4c")
 	)
 	(no_connect
-		(at 118.11 120.65)
-		(uuid "004a19d7-ef2e-4998-b2c2-abc7b9a4edf1")
-	)
-	(no_connect
 		(at 231.14 29.21)
 		(uuid "04a8ade5-5945-48f3-8dd3-c63eacdb3ba4")
 	)
 	(no_connect
+		(at 118.11 107.95)
+		(uuid "0ffb8dbe-9b05-473c-bd44-e7b3abed1d24")
+	)
+	(no_connect
 		(at 87.63 113.03)
 		(uuid "11d51797-379d-422a-bab1-fffd1f338faa")
+	)
+	(no_connect
+		(at 118.11 110.49)
+		(uuid "22d530fd-5e83-41d9-bb77-556b39590a1e")
 	)
 	(no_connect
 		(at 118.11 113.03)
@@ -4159,24 +4163,20 @@
 		(uuid "46d68ced-2f6c-497c-a032-654083b52ed6")
 	)
 	(no_connect
+		(at 87.63 107.95)
+		(uuid "757f2674-c572-44fc-8150-46e370bcfa8d")
+	)
+	(no_connect
 		(at 231.14 67.31)
 		(uuid "7b742f53-3b13-499a-a4d7-d4d121cddf8e")
-	)
-	(no_connect
-		(at 87.63 118.11)
-		(uuid "7ddbb636-e83a-4626-a31b-d064e789237f")
-	)
-	(no_connect
-		(at 118.11 118.11)
-		(uuid "9fd85f51-f698-4fa1-a001-87eb4d054fd5")
 	)
 	(no_connect
 		(at 231.14 41.91)
 		(uuid "a7ba33c9-7820-40a8-8479-a60d54e1182b")
 	)
 	(no_connect
-		(at 87.63 120.65)
-		(uuid "cfa5b82a-2805-4876-b9a7-e79d1c79cdf9")
+		(at 87.63 110.49)
+		(uuid "e507e3fd-ee08-4b1c-b57d-9adb53a33d34")
 	)
 	(no_connect
 		(at 243.84 41.91)
@@ -4674,7 +4674,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 107.95) (xy 139.7 107.95)
+			(xy 118.11 118.11) (xy 139.7 118.11)
 		)
 		(stroke
 			(width 0)
@@ -5124,7 +5124,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 110.49) (xy 87.63 110.49)
+			(xy 85.09 120.65) (xy 87.63 120.65)
 		)
 		(stroke
 			(width 0)
@@ -5174,7 +5174,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 110.49) (xy 139.7 110.49)
+			(xy 118.11 120.65) (xy 139.7 120.65)
 		)
 		(stroke
 			(width 0)
@@ -5314,7 +5314,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 107.95) (xy 87.63 107.95)
+			(xy 85.09 118.11) (xy 87.63 118.11)
 		)
 		(stroke
 			(width 0)
@@ -5780,7 +5780,7 @@
 		(uuid "a0a3f35e-6bee-4d71-8d0a-9906fa6f380c")
 	)
 	(label "CONN_LP_FILTER"
-		(at 139.7 110.49 180)
+		(at 139.7 118.11 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5846,7 +5846,7 @@
 		(uuid "bcc7ba90-155a-491e-a8fc-b89756877f2c")
 	)
 	(label "CONN_GAIN_x10C"
-		(at 149.86 86.36 0)
+		(at 149.86 88.9 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5923,7 +5923,7 @@
 		(uuid "e3fec7da-40c0-40e9-a8c2-8f960b5e3bed")
 	)
 	(label "CONN_GAIN_x10C"
-		(at 139.7 107.95 180)
+		(at 139.7 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5934,7 +5934,7 @@
 		(uuid "e63b7e3a-c1de-49ed-a3cb-96436eaa5d5c")
 	)
 	(label "CONN_LP_FILTER"
-		(at 149.86 88.9 0)
+		(at 149.86 86.36 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5982,7 +5982,7 @@
 	)
 	(hierarchical_label "Gain_x10C"
 		(shape output)
-		(at 85.09 107.95 180)
+		(at 85.09 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6030,7 +6030,7 @@
 	)
 	(hierarchical_label "LP_Filter"
 		(shape output)
-		(at 85.09 110.49 180)
+		(at 85.09 118.11 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
