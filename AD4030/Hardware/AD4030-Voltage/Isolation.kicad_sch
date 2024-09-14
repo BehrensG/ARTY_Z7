@@ -7892,7 +7892,7 @@
 				)
 			)
 		)
-		(property "Value" "ADuM260N"
+		(property "Value" "ADuM260N1"
 			(at 101.6 53.34 0)
 			(effects
 				(font
@@ -8069,7 +8069,7 @@
 				)
 			)
 		)
-		(property "Value" "ADuM260N"
+		(property "Value" "ADuM260N1"
 			(at 101.6 92.71 0)
 			(effects
 				(font
