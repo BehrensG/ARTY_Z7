@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/freertos_hello_world/build",
+  "command": "/opt/Xilinx/Vitis/2024.1/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc  -isystem /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030-Voltage/export/AD4030-Voltage/sw/freertos_ps7_cortexa9_0/include -isystem /opt/Xilinx/Vitis/2024.1/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/12.2.0/include -isystem /opt/Xilinx/Vitis/2024.1/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/12.2.0/include-fixed -isystem /opt/Xilinx/Vitis/2024.1/gnu/aarch32/lin/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include  -O2 -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030-Voltage/export/AD4030-Voltage/sw/freertos_ps7_cortexa9_0/Xilinx.spec -I/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030-Voltage/export/AD4030-Voltage/sw/freertos_ps7_cortexa9_0/include -Wall -Wextra      -O0  -g3     -U__clang__ -o CMakeFiles/freertos_hello_world.elf.dir/freertos_hello_world.c.obj -c /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/freertos_hello_world/src/freertos_hello_world.c",
+  "file": "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/freertos_hello_world/src/freertos_hello_world.c"
+}
+]

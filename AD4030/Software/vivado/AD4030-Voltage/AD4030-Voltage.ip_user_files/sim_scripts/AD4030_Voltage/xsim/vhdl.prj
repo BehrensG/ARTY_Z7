@@ -1,0 +1,9 @@
+vhdl xil_defaultlib  \
+"../../../bd/AD4030_Voltage/ip/AD4030_Voltage_rst_ps7_0_100M_0/sim/AD4030_Voltage_rst_ps7_0_100M_0.vhd" \
+"../../../bd/AD4030_Voltage/ip/AD4030_Voltage_axi_gpio_0_0/sim/AD4030_Voltage_axi_gpio_0_0.vhd" \
+"../../../bd/AD4030_Voltage/sim/AD4030_Voltage.vhd" \
+"../../../bd/AD4030_Voltage/ip/AD4030_Voltage_axi_timer_0_0/sim/AD4030_Voltage_axi_timer_0_0.vhd" \
+"../../../bd/AD4030_Voltage/ip/AD4030_Voltage_axi_gpio_1_1/sim/AD4030_Voltage_axi_gpio_1_1.vhd" \
+
+# Do not sort compile order
+nosort

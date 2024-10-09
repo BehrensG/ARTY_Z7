@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../AD4030-Voltage.ip_user_files/bd/AD4030_Voltage/ip/AD4030_Voltage_rst_ps7_0_100M_0/sim/AD4030_Voltage_rst_ps7_0_100M_0.vhd" \
+"../../../../AD4030-Voltage.ip_user_files/bd/AD4030_Voltage/ip/AD4030_Voltage_axi_gpio_0_0/sim/AD4030_Voltage_axi_gpio_0_0.vhd" \
+"../../../../AD4030-Voltage.ip_user_files/bd/AD4030_Voltage/sim/AD4030_Voltage.vhd" \
+"../../../../AD4030-Voltage.ip_user_files/bd/AD4030_Voltage/ip/AD4030_Voltage_axi_timer_0_0/sim/AD4030_Voltage_axi_timer_0_0.vhd" \
+"../../../../AD4030-Voltage.ip_user_files/bd/AD4030_Voltage/ip/AD4030_Voltage_axi_gpio_1_1/sim/AD4030_Voltage_axi_gpio_1_1.vhd" \
+"../../../../AD4030-Voltage.gen/sources_1/bd/AD4030_Voltage/hdl/AD4030_Voltage_wrapper.vhd" \
+
+# Do not sort compile order
+nosort

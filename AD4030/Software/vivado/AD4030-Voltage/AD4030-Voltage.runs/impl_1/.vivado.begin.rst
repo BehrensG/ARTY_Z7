@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="grzegorz" Host="archlinux" Pid="10195" HostCore="8" HostMemory="15989308">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="grzegorz" Host="archlinux" Pid="15203" HostCore="8" HostMemory="15989308">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="grzegorz" Host="archlinux" Pid="30721" HostCore="8" HostMemory="15989308">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="grzegorz" Host="archlinux" Pid="35805" HostCore="8" HostMemory="15989308">
+    </Process>
+</ProcessHandle>

@@ -1,0 +1,2 @@
+arm-none-eabi-ar qc libtmrctr.a CMakeFiles/tmrctr.dir/xtmrctr.c.obj CMakeFiles/tmrctr.dir/xtmrctr_g.c.obj CMakeFiles/tmrctr.dir/xtmrctr_intr.c.obj CMakeFiles/tmrctr.dir/xtmrctr_l.c.obj CMakeFiles/tmrctr.dir/xtmrctr_options.c.obj CMakeFiles/tmrctr.dir/xtmrctr_selftest.c.obj CMakeFiles/tmrctr.dir/xtmrctr_sinit.c.obj CMakeFiles/tmrctr.dir/xtmrctr_stats.c.obj
+/opt/Xilinx/Vitis/2024.1/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-ranlib libtmrctr.a

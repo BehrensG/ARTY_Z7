@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Oct  8 20:05:54 2024
+# Process ID: 30042
+# Current directory: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/AD4030-Voltage/AD4030-Voltage.runs/AD4030_Voltage_processing_system7_0_0_synth_1
+# Command line: vivado -log AD4030_Voltage_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AD4030_Voltage_processing_system7_0_0.tcl
+# Log file: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/AD4030-Voltage/AD4030-Voltage.runs/AD4030_Voltage_processing_system7_0_0_synth_1/AD4030_Voltage_processing_system7_0_0.vds
+# Journal file: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/AD4030-Voltage/AD4030-Voltage.runs/AD4030_Voltage_processing_system7_0_0_synth_1/vivado.jou
+# Running On        :archlinux
+# Platform          :unknown
+# Operating System  :unknown
+# Processor Detail  :Intel(R) Core(TM) i7-3630QM CPU @ 2.40GHz
+# CPU Frequency     :3192.882 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16373 MB
+# Swap memory       :34359 MB
+# Total Virtual     :50732 MB
+# Available Virtual :42883 MB
+#-----------------------------------------------------------
+source AD4030_Voltage_processing_system7_0_0.tcl -notrace

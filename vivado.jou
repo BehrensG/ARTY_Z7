@@ -3,105 +3,60 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Sat Aug 10 16:20:44 2024
-# Process ID: 5865
+# Start of session at: Sat Sep 14 21:02:39 2024
+# Process ID: 17492
 # Current directory: /home/grzegorz/git/ARTY_Z7
 # Command line: vivado
 # Log file: /home/grzegorz/git/ARTY_Z7/vivado.log
 # Journal file: /home/grzegorz/git/ARTY_Z7/vivado.jou
-# Running On: archlinux, OS: Linux, CPU Frequency: 2645.272 MHz, CPU Physical cores: 4, Host memory: 16373 MB
+# Running On: archlinux, OS: Linux, CPU Frequency: 2703.269 MHz, CPU Physical cores: 4, Host memory: 16373 MB
 #-----------------------------------------------------------
 start_gui
-create_project project_1 /home/grzegorz/git/ARTY_Z7/project_1/project_1 -part xc7z010clg400-1
+xhub::refresh_catalog [xhub::get_xstores xilinx_board_store]
+xhub::install [xhub::get_xitems digilentinc.com:xilinx_board_store:arty-a7-100:1.1]
+create_project AD4030-Voltage /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/AD4030-Voltage -part xc7a100tcsg324-1
+set_property board_part digilentinc.com:arty-a7-100:part0:1.1 [current_project]
+set_property target_language VHDL [current_project]
+create_bd_design "AD4030_Voltage_Vivado"
+update_compile_order -fileset sources_1
+open_bd_design {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/AD4030-Voltage/AD4030-Voltage.srcs/sources_1/bd/AD4030_Voltage_Vivado/AD4030_Voltage_Vivado.bd}
+regenerate_bd_layout
+validate_bd_design
+open_bd_design {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/AD4030-Voltage/AD4030-Voltage.srcs/sources_1/bd/AD4030_Voltage_Vivado/AD4030_Voltage_Vivado.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 axi_quad_spi_0
+endgroup
+close_bd_design [get_bd_designs AD4030_Voltage_Vivado]
+close_project
+xhub::refresh_catalog [xhub::get_xstores xilinx_board_store]
+create_project AD4030-Voltage /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/AD4030-Voltage/AD4030-Voltage -part xc7z010clg400-1
 set_property board_part digilentinc.com:arty-z7-10:part0:1.1 [current_project]
 set_property target_language VHDL [current_project]
-create_bd_design "design_1"
+create_bd_design "AD4030_Voltage_Vivado"
 update_compile_order -fileset sources_1
 startgroup
 create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
 endgroup
-delete_bd_objs [get_bd_cells processing_system7_0]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
-endgroup
+regenerate_bd_layout
 apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
-connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 axi_quad_spi_0
 endgroup
-set_property CONFIG.C_IS_DUAL {1} [get_bd_cells axi_gpio_0]
-apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {leds_4bits ( 4 LEDs ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {Custom} Manual_Source {Auto}}  [get_bd_intf_pins axi_quad_spi_0/SPI_0]
+regenerate_bd_layout
 startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {btns_4bits ( 4 Buttons ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO2]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_quad_spi_0/AXI_LITE} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_quad_spi_0/AXI_LITE]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axi_quad_spi_0/ext_spi_clk]
 endgroup
-startgroup
-endgroup
-startgroup
-set_property CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} [get_bd_cells processing_system7_0]
-endgroup
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets axi_quad_spi_0_SPI_0] [get_bd_cells axi_quad_spi_0]
+delete_bd_objs [get_bd_nets rst_ps7_0_100M_peripheral_aresetn] [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_cells ps7_0_axi_periph]
+delete_bd_objs [get_bd_intf_ports spi_rtl]
 validate_bd_design
 regenerate_bd_layout
 startgroup
-delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_cells ps7_0_axi_periph]
-delete_bd_objs [get_bd_intf_nets axi_gpio_0_GPIO2] [get_bd_intf_nets processing_system7_0_FIXED_IO] [get_bd_nets rst_ps7_0_100M_peripheral_aresetn] [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_intf_nets processing_system7_0_DDR] [get_bd_intf_nets axi_gpio_0_GPIO] [get_bd_nets processing_system7_0_FCLK_CLK0] [get_bd_cells axi_gpio_0] [get_bd_cells processing_system7_0] [get_bd_cells rst_ps7_0_100M]
+create_bd_cell -type ip -vlnv xilinx.com:ip:dsp_macro:1.0 dsp_macro_0
 endgroup
-delete_bd_objs [get_bd_intf_ports FIXED_IO]
-delete_bd_objs [get_bd_intf_ports DDR]
-delete_bd_objs [get_bd_intf_ports leds_4bits]
-delete_bd_objs [get_bd_intf_ports btns_4bits]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
-endgroup
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
-endgroup
-set_property -dict [list \
-  CONFIG.C_IS_DUAL {0} \
-  CONFIG.GPIO_BOARD_INTERFACE {leds_4bits} \
-] [get_bd_cells axi_gpio_0]
-apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Enable" Slave "Enable" }  [get_bd_cells processing_system7_0]
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {leds_4bits ( 4 LEDs ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
-endgroup
-validate_bd_design
-regenerate_bd_layout
-make_wrapper -files [get_files /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
-add_files -norecurse /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-validate_bd_design -force
-generate_target all [get_files  /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
-catch { config_ip_cache -export [get_ips -all design_1_axi_gpio_0_1] }
-catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_100M_1] }
-catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
-export_ip_user_files -of_objects [get_files /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs design_1_auto_pc_0_synth_1 design_1_axi_gpio_0_1_synth_1 design_1_processing_system7_0_2_synth_1 design_1_rst_ps7_0_100M_1_synth_1 -jobs 8
-wait_on_run design_1_auto_pc_0_synth_1
-wait_on_run design_1_axi_gpio_0_1_synth_1
-wait_on_run design_1_processing_system7_0_2_synth_1
-wait_on_run design_1_rst_ps7_0_100M_1_synth_1
-export_simulation -of_objects [get_files /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.ip_user_files -ipstatic_source_dir /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.cache/compile_simlib/modelsim} {questa=/home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.cache/compile_simlib/questa} {xcelium=/home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.cache/compile_simlib/xcelium} {vcs=/home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.cache/compile_simlib/vcs} {riviera=/home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-open_run impl_1
-write_hw_platform -fixed -include_bit -force -file /home/grzegorz/git/ARTY_Z7/project_1/project_1/design_1_wrapper.xsa
-open_bd_design {/home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
-startgroup
-set_property BITSTREAM.GENERAL.COMPRESS TRUE [get_designs impl_1]
-endgroup
-file mkdir /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.srcs/constrs_1/new
-close [ open /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.srcs/constrs_1/new/project_1.xdc w ]
-add_files -fileset constrs_1 /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.srcs/constrs_1/new/project_1.xdc
-set_property target_constrs_file /home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.srcs/constrs_1/new/project_1.xdc [current_fileset -constrset]
-save_constraints -force
-close_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-open_bd_design {/home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
-open_bd_design {/home/grzegorz/git/ARTY_Z7/project_1/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
-write_hw_platform -fixed -include_bit -force -file /home/grzegorz/git/ARTY_Z7/project_1/project_1/design_1_wrapper.xsa
+delete_bd_objs [get_bd_cells dsp_macro_0]
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:spi_rtl:1.0 spi
+delete_bd_objs [get_bd_intf_ports spi]
+save_bd_design

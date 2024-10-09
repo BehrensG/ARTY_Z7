@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/AD4030-Voltage/AD4030-Voltage.srcs/constrs_1/new/AD4030_Voltage_constraints.xdc rfile:../../../AD4030-Voltage.srcs/constrs_1/new/AD4030_Voltage_constraints.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_busy_tri_i[0]}]
+set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W19 [get_ports adc_cnv]
+set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN Y14 [get_ports adc_busy]
