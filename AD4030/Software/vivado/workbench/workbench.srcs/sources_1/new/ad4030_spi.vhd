@@ -1,0 +1,409 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 03/01/2026 08:31:55 PM
+-- Design Name: 
+-- Module Name: ad4030_spi - ad4030_spi_arch
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity ad4030_spi is
+generic(
+    REG_N : integer := 8;
+    constant ADRR_SIZE : natural :=4;
+    constant DATA_SIZE : natural :=32
+    );    
+    
+port(
+    axi_clk_in: in std_logic;
+    axi_rst_n_in : in std_logic;
+ 
+    adc_cs_n_out : out std_logic;
+    adc_busy_in : in std_logic;
+    adc_miso_in : in std_logic_vector(0 to 3);
+    adc_sclk_out : out std_logic;
+    adc_rst_n_out : out std_logic;
+    adc_mosi_out : out std_logic;
+    adc_conv_out : out std_logic;
+    
+    
+    read_address_in : in std_logic_vector(ADRR_SIZE-1 downto 0);
+    read_data_out : out std_logic_vector(DATA_SIZE-1 downto 0);
+    read_enable_in : in std_logic;
+    
+    write_address_in : in std_logic_vector(ADRR_SIZE-1 downto 0);
+    write_data_in : in std_logic_vector(DATA_SIZE-1 downto 0);
+    write_enable_in : in std_logic;
+    write_strobe_in : in std_logic_vector(3 downto 0)
+    
+    
+    
+    );
+
+end ad4030_spi;
+
+architecture ad4030_spi_arch of ad4030_spi is
+
+    type states_t is (IDLE,START,DATA,TRANSMIT,STOP);
+    
+    constant ADC_MODES : std_logic_vector(15 downto 0) := x"00_20";
+    constant ADC_ENABLE_CFG :  std_logic_vector(15 downto 0) := x"00_A0";
+    constant ADC_EXIT_CFG_MD :  std_logic_vector(15 downto 0) := x"00_14";
+    
+    constant ADC_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"0";  -- DEC: 0
+    constant SPI_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"1"; -- DEC: 1
+    constant CNV_PERIOD_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"2"; -- DEC: 2  
+    constant CNV_WIDTH_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"3"; -- DEC: 3  
+    constant SPI_STATUS_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"4"; -- DEC: 4  
+    
+    constant ONE_LINE : std_logic_vector(1 downto 0) := "00";
+    constant TWO_LINES : std_logic_vector(1 downto 0) := "01";
+    constant FOUR_LINES : std_logic_vector(1 downto 0) := "10";
+    
+    constant B24_DATA : std_logic_vector(2 downto 0) := "000";
+    constant B16P8_DATA : std_logic_vector(2 downto 0) := "001";
+    constant B24P8_DATA : std_logic_vector(2 downto 0) := "010";
+    constant B30P2_DATA : std_logic_vector(2 downto 0) := "011";
+    constant B32_TEST_DATA : std_logic_vector(2 downto 0) := "100";
+    
+    signal adc_cfg : std_logic_vector(DATA_SIZE-1 downto 0); -- 31 downto 24 : always 0; 23 downto 8 : adc config address; 7 downto 0 : adc config data
+    signal spi_cfg : std_logic_vector(DATA_SIZE-1 downto 0); -- 15 downto 0 : scpi clock divider 
+    signal cnv_period_cfg : std_logic_vector(DATA_SIZE-1 downto 0); -- 31 downto 0 : period size
+    signal cnv_width_cfg : std_logic_vector(DATA_SIZE-1 downto 0); -- 31 downto 0 : pulse width size
+    signal adc_spi_status : std_logic_vector(DATA_SIZE-1 downto 0);  --  31 downto 3 : free; 2: BUSY; 1 : SPRBF (SPI Receiver Buffer Full); 0 : SPTBE (SPI Transmit Buffer Empty)
+    
+    
+    signal adc_line_md : std_logic_vector(1 downto 0);
+    signal adc_out_data_md : std_logic_vector(2 downto 0);
+    signal adc_cfg_enabled : std_logic;
+    signal baud_count : unsigned(15 downto 0);
+    signal baud_count_limit : unsigned(15 downto 0);
+    signal baud_clk, baud_clk_pulse : std_logic;
+    signal adc_cs_n : std_logic;
+    signal adc_busy_reg1, adc_busy_reg2, adc_busy_reg3, falling_edge_detected : std_logic;
+    signal gen_load : std_logic;
+    signal adc_miso : std_logic_vector(0 to 3);
+    signal mosi_bit_count, spi_bit_count : natural range 0 to 32;
+    signal spi_state : states_t;
+    
+    signal write_data_to_adc_status : std_logic;
+    signal write_data_to_adc : std_logic_vector(DATA_SIZE-1 downto 0);
+  
+    alias adc_cfg_addr_a : std_logic_vector(15 downto 0) is adc_cfg(23 downto 8);
+    alias adc_cfg_data_a : std_logic_vector(7 downto 0) is adc_cfg(7 downto 0);
+    alias adc_line_md_a : std_logic_vector(1 downto 0) is adc_cfg(7 downto 6);
+    alias adc_out_data_md_a : std_logic_vector(2 downto 0) is adc_cfg(2 downto 0);
+    alias adc_exit_config_md_a : std_logic is adc_cfg(0);
+    alias spi_baud_div_a : std_logic_vector is spi_cfg(15 downto 0);
+    alias adc_wr_bit_a : std_logic is adc_cfg(23);
+    alias adc_spi_busy_a : std_logic is adc_spi_status(2);
+    alias adc_spi_sprbf_a : std_logic is adc_spi_status(1);
+    alias adc_spi_sptbe_a : std_logic is adc_spi_status(0);
+    
+    procedure ClockConfiguration
+    (
+        signal adc_out_data : in std_logic_vector(2 downto 0);
+        signal adc_line : in std_logic_vector(1 downto 0);
+        signal bit_count : out natural range 0 to 32
+    ) is
+      
+    begin
+        if (adc_out_data = B24_DATA or adc_out_data = B16P8_DATA) then
+            if (adc_line = ONE_LINE) then
+                bit_count <= 24;
+            elsif (adc_line = TWO_LINES) then
+                bit_count <= 12;
+            elsif (adc_line = FOUR_LINES) then
+                bit_count <= 6;
+                else
+                bit_count <= 24;
+            end if;
+        elsif (adc_out_data = B24P8_DATA or adc_out_data = B30P2_DATA or adc_out_data = B32_TEST_DATA) then
+            if (adc_line = ONE_LINE) then
+                bit_count <= 32;
+            elsif (adc_line = TWO_LINES) then
+                bit_count <= 16;
+            elsif (adc_line = FOUR_LINES) then
+                bit_count <= 8;
+                else
+                bit_count <= 32;
+            end if;
+        else
+            null;
+        end if;
+    end procedure ClockConfiguration;
+
+begin
+
+    write_proc : process(axi_clk_in, axi_rst_n_in) 
+        variable baud_val_v : unsigned(15 downto 0);
+    begin
+        if (axi_rst_n_in = '0') then
+            adc_cfg <= (others => '0');
+            spi_cfg <= (others => '0');
+            cnv_period_cfg <= (others => '0');
+            cnv_width_cfg <= (others => '0');
+            adc_spi_status <= x"00_00_00_01";
+            write_data_to_adc_status <= '0';
+            write_data_to_adc <= (others => '0');
+            adc_spi_status <= (others => '0');
+            gen_load <= '0';
+           -- adc_busy <= '0';
+           baud_count_limit <= (others => '0'); 
+        else
+            if rising_edge(axi_clk_in) then
+                if (write_enable_in = '1') then
+                    case write_address_in is
+                        when ADC_CFG_INDEX => 
+                            for i in 0 to 3 loop
+                                if(write_strobe_in(i) = '1') then
+                                    adc_cfg((i*8+7) downto (i*8)) <= write_data_in((i*8+7) downto (i*8));
+                                end if;
+                            end loop;
+                            write_data_to_adc <= adc_cfg;
+                            write_data_to_adc_status <= '1';
+                        when SPI_CFG_INDEX =>
+                             for i in 0 to 3 loop
+                                if(write_strobe_in(i) = '1') then
+                                    spi_cfg((i*8+7) downto (i*8)) <= write_data_in((i*8+7) downto (i*8));
+                                end if;
+                             end loop;
+                             baud_val_v := unsigned(spi_baud_div_a);
+                             if (baud_val_v > 1) then
+                                baud_count_limit <= unsigned(spi_baud_div_a) - 1;
+                             else
+                                baud_count_limit <= unsigned(spi_baud_div_a);
+                             end if;
+                        when CNV_PERIOD_INDEX =>
+                            for i in 0 to 3 loop
+                                if(write_strobe_in(i) = '1') then
+                                    cnv_period_cfg((i*8+7) downto (i*8)) <= write_data_in((i*8+7) downto (i*8));
+                                end if;
+                             end loop;
+                            gen_load <= '1';
+                        when CNV_WIDTH_INDEX =>
+                            for i in 0 to 3 loop
+                                if(write_strobe_in(i) = '1') then
+                                    cnv_width_cfg((i*8+7) downto (i*8)) <= write_data_in((i*8+7) downto (i*8));
+                                end if;
+                             end loop;
+                            gen_load <= '1';
+                        when SPI_STATUS_INDEX => -- do nothing, spi_status is a read only register
+                            null;
+                        when others =>
+                            null;
+                    end case;
+                end if;
+            end if;
+        end if;
+    end process write_proc;
+    
+   state_machine : process(axi_clk_in, axi_rst_n_in, baud_clk) 
+   begin
+        if (axi_rst_n_in = '0') then
+            spi_state <= IDLE;
+            adc_cs_n <= '1';
+        elsif rising_edge(axi_clk_in) then
+            --spi_current_state <= spi_next_state;
+            case spi_state is
+                when IDLE =>
+                    adc_cs_n <= '1';
+                    if (write_data_to_adc_status = '1' or adc_cfg_enabled = '1') then
+                        spi_bit_count <= 24;
+                        spi_state <= START;
+                    elsif (falling_edge_detected = '1') then
+--                        if (adc_out_data_md = B24_DATA or adc_out_data_md = B16P8_DATA) then
+--                                if (adc_line_md = ONE_LINE) then
+--                                    spi_bit_count <= 24;
+--                                elsif (adc_line_md = TWO_LINES) then
+--                                    spi_bit_count <= 12;
+--                                elsif (adc_line_md = FOUR_LINES) then
+--                                    spi_bit_count <= 6;
+--                                 else
+--                                    spi_bit_count <= 24;
+--                                end if;
+--                            elsif (adc_out_data_md = B24P8_DATA or adc_out_data_md = B30P2_DATA or adc_out_data_md = B32_TEST_DATA) then
+--                                if (adc_line_md = ONE_LINE) then
+--                                    spi_bit_count <= 32;
+--                                elsif (adc_line_md = TWO_LINES) then
+--                                    spi_bit_count <= 16;
+--                                elsif (adc_line_md = FOUR_LINES) then
+--                                    spi_bit_count <= 8;
+--                                 else
+--                                    spi_bit_count <= 32;
+--                                end if;
+--                            else
+--                                null;
+--                        end if;
+                        ClockConfiguration
+                        (
+                            adc_out_data => adc_out_data_md,
+                            adc_line => adc_line_md,
+                            bit_count => spi_bit_count
+                        );
+                        spi_state <= START;
+                    else
+                        null;
+                    end if;
+                when START =>
+                    adc_cs_n <= '0';
+                    adc_spi_busy_a <= '1';
+                    adc_spi_sprbf_a <= '0';
+                    adc_spi_sptbe_a <= '1';
+                    spi_state <= DATA;
+                when DATA =>
+                    if (baud_clk_pulse = '1') then
+                        if (spi_bit_count - 1  > 0) then
+                            spi_bit_count <= spi_bit_count - 1;
+                            spi_state <= DATA;
+                        else
+                            spi_state <= STOP;
+                        end if;
+                        adc_spi_busy_a <= '1';
+                        adc_spi_sprbf_a <= '0';
+                        adc_spi_sptbe_a <= '0';
+                    end if;
+                when STOP =>
+                    spi_state <= IDLE;
+                    adc_cs_n <= '1';
+                    adc_spi_busy_a <= '0';
+                    adc_spi_sprbf_a <= '1';
+                    adc_spi_sptbe_a <= '0';
+                when others =>
+                    spi_state <= IDLE;
+            end case;
+        end if;
+    end process state_machine;
+   
+    adc_config_proc : process(adc_cfg, axi_rst_n_in)
+    begin
+        if(axi_rst_n_in = '0') then
+            adc_line_md <= (others => '0');
+            adc_out_data_md <= (others => '0');
+            adc_cfg_enabled <= '0';
+        else
+            case adc_cfg_addr_a is
+                when ADC_MODES =>
+                    adc_line_md <= adc_line_md_a;
+                    adc_out_data_md <= adc_out_data_md_a;
+                when others => 
+                    null;
+            end case;
+        end if;
+    end process adc_config_proc;
+  
+    adc_clock_gen_proc : process(axi_rst_n_in, axi_clk_in) 
+    begin 
+        if (axi_rst_n_in = '0') then
+            baud_count <= (others => '0');
+            baud_clk <= '1';  
+            baud_clk_pulse <= '0';   
+        elsif rising_edge(axi_clk_in) then
+            if (adc_cs_n = '0') then
+                baud_clk_pulse <= '0';
+                if (baud_count = baud_count_limit) then
+                    baud_count <= (others => '0');
+                    baud_clk <= not baud_clk;
+
+                else
+                    baud_count <= baud_count + 1;
+                    if (baud_clk = '1') then
+                        baud_clk_pulse <= '1';
+                    end if;
+                 end if;
+             else
+                baud_clk <= '0';
+            end if;
+        end if;
+    end process adc_clock_gen_proc;
+    
+    adc_mosi_proc : process (axi_clk_in, axi_rst_n_in)
+    begin
+    if (axi_rst_n_in = '0') then
+        mosi_bit_count <= 24;
+    elsif (baud_clk_pulse = '1') then 
+        if (write_data_to_adc_status ='1' and adc_cs_n = '0') then
+            if mosi_bit_count - 1 > 0 then
+                mosi_bit_count <= mosi_bit_count - 1; 
+            else
+                mosi_bit_count <= 24;
+                write_data_to_adc_status <= '0';
+                if(adc_cfg_addr_a = ADC_ENABLE_CFG) then
+                    adc_cfg_enabled <= '1';
+                elsif (adc_cfg_addr_a = ADC_EXIT_CFG_MD and adc_cfg_data_a(0) = '1') then
+                    adc_cfg_enabled <= '0';
+                else
+                end if;
+            end if;
+        end if;
+    end if;    
+    end process adc_mosi_proc;
+    
+    adc_miso_proc : process (axi_clk_in, axi_rst_n_in)
+    begin
+        if (axi_rst_n_in = '0') then
+            adc_miso <= (others => '0');
+        elsif (baud_clk_pulse = '1') then
+        end if;
+    end process adc_miso_proc;
+    
+    cnv_generator : entity work.pulse_generator
+        port map (
+            clk_in               => axi_clk_in,
+            rst_n_in             => axi_rst_n_in,
+            pulse_width_in       => cnv_width_cfg,
+            pulse_period_in      => cnv_period_cfg,
+            load_config_in       => gen_load,
+            pulse_out            => adc_conv_out,
+            pulse_counter_out    => open
+        );
+        
+    busy_sync_proc : process(axi_clk_in, axi_rst_n_in)
+    begin
+        if (axi_rst_n_in = '0') then
+            adc_busy_reg1 <= '0';
+            adc_busy_reg2 <= '0';
+            adc_busy_reg3 <= '0';
+            falling_edge_detected <= '0';
+        elsif rising_edge(axi_clk_in) then
+            -- 2-FF Synchronizer to prevent metastability
+            adc_busy_reg1 <= adc_busy_in;
+            adc_busy_reg2 <= adc_busy_reg1;
+            
+            -- Delay register for edge detection
+            adc_busy_reg3 <= adc_busy_reg2;
+            falling_edge_detected <= (not adc_busy_reg2) and adc_busy_reg3;
+        end if;
+    end process busy_sync_proc;
+
+    adc_mosi_out <= write_data_to_adc(mosi_bit_count - 1) when (write_data_to_adc_status ='1' and adc_cs_n = '0') else '0';    
+    adc_sclk_out <= baud_clk;
+    adc_cs_n_out <= adc_cs_n;
+    
+
+end ad4030_spi_arch;

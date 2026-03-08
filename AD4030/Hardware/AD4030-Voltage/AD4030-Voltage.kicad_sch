@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "af28bfe6-a5ae-47dd-9259-97a6edcec559")
 	(paper "A4")
 	(lib_symbols
@@ -86,6 +86,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(wire
@@ -389,6 +390,10 @@
 	(sheet
 		(at 73.66 50.8)
 		(size 35.56 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -418,33 +423,33 @@
 		)
 		(pin "GAIN_x20" input
 			(at 109.22 76.2 0)
+			(uuid "14efef3b-600c-4ac1-85aa-064debd2e6b2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "14efef3b-600c-4ac1-85aa-064debd2e6b2")
 		)
 		(pin "Gain_x10" input
 			(at 109.22 73.66 0)
+			(uuid "a7cdd574-d5d7-42d7-b37e-54906f8e0f7e")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "a7cdd574-d5d7-42d7-b37e-54906f8e0f7e")
 		)
 		(pin "V_OUT" output
 			(at 109.22 53.34 0)
+			(uuid "27fb3b3a-7f12-41df-9a41-cb9e0790c0ef")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "27fb3b3a-7f12-41df-9a41-cb9e0790c0ef")
 		)
 		(instances
 			(project "AD4030-Voltage"
@@ -457,6 +462,10 @@
 	(sheet
 		(at 167.64 50.8)
 		(size 35.56 36.83)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -486,123 +495,123 @@
 		)
 		(pin "ADC_SCK" output
 			(at 167.64 66.04 180)
+			(uuid "a629bd60-5b21-4b17-8fa3-5a0205fd5fda")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "a629bd60-5b21-4b17-8fa3-5a0205fd5fda")
 		)
 		(pin "ADC_~{CS}" output
 			(at 167.64 53.34 180)
+			(uuid "3b639e42-c83d-4721-9710-35ff8333fb51")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "3b639e42-c83d-4721-9710-35ff8333fb51")
 		)
 		(pin "ADC_CNV" output
 			(at 167.64 73.66 180)
+			(uuid "ba9a3d96-f37d-4bbe-a8a2-7e0e5eb41b85")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "ba9a3d96-f37d-4bbe-a8a2-7e0e5eb41b85")
 		)
 		(pin "ADC_SDI" output
 			(at 167.64 68.58 180)
+			(uuid "6d618b66-16a4-4c27-ae34-eb4ce92d1d59")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "6d618b66-16a4-4c27-ae34-eb4ce92d1d59")
 		)
 		(pin "Gain_x10" output
 			(at 167.64 82.55 180)
+			(uuid "441fa22d-a20f-4391-9544-3891c75e25bf")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "441fa22d-a20f-4391-9544-3891c75e25bf")
 		)
 		(pin "GAIN_x20" output
 			(at 167.64 85.09 180)
+			(uuid "0cd24eb4-4773-4a26-9e55-a5e0649a4eb4")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "0cd24eb4-4773-4a26-9e55-a5e0649a4eb4")
 		)
 		(pin "ADC_SDO0" input
 			(at 167.64 55.88 180)
+			(uuid "1ddb57bb-c86c-462e-9bbc-c6ba677c4641")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "1ddb57bb-c86c-462e-9bbc-c6ba677c4641")
 		)
 		(pin "ADC_SDO3" input
 			(at 167.64 63.5 180)
+			(uuid "1dc3e7bf-dbe6-4b7c-bbcd-df09073f9a67")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "1dc3e7bf-dbe6-4b7c-bbcd-df09073f9a67")
 		)
 		(pin "ADC_SDO1" input
 			(at 167.64 58.42 180)
+			(uuid "db011222-a17b-495c-9c07-d934ff18d69d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "db011222-a17b-495c-9c07-d934ff18d69d")
 		)
 		(pin "ADC_SDO2" input
 			(at 167.64 60.96 180)
+			(uuid "4c57201b-5803-45d9-afbb-e28fc92c69b5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "4c57201b-5803-45d9-afbb-e28fc92c69b5")
 		)
 		(pin "ADC_BUSY" input
 			(at 167.64 76.2 180)
+			(uuid "27bec2cb-d898-47c0-a4d0-ea5c79bf663b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "27bec2cb-d898-47c0-a4d0-ea5c79bf663b")
 		)
 		(pin "CLK_100MHz" input
 			(at 167.64 71.12 180)
+			(uuid "14a092ff-cad2-4fc7-bf01-21cbf747c6d1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "14a092ff-cad2-4fc7-bf01-21cbf747c6d1")
 		)
 		(instances
 			(project "AD4030-Voltage"
@@ -615,6 +624,10 @@
 	(sheet
 		(at 119.38 50.8)
 		(size 35.56 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -644,113 +657,113 @@
 		)
 		(pin "V_OUT" input
 			(at 119.38 53.34 180)
+			(uuid "7994d090-bb24-4ada-b6b1-0b35c5853abd")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "7994d090-bb24-4ada-b6b1-0b35c5853abd")
 		)
 		(pin "ADC_~{CS}" input
 			(at 154.94 53.34 0)
+			(uuid "8595bf70-c865-416c-9cde-7f0a794683f9")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "8595bf70-c865-416c-9cde-7f0a794683f9")
 		)
 		(pin "ADC_SDO0" output
 			(at 154.94 55.88 0)
+			(uuid "5f22f3c6-149e-4d8c-9be5-8a88e685881d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "5f22f3c6-149e-4d8c-9be5-8a88e685881d")
 		)
 		(pin "ADC_SDO3" output
 			(at 154.94 63.5 0)
+			(uuid "7a50ebd3-1c17-4b7e-8c44-b30a6081fcf0")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "7a50ebd3-1c17-4b7e-8c44-b30a6081fcf0")
 		)
 		(pin "ADC_SDO2" output
 			(at 154.94 60.96 0)
+			(uuid "032b9108-7cc3-4973-990c-0adf1265ab86")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "032b9108-7cc3-4973-990c-0adf1265ab86")
 		)
 		(pin "ADC_SDO1" output
 			(at 154.94 58.42 0)
+			(uuid "a2f74277-38bc-4aeb-8c01-b8a3d1cd0de9")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "a2f74277-38bc-4aeb-8c01-b8a3d1cd0de9")
 		)
 		(pin "ADC_SCK" input
 			(at 154.94 66.04 0)
+			(uuid "2797280c-bf35-426f-ae88-f4036b61412a")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "2797280c-bf35-426f-ae88-f4036b61412a")
 		)
 		(pin "ADC_SDI" input
 			(at 154.94 68.58 0)
+			(uuid "570ab0f4-8d86-4fe5-82ab-5c1f45eccf92")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "570ab0f4-8d86-4fe5-82ab-5c1f45eccf92")
 		)
 		(pin "ADC_CNV" input
 			(at 154.94 73.66 0)
+			(uuid "1ca97abe-5aed-4777-8446-1935eb80ec2c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "1ca97abe-5aed-4777-8446-1935eb80ec2c")
 		)
 		(pin "ADC_BUSY" output
 			(at 154.94 76.2 0)
+			(uuid "a34bb9da-133a-45c3-800a-cf0dea14632c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "a34bb9da-133a-45c3-800a-cf0dea14632c")
 		)
 		(pin "CLK_100MHz" output
 			(at 154.94 71.12 0)
+			(uuid "95ddede0-4bb4-40ed-ac5d-bf386455ad5f")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "95ddede0-4bb4-40ed-ac5d-bf386455ad5f")
 		)
 		(instances
 			(project "AD4030-Voltage"
@@ -763,6 +776,10 @@
 	(sheet
 		(at 73.66 95.25)
 		(size 129.54 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -803,4 +820,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )
