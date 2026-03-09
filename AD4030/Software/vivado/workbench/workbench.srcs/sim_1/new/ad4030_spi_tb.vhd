@@ -71,7 +71,10 @@ begin
          
             adc_cs_n_out        => adc_cs,
             adc_busy_in         => adc_busy,
-            adc_miso_in         => (others => '0'),
+            adc_miso0_in         => '0',
+            adc_miso1_in         => '0',
+            adc_miso2_in         => '0',
+            adc_miso3_in         => '0',
             adc_sclk_out        => spi_sclk,
             adc_rst_n_out       => open,
             adc_mosi_out        => open,

@@ -35,8 +35,8 @@ use IEEE.NUMERIC_STD.ALL;
 entity ad4030_spi is
 generic(
     REG_N : integer := 8;
-    constant ADRR_SIZE : natural :=4;
-    constant DATA_SIZE : natural :=32
+    constant ADRR_SIZE : natural range 0 to 16 :=4;
+    constant DATA_SIZE : natural range 0 to 32 :=32
     );    
     
 port(
@@ -45,7 +45,10 @@ port(
  
     adc_cs_n_out : out std_logic;
     adc_busy_in : in std_logic;
-    adc_miso_in : in std_logic_vector(0 to 3);
+    adc_miso0_in : in std_logic;
+    adc_miso1_in : in std_logic;
+    adc_miso2_in : in std_logic;
+    adc_miso3_in : in std_logic;
     adc_sclk_out : out std_logic;
     adc_rst_n_out : out std_logic;
     adc_mosi_out : out std_logic;
@@ -96,6 +99,7 @@ architecture ad4030_spi_arch of ad4030_spi is
     signal cnv_period_cfg : std_logic_vector(DATA_SIZE-1 downto 0); -- 31 downto 0 : period size
     signal cnv_width_cfg : std_logic_vector(DATA_SIZE-1 downto 0); -- 31 downto 0 : pulse width size
     signal adc_spi_status : std_logic_vector(DATA_SIZE-1 downto 0);  --  31 downto 3 : free; 2: BUSY; 1 : SPRBF (SPI Receiver Buffer Full); 0 : SPTBE (SPI Transmit Buffer Empty)
+    signal adc_miso_buffer : std_logic_vector(DATA_SIZE-1 downto 0); 
     
     
     signal adc_line_md : std_logic_vector(1 downto 0);
@@ -108,8 +112,10 @@ architecture ad4030_spi_arch of ad4030_spi is
     signal adc_busy_reg1, adc_busy_reg2, adc_busy_reg3, falling_edge_detected : std_logic;
     signal gen_load : std_logic;
     signal adc_miso : std_logic_vector(0 to 3);
-    signal mosi_bit_count, spi_bit_count : natural range 0 to 32;
-    signal spi_state : states_t;
+    signal mosi_bit_count, spi_bit_count, miso_bit_count : natural range 0 to 32;
+    signal spi_state, miso_state : states_t;
+    signal adc_miso0_reg, adc_miso1_reg, adc_miso2_reg, adc_miso3_reg : std_logic;
+    signal adc_miso0_sync, adc_miso1_sync, adc_miso2_sync, adc_miso3_sync : std_logic;
     
     signal write_data_to_adc_status : std_logic;
     signal write_data_to_adc : std_logic_vector(DATA_SIZE-1 downto 0);
@@ -125,7 +131,7 @@ architecture ad4030_spi_arch of ad4030_spi is
     alias adc_spi_sprbf_a : std_logic is adc_spi_status(1);
     alias adc_spi_sptbe_a : std_logic is adc_spi_status(0);
     
-    procedure ClockConfiguration
+    procedure CountConfiguration
     (
         signal adc_out_data : in std_logic_vector(2 downto 0);
         signal adc_line : in std_logic_vector(1 downto 0);
@@ -156,7 +162,7 @@ architecture ad4030_spi_arch of ad4030_spi is
         else
             null;
         end if;
-    end procedure ClockConfiguration;
+    end procedure CountConfiguration;
 
 begin
 
@@ -175,6 +181,7 @@ begin
             gen_load <= '0';
            -- adc_busy <= '0';
            baud_count_limit <= (others => '0'); 
+           adc_miso_buffor <= (others => '0'); 
         else
             if rising_edge(axi_clk_in) then
                 if (write_enable_in = '1') then
@@ -223,7 +230,7 @@ begin
         end if;
     end process write_proc;
     
-   state_machine : process(axi_clk_in, axi_rst_n_in, baud_clk) 
+   state_machine : process(axi_clk_in, axi_rst_n_in, baud_clk)
    begin
         if (axi_rst_n_in = '0') then
             spi_state <= IDLE;
@@ -237,30 +244,7 @@ begin
                         spi_bit_count <= 24;
                         spi_state <= START;
                     elsif (falling_edge_detected = '1') then
---                        if (adc_out_data_md = B24_DATA or adc_out_data_md = B16P8_DATA) then
---                                if (adc_line_md = ONE_LINE) then
---                                    spi_bit_count <= 24;
---                                elsif (adc_line_md = TWO_LINES) then
---                                    spi_bit_count <= 12;
---                                elsif (adc_line_md = FOUR_LINES) then
---                                    spi_bit_count <= 6;
---                                 else
---                                    spi_bit_count <= 24;
---                                end if;
---                            elsif (adc_out_data_md = B24P8_DATA or adc_out_data_md = B30P2_DATA or adc_out_data_md = B32_TEST_DATA) then
---                                if (adc_line_md = ONE_LINE) then
---                                    spi_bit_count <= 32;
---                                elsif (adc_line_md = TWO_LINES) then
---                                    spi_bit_count <= 16;
---                                elsif (adc_line_md = FOUR_LINES) then
---                                    spi_bit_count <= 8;
---                                 else
---                                    spi_bit_count <= 32;
---                                end if;
---                            else
---                                null;
---                        end if;
-                        ClockConfiguration
+                        CountConfiguration
                         (
                             adc_out_data => adc_out_data_md,
                             adc_line => adc_line_md,
@@ -364,11 +348,76 @@ begin
     end if;    
     end process adc_mosi_proc;
     
+    adc_miso_sync_proc : process (axi_clk_in, axi_rst_n_in)
+    begin
+        if (axi_rst_n_in = '0') then
+            adc_miso0_reg <= '0';
+            adc_miso1_reg <= '0';
+            adc_miso2_reg <= '0';
+            adc_miso3_reg <= '0';
+            adc_miso0_sync <= '0';
+            adc_miso1_sync <= '0';
+            adc_miso2_sync <= '0';
+            adc_miso3_sync <= '0';
+        elsif rising_edge(axi_clk_in) then
+            adc_miso0_reg <= adc_miso0_in;
+            adc_miso0_sync <= adc_miso0_reg;
+            adc_miso1_reg <= adc_miso1_in;
+            adc_miso1_sync <= adc_miso1_reg;
+            adc_miso2_reg <= adc_miso2_in;
+            adc_miso2_sync <= adc_miso2_reg;
+            adc_miso3_reg <= adc_miso3_in;
+            adc_miso3_sync <= adc_miso3_reg;
+        end if;
+        
+    end process adc_miso_sync_proc;
+    
     adc_miso_proc : process (axi_clk_in, axi_rst_n_in)
     begin
         if (axi_rst_n_in = '0') then
             adc_miso <= (others => '0');
-        elsif (baud_clk_pulse = '1') then
+            miso_state <= IDLE;
+        elsif rising_edge(axi_clk_in) then
+            case miso_state is 
+                when IDLE =>
+                    CountConfiguration
+                    (
+                        adc_out_data => adc_out_data_md,
+                        adc_line => adc_line_md,
+                        bit_count => miso_bit_count
+                     ); 
+                    if(adc_cs_n = '0') then
+                        miso_state <= DATA;
+                    end if;
+                when DATA =>
+                    if (baud_clk_pulse = '1' and adc_cs_n = '0') then
+                        if (miso_bit_count - 1  > 0) then
+                            miso_bit_count <= miso_bit_count - 1;
+                            if (adc_cfg_enabled = '1') then
+                                adc_miso_buffer(miso_bit_count-1) <= adc_miso0_sync;
+                            else
+                                case adc_line_md is
+                                    when ONE_LINE =>
+                                        adc_miso_buffer(miso_bit_count-1) <= adc_miso0_sync;
+                                    when TWO_LINES =>
+                                        adc_miso_buffer(2*miso_bit_count - 1) <= adc_miso0_sync;
+                                        adc_miso_buffer(2*miso_bit_count - 2) <= adc_miso1_sync;
+                                    when FOUR_LINES =>
+                                        adc_miso_buffer(4*miso_bit_count - 1) <= adc_miso0_sync;
+                                        adc_miso_buffer(4*miso_bit_count - 2) <= adc_miso1_sync;
+                                        adc_miso_buffer(4*miso_bit_count - 3) <= adc_miso2_sync;
+                                        adc_miso_buffer(4*miso_bit_count - 4) <= adc_miso3_sync;                                   
+                                    when others =>
+                                        null;
+                                end case;
+                            end if;
+                         else
+                            miso_state <= IDLE;
+                        end if;
+                    end if;
+                when others =>
+                    miso_state <= IDLE;
+            end case;
         end if;
     end process adc_miso_proc;
     
