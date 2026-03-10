@@ -57,9 +57,15 @@ architecture test of ad4030_spi_tb is
     signal adc_cnv : std_logic;
     signal adc_busy : std_logic := '0';
     signal adc_cs : std_logic;
-
+    signal adc_miso0 : std_logic := '0';
+    signal adc_miso1 : std_logic := '0';
+    signal adc_miso2 : std_logic := '0';
+    signal adc_miso3 : std_logic := '0';
+    
+    signal adc_test_data0 : std_logic_vector(23 downto 0);
+    
     -- Clock period definition (100 MHz)
-    constant clk_period : time := 10 ns;
+    constant clk_period : time := 5 ns;
     constant N_BITS : integer := 32;
 
 begin
@@ -71,12 +77,11 @@ begin
          
             adc_cs_n_out        => adc_cs,
             adc_busy_in         => adc_busy,
-            adc_miso0_in         => '0',
-            adc_miso1_in         => '0',
-            adc_miso2_in         => '0',
-            adc_miso3_in         => '0',
+            adc_miso0_in         => adc_miso0,
+            adc_miso1_in         => adc_miso1,
+            adc_miso2_in         => adc_miso2,
+            adc_miso3_in         => adc_miso3,
             adc_sclk_out        => spi_sclk,
-            adc_rst_n_out       => open,
             adc_mosi_out        => open,
             adc_conv_out        => adc_cnv,
             
@@ -139,13 +144,31 @@ begin
         write_enable <= '0';
         wait for 20 ns;  
         
---        if falling_edge(adc_cnv) then
---            adc_busy <= '1';
---            wait for 300 ns;
---            adc_busy <= '0';
---        end if;
+        -- Test readout from ADC : one line, 24 bit data size -----
         
-        wait;  
+        adc_test_data0 <= x"9ABCDE";
+
+        wait until falling_edge(adc_cs);        
+        for i in  23 downto 0 loop
+            wait until rising_edge(spi_sclk);
+            adc_miso0 <= adc_test_data0(i);
+        end loop;
+        
+        ------------------------------------------------------------ 
+        
+        -- Test readout from ADC : one line, 24 bit data size -----
+        
+        adc_test_data0 <= x"123456";
+
+        wait until falling_edge(adc_cs);        
+        for i in  23 downto 0 loop
+            wait until rising_edge(spi_sclk);
+            adc_miso0 <= adc_test_data0(i);
+        end loop;
+        
+        ------------------------------------------------------------ 
+        
+        wait;  -- Pause the simulation
     
     end process uut_proc;
     

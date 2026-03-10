@@ -62,7 +62,9 @@ architecture pulse_generator_arch of pulse_generator is
 
 begin
 
-    reg_ctrl_proc : process(clk_in) begin
+    reg_ctrl_proc : process(clk_in)
+    begin
+    
         if (rising_edge(clk_in)) then
             if rst_n_in = '0' then
                 if (PULSE_PERIOD_SIZE = 0) then
@@ -88,10 +90,13 @@ begin
     
     end process reg_ctrl_proc;
     
-    counter_proc : process(clk_in) begin
-        if (rising_edge(clk_in)) then
-            if (pulse_period_cnt = 0 or rst_n_in = '0') then
-                pulse_period_cnt <= unsigned(pulse_period_reg_out);
+    counter_proc : process(clk_in, rst_n_in) 
+    begin
+        if  (rst_n_in = '0') then
+            pulse_period_cnt <= (others => '0');
+        elsif rising_edge(clk_in) then
+            if (pulse_period_cnt = 0) then
+                pulse_period_cnt <= unsigned(pulse_period_reg_out) - 1;
             else
                 pulse_period_cnt <= pulse_period_cnt - 1;
             end if; 
@@ -100,9 +105,10 @@ begin
     
     end process counter_proc;
     
-    pulse_gen_proc : process(clk_in) begin
+    pulse_gen_proc : process(clk_in, rst_n_in)
+    begin
     
-        if((pulse_period_cnt = unsigned(pulse_width_reg_out)) and rst_n_in = '1') then
+        if((pulse_period_cnt = unsigned(pulse_width_reg_out)- 1) and rst_n_in = '1') then
             pulse_out <= '1';
         elsif (rst_n_in = '0' or pulse_period_cnt = 0) then
             pulse_out <= '0';
