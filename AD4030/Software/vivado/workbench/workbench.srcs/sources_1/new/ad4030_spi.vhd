@@ -36,12 +36,13 @@ entity ad4030_spi is
 generic(
     REG_N : integer := 8;
     constant ADRR_SIZE : natural range 0 to 16 :=4;
-    constant DATA_SIZE : natural range 0 to 32 :=32
+    constant DATA_SIZE : natural range 0 to 32 :=32;
+    constant CFG_DATA_SIZE : natural range 0 to 24 :=24
     );    
     
 port(
-    axi_clk_in: in std_logic;
-    axi_rst_n_in : in std_logic;
+    axi4_clk_in: in std_logic;
+    axi4_rst_n_in : in std_logic;
  
     adc_cs_n_out : out std_logic;
     adc_busy_in : in std_logic;
@@ -54,14 +55,16 @@ port(
     adc_conv_out : out std_logic;
     
     
-    read_address_in : in std_logic_vector(ADRR_SIZE-1 downto 0);
-    read_data_out : out std_logic_vector(DATA_SIZE-1 downto 0);
-    read_enable_in : in std_logic;
+    axi4l_read_address_in : in std_logic_vector(ADRR_SIZE-1 downto 0);
+    axi4l_read_data_out : out std_logic_vector(DATA_SIZE-1 downto 0);
+    axi4l_read_enable_in : in std_logic;
     
-    write_address_in : in std_logic_vector(ADRR_SIZE-1 downto 0);
-    write_data_in : in std_logic_vector(DATA_SIZE-1 downto 0);
-    write_enable_in : in std_logic;
-    write_strobe_in : in std_logic_vector(3 downto 0)
+    axi4s_read_data_out : out std_logic_vector(DATA_SIZE-1 downto 0);
+    
+    axi4l_write_address_in : in std_logic_vector(ADRR_SIZE-1 downto 0);
+    axi4l_write_data_in : in std_logic_vector(DATA_SIZE-1 downto 0);
+    axi4l_write_enable_in : in std_logic;
+    axi4l_write_strobe_in : in std_logic_vector(3 downto 0)
     
     
     
@@ -73,15 +76,16 @@ architecture ad4030_spi_arch of ad4030_spi is
 
     type states_t is (IDLE,START,DATA,TRANSMIT,STOP);
     
-    constant ADC_MODES : std_logic_vector(15 downto 0) := x"00_20";
-    constant ADC_ENABLE_CFG :  std_logic_vector(15 downto 0) := x"00_A0";
-    constant ADC_EXIT_CFG_MD :  std_logic_vector(15 downto 0) := x"00_14";
+    constant ADC_MODES_ADDR : std_logic_vector(15 downto 0) := x"00_20";
+    constant ADC_ENABLE_CFG_CMD :  std_logic_vector(DATA_SIZE-1 downto 0) := x"00_A0_00_00";
+    constant ADC_EXIT_CFG_MD_ADDR :  std_logic_vector(15 downto 0) := x"00_14";
     
     constant ADC_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"0";  -- DEC: 0
     constant SPI_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"1"; -- DEC: 1
     constant CNV_PERIOD_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"2"; -- DEC: 2  
     constant CNV_WIDTH_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"3"; -- DEC: 3  
     constant SPI_STATUS_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"4"; -- DEC: 4  
+    constant ADC_READOUT_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"5"; -- DEC: 5  
     
     constant ONE_LINE : std_logic_vector(1 downto 0) := "00";
     constant TWO_LINES : std_logic_vector(1 downto 0) := "01";
@@ -98,8 +102,9 @@ architecture ad4030_spi_arch of ad4030_spi is
     signal cnv_period_cfg : std_logic_vector(DATA_SIZE-1 downto 0); -- 31 downto 0 : period size
     signal cnv_width_cfg : std_logic_vector(DATA_SIZE-1 downto 0); -- 31 downto 0 : pulse width size
     signal adc_spi_status : std_logic_vector(DATA_SIZE-1 downto 0);  --  31 downto 3 : free; 2: BUSY; 1 : SPRBF (SPI Receiver Buffer Full); 0 : SPTBE (SPI Transmit Buffer Empty)
-    signal adc_miso_buffer : std_logic_vector(DATA_SIZE-1 downto 0); 
-    
+    signal adc_cfg_buffer : std_logic_vector(DATA_SIZE-1 downto 0); 
+    signal adc_stream_buffer : std_logic_vector(DATA_SIZE-1 downto 0);
+    signal adc_mosi_data :  std_logic_vector(CFG_DATA_SIZE-1 downto 0);
     
     signal adc_line_md : std_logic_vector(1 downto 0);
     signal adc_out_data_md : std_logic_vector(2 downto 0);
@@ -111,13 +116,11 @@ architecture ad4030_spi_arch of ad4030_spi is
     signal adc_busy_reg1, adc_busy_reg2, adc_busy_reg3, falling_edge_detected : std_logic;
     signal gen_load : std_logic;
     signal adc_miso : std_logic_vector(0 to 3);
-    signal mosi_bit_count, spi_bit_count, miso_bit_count : natural range 0 to 32;
+    signal spi_bit_count : natural range 0 to 32;
     signal spi_state, miso_state : states_t;
     signal adc_miso0_sync, adc_miso1_sync, adc_miso2_sync, adc_miso3_sync : std_logic;
+    signal generator_reset : std_logic;
     
-    signal write_data_to_adc_status : std_logic;
-    signal write_data_to_adc : std_logic_vector(DATA_SIZE-1 downto 0);
-  
     alias adc_cfg_addr_a : std_logic_vector(15 downto 0) is adc_cfg(23 downto 8);
     alias adc_cfg_data_a : std_logic_vector(7 downto 0) is adc_cfg(7 downto 0);
     alias adc_line_md_a : std_logic_vector(1 downto 0) is adc_cfg(7 downto 6);
@@ -181,37 +184,31 @@ architecture ad4030_spi_arch of ad4030_spi is
 
 begin
 
-    write_proc : process(axi_clk_in, axi_rst_n_in) 
+    write_proc : process(axi4_clk_in, axi4_rst_n_in) 
         variable baud_val_v : unsigned(15 downto 0);
     begin
-        if (axi_rst_n_in = '0') then
+        if (axi4_rst_n_in = '0') then
             adc_cfg <= (others => '0');
             spi_cfg <= (others => '0');
             cnv_period_cfg <= (others => '0');
             cnv_width_cfg <= (others => '0');
-            adc_spi_status <= x"00_00_00_01";
-            write_data_to_adc_status <= '0';
-            write_data_to_adc <= (others => '0');
-            adc_spi_status <= (others => '0');
             gen_load <= '0';
            -- adc_busy <= '0';
            baud_count_limit <= (others => '0'); 
         else
-            if rising_edge(axi_clk_in) then
-                if (write_enable_in = '1') then
-                    case write_address_in is
+            if rising_edge(axi4_clk_in) then
+                if (axi4l_write_enable_in = '1') then
+                    case axi4l_write_address_in is
                         when ADC_CFG_INDEX => 
                             for i in 0 to 3 loop
-                                if(write_strobe_in(i) = '1') then
-                                    adc_cfg((i*8+7) downto (i*8)) <= write_data_in((i*8+7) downto (i*8));
+                                if(axi4l_write_strobe_in(i) = '1') then
+                                    adc_cfg((i*8+7) downto (i*8)) <= axi4l_write_data_in((i*8+7) downto (i*8));
                                 end if;
                             end loop;
-                            write_data_to_adc <= adc_cfg;
-                            --write_data_to_adc_status <= '1';
                         when SPI_CFG_INDEX =>
                              for i in 0 to 3 loop
-                                if(write_strobe_in(i) = '1') then
-                                    spi_cfg((i*8+7) downto (i*8)) <= write_data_in((i*8+7) downto (i*8));
+                                if(axi4l_write_strobe_in(i) = '1') then
+                                    spi_cfg((i*8+7) downto (i*8)) <= axi4l_write_data_in((i*8+7) downto (i*8));
                                 end if;
                              end loop;
                              baud_val_v := unsigned(spi_baud_div_a);
@@ -222,15 +219,15 @@ begin
                              end if;
                         when CNV_PERIOD_INDEX =>
                             for i in 0 to 3 loop
-                                if(write_strobe_in(i) = '1') then
-                                    cnv_period_cfg((i*8+7) downto (i*8)) <= write_data_in((i*8+7) downto (i*8));
+                                if(axi4l_write_strobe_in(i) = '1') then
+                                    cnv_period_cfg((i*8+7) downto (i*8)) <= axi4l_write_data_in((i*8+7) downto (i*8));
                                 end if;
                              end loop;
                             gen_load <= '1';
                         when CNV_WIDTH_INDEX =>
                             for i in 0 to 3 loop
-                                if(write_strobe_in(i) = '1') then
-                                    cnv_width_cfg((i*8+7) downto (i*8)) <= write_data_in((i*8+7) downto (i*8));
+                                if(axi4l_write_strobe_in(i) = '1') then
+                                    cnv_width_cfg((i*8+7) downto (i*8)) <= axi4l_write_data_in((i*8+7) downto (i*8));
                                 end if;
                              end loop;
                             gen_load <= '1';
@@ -244,34 +241,66 @@ begin
         end if;
     end process write_proc;
     
-    read_proc : process(adc_cfg, spi_cfg, cnv_period_cfg, cnv_width_cfg, adc_spi_status, adc_miso_buffer, read_address_in)
-    
+    adc_config_proc : process(adc_cfg, axi4_rst_n_in)
     begin
-        case read_address_in is
-            when ADC_CFG_INDEX =>
-                read_data_out <= adc_cfg;
-            when SPI_CFG_INDEX =>
-                read_data_out <= spi_cfg;
-            when CNV_PERIOD_INDEX => 
-                read_data_out <= cnv_period_cfg;
-            when CNV_WIDTH_INDEX =>
-                read_data_out <= cnv_width_cfg;
-            when others =>
-                read_data_out <= (others => '0');
-        end case;
+        if(axi4_rst_n_in = '0') then
+            adc_line_md <= (others => '0');
+            adc_out_data_md <= (others => '0');
+            adc_cfg_enabled <= '0';
+            
+        else
+            if (adc_cfg = ADC_ENABLE_CFG_CMD) then
+                adc_cfg_enabled <= '1';
+            elsif (adc_cfg = ADC_EXIT_CFG_MD_ADDR & x"01")then
+            adc_cfg_enabled <= '0';
+            else
+                case adc_cfg_addr_a is
+                    when ADC_MODES_ADDR =>
+                        adc_line_md <= adc_line_md_a;
+                        adc_out_data_md <= adc_out_data_md_a;
+                    when others => 
+                        null;
+                end case;
+            end if;
+        end if;
+    end process adc_config_proc;
+    
+    read_proc : process(axi4_rst_n_in, adc_cfg, spi_cfg, cnv_period_cfg, cnv_width_cfg, adc_spi_status, adc_cfg_buffer, axi4l_read_address_in)
+    begin
+        if (axi4_rst_n_in = '0') then
+            axi4l_read_data_out <= (others => '0');
+        else
+            case axi4l_read_address_in is
+                when ADC_CFG_INDEX =>
+                    axi4l_read_data_out <= adc_cfg;
+                when SPI_CFG_INDEX =>
+                    axi4l_read_data_out <= spi_cfg;
+                when CNV_PERIOD_INDEX => 
+                    axi4l_read_data_out <= cnv_period_cfg;
+                when CNV_WIDTH_INDEX =>
+                    axi4l_read_data_out <= cnv_width_cfg;
+                when SPI_STATUS_INDEX =>
+                    axi4l_read_data_out <= adc_spi_status; 
+                when ADC_READOUT_INDEX => 
+                    axi4l_read_data_out <= adc_cfg_buffer;
+                when others =>
+                    axi4l_read_data_out <= (others => '0');
+            end case;
+         end if;
     end process read_proc;
     
-   state_machine : process(axi_clk_in, axi_rst_n_in, baud_clk)
+   state_machine : process(axi4_clk_in, axi4_rst_n_in, baud_clk)
    begin
-        if (axi_rst_n_in = '0') then
+        if (axi4_rst_n_in = '0') then
             spi_state <= IDLE;
             adc_cs_n <= '1';
-        elsif rising_edge(axi_clk_in) then
+            adc_spi_status <= (others => '0');
+        elsif rising_edge(axi4_clk_in) then
             --spi_current_state <= spi_next_state;
             case spi_state is
                 when IDLE =>
                     adc_cs_n <= '1';
-                    if (adc_cfg_enabled = '1') then
+                    if (adc_cfg_enabled = '1' and axi4l_write_enable_in = '1') then
                         spi_bit_count <= 24;
                         spi_state <= START;
                     elsif (falling_edge_detected = '1') then
@@ -289,63 +318,48 @@ begin
                     spi_state <= DATA;
                 when DATA =>
                     if (baud_clk_pulse = '1') then
-                        if (spi_bit_count - 1  > 0) then
+                        if (spi_bit_count - 1 > 0) then
                             spi_bit_count <= spi_bit_count - 1;
+                            adc_spi_busy_a <= '1';
+                            adc_spi_busy_a <= '1';
+                            adc_spi_sprbf_a <= '0';
+                            adc_spi_sptbe_a <= '0';
                             spi_state <= DATA;
                         else
                             spi_state <= STOP;
                         end if;
-                        adc_spi_busy_a <= '1';
-                        adc_spi_sprbf_a <= '0';
-                        adc_spi_sptbe_a <= '0';
                     end if;
                 when STOP =>
-                    spi_state <= IDLE;
-                    adc_cs_n <= '1';
-                    adc_spi_busy_a <= '0';
-                    adc_spi_sprbf_a <= '1';
-                    adc_spi_sptbe_a <= '0';
+                   if (baud_clk = '0') then
+                        adc_cs_n <= '1';
+                        adc_spi_busy_a <= '0';
+                        adc_spi_sprbf_a <= '1';
+                        adc_spi_sptbe_a <= '0';
+                        spi_state <= IDLE;
+                    end if;
                 when others =>
                     spi_state <= IDLE;
             end case;
         end if;
     end process state_machine;
    
-    adc_config_proc : process(adc_cfg, axi_rst_n_in)
-    begin
-        if(axi_rst_n_in = '0') then
-            adc_line_md <= (others => '0');
-            adc_out_data_md <= (others => '0');
-            
-        else
-            case adc_cfg_addr_a is
-                when ADC_MODES =>
-                    adc_line_md <= adc_line_md_a;
-                    adc_out_data_md <= adc_out_data_md_a;
-                when others => 
-                    null;
-            end case;
-        end if;
-    end process adc_config_proc;
-  
-    adc_clock_gen_proc : process(axi_rst_n_in, axi_clk_in) 
+    adc_clock_gen_proc : process(axi4_rst_n_in, axi4_clk_in) 
     begin 
-        if (axi_rst_n_in = '0') then
+        if (axi4_rst_n_in = '0') then
             baud_count <= (others => '0');
             baud_clk <= '1';  
             baud_clk_pulse <= '0';   
-        elsif rising_edge(axi_clk_in) then
+        elsif rising_edge(axi4_clk_in) then
             if (adc_cs_n = '0') then
                 baud_clk_pulse <= '0';
                 if (baud_count = baud_count_limit) then
                     baud_count <= (others => '0');
                     baud_clk <= not baud_clk;
-
+                    if (baud_clk = '0') then
+                        baud_clk_pulse <= not baud_clk_pulse ;
+                    end if;
                 else
                     baud_count <= baud_count + 1;
-                    if (baud_clk = '1') then
-                        baud_clk_pulse <= '1';
-                    end if;
                  end if;
              else
                 baud_clk <= '0';
@@ -353,38 +367,33 @@ begin
         end if;
     end process adc_clock_gen_proc;
     
-    adc_mosi_proc : process (axi_clk_in, axi_rst_n_in, baud_clk_pulse, adc_cs_n)
+    adc_mosi_proc : process (axi4l_write_enable_in, axi4_clk_in, axi4_rst_n_in, baud_clk_pulse, adc_cfg,adc_cfg_enabled,baud_clk)
     begin
-    if (axi_rst_n_in = '0') then
-        mosi_bit_count <= 24;
-        adc_cfg_enabled <= '0';
-    elsif (baud_clk_pulse = '1') then 
-        if (adc_cs_n = '0') then
-            if mosi_bit_count - 1 > 0 then
-                mosi_bit_count <= mosi_bit_count - 1; 
-            else
-                mosi_bit_count <= 24;
-                --write_data_to_adc_status <= '0';
-                if(adc_cfg_addr_a = ADC_ENABLE_CFG) then
-                    adc_cfg_enabled <= '1';
-                elsif (adc_cfg_addr_a = ADC_EXIT_CFG_MD and adc_cfg_data_a(0) = '1') then
-                    adc_cfg_enabled <= '0';
-                else
-                    adc_cfg_enabled <= '0';
-                end if;
+    if (axi4_rst_n_in = '0') then
+        adc_mosi_data <= (others => '0');
+        --adc_mosi_out <= '0';
+    elsif rising_edge(axi4_clk_in) then 
+        if (axi4l_write_enable_in = '1') then
+            adc_mosi_data <= adc_cfg(CFG_DATA_SIZE-1 downto 0);
+        elsif(adc_cs_n = '0' and adc_cfg_enabled = '1') then
+            if(baud_clk_pulse = '1' ) then
+                adc_mosi_data <=  adc_mosi_data(22 downto 0) & '0';
             end if;
-        end if;
+        end if; 
     end if;    
     end process adc_mosi_proc;
     
-    adc_miso_sync_proc : process (axi_clk_in, axi_rst_n_in)
+    adc_mosi_out <= adc_mosi_data(23);
+    
+    
+    adc_miso_sync_proc : process (axi4_clk_in, axi4_rst_n_in)
     begin
-        if (axi_rst_n_in = '0') then
+        if (axi4_rst_n_in = '0') then
             adc_miso0_sync <= '0';
             adc_miso1_sync <= '0';
             adc_miso2_sync <= '0';
             adc_miso3_sync <= '0';
-        elsif rising_edge(axi_clk_in) then
+        elsif rising_edge(axi4_clk_in) then
             adc_miso0_sync <= adc_miso0_in;
             adc_miso1_sync <= adc_miso1_in;
             adc_miso2_sync <= adc_miso2_in;
@@ -394,57 +403,60 @@ begin
     end process adc_miso_sync_proc;
     
     
-    adc_miso_proc : process (axi_clk_in, axi_rst_n_in)
+    adc_miso_proc : process (axi4_clk_in, axi4_rst_n_in, adc_spi_busy_a, baud_clk_pulse)
     begin
-        if (axi_rst_n_in = '0') then
+        if (axi4_rst_n_in = '0') then
             adc_miso <= (others => '0');
             miso_state <= IDLE;
-            adc_miso_buffer <= (others => '0'); 
-            
-        elsif rising_edge(axi_clk_in) then
+            adc_cfg_buffer <= (others => '0'); 
+            adc_stream_buffer <= (others => '0'); 
+        elsif rising_edge(axi4_clk_in) then
             case miso_state is 
                 when IDLE =>
-                    miso_bit_count <= CountConfiguration(adc_out => adc_out_data_md, adc_line => adc_line_md);
                     if(adc_cs_n = '0') then
-                        miso_state <= DATA;
-                        adc_miso_buffer <= (others => '0'); 
+                        adc_cfg_buffer <= (others => '0'); 
+                        if (adc_cfg_enabled = '0') then
+                            adc_stream_buffer <= (others => '0'); 
+                        end if;
+                        miso_state <= DATA; 
                     end if;
                 when DATA =>
-                    if (baud_clk_pulse = '1' and adc_cs_n = '0') then
-                        if (miso_bit_count  > 0) then
-                            miso_bit_count <= miso_bit_count - 1;
+                if (adc_cs_n = '0') then
+                    if (baud_clk_pulse = '1') then
                             if (adc_cfg_enabled = '1') then
-                                adc_miso_buffer <= adc_miso_buffer(DATA_SIZE - 2 downto 0) & adc_miso0_sync;
+                                adc_cfg_buffer <= adc_cfg_buffer(DATA_SIZE - 2 downto 0) & adc_miso0_sync;
                             else
                                 case adc_line_md is
                                     when ONE_LINE =>
-                                        adc_miso_buffer <= adc_miso_buffer(DATA_SIZE - 2 downto 0) & adc_miso0_sync;
+                                        adc_stream_buffer <= adc_stream_buffer(DATA_SIZE - 2 downto 0) & adc_miso0_sync;
                                     when TWO_LINES =>
-                                        adc_miso_buffer <= adc_miso_buffer(DATA_SIZE - 3 downto 0) & adc_miso0_sync & adc_miso1_sync;
+                                        adc_stream_buffer <= adc_stream_buffer(DATA_SIZE - 3 downto 0) & adc_miso0_sync & adc_miso1_sync;
                                     when FOUR_LINES =>
-                                        adc_miso_buffer <= adc_miso_buffer(DATA_SIZE - 5  downto 0) & adc_miso0_sync & adc_miso1_sync & adc_miso2_sync & adc_miso3_sync;
+                                        adc_stream_buffer <= adc_stream_buffer(DATA_SIZE - 5  downto 0) & adc_miso0_sync & adc_miso1_sync & adc_miso2_sync & adc_miso3_sync;
                                     when others =>
                                         null;
                                 end case;
                             end if;
-                         else
-                            miso_state <= IDLE;
-                        end if;
-                    else
-                        miso_state <= DATA;
-                    end if;
+                      end if;
+                 else
+                    miso_state <= IDLE;
+                 end if;
                 when others =>
                     miso_state <= IDLE;
             end case;
         end if;
     end process adc_miso_proc;
     
-    read_data_out <= adc_miso_buffer; -- Only for test, delete this
+    
+    
+    axi4s_read_data_out <= adc_stream_buffer;
+    
+    generator_reset <= axi4_rst_n_in when (adc_cfg_enabled = '0') else '0';
     
     cnv_generator : entity work.pulse_generator
         port map (
-            clk_in               => axi_clk_in,
-            rst_n_in             => axi_rst_n_in,
+            clk_in               => axi4_clk_in,
+            rst_n_in             => generator_reset,
             pulse_width_in       => cnv_width_cfg,
             pulse_period_in      => cnv_period_cfg,
             load_config_in       => gen_load,
@@ -452,26 +464,22 @@ begin
             pulse_counter_out    => open
         );
         
-    busy_sync_proc : process(axi_clk_in, axi_rst_n_in)
+    busy_sync_proc : process(axi4_clk_in, axi4_rst_n_in)
     begin
-        if (axi_rst_n_in = '0') then
+        if (axi4_rst_n_in = '0') then
             adc_busy_reg1 <= '0';
             adc_busy_reg2 <= '0';
             adc_busy_reg3 <= '0';
             falling_edge_detected <= '0';
-        elsif rising_edge(axi_clk_in) then
-            -- 2-FF Synchronizer to prevent metastability
+        elsif rising_edge(axi4_clk_in) then
             adc_busy_reg1 <= adc_busy_in;
             adc_busy_reg2 <= adc_busy_reg1;
-            
-            -- Delay register for edge detection
             adc_busy_reg3 <= adc_busy_reg2;
             falling_edge_detected <= (not adc_busy_reg2) and adc_busy_reg3;
         end if;
     end process busy_sync_proc;
 
-    adc_mosi_out <= write_data_to_adc(mosi_bit_count - 1) when (adc_cfg_enabled ='1' and adc_cs_n = '0') else '0';    
-    adc_sclk_out <= baud_clk;
+    adc_sclk_out <= baud_clk when(adc_cs_n = '0') else '0';
     adc_cs_n_out <= adc_cs_n;
     
 
