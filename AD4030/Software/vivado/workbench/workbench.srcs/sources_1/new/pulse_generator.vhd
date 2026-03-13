@@ -45,8 +45,8 @@ entity pulse_generator is
         pulse_period_in : in std_logic_vector(N-1 downto 0);
         pulse_counter_out : out std_logic_vector(N-1 downto 0);
         load_config_in : in std_logic;
-        pulse_out : out std_logic
-        
+        pulse_out : out std_logic;
+        enable : in std_logic
         );
                
 --  Port ( );
@@ -105,14 +105,17 @@ begin
     
     end process counter_proc;
     
-    pulse_gen_proc : process(clk_in, rst_n_in)
+    pulse_gen_proc : process(clk_in, rst_n_in, enable)
     begin
-    
-        if((pulse_period_cnt = unsigned(pulse_width_reg_out)- 1) and rst_n_in = '1') then
-            pulse_out <= '1';
-        elsif (rst_n_in = '0' or pulse_period_cnt = 0) then
+        if(enable = '1') then
+            if((pulse_period_cnt = unsigned(pulse_width_reg_out)- 1) and rst_n_in = '1') then
+                pulse_out <= '1';
+            elsif (rst_n_in = '0' or pulse_period_cnt = 0) then
+                pulse_out <= '0';
+            end if;
+         else
             pulse_out <= '0';
-        end if;
+         end if;
     
     end process pulse_gen_proc;
     
