@@ -38,16 +38,16 @@ end ad4030_spi_tb;
 
 architecture test of ad4030_spi_tb is
 
-    constant ADRR_SIZE : natural :=4;
+    constant ADRR_SIZE : natural :=6;
     constant DATA_SIZE : natural :=32;
 
-    constant ADC_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"0";  -- DEC: 0
-    constant SPI_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"1"; -- DEC: 1
-    constant CNV_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"2"; -- DEC: 2  
-    constant CNV_PERIOD_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"3"; -- DEC: 3  
-    constant CNV_WIDTH_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"4"; -- DEC: 4  
-    constant SPI_STATUS_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"5"; -- DEC: 5  
-    constant ADC_READOUT_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"6"; -- DEC: 6  
+    constant ADC_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "000000";  -- DEC: 0
+    constant SPI_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "000001"; -- DEC: 1
+    constant CNV_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "000010"; -- DEC: 2  
+    constant CNV_PERIOD_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "000011"; -- DEC: 3  
+    constant CNV_WIDTH_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "000100"; -- DEC: 4  
+    constant SPI_STATUS_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "001001"; -- DEC: 5  
+    constant ADC_READOUT_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "001010"; -- DEC: 6  
     
     constant B24_DATA : std_logic_vector(2 downto 0) := "000";
     constant B16P8_DATA : std_logic_vector(2 downto 0) := "001";
@@ -66,7 +66,7 @@ architecture test of ad4030_spi_tb is
     signal clk : std_logic;
     signal rst_n : std_logic;
     signal adc_sclk : std_logic;
-    signal write_address : std_logic_vector(3 downto 0);
+    signal write_address : std_logic_vector(ADRR_SIZE-1 downto 0);
     signal write_data : std_logic_vector(DATA_SIZE-1 downto 0);
     signal write_strobe : std_logic_vector(3 downto 0);
     signal write_enable : std_logic;
@@ -78,7 +78,7 @@ architecture test of ad4030_spi_tb is
     signal adc_miso2 : std_logic := '0';
     signal adc_miso3 : std_logic := '0';
     signal adc_stream_readout : std_logic_vector(DATA_SIZE-1 downto 0);
-    signal read_address : std_logic_vector(3 downto 0);
+    signal read_address : std_logic_vector(ADRR_SIZE-1 downto 0);
     signal read_data : std_logic_vector(DATA_SIZE-1 downto 0);
     signal read_enable : std_logic;
           
@@ -228,7 +228,8 @@ begin
             axi4l_read_address_in     => read_address,
             axi4l_read_data_out       => read_data,
             axi4l_read_enable_in      => read_enable,
-            axi4s_read_data_out       => adc_stream_readout,
+            
+            m_axi4s_tdata             => adc_stream_readout,
             
             
             axi4l_write_address_in    => write_address,

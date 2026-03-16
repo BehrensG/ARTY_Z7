@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.sim/sim_1/synth/timing/xsim/ad4030_spi_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ad4030_spi
+INFO: [VRFC 10-311] analyzing module pulse_generator
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_spi_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ad4030_spi_tb'

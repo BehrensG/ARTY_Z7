@@ -35,9 +35,9 @@ use IEEE.NUMERIC_STD.ALL;
 entity ad4030_spi is
 generic(
     REG_N : integer := 8;
-    constant ADRR_SIZE : natural range 0 to 16 :=4;
-    constant DATA_SIZE : natural range 0 to 32 :=32;
-    constant CFG_DATA_SIZE : natural range 0 to 24 :=24
+    ADRR_SIZE : natural range 0 to 16 :=6;
+    DATA_SIZE : natural range 0 to 32 :=32;
+    CFG_DATA_SIZE : natural range 0 to 24 :=24
     );    
     
 port(
@@ -58,9 +58,13 @@ port(
     axi4l_read_address_in : in std_logic_vector(ADRR_SIZE-1 downto 0);
     axi4l_read_data_out : out std_logic_vector(DATA_SIZE-1 downto 0);
     axi4l_read_enable_in : in std_logic;
-    
-    axi4s_read_data_out : out std_logic_vector(DATA_SIZE-1 downto 0);
-    
+
+    -- AXI4 Master Stream    
+    m_axi4s_tdata : out std_logic_vector(DATA_SIZE-1 downto 0);
+    m_axi4s_tvalid : out std_logic;
+    m_axi4s_tready : in std_logic;
+    ----------------------
+        
     axi4l_write_address_in : in std_logic_vector(ADRR_SIZE-1 downto 0);
     axi4l_write_data_in : in std_logic_vector(DATA_SIZE-1 downto 0);
     axi4l_write_enable_in : in std_logic;
@@ -80,13 +84,13 @@ architecture ad4030_spi_arch of ad4030_spi is
     constant ADC_ENABLE_CFG_CMD :  std_logic_vector(DATA_SIZE-1 downto 0) := x"00_A0_00_00";
     constant ADC_EXIT_CFG_MD_ADDR :  std_logic_vector(15 downto 0) := x"00_14";
     
-    constant ADC_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"0";  -- DEC: 0
-    constant SPI_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"1"; -- DEC: 1
-    constant CNV_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"2"; -- DEC: 2  
-    constant CNV_PERIOD_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"3"; -- DEC: 3  
-    constant CNV_WIDTH_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"4"; -- DEC: 4  
-    constant SPI_STATUS_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"5"; -- DEC: 5  
-    constant ADC_READOUT_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := x"6"; -- DEC: 6  
+    constant ADC_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "000000";  -- DEC: 0
+    constant SPI_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "000001"; -- DEC: 1
+    constant CNV_CFG_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "000010"; -- DEC: 2  
+    constant CNV_PERIOD_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "000011"; -- DEC: 3  
+    constant CNV_WIDTH_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "000100"; -- DEC: 4  
+    constant SPI_STATUS_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "001001"; -- DEC: 5  
+    constant ADC_READOUT_INDEX : std_logic_vector(ADRR_SIZE-1 downto 0) := "001010"; -- DEC: 6  
     
     constant ONE_LINE : std_logic_vector(1 downto 0) := "00";
     constant TWO_LINES : std_logic_vector(1 downto 0) := "01";
@@ -104,8 +108,10 @@ architecture ad4030_spi_arch of ad4030_spi is
     signal cnv_period_cfg : std_logic_vector(DATA_SIZE-1 downto 0); -- 31 downto 0 : period size
     signal cnv_width_cfg : std_logic_vector(DATA_SIZE-1 downto 0); -- 31 downto 0 : pulse width size
     signal adc_spi_status : std_logic_vector(DATA_SIZE-1 downto 0);  --  31 downto 3 : free; 2: BUSY; 1 : SPRBF (SPI Receiver Buffer Full); 0 : SPTBE (SPI Transmit Buffer Empty)
-    signal adc_cfg_buffer : std_logic_vector(DATA_SIZE-1 downto 0); 
-    signal adc_stream_buffer : std_logic_vector(DATA_SIZE-1 downto 0);
+    signal adc_cfg_reg : std_logic_vector(DATA_SIZE-1 downto 0); 
+    signal adc_stream_reg : std_logic_vector(DATA_SIZE-1 downto 0);
+    signal adc_data_ready : std_logic;
+    signal adc_data_valid : std_logic;
     signal adc_mosi_data :  std_logic_vector(CFG_DATA_SIZE-1 downto 0);
     
     signal adc_line_md : std_logic_vector(1 downto 0);
@@ -126,6 +132,8 @@ architecture ad4030_spi_arch of ad4030_spi is
     signal baud_clk_rising_edge : std_logic;
     signal baud_clk_edge : std_logic;
     signal spi_end_pulse : std_logic;
+    signal cnv_enable : std_logic;
+    signal axis_tready : std_logic;
     
     alias adc_cfg_addr_a : std_logic_vector(15 downto 0) is adc_cfg(23 downto 8);
     alias adc_cfg_data_a : std_logic_vector(7 downto 0) is adc_cfg(7 downto 0);
@@ -279,7 +287,7 @@ begin
         end if;
     end process adc_config_proc;
     
-    read_proc : process(axi4_rst_n_in, adc_cfg, spi_cfg, cnv_period_cfg, cnv_width_cfg, adc_spi_status, adc_cfg_buffer, axi4l_read_address_in, cnv_cfg)
+    read_proc : process(axi4_rst_n_in, adc_cfg, spi_cfg, cnv_period_cfg, cnv_width_cfg, adc_spi_status, adc_cfg_reg, axi4l_read_address_in, cnv_cfg)
     begin
         if (axi4_rst_n_in = '0') then
             axi4l_read_data_out <= (others => '0');
@@ -298,7 +306,7 @@ begin
                 when SPI_STATUS_INDEX =>
                     axi4l_read_data_out <= adc_spi_status; 
                 when ADC_READOUT_INDEX => 
-                    axi4l_read_data_out <= adc_cfg_buffer;
+                    axi4l_read_data_out <= adc_cfg_reg;
                 when others =>
                     axi4l_read_data_out <= (others => '0');
             end case;
@@ -360,7 +368,21 @@ begin
             end case;
         end if;
     end process state_machine;
-   
+    
+    adc_data_valid_proc : process(axis_tready, adc_cfg_enabled, axi4_rst_n_in, adc_spi_sprbf_a)
+    begin
+        if (axi4_rst_n_in = '0') then
+            adc_data_valid <= '0';
+        else
+            if (adc_cfg_enabled = '0' and adc_spi_sprbf_a = '1') then
+                adc_data_valid <= '1';
+            else
+                adc_data_valid <= '0';    
+            end if;
+        end if;
+        
+    end process adc_data_valid_proc;
+    
    
    edge_detection_proc : process(axi4_rst_n_in, axi4_clk_in)
    begin
@@ -434,15 +456,15 @@ begin
         if (axi4_rst_n_in = '0') then
             adc_miso <= (others => '0');
             miso_state <= IDLE;
-            adc_cfg_buffer <= (others => '0'); 
-            adc_stream_buffer <= (others => '0'); 
+            adc_cfg_reg <= (others => '0'); 
+            adc_stream_reg <= (others => '0'); 
         elsif rising_edge(axi4_clk_in) then
             case miso_state is 
                 when IDLE =>
                     if(adc_cs_n = '0') then
-                        adc_cfg_buffer <= (others => '0'); 
+                        adc_cfg_reg <= (others => '0'); 
                         if (adc_cfg_enabled = '0') then
-                            adc_stream_buffer <= (others => '0'); 
+                            adc_stream_reg <= (others => '0'); 
                         end if;
                         miso_state <= DATA; 
                     end if;
@@ -450,15 +472,15 @@ begin
                 if (adc_cs_n = '0') then
                     if (baud_clk_rising_edge = '1') then
                             if (adc_cfg_enabled = '1') then
-                                adc_cfg_buffer <= adc_cfg_buffer(DATA_SIZE - 2 downto 0) & adc_miso0_sync;
-                            else
+                                adc_cfg_reg <= adc_cfg_reg(DATA_SIZE - 2 downto 0) & adc_miso0_sync;
+                            elsif (adc_cfg_enabled = '0') then
                                 case adc_line_md is
                                     when ONE_LINE =>
-                                        adc_stream_buffer <= adc_stream_buffer(DATA_SIZE - 2 downto 0) & adc_miso0_sync;
+                                        adc_stream_reg <= adc_stream_reg(DATA_SIZE - 2 downto 0) & adc_miso0_sync;
                                     when TWO_LINES =>
-                                        adc_stream_buffer <= adc_stream_buffer(DATA_SIZE - 3 downto 0) & adc_miso0_sync & adc_miso1_sync;
+                                        adc_stream_reg <= adc_stream_reg(DATA_SIZE - 3 downto 0) & adc_miso0_sync & adc_miso1_sync;
                                     when FOUR_LINES =>
-                                        adc_stream_buffer <= adc_stream_buffer(DATA_SIZE - 5  downto 0) & adc_miso0_sync & adc_miso1_sync & adc_miso2_sync & adc_miso3_sync;
+                                        adc_stream_reg <= adc_stream_reg(DATA_SIZE - 5  downto 0) & adc_miso0_sync & adc_miso1_sync & adc_miso2_sync & adc_miso3_sync;
                                     when others =>
                                         null;
                                 end case;
@@ -475,9 +497,10 @@ begin
     
     
     
-    axi4s_read_data_out <= adc_stream_buffer;
-    
+        
     --generator_reset <= axi4_rst_n_in when (adc_cfg_enabled = '0') else '0';
+    
+    cnv_enable <= '1' when (m_axi4s_tready = '1') else '0';
     
     cnv_generator : entity work.pulse_generator
         port map (
@@ -488,7 +511,7 @@ begin
             load_config_in       => gen_load,
             pulse_out            => adc_conv_out,
             pulse_counter_out    => open,
-            enable               => cnv_cfg_enable_a
+            enable               => cnv_enable
         );
         
     busy_sync_proc : process(axi4_clk_in, axi4_rst_n_in)
@@ -508,6 +531,11 @@ begin
 
     adc_sclk_out <= baud_clk when(adc_cs_n = '0') else '0';
     adc_cs_n_out <= adc_cs_n;
+    
+    m_axi4s_tvalid <= adc_data_valid;
+    m_axi4s_tdata <= adc_stream_reg;
+    axis_tready <= m_axi4s_tready;
+   
     
 
 end ad4030_spi_arch;

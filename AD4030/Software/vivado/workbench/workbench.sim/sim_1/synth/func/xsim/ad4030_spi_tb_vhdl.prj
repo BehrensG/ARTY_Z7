@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"ad4030_spi_tb_func_synth.vhd" \
+"../../../../../workbench.srcs/sim_1/new/ad4030_spi_tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,7 @@
+Running: xsim.dir/ad4030_spi_tb_time_synth/xsimk -simmode gui -wdb ad4030_spi_tb_time_synth.wdb -simrunnum 0 -socket 55703
+Design successfully loaded
+Design Loading Memory Usage: 34784 KB (Peak: 34784 KB)
+Design Loading CPU Usage: 60 ms
+Simulation completed
+Simulation Memory Usage: 116992 KB (Peak: 174052 KB)
+Simulation CPU Usage: 1740 ms
