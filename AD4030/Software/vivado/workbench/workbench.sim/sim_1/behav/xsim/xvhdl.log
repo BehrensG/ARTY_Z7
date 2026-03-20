@@ -1,3 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd" into library xil_defaultlib
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_spi.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ad4030_spi'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ad4030_axi_tb'

@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log ad4030_spi.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ad4030_spi.tcl" );
+         "-log AD4030.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source AD4030.tcl" );
 
 
 

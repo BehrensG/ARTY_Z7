@@ -1,0 +1,1656 @@
+/*
+
+AMD Vivado v2024.1 (64-bit) [Major: 2024, Minor: 1]
+SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+
+Process ID (PID): 20440
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Mar 18 14:24:15 CET 2026
+Time zone: 	Central European Standard Time (Europe/Berlin)
+
+OS: NAME="Arch Linux"
+OS Version: 6.19.8-arch1-1
+OS Architecture: amd64
+Available processors (cores): 12
+LSB Release Description: NAME=Arch Linux
+
+Display: 0.0
+Screen size: 1920x1080
+Local screen bounds: x = 1920, y = 0, width = 1920, height = 1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+JavaFX version: 21.0.1
+Java home: 	/opt/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12
+Java executable: 	/opt/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	grzegorz
+User home directory: /home/grzegorz
+User working directory: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2024.1
+RDI_DATADIR: /opt/Xilinx/SharedData/2024.1/data:/opt/Xilinx/Vivado/2024.1/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2024.1/bin
+
+Vivado preferences file: /home/grzegorz/.Xilinx/Vivado/2024.1/vivado.xml
+Vivado preferences directory: /home/grzegorz/.Xilinx/Vivado/2024.1/
+Vivado layouts directory: /home/grzegorz/.Xilinx/Vivado/2024.1/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2024.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/vivado.log
+Vivado journal file: 	/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-20440-archlinux
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /opt/Xilinx/Vivado/2024.1
+RDI_BASEROOT: /opt/Xilinx/Vivado
+RDI_BINROOT: /opt/Xilinx/Vivado/2024.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /opt/Xilinx/SharedData/2024.1/data:/opt/Xilinx/Vivado/2024.1/data
+RDI_INSTALLROOT: /opt/Xilinx
+RDI_INSTALLVER: 2024.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /opt/Xilinx/Vivado/2024.1/lib/lnx64.o/Default:/opt/Xilinx/Vivado/2024.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /opt/Xilinx/Vitis/2024.1/bin:/opt/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /opt/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench:archlinux_1773840239_20386
+RDI_SHARED_DATA: /opt/Xilinx/SharedData/2024.1/data
+RDI_TPS_ROOT: /opt/Xilinx/Vivado/2024.1/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /usr/bin/bash
+XILINX: /opt/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_DSP: /opt/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2024.1
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2024.1
+XILINX_SDK: /opt/Xilinx/Vitis/2024.1
+XILINX_VITIS: /opt/Xilinx/Vitis/2024.1
+XILINX_VIVADO: /opt/Xilinx/Vivado/2024.1
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2024.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,566 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.xpr", 0); // b.c (PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS)
+// [GUI Memory]: 111 MB (+113911kb) [00:00:08]
+// [Engine Memory]: 1,469 MB (+1388530kb) [00:00:08]
+// Opening Vivado Project: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.xpr. Version: Vivado v2024.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,667 MB. GUI used memory: 68 MB. Current time: 3/18/26, 2:24:16 PM CET
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 120 MB (+3294kb) [00:00:15]
+// [Engine Memory]: 1,826 MB (+298142kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  1445 ms.
+// Tcl Message: open_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'. 
+// Project name: workbench; location: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench; part: xc7z010clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 7944.293 ; gain = 365.469 ; free physical = 55416 ; free virtual = 62828 
+dismissDialog("Open Project"); // bj (Open Project Progress)
+// [Engine Memory]: 1,930 MB (+12750kb) [00:00:20]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AD4030(arch_imp) (AD4030.vhd)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AD4030(arch_imp) (AD4030.vhd)]", 1, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// [GUI Memory]: 135 MB (+9636kb) [00:00:23]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02m:10s
+// Elapsed Time for: 'L.f': 02m:12s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,008 MB. GUI used memory: 74 MB. Current time: 3/18/26, 2:26:36 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04m:54s
+// Elapsed Time for: 'L.f': 04m:56s
+// [GUI Memory]: 145 MB (+3584kb) [00:31:14]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,021 MB. GUI used memory: 74 MB. Current time: 3/18/26, 2:56:36 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:00m:28s
+// [Engine Memory]: 2,036 MB (+10031kb) [01:00:46]
+// Elapsed Time for: 'L.f': 01h:00m:30s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,036 MB. GUI used memory: 74 MB. Current time: 3/18/26, 3:24:51 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:00m:52s
+// Elapsed Time for: 'L.f': 01h:00m:54s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:01m:28s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:01m:30s
+// Tcl Message: update_compile_order -fileset sim_1 
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,069 MB. GUI used memory: 74 MB. Current time: 3/18/26, 3:25:51 PM CET
+// Elapsed Time for: 'L.f': 01h:01m:32s
+// Elapsed Time for: 'L.f': 01h:01m:34s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:02m:02s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:02m:04s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,112 MB. GUI used memory: 74 MB. Current time: 3/18/26, 3:26:26 PM CET
+// Elapsed Time for: 'L.f': 01h:02m:06s
+// Elapsed Time for: 'L.f': 01h:02m:08s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:02m:20s
+// Elapsed Time for: 'L.f': 01h:02m:22s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,135 MB. GUI used memory: 75 MB. Current time: 3/18/26, 3:26:46 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:02m:30s
+// [Engine Memory]: 2,151 MB (+13595kb) [01:02:48]
+// Elapsed Time for: 'L.f': 01h:02m:32s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:02m:52s
+// Elapsed Time for: 'L.f': 01h:02m:54s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,167 MB. GUI used memory: 75 MB. Current time: 3/18/26, 3:27:16 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:03m:42s
+// Elapsed Time for: 'L.f': 01h:03m:44s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:04m:20s
+// Elapsed Time for: 'L.f': 01h:04m:22s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,199 MB. GUI used memory: 75 MB. Current time: 3/18/26, 3:28:46 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:04m:34s
+// Elapsed Time for: 'L.f': 01h:04m:36s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:07m:10s
+// Elapsed Time for: 'L.f': 01h:07m:12s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,233 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:31:36 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:08m:04s
+// Elapsed Time for: 'L.f': 01h:08m:06s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:08m:28s
+// Elapsed Time for: 'L.f': 01h:08m:30s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,267 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:32:51 PM CET
+// [Engine Memory]: 2,267 MB (+9399kb) [01:08:47]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:08m:48s
+// Elapsed Time for: 'L.f': 01h:08m:50s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:09m:44s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,294 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:34:06 PM CET
+// Elapsed Time for: 'L.f': 01h:09m:46s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:13m:32s
+// Elapsed Time for: 'L.f': 01h:13m:34s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,318 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:37:56 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:14m:46s
+// Elapsed Time for: 'L.f': 01h:14m:48s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:17m:22s
+// Elapsed Time for: 'L.f': 01h:17m:24s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,352 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:41:46 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:17m:44s
+// Elapsed Time for: 'L.f': 01h:17m:46s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:18m:00s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,378 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:42:21 PM CET
+// Elapsed Time for: 'L.f': 01h:18m:02s
+// [Engine Memory]: 2,386 MB (+5378kb) [01:18:19]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:18m:04s
+// Elapsed Time for: 'L.f': 01h:18m:06s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:18m:24s
+// Elapsed Time for: 'L.f': 01h:18m:26s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:19m:04s
+// Elapsed Time for: 'L.f': 01h:19m:06s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:19m:08s
+// Elapsed Time for: 'L.f': 01h:19m:10s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,454 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:43:31 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:19m:36s
+// Elapsed Time for: 'L.f': 01h:19m:38s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:20m:28s
+// Elapsed Time for: 'L.f': 01h:20m:30s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,488 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:44:51 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:21m:26s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:21m:28s
+// Elapsed Time for: 'L.f': 01h:21m:30s
+// Elapsed Time for: 'L.f': 01h:21m:32s
+// [Engine Memory]: 2,520 MB (+15815kb) [01:21:49]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,520 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:45:56 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:23m:42s
+// Elapsed Time for: 'L.f': 01h:23m:44s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:24m:02s
+// Elapsed Time for: 'L.f': 01h:24m:04s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,552 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:48:26 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:25m:28s
+// Elapsed Time for: 'L.f': 01h:25m:30s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:25m:34s
+// Elapsed Time for: 'L.f': 01h:25m:36s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,584 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:50:01 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:25m:54s
+// Elapsed Time for: 'L.f': 01h:25m:56s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:26m:38s
+// Elapsed Time for: 'L.f': 01h:26m:40s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,616 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:51:01 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:26m:50s
+// Elapsed Time for: 'L.f': 01h:26m:52s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:27m:22s
+// Elapsed Time for: 'L.f': 01h:27m:24s
+// [Engine Memory]: 2,651 MB (+4402kb) [01:27:41]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,651 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:51:46 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:27m:28s
+// Elapsed Time for: 'L.f': 01h:27m:30s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:28m:26s
+// Elapsed Time for: 'L.f': 01h:28m:28s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,685 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:52:51 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:29m:38s
+// Elapsed Time for: 'L.f': 01h:29m:40s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:29m:58s
+// Elapsed Time for: 'L.f': 01h:30m:00s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,719 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:54:21 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:30m:08s
+// Elapsed Time for: 'L.f': 01h:30m:10s
+// [Engine Memory]: 3,575 MB (+830139kb) [01:30:27]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:30m:24s
+// Elapsed Time for: 'L.f': 01h:30m:26s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:30m:58s
+// Elapsed Time for: 'L.f': 01h:31m:00s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,613 MB. GUI used memory: 57 MB. Current time: 3/18/26, 3:55:21 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:31m:26s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:31m:28s
+// Elapsed Time for: 'L.f': 01h:31m:30s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:31m:48s
+// Elapsed Time for: 'L.f': 01h:31m:50s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:31m:58s
+// Elapsed Time for: 'L.f': 01h:32m:00s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:32m:12s
+// Elapsed Time for: 'L.f': 01h:32m:14s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:32m:54s
+// Elapsed Time for: 'L.f': 01h:32m:56s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:33m:54s
+// Elapsed Time for: 'L.f': 01h:33m:56s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:34m:06s
+// Elapsed Time for: 'L.f': 01h:34m:08s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:34m:54s
+// Elapsed Time for: 'L.f': 01h:34m:56s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:35m:02s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:35m:04s
+// Elapsed Time for: 'L.f': 01h:35m:06s
+// Elapsed Time for: 'L.f': 01h:35m:08s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:35m:10s
+// Elapsed Time for: 'L.f': 01h:35m:12s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:35m:30s
+// Elapsed Time for: 'L.f': 01h:35m:32s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:35m:54s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:35m:56s
+// Elapsed Time for: 'L.f': 01h:35m:58s
+// Elapsed Time for: 'L.f': 01h:36m:00s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:36m:48s
+// Elapsed Time for: 'L.f': 01h:36m:50s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:37m:16s
+// Elapsed Time for: 'L.f': 01h:37m:18s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:40m:28s
+// Elapsed Time for: 'L.f': 01h:40m:30s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:40m:38s
+// Elapsed Time for: 'L.f': 01h:40m:40s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:40m:44s
+// Elapsed Time for: 'L.f': 01h:40m:46s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:41m:14s
+// Elapsed Time for: 'L.f': 01h:41m:16s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:41m:32s
+// Elapsed Time for: 'L.f': 01h:41m:34s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:42m:24s
+// Elapsed Time for: 'L.f': 01h:42m:26s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:42m:36s
+// Elapsed Time for: 'L.f': 01h:42m:38s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:43m:08s
+// Elapsed Time for: 'L.f': 01h:43m:10s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:43m:28s
+// Elapsed Time for: 'L.f': 01h:43m:30s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:43m:36s
+// Elapsed Time for: 'L.f': 01h:43m:38s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:44m:44s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:44m:46s
+// Elapsed Time for: 'L.f': 01h:44m:48s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:45m:00s
+// Elapsed Time for: 'L.f': 01h:45m:02s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:45m:10s
+// Elapsed Time for: 'L.f': 01h:45m:12s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:45m:16s
+// Elapsed Time for: 'L.f': 01h:45m:18s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:45m:28s
+// Elapsed Time for: 'L.f': 01h:45m:30s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:46m:44s
+// Elapsed Time for: 'L.f': 01h:46m:46s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:47m:40s
+// Elapsed Time for: 'L.f': 01h:47m:42s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:48m:02s
+// Elapsed Time for: 'L.f': 01h:48m:04s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:48m:26s
+// Elapsed Time for: 'L.f': 01h:48m:28s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:48m:30s
+// Elapsed Time for: 'L.f': 01h:48m:32s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:48m:38s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:48m:40s
+// Elapsed Time for: 'L.f': 01h:48m:42s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:49m:02s
+// Elapsed Time for: 'L.f': 01h:49m:04s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:49m:16s
+// Elapsed Time for: 'L.f': 01h:49m:18s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:49m:30s
+// Elapsed Time for: 'L.f': 01h:49m:32s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:49m:38s
+// Elapsed Time for: 'L.f': 01h:49m:40s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:50m:00s
+// Elapsed Time for: 'L.f': 01h:50m:02s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:50m:20s
+// Elapsed Time for: 'L.f': 01h:50m:22s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:50m:36s
+// Elapsed Time for: 'L.f': 01h:50m:38s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:51m:50s
+// Elapsed Time for: 'L.f': 01h:51m:52s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:52m:26s
+// Elapsed Time for: 'L.f': 01h:52m:28s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:53m:26s
+// Elapsed Time for: 'L.f': 01h:53m:28s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:53m:34s
+// Elapsed Time for: 'L.f': 01h:53m:36s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:53m:40s
+// Elapsed Time for: 'L.f': 01h:53m:42s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,645 MB. GUI used memory: 60 MB. Current time: 3/18/26, 4:18:07 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:53m:52s
+// Elapsed Time for: 'L.f': 01h:53m:54s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:54m:02s
+// Elapsed Time for: 'L.f': 01h:54m:04s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,677 MB. GUI used memory: 60 MB. Current time: 3/18/26, 4:18:27 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:54m:20s
+// Elapsed Time for: 'L.f': 01h:54m:22s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:54m:24s
+// Elapsed Time for: 'L.f': 01h:54m:26s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,709 MB. GUI used memory: 60 MB. Current time: 3/18/26, 4:18:52 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:54m:56s
+// Elapsed Time for: 'L.f': 01h:54m:58s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,725 MB. GUI used memory: 61 MB. Current time: 3/18/26, 4:48:52 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:54m:09s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,741 MB. GUI used memory: 61 MB. Current time: 3/18/26, 5:18:32 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:54m:11s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed Time for: 'L.f': 02h:54m:13s
+// [Engine Memory]: 3,759 MB (+5892kb) [02:54:31]
+// Elapsed Time for: 'L.f': 02h:54m:15s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:54m:45s
+// Elapsed Time for: 'L.f': 02h:54m:47s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,775 MB. GUI used memory: 60 MB. Current time: 3/18/26, 5:19:12 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:54m:57s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:54m:59s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed Time for: 'L.f': 02h:55m:01s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:55m:03s
+// Elapsed Time for: 'L.f': 02h:55m:05s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:55m:39s
+// Elapsed Time for: 'L.f': 02h:55m:41s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:56m:21s
+// Elapsed Time for: 'L.f': 02h:56m:23s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,869 MB. GUI used memory: 61 MB. Current time: 3/18/26, 5:20:47 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:56m:55s
+// Elapsed Time for: 'L.f': 02h:56m:57s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,885 MB. GUI used memory: 61 MB. Current time: 3/18/26, 5:21:22 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:02m:15s
+// Elapsed Time for: 'L.f': 03h:02m:17s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:03m:23s
+// Elapsed Time for: 'L.f': 03h:03m:25s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,919 MB. GUI used memory: 61 MB. Current time: 3/18/26, 5:27:47 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:05m:15s
+// Elapsed Time for: 'L.f': 03h:05m:17s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:07m:35s
+// Elapsed Time for: 'L.f': 03h:07m:37s
+// [Engine Memory]: 3,951 MB (+4191kb) [03:07:54]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:07m:39s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,969 MB. GUI used memory: 61 MB. Current time: 3/18/26, 5:32:02 PM CET
+// Elapsed Time for: 'L.f': 03h:07m:41s
+// Elapsed time: 11551 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 7, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // am (PAResourceCommand.PACommandNames_OPEN_FILE_WITH, Open With)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // am (PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update)
+selectMenuItem(PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // ap (PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY)
+// Elapsed Time for: 'L.f': 03h:12m:41s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AD4030(arch_imp) (AD4030.vhd), AD4030_slave_lite_v1_0_S00_AXI_inst : AD4030_slave_lite_v1_0_S00_AXI(arch_imp) (AD4030_slave_lite_v1_0_S00_AXI.vhd)]", 2, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed Time for: 'L.f': 03h:12m:43s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AD4030(arch_imp) (AD4030.vhd), AD4030_slave_lite_v1_0_S00_AXI_inst : AD4030_slave_lite_v1_0_S00_AXI(arch_imp) (AD4030_slave_lite_v1_0_S00_AXI.vhd)]", 2, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AD4030(arch_imp) (AD4030.vhd), AD4030_slave_lite_v1_0_S00_AXI_inst : AD4030_slave_lite_v1_0_S00_AXI(arch_imp) (AD4030_slave_lite_v1_0_S00_AXI.vhd)]", 2, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 4,046 MB. GUI used memory: 63 MB. Current time: 3/18/26, 5:37:07 PM CET
+// Elapsed time: 21 seconds
+selectCodeEditor("AD4030_slave_lite_v1_0_S00_AXI.vhd", 107, 51); // ac (AD4030_slave_lite_v1_0_S00_AXI.vhd)
+selectCodeEditor("AD4030_slave_lite_v1_0_S00_AXI.vhd", 107, 51, false, false, false, false, true); // ac (AD4030_slave_lite_v1_0_S00_AXI.vhd) - Double Click
+selectCodeEditor("AD4030_slave_lite_v1_0_S00_AXI.vhd", 107, 51, false, false, false, true, false); // ac (AD4030_slave_lite_v1_0_S00_AXI.vhd) - Popup Trigger
+selectCodeEditor("AD4030_slave_lite_v1_0_S00_AXI.vhd", 90, 39); // ac (AD4030_slave_lite_v1_0_S00_AXI.vhd)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+// Elapsed time: 13 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AD4030(arch_imp) (AD4030.vhd), AD4030_spi_v1_0_inst : ad4030_spi(ad4030_spi_arch) (AD4030_spi.vhd)]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AD4030(arch_imp) (AD4030.vhd), AD4030_spi_v1_0_inst : ad4030_spi(ad4030_spi_arch) (AD4030_spi.vhd)]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 9); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 8); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 8); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Unreferenced]", 7); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, work, Unreferenced]", 10); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, work, Unreferenced]", 10); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, work, Unreferenced]", 10); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, work, Unreferenced, AD4030_package.vhd]", 11, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, work, Unreferenced, AD4030_package.vhd]", 11, false, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // am (PAResourceCommand.PACommandNames_OPEN_FILE_WITH, Open With)
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // am (PAResourceCommand.PACommandNames_OPEN_FILE_WITH, Open With)
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, work, Unreferenced, AD4030_package.vhd]", 11, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property library xil_defaultlib [get_files -of_objects [get_filesets sources_1] /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd] 
+// Elapsed Time for: 'L.f': 03h:14m:07s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:14m:09s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 4,052 MB. GUI used memory: 63 MB. Current time: 3/18/26, 5:38:32 PM CET
+// Elapsed Time for: 'L.f': 03h:14m:11s
+// Elapsed Time for: 'L.f': 03h:14m:13s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:23m:09s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,112 MB. GUI used memory: 63 MB. Current time: 3/18/26, 5:47:32 PM CET
+// Elapsed Time for: 'L.f': 03h:23m:11s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:27m:19s
+// Elapsed Time for: 'L.f': 03h:27m:21s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:27m:27s
+// Elapsed Time for: 'L.f': 03h:27m:29s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,130 MB. GUI used memory: 64 MB. Current time: 3/18/26, 5:51:52 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:32m:41s
+// Elapsed Time for: 'L.f': 03h:32m:43s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:36m:27s
+// Elapsed Time for: 'L.f': 03h:36m:29s
+// [Engine Memory]: 4,162 MB (+14078kb) [03:36:46]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,162 MB. GUI used memory: 64 MB. Current time: 3/18/26, 6:00:52 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:37m:59s
+// Elapsed Time for: 'L.f': 03h:38m:01s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:39m:57s
+// Elapsed Time for: 'L.f': 03h:39m:59s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,196 MB. GUI used memory: 64 MB. Current time: 3/18/26, 6:04:22 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:40m:15s
+// Elapsed Time for: 'L.f': 03h:40m:17s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:40m:43s
+// Elapsed Time for: 'L.f': 03h:40m:45s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,231 MB. GUI used memory: 64 MB. Current time: 3/18/26, 6:05:07 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:45m:21s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:45m:23s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:45m:25s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,257 MB. GUI used memory: 64 MB. Current time: 3/18/26, 6:09:47 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:45m:27s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed Time for: 'L.f': 03h:45m:29s
+// [Engine Memory]: 4,387 MB (+17085kb) [03:45:47]
+// Elapsed Time for: 'L.f': 03h:45m:31s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:47m:05s
+// Elapsed Time for: 'L.f': 03h:47m:07s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:47m:27s
+// Elapsed Time for: 'L.f': 03h:47m:29s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,421 MB. GUI used memory: 64 MB. Current time: 3/18/26, 6:11:52 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:47m:55s
+// Elapsed Time for: 'L.f': 03h:47m:57s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:49m:01s
+// Elapsed Time for: 'L.f': 03h:49m:03s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:49m:27s
+// Elapsed Time for: 'L.f': 03h:49m:29s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:49m:37s
+// Elapsed Time for: 'L.f': 03h:49m:39s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:49m:45s
+// Elapsed Time for: 'L.f': 03h:49m:47s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:51m:49s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:51m:51s
+// Elapsed Time for: 'L.f': 03h:51m:53s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:54m:45s
+// Elapsed Time for: 'L.f': 03h:54m:47s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,443 MB. GUI used memory: 65 MB. Current time: 3/18/26, 6:19:12 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:55m:51s
+// Elapsed Time for: 'L.f': 03h:55m:53s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:56m:19s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,475 MB. GUI used memory: 65 MB. Current time: 3/18/26, 6:20:42 PM CET
+// Elapsed Time for: 'L.f': 03h:56m:21s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:58m:37s
+// Elapsed Time for: 'L.f': 03h:58m:39s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:59m:27s
+// Elapsed Time for: 'L.f': 03h:59m:29s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,509 MB. GUI used memory: 65 MB. Current time: 3/18/26, 6:23:52 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:59m:33s
+// Elapsed Time for: 'L.f': 03h:59m:35s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03h:59m:47s
+// Elapsed Time for: 'L.f': 03h:59m:49s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,543 MB. GUI used memory: 65 MB. Current time: 3/18/26, 6:24:12 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:00m:15s
+// Elapsed Time for: 'L.f': 04h:00m:17s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:00m:25s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,569 MB. GUI used memory: 65 MB. Current time: 3/18/26, 6:24:47 PM CET
+// Elapsed Time for: 'L.f': 04h:00m:27s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:00m:55s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:00m:57s
+// [Engine Memory]: 4,609 MB (+3074kb) [04:01:15]
+// Elapsed Time for: 'L.f': 04h:00m:59s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,609 MB. GUI used memory: 65 MB. Current time: 3/18/26, 6:25:22 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:01m:29s
+// Elapsed Time for: 'L.f': 04h:01m:31s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:01m:39s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,643 MB. GUI used memory: 65 MB. Current time: 3/18/26, 6:26:02 PM CET
+// Elapsed Time for: 'L.f': 04h:01m:41s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,835 MB. GUI used memory: 65 MB. Current time: 3/18/26, 6:26:32 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:02m:13s
+// Elapsed Time for: 'L.f': 04h:02m:15s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:02m:49s
+// Elapsed Time for: 'L.f': 04h:02m:51s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:03m:03s
+// Elapsed Time for: 'L.f': 04h:03m:05s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:03m:27s
+// Elapsed Time for: 'L.f': 04h:03m:29s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:03m:51s
+// Elapsed Time for: 'L.f': 04h:03m:53s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:08m:19s
+// Elapsed Time for: 'L.f': 04h:08m:21s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:08m:31s
+// Elapsed Time for: 'L.f': 04h:08m:33s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:10m:57s
+// Elapsed Time for: 'L.f': 04h:10m:59s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:12m:57s
+// Elapsed Time for: 'L.f': 04h:12m:59s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:16m:25s
+// Elapsed Time for: 'L.f': 04h:16m:27s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:17m:45s
+// Elapsed Time for: 'L.f': 04h:17m:47s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:17m:53s
+// Elapsed Time for: 'L.f': 04h:17m:55s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:18m:05s
+// Elapsed Time for: 'L.f': 04h:18m:07s
+// [Engine Memory]: 4,855 MB (+16765kb) [04:18:24]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,859 MB. GUI used memory: 66 MB. Current time: 3/18/26, 6:42:32 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:19m:57s
+// Elapsed Time for: 'L.f': 04h:19m:59s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,875 MB. GUI used memory: 65 MB. Current time: 3/18/26, 6:44:22 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:21m:35s
+// Elapsed Time for: 'L.f': 04h:21m:37s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:22m:13s
+// Elapsed Time for: 'L.f': 04h:22m:15s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,907 MB. GUI used memory: 65 MB. Current time: 3/18/26, 6:46:37 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:22m:27s
+// Elapsed Time for: 'L.f': 04h:22m:29s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:23m:01s
+// Elapsed Time for: 'L.f': 04h:23m:03s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,940 MB. GUI used memory: 66 MB. Current time: 3/18/26, 6:47:27 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:24m:05s
+// Elapsed Time for: 'L.f': 04h:24m:07s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:40m:05s
+// Elapsed Time for: 'L.f': 04h:40m:07s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,974 MB. GUI used memory: 66 MB. Current time: 3/18/26, 7:04:32 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:40m:59s
+// Elapsed Time for: 'L.f': 04h:41m:01s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:41m:09s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,000 MB. GUI used memory: 66 MB. Current time: 3/18/26, 7:05:32 PM CET
+// Elapsed Time for: 'L.f': 04h:41m:11s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:41m:45s
+// Elapsed Time for: 'L.f': 04h:41m:47s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:41m:50s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,024 MB. GUI used memory: 66 MB. Current time: 3/18/26, 7:06:12 PM CET
+// Elapsed Time for: 'L.f': 04h:41m:51s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:41m:55s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'L.f': 04h:41m:57s
+// Elapsed Time for: 'L.f': 04h:41m:59s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:42m:08s
+// Elapsed Time for: 'L.f': 04h:42m:09s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 5,100 MB (+1767kb) [04:42:28]
+// Elapsed Time for: 'L.f': 04h:42m:11s
+// Elapsed Time for: 'L.f': 04h:42m:13s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,108 MB. GUI used memory: 66 MB. Current time: 3/18/26, 7:06:37 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:42m:17s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'L.f': 04h:42m:19s
+// Elapsed Time for: 'L.f': 04h:42m:21s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:42m:55s
+// Elapsed Time for: 'L.f': 04h:42m:57s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,156 MB. GUI used memory: 66 MB. Current time: 3/18/26, 7:07:22 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:47m:00s
+// Elapsed Time for: 'L.f': 04h:47m:01s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:47m:25s
+// Elapsed Time for: 'L.f': 04h:47m:27s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,193 MB. GUI used memory: 66 MB. Current time: 3/18/26, 7:11:52 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:48m:04s
+// Elapsed Time for: 'L.f': 04h:48m:05s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,209 MB. GUI used memory: 66 MB. Current time: 3/18/26, 7:12:27 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:48m:27s
+// Elapsed Time for: 'L.f': 04h:48m:29s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:50m:54s
+// Elapsed Time for: 'L.f': 04h:50m:55s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,241 MB. GUI used memory: 67 MB. Current time: 3/18/26, 7:15:17 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:51m:07s
+// Elapsed Time for: 'L.f': 04h:51m:09s
+// [Engine Memory]: 5,779 MB (+445088kb) [04:51:26]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,779 MB. GUI used memory: 67 MB. Current time: 3/18/26, 7:15:32 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:52m:16s
+// Elapsed Time for: 'L.f': 04h:52m:18s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:52m:24s
+// Elapsed Time for: 'L.f': 04h:52m:26s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:52m:40s
+// Elapsed Time for: 'L.f': 04h:52m:42s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04h:53m:22s
+// Elapsed Time for: 'L.f': 04h:53m:24s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:00m:14s
+// Elapsed Time for: 'L.f': 05h:00m:16s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:00m:30s
+// Elapsed Time for: 'L.f': 05h:00m:32s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:00m:56s
+// Elapsed Time for: 'L.f': 05h:00m:58s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:01m:08s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:01m:10s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed Time for: 'L.f': 05h:01m:12s
+// Elapsed Time for: 'L.f': 05h:01m:14s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:01m:56s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:01m:58s
+// Tcl Message: update_compile_order -fileset sim_1 
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed Time for: 'L.f': 05h:02m:00s
+// Elapsed Time for: 'L.f': 05h:02m:02s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:03m:00s
+// Elapsed Time for: 'L.f': 05h:03m:02s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:03m:30s
+// Elapsed Time for: 'L.f': 05h:03m:32s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:03m:52s
+// Elapsed Time for: 'L.f': 05h:03m:54s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:04m:58s
+// Elapsed Time for: 'L.f': 05h:05m:00s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:05m:12s
+// Elapsed Time for: 'L.f': 05h:05m:14s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:06m:16s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'L.f': 05h:06m:18s
+// Elapsed Time for: 'L.f': 05h:06m:20s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:08m:20s
+// Elapsed Time for: 'L.f': 05h:08m:22s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:09m:10s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:09m:12s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'L.f': 05h:09m:14s
+// Elapsed Time for: 'L.f': 05h:09m:16s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:09m:24s
+// Elapsed Time for: 'L.f': 05h:09m:26s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:09m:58s
+// Elapsed Time for: 'L.f': 05h:10m:00s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:10m:58s
+// Elapsed Time for: 'L.f': 05h:11m:00s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:11m:08s
+// Elapsed Time for: 'L.f': 05h:11m:10s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:11m:20s
+// Elapsed Time for: 'L.f': 05h:11m:22s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:11m:38s
+// Elapsed Time for: 'L.f': 05h:11m:40s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:11m:58s
+// Elapsed Time for: 'L.f': 05h:12m:00s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:12m:52s
+// Elapsed Time for: 'L.f': 05h:12m:54s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:13m:20s
+// Elapsed Time for: 'L.f': 05h:13m:22s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:13m:24s
+// Elapsed Time for: 'L.f': 05h:13m:26s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:13m:32s
+// Elapsed Time for: 'L.f': 05h:13m:34s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,800 MB. GUI used memory: 68 MB. Current time: 3/18/26, 7:37:57 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:13m:54s
+// Elapsed Time for: 'L.f': 05h:13m:56s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:16m:06s
+// Elapsed Time for: 'L.f': 05h:16m:08s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,834 MB. GUI used memory: 68 MB. Current time: 3/18/26, 7:40:32 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:16m:38s
+// Elapsed Time for: 'L.f': 05h:16m:40s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:17m:18s
+// Elapsed Time for: 'L.f': 05h:17m:20s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,866 MB. GUI used memory: 68 MB. Current time: 3/18/26, 7:41:42 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05h:17m:26s
+// Elapsed Time for: 'L.f': 05h:17m:28s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,882 MB. GUI used memory: 69 MB. Current time: 3/18/26, 8:11:42 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 5,882 MB. GUI used memory: 68 MB. Current time: 3/18/26, 8:41:42 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 06h:40m:00s
+// Elapsed Time for: 'L.f': 06h:40m:02s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,898 MB. GUI used memory: 68 MB. Current time: 3/18/26, 9:04:27 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:03m:16s
+// Elapsed Time for: 'L.f': 07h:03m:18s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:05m:03s
+// Elapsed Time for: 'L.f': 07h:05m:04s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,932 MB. GUI used memory: 68 MB. Current time: 3/18/26, 9:29:27 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:05m:34s
+// Elapsed Time for: 'L.f': 07h:05m:36s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:06m:13s
+// Elapsed Time for: 'L.f': 07h:06m:14s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,962 MB. GUI used memory: 68 MB. Current time: 3/18/26, 9:30:37 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:14m:07s
+// Elapsed Time for: 'L.f': 07h:14m:09s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:14m:13s
+// Elapsed Time for: 'L.f': 07h:14m:15s
+// HMemoryUtils.trashcanNow. Engine heap size: 5,994 MB. GUI used memory: 68 MB. Current time: 3/18/26, 9:38:37 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:14m:25s
+// Elapsed Time for: 'L.f': 07h:14m:27s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:21m:17s
+// Elapsed Time for: 'L.f': 07h:21m:19s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:21m:43s
+// Elapsed Time for: 'L.f': 07h:21m:45s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,045 MB. GUI used memory: 69 MB. Current time: 3/18/26, 9:46:07 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:21m:53s
+// Elapsed Time for: 'L.f': 07h:21m:55s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:22m:43s
+// [Engine Memory]: 6,071 MB (+2526kb) [07:22:59]
+// Elapsed Time for: 'L.f': 07h:22m:45s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,081 MB. GUI used memory: 69 MB. Current time: 3/18/26, 9:47:07 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:23m:55s
+// Elapsed Time for: 'L.f': 07h:23m:57s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:24m:35s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,115 MB. GUI used memory: 69 MB. Current time: 3/18/26, 9:48:57 PM CET
+// Elapsed Time for: 'L.f': 07h:24m:37s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:24m:39s
+// Elapsed Time for: 'L.f': 07h:24m:41s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:31m:17s
+// Elapsed Time for: 'L.f': 07h:31m:19s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,147 MB. GUI used memory: 69 MB. Current time: 3/18/26, 9:55:42 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:42m:49s
+// Elapsed Time for: 'L.f': 07h:42m:51s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:43m:25s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,181 MB. GUI used memory: 69 MB. Current time: 3/18/26, 10:07:47 PM CET
+// Elapsed Time for: 'L.f': 07h:43m:27s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:43m:49s
+// Elapsed Time for: 'L.f': 07h:43m:51s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:44m:03s
+// Elapsed Time for: 'L.f': 07h:44m:05s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,213 MB. GUI used memory: 69 MB. Current time: 3/18/26, 10:08:27 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:44m:15s
+// Elapsed Time for: 'L.f': 07h:44m:17s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:44m:37s
+// Elapsed Time for: 'L.f': 07h:44m:39s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,247 MB. GUI used memory: 69 MB. Current time: 3/18/26, 10:09:03 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:45m:27s
+// Elapsed Time for: 'L.f': 07h:45m:29s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:48m:35s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,297 MB. GUI used memory: 69 MB. Current time: 3/18/26, 10:12:57 PM CET
+// Elapsed Time for: 'L.f': 07h:48m:37s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:49m:25s
+// Elapsed Time for: 'L.f': 07h:49m:27s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:49m:41s
+// Elapsed Time for: 'L.f': 07h:49m:43s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,313 MB. GUI used memory: 69 MB. Current time: 3/18/26, 10:14:08 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:50m:13s
+// Elapsed Time for: 'L.f': 07h:50m:15s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:53m:01s
+// Elapsed Time for: 'L.f': 07h:53m:03s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,345 MB. GUI used memory: 70 MB. Current time: 3/18/26, 10:17:28 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:54m:01s
+// Elapsed Time for: 'L.f': 07h:54m:03s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:55m:15s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,379 MB. GUI used memory: 70 MB. Current time: 3/18/26, 10:19:38 PM CET
+// Elapsed Time for: 'L.f': 07h:55m:17s
+// [Engine Memory]: 6,379 MB (+5144kb) [07:55:34]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:57m:33s
+// Elapsed Time for: 'L.f': 07h:57m:35s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 07h:57m:41s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,405 MB. GUI used memory: 70 MB. Current time: 3/18/26, 10:22:03 PM CET
+// Elapsed Time for: 'L.f': 07h:57m:43s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:04m:07s
+// Elapsed Time for: 'L.f': 08h:04m:09s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,429 MB. GUI used memory: 70 MB. Current time: 3/18/26, 10:28:33 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:04m:33s
+// Elapsed Time for: 'L.f': 08h:04m:35s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:04m:59s
+// Elapsed Time for: 'L.f': 08h:05m:01s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,465 MB. GUI used memory: 70 MB. Current time: 3/18/26, 10:29:23 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:05m:09s
+// Elapsed Time for: 'L.f': 08h:05m:11s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 6,803 MB (+110389kb) [08:05:42]
+// Elapsed Time for: 'L.f': 08h:05m:27s
+// Elapsed Time for: 'L.f': 08h:05m:29s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:05m:37s
+// Elapsed Time for: 'L.f': 08h:05m:39s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,835 MB. GUI used memory: 70 MB. Current time: 3/18/26, 10:30:03 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:05m:57s
+// Elapsed Time for: 'L.f': 08h:05m:59s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:06m:01s
+// Elapsed Time for: 'L.f': 08h:06m:03s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:06m:15s
+// Elapsed Time for: 'L.f': 08h:06m:17s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:06m:45s
+// Elapsed Time for: 'L.f': 08h:06m:47s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:06m:49s
+// Elapsed Time for: 'L.f': 08h:06m:51s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:07m:15s
+// Elapsed Time for: 'L.f': 08h:07m:17s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:07m:47s
+// Elapsed Time for: 'L.f': 08h:07m:49s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:07m:51s
+// Elapsed Time for: 'L.f': 08h:07m:53s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:08m:17s
+// Elapsed Time for: 'L.f': 08h:08m:19s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:17m:21s
+// Elapsed Time for: 'L.f': 08h:17m:23s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:18m:41s
+// Elapsed Time for: 'L.f': 08h:18m:43s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:19m:01s
+// Elapsed Time for: 'L.f': 08h:19m:03s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:20m:17s
+// Elapsed Time for: 'L.f': 08h:20m:19s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:20m:25s
+// Elapsed Time for: 'L.f': 08h:20m:27s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:20m:35s
+// Elapsed Time for: 'L.f': 08h:20m:37s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:20m:43s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:20m:45s
+// Elapsed Time for: 'L.f': 08h:20m:47s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:21m:13s
+// Elapsed Time for: 'L.f': 08h:21m:15s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:21m:31s
+// Elapsed Time for: 'L.f': 08h:21m:33s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:22m:09s
+// Elapsed Time for: 'L.f': 08h:22m:11s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:22m:15s
+// Elapsed Time for: 'L.f': 08h:22m:17s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,864 MB. GUI used memory: 71 MB. Current time: 3/18/26, 10:46:43 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:22m:53s
+// Elapsed Time for: 'L.f': 08h:22m:55s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,882 MB. GUI used memory: 71 MB. Current time: 3/18/26, 10:47:18 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:24m:03s
+// Elapsed Time for: 'L.f': 08h:24m:05s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:24m:25s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,916 MB. GUI used memory: 71 MB. Current time: 3/18/26, 10:48:48 PM CET
+// Elapsed Time for: 'L.f': 08h:24m:27s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:24m:33s
+// Elapsed Time for: 'L.f': 08h:24m:35s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:24m:49s
+// Elapsed Time for: 'L.f': 08h:24m:51s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,948 MB. GUI used memory: 71 MB. Current time: 3/18/26, 10:49:13 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:24m:55s
+// Elapsed Time for: 'L.f': 08h:24m:57s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:25m:13s
+// Elapsed Time for: 'L.f': 08h:25m:15s
+// HMemoryUtils.trashcanNow. Engine heap size: 6,984 MB. GUI used memory: 72 MB. Current time: 3/18/26, 10:49:38 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:25m:19s
+// Elapsed Time for: 'L.f': 08h:25m:21s
+// [Engine Memory]: 7,187 MB (+45965kb) [08:25:38]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:25m:27s
+// Elapsed Time for: 'L.f': 08h:25m:29s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:26m:25s
+// HMemoryUtils.trashcanNow. Engine heap size: 7,219 MB. GUI used memory: 72 MB. Current time: 3/18/26, 10:50:48 PM CET
+// Elapsed Time for: 'L.f': 08h:26m:27s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:26m:35s
+// Elapsed Time for: 'L.f': 08h:26m:37s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:26m:57s
+// Elapsed Time for: 'L.f': 08h:26m:59s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:28m:41s
+// Elapsed Time for: 'L.f': 08h:28m:43s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:29m:47s
+// Elapsed Time for: 'L.f': 08h:29m:49s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:32m:03s
+// Elapsed Time for: 'L.f': 08h:32m:05s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:34m:07s
+// Elapsed Time for: 'L.f': 08h:34m:09s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:34m:13s
+// Elapsed Time for: 'L.f': 08h:34m:15s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:36m:15s
+// Elapsed Time for: 'L.f': 08h:36m:17s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:36m:39s
+// Elapsed Time for: 'L.f': 08h:36m:41s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:38m:37s
+// Elapsed Time for: 'L.f': 08h:38m:39s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:43m:57s
+// Elapsed Time for: 'L.f': 08h:43m:59s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:46m:07s
+// Elapsed Time for: 'L.f': 08h:46m:09s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:46m:11s
+// Elapsed Time for: 'L.f': 08h:46m:13s
+// HMemoryUtils.trashcanNow. Engine heap size: 7,244 MB. GUI used memory: 72 MB. Current time: 3/18/26, 11:10:38 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:47m:21s
+// Elapsed Time for: 'L.f': 08h:47m:23s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:47m:37s
+// Elapsed Time for: 'L.f': 08h:47m:39s
+// HMemoryUtils.trashcanNow. Engine heap size: 7,276 MB. GUI used memory: 73 MB. Current time: 3/18/26, 11:12:03 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:48m:53s
+// Elapsed Time for: 'L.f': 08h:48m:55s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:49m:15s
+// HMemoryUtils.trashcanNow. Engine heap size: 7,302 MB. GUI used memory: 73 MB. Current time: 3/18/26, 11:13:38 PM CET
+// Elapsed Time for: 'L.f': 08h:49m:17s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:49m:49s
+// Elapsed Time for: 'L.f': 08h:49m:51s
+// HMemoryUtils.trashcanNow. Engine heap size: 7,326 MB. GUI used memory: 73 MB. Current time: 3/18/26, 11:14:13 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:52m:05s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:52m:07s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed Time for: 'L.f': 08h:52m:09s
+// Elapsed Time for: 'L.f': 08h:52m:11s
+// HMemoryUtils.trashcanNow. Engine heap size: 7,360 MB. GUI used memory: 73 MB. Current time: 3/18/26, 11:16:33 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:52m:33s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:52m:35s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// [Engine Memory]: 7,655 MB (+113842kb) [08:52:52]
+// HMemoryUtils.trashcanNow. Engine heap size: 7,655 MB. GUI used memory: 73 MB. Current time: 3/18/26, 11:16:58 PM CET
+// Elapsed Time for: 'L.f': 08h:52m:37s
+// Elapsed Time for: 'L.f': 08h:52m:39s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:53m:43s
+// Elapsed Time for: 'L.f': 08h:53m:45s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:55m:01s
+// Elapsed Time for: 'L.f': 08h:55m:03s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:55m:27s
+// Elapsed Time for: 'L.f': 08h:55m:29s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:56m:03s
+// Elapsed Time for: 'L.f': 08h:56m:05s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:56m:27s
+// Elapsed Time for: 'L.f': 08h:56m:29s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:57m:23s
+// Elapsed Time for: 'L.f': 08h:57m:25s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:57m:37s
+// Elapsed Time for: 'L.f': 08h:57m:39s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:58m:03s
+// Elapsed Time for: 'L.f': 08h:58m:05s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:59m:21s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'L.f': 08h:59m:23s
+// Elapsed Time for: 'L.f': 08h:59m:25s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08h:59m:59s
+// Elapsed Time for: 'L.f': 09h:00m:01s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 09h:00m:15s
+// Elapsed Time for: 'L.f': 09h:00m:17s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 09h:01m:11s
+// Elapsed Time for: 'L.f': 09h:01m:13s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 09h:01m:29s
+// Elapsed Time for: 'L.f': 09h:01m:31s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 09h:01m:55s
+// Elapsed Time for: 'L.f': 09h:01m:57s
+// HMemoryUtils.trashcanNow. Engine heap size: 7,643 MB. GUI used memory: 74 MB. Current time: 3/18/26, 11:46:58 PM CET

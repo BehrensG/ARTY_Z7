@@ -1,28 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1773359295" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ad4030_spi.dcp">
-  <File Type="RDS-RDS" Name="ad4030_spi.vds"/>
-  <File Type="REPORTS-TCL" Name="ad4030_spi_reports.tcl"/>
-  <File Type="PA-TCL" Name="ad4030_spi.tcl"/>
-  <File Type="RDS-DCP" Name="ad4030_spi.dcp"/>
-  <File Type="RDS-UTIL" Name="ad4030_spi_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="ad4030_spi_utilization_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1773964339" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ad4030_spi.dcp">
+  <File Type="RDS-RDS" Name="AD4030.vds"/>
+  <File Type="REPORTS-TCL" Name="AD4030_reports.tcl"/>
+  <File Type="PA-TCL" Name="AD4030.tcl"/>
+  <File Type="RDS-DCP" Name="AD4030.dcp"/>
+  <File Type="RDS-UTIL" Name="AD4030_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="AD4030_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/AD4030_package.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/AD4030_slave_lite_v1_0_S00_AXI.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/pulse_generator.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/ad4030_spi.vhd">
+    <File Path="$PSRCDIR/sources_1/new/AD4030_spi.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/AD4030.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/AD4030_master_stream_v1_0_M00_AXIS.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ip/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ad4030_spi"/>
+      <Option Name="TopModule" Val="AD4030"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>

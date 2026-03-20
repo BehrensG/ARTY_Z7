@@ -1,212 +1,219 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 03/16/2026 11:54:43 AM
--- Design Name: 
--- Module Name: ad4030_axi_tb - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
-use work.ad4030_pkg.ALL;
-
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.ad4030_pkg.all;
+use ieee.std_logic_textio.all;
+use std.textio.all;
 
 entity ad4030_axi_tb is
---  Port ( );
-end ad4030_axi_tb;
+end entity ad4030_axi_tb;
 
-architecture Behavioral of ad4030_axi_tb is
+architecture testbench of ad4030_axi_tb is
 
-    constant ADRR_SIZE : natural range 0 to 16 :=6;
-    constant DATA_SIZE : natural range 0 to 32 :=32;
-    constant CFG_DATA_SIZE : natural range 0 to 24 :=24;
-    
-    -- Clock period definition (100 MHz)
-    constant clk_period : time := 10 ns;
-    
-    signal clk : std_logic;
+    constant clock_period : time := 10 ns; -- 100 MHz
+
+    signal clk   : std_logic;
     signal rst_n : std_logic;
-    signal adc_cs_n : std_logic;
-    signal adc_busy : std_logic;
-    signal adc_miso : std_logic_vector(0 to 3);
-    signal adc_sclk : std_logic;
-    signal adc_mosi : std_logic;
-    signal adc_cnv : std_logic;
+
+    -- AD4030 
+    signal cs_n            : std_logic;
+    signal busy            : std_logic;
+    signal miso0           : std_logic;
+    signal miso1           : std_logic;
+    signal miso2           : std_logic;
+    signal miso3           : std_logic;
+    signal sclk            : std_logic;
+    signal mosi            : std_logic;
+    signal conv            : std_logic;
+    -- AXI4 Lite interface
+    signal s00_axi_awaddr  : std_logic_vector(31 downto 0);
+    signal s00_axi_awprot  : std_logic_vector(2 downto 0);
+    signal s00_axi_awvalid : std_logic;
+    signal s00_axi_awready : std_logic;
+    signal s00_axi_wdata   : std_logic_vector(31 downto 0);
+    signal s00_axi_wstrb   : std_logic_vector(3 downto 0);
+    signal s00_axi_wvalid  : std_logic;
+    signal s00_axi_wready  : std_logic;
+    signal s00_axi_bresp   : std_logic_vector(1 downto 0);
+    signal s00_axi_bvalid  : std_logic;
+    signal s00_axi_bready  : std_logic;
+    signal s00_axi_araddr  : std_logic_vector(31 downto 0);
+    signal s00_axi_arprot  : std_logic_vector(2 downto 0);
+    signal s00_axi_arvalid : std_logic;
+    signal s00_axi_arready : std_logic;
+    signal s00_axi_rdata   : std_logic_vector(31 downto 0);
+    signal s00_axi_rresp   : std_logic_vector(1 downto 0);
+    signal s00_axi_rvalid  : std_logic;
+    signal s00_axi_rready  : std_logic;
+                signal sine_hex : std_logic_vector(31 downto 0);
+
+
+    component AD4030
+        generic(
+            C_S00_AXI_DATA_WIDTH   : integer := 32;
+            C_S00_AXI_ADDR_WIDTH   : integer := 32;
+            C_M00_AXIS_TDATA_WIDTH : integer := 32;
+            C_M00_AXIS_START_COUNT : integer := 32
+        );
+        port(
+            clk_in          : in  std_logic;
+            rst_n_in        : in  std_logic;
+            cs_n_out        : out std_logic;
+            busy_in         : in  std_logic;
+            miso0_in        : in  std_logic;
+            miso1_in        : in  std_logic;
+            miso2_in        : in  std_logic;
+            miso3_in        : in  std_logic;
+            sclk_out        : out std_logic;
+            mosi_out        : out std_logic;
+            conv_out        : out std_logic;
+            s00_axi_aclk    : in  std_logic;
+            s00_axi_aresetn : in  std_logic;
+            s00_axi_awaddr  : in  std_logic_vector(C_S00_AXI_ADDR_WIDTH - 1 downto 0);
+            s00_axi_awprot  : in  std_logic_vector(2 downto 0);
+            s00_axi_awvalid : in  std_logic;
+            s00_axi_awready : out std_logic;
+            s00_axi_wdata   : in  std_logic_vector(C_S00_AXI_DATA_WIDTH - 1 downto 0);
+            s00_axi_wstrb   : in  std_logic_vector((C_S00_AXI_DATA_WIDTH / 8) - 1 downto 0);
+            s00_axi_wvalid  : in  std_logic;
+            s00_axi_wready  : out std_logic;
+            s00_axi_bresp   : out std_logic_vector(1 downto 0);
+            s00_axi_bvalid  : out std_logic;
+            s00_axi_bready  : in  std_logic;
+            s00_axi_araddr  : in  std_logic_vector(C_S00_AXI_ADDR_WIDTH - 1 downto 0);
+            s00_axi_arprot  : in  std_logic_vector(2 downto 0);
+            s00_axi_arvalid : in  std_logic;
+            s00_axi_arready : out std_logic;
+            s00_axi_rdata   : out std_logic_vector(C_S00_AXI_DATA_WIDTH - 1 downto 0);
+            s00_axi_rresp   : out std_logic_vector(1 downto 0);
+            s00_axi_rvalid  : out std_logic;
+            s00_axi_rready  : in  std_logic
+        );
+    end component AD4030;
+
+    procedure SineGen(
+        signal spi_clk_in : in  std_logic;
+        signal sine_out   : out std_logic;
+        signal sine_hex_out : out std_logic_vector(31 downto 0);
+        signal cs_n : in std_logic) 
+        is
+        constant SIZE       : integer := 24;
+        file     input_file : text;
+        variable file_line  : line;
+        variable hex_val    : std_logic_vector(23 downto 0);
+        variable sine_hex    : std_logic_vector(31 downto 0);
+    begin
     
-    signal axi4l_read_address : std_logic_vector(ADRR_SIZE-1 downto 0);
-    signal axi4l_write_address : std_logic_vector(ADRR_SIZE-1 downto 0);
-    signal axi4l_read_data : std_logic_vector(DATA_SIZE-1 downto 0);
-    signal axi4l_write_data : std_logic_vector(DATA_SIZE-1 downto 0);
-    signal axi4l_read_enable : std_logic;
-    signal axi4l_write_enable : std_logic;
-    signal axi4l_write_strobe : std_logic_vector(3 downto 0);
-    
-    signal axi4s_tdata : std_logic_vector(DATA_SIZE-1 downto 0);
-    signal axi4s_tvalid : std_logic;
-    signal axi4s_tready : std_logic;
-    
-    signal adc_test_data : std_logic_vector(DATA_SIZE-1 downto 0);
-    
+        -- Open the file generated by your Python script
+        file_open(input_file, "sine_data.txt", read_mode);
+
+        while not endfile(input_file) loop
+            readline(input_file, file_line);
+            hread(file_line, hex_val);  -- Use 'hread' for Hex, 'read' for Integer
+            sine_hex := x"00" & hex_val;
+            wait until (cs_n ='0');
+            sine_hex_out <= sine_hex;
+            for i in SIZE - 1 downto 0 loop
+                wait until rising_edge(spi_clk_in);
+                sine_out <= sine_hex(i);
+            end loop;
+        end loop;
+
+        file_close(input_file);
+
+    end procedure SineGen;
+
 begin
 
-
-uut : entity work.ad4030_spi
+    AD4030_inst : AD4030
+        generic map(
+            C_S00_AXI_DATA_WIDTH   => 32,
+            C_S00_AXI_ADDR_WIDTH   => 32,
+            C_M00_AXIS_TDATA_WIDTH => 32,
+            C_M00_AXIS_START_COUNT => 32
+        )
         port map(
-            axi4_clk_in         => clk,
-            axi4_rst_n_in       => rst_n,
-         
-            adc_cs_n_out        => adc_cs_n,
-            adc_busy_in         => adc_busy,
-            adc_miso0_in        => adc_miso(0),
-            adc_miso1_in        => adc_miso(1),
-            adc_miso2_in        => adc_miso(2),
-            adc_miso3_in        => adc_miso(3),
-            adc_sclk_out        => adc_sclk,
-            adc_mosi_out        => adc_mosi,
-            adc_conv_out        => adc_cnv,
-            
-            
-            axi4l_read_address_in     => axi4l_read_address,
-            axi4l_read_data_out       => axi4l_read_data,
-            axi4l_read_enable_in      => axi4l_read_enable,
+            clk_in          => clk,
+            rst_n_in        => rst_n,
+            cs_n_out        => cs_n,
+            busy_in         => busy,
+            miso0_in        => miso0,
+            miso1_in        => miso1,
+            miso2_in        => miso2,
+            miso3_in        => miso3,
+            sclk_out        => sclk,
+            mosi_out        => mosi,
+            conv_out        => conv,
+            s00_axi_aclk    => clk,
+            s00_axi_aresetn => rst_n,
+            s00_axi_awaddr  => s00_axi_awaddr,
+            s00_axi_awprot  => s00_axi_awprot,
+            s00_axi_awvalid => s00_axi_awvalid,
+            s00_axi_awready => s00_axi_awready,
+            s00_axi_wdata   => s00_axi_wdata,
+            s00_axi_wstrb   => s00_axi_wstrb,
+            s00_axi_wvalid  => s00_axi_wvalid,
+            s00_axi_wready  => s00_axi_wready,
+            s00_axi_bresp   => s00_axi_bresp,
+            s00_axi_bvalid  => s00_axi_bvalid,
+            s00_axi_bready  => s00_axi_bready,
+            s00_axi_araddr  => s00_axi_araddr,
+            s00_axi_arprot  => s00_axi_arprot,
+            s00_axi_arvalid => s00_axi_arvalid,
+            s00_axi_arready => s00_axi_arready,
+            s00_axi_rdata   => s00_axi_rdata,
+            s00_axi_rresp   => s00_axi_rresp,
+            s00_axi_rvalid  => s00_axi_rvalid,
+            s00_axi_rready  => s00_axi_rready
+        );
 
-            axi4l_write_address_in    => axi4l_write_address,
-            axi4l_write_data_in       => axi4l_write_data,
-            axi4l_write_enable_in     => axi4l_write_enable,
-            axi4l_write_strobe_in     => axi4l_write_strobe,
+    clock_generator_proc : process is
+    begin
+        wait for clock_period / 2;
+        clk <= '0';
+        wait for clock_period / 2;
+        clk <= '1';
 
-            
-            m_axi4s_tdata             => axi4s_tdata,
-            m_axi4s_tready            => axi4s_tready,
-            m_axi4s_tvalid            => axi4s_tvalid
-            
-            
-         
-            );
-
-
-     clk_proc : process
-        begin
-            clk <= '0';
-            wait for clk_period/2;
-            clk <= '1';
-            wait for clk_period/2;
-        end process clk_proc;    
+    end process clock_generator_proc;
 
     adc_busy_proc : process
     begin
-        wait until rising_edge(adc_cnv); 
-        adc_busy <= '1';
+        wait until rising_edge(conv); 
+        busy <= '1';
         wait for 300 ns;
-        adc_busy <= '0';
+        busy <= '0';
     end process adc_busy_proc;
-    
-     axis_tready_proc : process(adc_cs_n, axi4s_tvalid)
-         begin
-            if(axi4s_tvalid = '1' or adc_cs_n = '1') then
-                axi4s_tready <= '1';
-            else
-                axi4s_tready <= '0';
-            end if;
-         end process axis_tready_proc;
-        
-    uut_proc : process
+
+    uut : process is
+
     begin
-    
-        rst_n <= '0';
-        wait for 200 ns;
-        rst_n <= '1';
-        wait for 50 ns;
-       -- axi4s_tready <= '0';
-        
-        -- Init data
-        
-        axi4l_read_address <= (others => '0');
-        --read_data <= (others => '0');
-        axi4l_read_enable <= '0';
-        
-        --adc_mosi_buffer <= (others => '0');
-        wait for 50 ns;
- 
-        
-        ------------------------------------------------------------ 
-        
-        -- SPI configuration 
-        
-        axi4l_write_address <= SPI_CFG_INDEX;
-        axi4l_write_data <= x"00_00_00_08"; -- SCLK speed
-        axi4l_write_strobe <= "0111";
-        axi4l_write_enable <= '1';
-        wait for 40 ns;
-        axi4l_write_enable <= '0';
-        wait for 20 ns;
-        
-        -- Pulse signal configuration
-        
-        axi4l_write_address <= CNV_PERIOD_INDEX;
-        axi4l_write_data <= x"00_00_02_00";
-        axi4l_write_strobe <= "1111";
-        axi4l_write_enable <= '1';
-        wait for 40 ns;
-        axi4l_write_enable <= '0';
-        wait for 20 ns;
-    
-        axi4l_write_address <= CNV_WIDTH_INDEX;
-        axi4l_write_data <= x"00_00_00_06";
-        axi4l_write_enable <= '1';
-        wait for 40 ns;
-        axi4l_write_enable <= '0';
-        wait for 20 ns;  
-        
-        axi4l_write_address <= CNV_CFG_INDEX;
-        axi4l_write_data <= x"00_00_00_01";
-        axi4l_write_enable <= '1';
-        wait for 40 ns;
-        axi4l_write_enable <= '0';
-        wait for 20 ns; 
-        
-        ------------------------------------------------------------ 
-        
-        -- Test readout from ADC : one line, 24 bit data size 
-        
-        adc_test_data <= x"009ABCDE";
-        
-        OneMisoLine(
-            input => adc_test_data,
-            size => 24,
-            cs => adc_cs_n,
-            sclk => adc_sclk,
-            miso0 => adc_miso(0) );
-            wait for 500 ns; 
-            
-         
-         wait; 
-            
-    end process uut_proc;
-    
+        -- Init 
+        rst_n           <= '0';
+        miso0           <= '0';
+        miso1           <= '0';
+        miso2           <= '0';
+        miso3           <= '0';
+        s00_axi_araddr  <= (others => '0');
+        s00_axi_awaddr  <= (others => '0');
+        s00_axi_wdata   <= (others => '0');
+        s00_axi_wstrb   <= (others => '0');
+        s00_axi_bready  <= '0';
+        s00_axi_rready  <= '0';
+        s00_axi_awprot  <= (others => '0');
+        s00_axi_awvalid <= '0';
+        s00_axi_wvalid  <= '0';
+        s00_axi_arprot  <= (others => '0');
+        s00_axi_arvalid <= '0';
+        wait for 100 ns;
+        rst_n           <= '1';
 
+        SineGen(spi_clk_in => sclk,
+                sine_out => miso0,
+                sine_hex_out =>sine_hex,
+                cs_n => cs_n);
+        wait;
 
-end Behavioral;
+    end process uut;
+
+end architecture testbench;
+

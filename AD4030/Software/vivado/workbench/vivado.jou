@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Mar 18 14:24:01 2026
+# Process ID: 20440
+# Current directory: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench
+# Command line: vivado
+# Log file: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/vivado.log
+# Journal file: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/vivado.jou
+# Running On        :archlinux
+# Platform          :Arch
+# Operating System  :Arch Linux
+# Processor Detail  :Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz
+# CPU Frequency     :3554.511 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :67062 MB
+# Swap memory       :4294 MB
+# Total Virtual     :71357 MB
+# Available Virtual :67020 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property library xil_defaultlib [get_files -of_objects [get_filesets sources_1] /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1

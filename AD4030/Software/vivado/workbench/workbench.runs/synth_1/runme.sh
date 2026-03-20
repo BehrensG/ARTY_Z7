@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ad4030_spi.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ad4030_spi.tcl
+EAStep vivado -log AD4030.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source AD4030.tcl

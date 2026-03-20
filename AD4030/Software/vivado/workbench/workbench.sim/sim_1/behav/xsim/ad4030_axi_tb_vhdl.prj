@@ -1,6 +1,8 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
 "../../../../workbench.srcs/sources_1/new/AD4030_package.vhd" \
+"../../../../workbench.srcs/sources_1/new/AD4030.vhd" \
+"../../../../workbench.srcs/sources_1/new/AD4030_slave_lite_v1_0_S00_AXI.vhd" \
 "../../../../workbench.srcs/sources_1/new/pulse_generator.vhd" \
 "../../../../workbench.srcs/sources_1/new/AD4030_spi.vhd" \
 "../../../../workbench.srcs/sim_1/new/ad4030_axi_tb.vhd" \
