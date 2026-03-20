@@ -5,4 +5,5 @@
   <Mappings Location="Common Libraries" Library="not mapped"/>
   <Mappings Location="Common Libraries/STD" Library="std"/>
   <Mappings Location="workbench.srcs/sim_1/new" Library="work"/>
+  <Mappings Location="workbench.srcs/sources_1/new" Library="work"/>
 </com.sigasi.hdt.shared.librarymapping.model:LibraryMappings>

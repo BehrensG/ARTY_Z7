@@ -2,9 +2,9 @@
 2020.2
 May 22 2024
 18:54:44
-/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd,1774026123,vhdl,,,,ad4030_axi_tb,,,,,,,,
-/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030.vhd,1773949516,vhdl,,,,ad4030,,,,,,,,
-/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd,1773963825,vhdl,/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd,,,ad4030_pkg,,,,,,,,
-/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_slave_lite_v1_0_S00_AXI.vhd,1773948342,vhdl,,,,ad4030_slave_lite_v1_0_s00_axi,,,,,,,,
-/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_spi.vhd,1773956358,vhdl,,,,ad4030_spi,,,,,,,,
-/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/pulse_generator.vhd,1773957785,vhdl,/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_spi.vhd,,,pulse_generator,,,,,,,,
+/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd,1774043744,vhdl,,,,ad4030_axi_tb,,,,,,,,
+/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030.vhd,1774048570,vhdl,,,,ad4030,,,,,,,,
+/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd,1774041843,vhdl,/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_spi.vhd;/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/pulse_generator.vhd,,,ad4030_pkg,,,,,,,,
+/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_slave_lite_v1_0_S00_AXI.vhd,1774044549,vhdl,,,,ad4030_slave_lite_v1_0_s00_axi,,,,,,,,
+/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_spi.vhd,1774049270,vhdl,,,,ad4030_spi,,,,,,,,
+/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/pulse_generator.vhd,1774048102,vhdl,/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_spi.vhd,,,pulse_generator,,,,,,,,

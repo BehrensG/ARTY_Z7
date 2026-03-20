@@ -33,7 +33,9 @@ use work.ad4030_pkg.all;
 --use UNISIM.VComponents.all;
 
 entity ad4030_spi is
-
+    generic(
+        SPI_CLK_DIV : natural := 2
+    );
     port(
         axi4_clk_in         : in  std_logic;
         axi4_rst_n_in       : in  std_logic;
@@ -105,7 +107,7 @@ architecture ad4030_spi_arch of ad4030_spi is
     signal spi_bit_count                                                               : natural range 0 to 32;
     signal spi_state, miso_state                                                       : states_t;
     signal ad4030_miso0_sync, ad4030_miso1_sync, ad4030_miso2_sync, ad4030_miso3_sync  : std_logic;
-   -- signal generator_reset                                                             : std_logic;
+    -- signal generator_reset                                                             : std_logic;
     signal baud_clk_falling_edge                                                       : std_logic;
     signal baud_clk_rising_edge                                                        : std_logic;
     signal baud_clk_edge                                                               : std_logic;
@@ -195,15 +197,14 @@ begin
     end process write_addr_proc;
 
     write_data_proc : process(axi4_clk_in, axi4_rst_n_in)
-        variable baud_val_v : unsigned(15 downto 0);
     begin
         if (axi4_rst_n_in = '0') then
             ad4030_cfg       <= (others => '0');
             spi_cfg          <= (others => '0');
-            cnv_period_cfg   <= x"00_00_00_64";
-            cnv_width_cfg    <= x"00_00_00_10";
+            cnv_period_cfg   <= (others => '0');
+            cnv_width_cfg    <= (others => '0');
             gen_load         <= '0';
-            baud_count_limit <= (others => '0');
+            baud_count_limit <= unsigned(TO_UNSIGNED(SPI_CLK_DIV, 16));
             cnv_cfg          <= (0 => '1', others => '0');
         else
             if rising_edge(axi4_clk_in) then
@@ -221,12 +222,7 @@ begin
                                     spi_cfg((i * 8 + 7) downto (i * 8)) <= axi4l_wdata_in((i * 8 + 7) downto (i * 8));
                                 end if;
                             end loop;
-                            baud_val_v := unsigned(spi_baud_div_a);
-                            if (baud_val_v > 1) then
-                                baud_count_limit <= unsigned(spi_baud_div_a) - 1;
-                            else
-                                baud_count_limit <= unsigned(spi_baud_div_a);
-                            end if;
+                            baud_count_limit <= unsigned(spi_baud_div_a);
                         when CNV_CFG_INDEX =>
                             for i in 0 to 3 loop
                                 if (axi4l_wstrb_in(i) = '1') then
@@ -387,7 +383,7 @@ begin
             baud_clk   <= '1';
         elsif rising_edge(axi4_clk_in) then
             if (ad4030_cs_n = '0') then
-                if (baud_count = baud_count_limit) then
+                if (baud_count = baud_count_limit - 1) then
                     baud_count <= (others => '0');
                     baud_clk   <= not baud_clk;
                 else
@@ -439,39 +435,22 @@ begin
             ad4030_cfg_reg    <= (others => '0');
             ad4030_stream_reg <= (others => '0');
         elsif rising_edge(axi4_clk_in) then
-            case miso_state is
-                when IDLE =>
-                    if (ad4030_cs_n = '0') then
-                        ad4030_cfg_reg <= (others => '0');
-                        if (ad4030_cfg_enabled = '0') then
-                            ad4030_stream_reg <= (others => '0');
-                        end if;
-                        miso_state     <= DATA;
-                    end if;
-                when DATA =>
-                    if (ad4030_cs_n = '0') then
-                        if (baud_clk_rising_edge = '1') then
-                            if (ad4030_cfg_enabled = '1') then
-                                ad4030_cfg_reg <= ad4030_cfg_reg(DATA_SIZE - 2 downto 0) & ad4030_miso0_sync;
-                            elsif (ad4030_cfg_enabled = '0') then
-                                case ad4030_line_md is
-                                    when ONE_LINE =>
-                                        ad4030_stream_reg <= ad4030_stream_reg(DATA_SIZE - 2 downto 0) & ad4030_miso0_sync;
-                                    when TWO_LINES =>
-                                        ad4030_stream_reg <= ad4030_stream_reg(DATA_SIZE - 3 downto 0) & ad4030_miso0_sync & ad4030_miso1_sync;
-                                    when FOUR_LINES =>
-                                        ad4030_stream_reg <= ad4030_stream_reg(DATA_SIZE - 5 downto 0) & ad4030_miso0_sync & ad4030_miso1_sync & ad4030_miso2_sync & ad4030_miso3_sync;
-                                    when others =>
-                                        null;
-                                end case;
-                            end if;
-                        end if;
-                    else
-                        miso_state <= IDLE;
-                    end if;
-                when others =>
-                    miso_state <= IDLE;
-            end case;
+            if (spi_state = DATA and baud_clk_rising_edge = '1') then
+                if (ad4030_cfg_enabled = '1') then
+                    ad4030_cfg_reg <= ad4030_cfg_reg(DATA_SIZE - 2 downto 0) & ad4030_miso0_sync;
+                elsif (ad4030_cfg_enabled = '0') then
+                    case ad4030_line_md is
+                        when ONE_LINE =>
+                            ad4030_stream_reg <= ad4030_stream_reg(DATA_SIZE - 2 downto 0) & ad4030_miso0_sync;
+                        when TWO_LINES =>
+                            ad4030_stream_reg <= ad4030_stream_reg(DATA_SIZE - 3 downto 0) & ad4030_miso0_sync & ad4030_miso1_sync;
+                        when FOUR_LINES =>
+                            ad4030_stream_reg <= ad4030_stream_reg(DATA_SIZE - 5 downto 0) & ad4030_miso0_sync & ad4030_miso1_sync & ad4030_miso2_sync & ad4030_miso3_sync;
+                        when others =>
+                            null;
+                    end case;
+                end if;
+            end if;
         end if;
     end process ad4030_miso_proc;
 
@@ -482,7 +461,7 @@ begin
     cnv_generator : entity work.pulse_generator
         generic map(
             PULSE_WIDTH_SIZE  => 10,
-            PULSE_PERIOD_SIZE => 100
+            PULSE_PERIOD_SIZE => 200
         )
         port map(
             clk_in            => axi4_clk_in,
@@ -516,7 +495,7 @@ begin
     --m_axi4s_tvalid <= ad4030_data_valid;
     --m_axi4s_tdata  <= ad4030_stream_reg;
     --axis_tready    <= m_axi4s_tready;
-    axi4l_busy_out <= ad4030_busy;
+    axi4l_busy_out    <= ad4030_busy;
     ad4030_awaddr_sig <= axi4l_awaddr_sig_in;
 
 end ad4030_spi_arch;

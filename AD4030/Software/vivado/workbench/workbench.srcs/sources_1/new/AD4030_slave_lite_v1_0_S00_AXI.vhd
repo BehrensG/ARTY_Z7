@@ -108,7 +108,6 @@ architecture arch_imp of AD4030_slave_lite_v1_0_S00_AXI is
 	signal axi_arready      : std_logic;
 	signal axi_rresp        : std_logic_vector(1 downto 0);
 	signal axi_rvalid       : std_logic;
-	signal axi4l_busy       : std_logic;
 	signal axi4l_awaddr_sig : std_logic;
 	signal axi4l_wdata_sig  : std_logic;
 
@@ -131,7 +130,6 @@ begin
 	S_AXI_ARREADY        <= axi_arready;
 	S_AXI_RRESP          <= axi_rresp;
 	S_AXI_RVALID         <= axi_rvalid;
-	axi4l_busy           <= axi4l_busy;
 	axi_bresp            <= axi4l_bresp_in;
 	axi4l_awaddr_sig_out <= axi4l_awaddr_sig;
 	axi4l_wdata_sig_out  <= axi4l_wdata_sig;
@@ -141,7 +139,6 @@ begin
 	axi4l_wstrb_out      <= axi_wstrb;
 	axi4l_wdata_out      <= axi_wdata;
 	axi4l_awaddr_out     <= axi_awaddr;
-	axi4l_busy           <= axi4l_busy_in;
 
 	address_read_proc : process(S_AXI_ACLK) is
 	begin
@@ -168,7 +165,7 @@ begin
 				axi_rvalid <= '0';
 				axi_rdata  <= (others => '0');
 			else
-				if (S_AXI_ARVALID = '1' and axi_arready = '1') then
+				if (S_AXI_RREADY = '1' and axi4l_busy_in = '0' and axi_rvalid = '0') then
 					axi_rvalid <= '1';
 					axi_rdata  <= axi4l_rdata_in;
 
@@ -191,9 +188,9 @@ begin
 					axi_awready      <= '0';
 					axi_awaddr       <= S_AXI_AWADDR;
 					axi4l_awaddr_sig <= '1';
-				elsif (S_AXI_BREADY = '1' and axi_bvalid = '1' and axi4l_busy = '0') then
+				elsif (S_AXI_BREADY = '1' and axi_bvalid = '1' and axi4l_busy_in = '0') then
 					axi_awready <= '1';
-				elsif (axi4l_busy = '1') then
+				elsif (axi4l_busy_in = '1') then
 					axi4l_awaddr_sig <= '0';
 				end if;
 			end if;
@@ -214,9 +211,9 @@ begin
 					axi_wdata       <= S_AXI_WDATA;
 					axi_wstrb       <= S_AXI_WSTRB;
 					axi4l_wdata_sig <= '1';
-				elsif (S_AXI_BREADY = '1' and axi_bvalid = '1' and axi4l_busy = '0') then
+				elsif (S_AXI_BREADY = '1' and axi_bvalid = '1' and axi4l_busy_in = '0') then
 					axi_wready <= '1';
-				elsif (axi4l_busy = '1') then
+				elsif (axi4l_busy_in = '1') then
 					axi4l_wdata_sig <= '0';
 				end if;
 			end if;
@@ -229,7 +226,7 @@ begin
 			if (S_AXI_ARESETN = '0') then
 				axi_bvalid <= '0';
 			else
-				if (axi_awready = '0' and axi_wready = '0' and axi4l_busy = '0' and axi_bvalid = '0') then
+				if (axi_awready = '0' and axi_wready = '0' and axi4l_busy_in = '0' and axi_bvalid = '0') then
 					axi_bvalid <= '1';
 				elsif (axi_bvalid = '1' and S_AXI_BREADY = '1') then
 					axi_bvalid <= '0';

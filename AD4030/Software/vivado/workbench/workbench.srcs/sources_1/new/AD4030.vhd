@@ -140,6 +140,9 @@ architecture arch_imp of AD4030 is
 	-- end component AD4030_master_stream_v1_0_M00_AXIS;
 
 	component ad4030_spi
+		generic(
+			SPI_CLK_DIV : natural := 2
+		);
 		port(
 			axi4_clk_in         : in  std_logic;
 			axi4_rst_n_in       : in  std_logic;
@@ -205,7 +208,7 @@ begin
 			S_AXI_RRESP          => s00_axi_rresp,
 			S_AXI_RVALID         => s00_axi_rvalid,
 			S_AXI_RREADY         => s00_axi_rready
-	);
+		);
 
 	-- Instantiation of Axi Bus Interface M00_AXIS
 	-- AD4030_master_stream_v1_0_M00_AXIS_inst : AD4030_master_stream_v1_0_M00_AXIS
@@ -226,6 +229,7 @@ begin
 	-- Add user logic here
 
 	AD4030_spi_inst : ad4030_spi
+		generic map(SPI_CLK_DIV => 2)
 		port map(
 			axi4_clk_in         => clk_in,
 			axi4_rst_n_in       => rst_n_in,
@@ -246,7 +250,7 @@ begin
 			axi4l_wstrb_in      => axi4l_wstrb,
 			axi4l_araddr_in     => axi4l_araddr,
 			axi4l_rdata_out     => axi4l_rdata
-	);
+		);
 
 	-- User logic ends
 

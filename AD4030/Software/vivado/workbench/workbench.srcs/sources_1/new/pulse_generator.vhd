@@ -35,7 +35,7 @@ use work.AD4030_pkg.ALL;
 entity pulse_generator is
     generic(
         PULSE_WIDTH_SIZE  : integer := 10;
-        PULSE_PERIOD_SIZE : integer := 100
+        PULSE_PERIOD_SIZE : integer := 200
     );
     port(
         clk_in            : in  std_logic; -- clock should be 100MHz
