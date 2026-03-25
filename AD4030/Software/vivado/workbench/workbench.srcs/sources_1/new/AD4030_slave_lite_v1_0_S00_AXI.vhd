@@ -136,16 +136,16 @@ begin
 	S_AXI_RDATA          <= axi_rdata;
 	axi4l_araddr_out     <= axi_araddr;
 	S_AXI_ARREADY        <= axi_arready;
-	axi4l_wstrb_out      <= axi_wstrb;
-	axi4l_wdata_out      <= axi_wdata;
-	axi4l_awaddr_out     <= axi_awaddr;
+	axi4l_wstrb_out      <= S_AXI_WSTRB;
+	axi4l_wdata_out      <= S_AXI_WDATA;
+	axi4l_awaddr_out     <= S_AXI_AWADDR;
 
 	address_read_proc : process(S_AXI_ACLK) is
 	begin
 		if rising_edge(S_AXI_ACLK) then
 			if (S_AXI_ARESETN = '0') then
 				axi_araddr  <= (others => '0');
-				axi_arready <= '0';
+				axi_arready <= '1';
 			else
 				if (S_AXI_ARVALID = '1' and axi_arready = '0') then
 					axi_arready <= '1';
@@ -162,10 +162,10 @@ begin
 	begin
 		if rising_edge(S_AXI_ACLK) then
 			if (S_AXI_ARESETN = '0') then
-				axi_rvalid <= '0';
+				axi_rvalid <= '1';
 				axi_rdata  <= (others => '0');
 			else
-				if (S_AXI_RREADY = '1' and axi4l_busy_in = '0' and axi_rvalid = '0') then
+				if (S_AXI_RREADY = '1' and axi_rvalid = '0') then
 					axi_rvalid <= '1';
 					axi_rdata  <= axi4l_rdata_in;
 
@@ -176,59 +176,55 @@ begin
 		end if;
 	end process data_read_proc;
 
-	address_write_proc : process(S_AXI_ACLK) is
+	process(S_AXI_ACLK)
 	begin
 		if rising_edge(S_AXI_ACLK) then
-			if (S_AXI_ARESETN = '0') then
-				axi_awready      <= '1';
-				axi_awaddr       <= (others => '0');
-				axi4l_awaddr_sig <= '0';
+			if S_AXI_ARESETN = '0' then
+				axi_awready <= '0';
+				axi_wready  <= '0';
+				axi_awaddr  <= (others => '0');
 			else
-				if (axi_awready = '1' and S_AXI_AWVALID = '1') then -- Go the address
-					axi_awready      <= '0';
-					axi_awaddr       <= S_AXI_AWADDR;
-					axi4l_awaddr_sig <= '1';
-				elsif (S_AXI_BREADY = '1' and axi_bvalid = '1' and axi4l_busy_in = '0') then
+				-- 1. Check for incoming Valid signals and ensure we aren't already processing
+				-- We only assert READY if both Address and Data are valid from the Master
+				if (axi_awready = '0' and S_AXI_AWVALID = '1' and S_AXI_WVALID = '1') then
+
+					-- Capture the address for internal use
+					--axi_awaddr <= S_AXI_AWADDR;
+					--axi_wdata  <= S_AXI_WDATA;
+					--axi_wstrb  <= S_AXI_WSTRB;
+
+					-- Pulse READY signals for one clock cycle
 					axi_awready <= '1';
-				elsif (axi4l_busy_in = '1') then
+					axi_wready  <= '1';
+
+					axi4l_wdata_sig  <= '1';
+					axi4l_awaddr_sig <= '1';
+
+				else
+					-- Deassert after one cycle (Handshake complete)
+					axi_awready <= '0';
+					axi_wready  <= '0';
+
+					axi4l_wdata_sig  <= '0';
 					axi4l_awaddr_sig <= '0';
 				end if;
 			end if;
 		end if;
-	end process address_write_proc;
-
-	data_write_proc : process(S_AXI_ACLK) is
-	begin
-		if rising_edge(S_AXI_ACLK) then
-			if (S_AXI_ARESETN = '0') then
-				axi_wready      <= '1';
-				axi_wdata       <= (others => '0');
-				axi4l_wdata_sig <= '0';
-				axi_wstrb       <= (others => '0');
-			else
-				if (axi_wready = '1' and S_AXI_WVALID = '1') then -- Go the address
-					axi_wready      <= '0';
-					axi_wdata       <= S_AXI_WDATA;
-					axi_wstrb       <= S_AXI_WSTRB;
-					axi4l_wdata_sig <= '1';
-				elsif (S_AXI_BREADY = '1' and axi_bvalid = '1' and axi4l_busy_in = '0') then
-					axi_wready <= '1';
-				elsif (axi4l_busy_in = '1') then
-					axi4l_wdata_sig <= '0';
-				end if;
-			end if;
-		end if;
-	end process data_write_proc;
+	end process;
 
 	response_write_proc : process(S_AXI_ACLK) is
 	begin
 		if rising_edge(S_AXI_ACLK) then
-			if (S_AXI_ARESETN = '0') then
+			if S_AXI_ARESETN = '0' then
 				axi_bvalid <= '0';
 			else
-				if (axi_awready = '0' and axi_wready = '0' and axi4l_busy_in = '0' and axi_bvalid = '0') then
+				-- 1. Trigger BVALID only when Handshakes are done AND IP is ready
+				if (axi_bvalid = '0' and axi4l_busy_in = '0') then -- <--- Internal Condition
+
 					axi_bvalid <= '1';
-				elsif (axi_bvalid = '1' and S_AXI_BREADY = '1') then
+
+				-- 2. Standard AXI Handshake: Clear BVALID when Master is ready
+				elsif (S_AXI_BREADY = '1' and axi_bvalid = '1') then
 					axi_bvalid <= '0';
 				end if;
 			end if;

@@ -19,8 +19,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use ieee.std_logic_textio.all;          
-use std.textio.all;     
+use ieee.std_logic_textio.all;
+use std.textio.all;
 
 package ad4030_pkg is
     -- Constants
@@ -64,23 +64,28 @@ package ad4030_pkg is
     -- Custom Types
 
     -- Procedure Declaration (Signature)
-    procedure OneMisoLine(
-        signal input : in  std_logic_vector(DATA_SIZE - 1 downto 0);
-        size         : in  integer;
-        signal cs    : in  std_logic;
-        signal sclk  : in  std_logic;
-        signal miso0 : out std_logic);
-
-    procedure TwoMisoLines(
-        signal input : in  std_logic_vector(DATA_SIZE - 1 downto 0);
+    procedure one_miso_line(
+        input        : in  std_logic_vector(DATA_SIZE - 1 downto 0);
         size         : in  integer;
         signal cs    : in  std_logic;
         signal sclk  : in  std_logic;
         signal miso0 : out std_logic;
-        signal miso1 : out std_logic);
+        signal miso1 : out std_logic;
+        signal miso2 : out std_logic;
+        signal miso3 : out std_logic);
 
-    procedure FourMisoLines(
-        signal input : in  std_logic_vector(DATA_SIZE - 1 downto 0);
+    procedure two_miso_lines(
+        input        : in  std_logic_vector(DATA_SIZE - 1 downto 0);
+        size         : in  integer;
+        signal cs    : in  std_logic;
+        signal sclk  : in  std_logic;
+        signal miso0 : out std_logic;
+        signal miso1 : out std_logic;
+        signal miso2 : out std_logic;
+        signal miso3 : out std_logic);
+
+    procedure four_miso_lines(
+        input        : in  std_logic_vector(DATA_SIZE - 1 downto 0);
         size         : in  integer;
         signal cs    : in  std_logic;
         signal sclk  : in  std_logic;
@@ -94,40 +99,50 @@ end package ad4030_pkg;
 -- Body: Logic for the subprograms declared above
 package body ad4030_pkg is
 
-    procedure OneMisoLine(
-        signal input : in  std_logic_vector(DATA_SIZE - 1 downto 0);
-        size         : in  integer;
-        signal cs    : in  std_logic;
-        signal sclk  : in  std_logic;
-        signal miso0 : out std_logic) is
-    begin
-        wait until falling_edge(cs);
-        for i in size - 1 downto 0 loop
-            wait until rising_edge(sclk);
-            miso0 <= input(i);
-        end loop;
-
-    end procedure;
-
-    procedure TwoMisoLines(
-        signal input : in  std_logic_vector(DATA_SIZE - 1 downto 0);
+    procedure one_miso_line(
+        input        : in  std_logic_vector(DATA_SIZE - 1 downto 0);
         size         : in  integer;
         signal cs    : in  std_logic;
         signal sclk  : in  std_logic;
         signal miso0 : out std_logic;
-        signal miso1 : out std_logic) is
+        signal miso1 : out std_logic;
+        signal miso2 : out std_logic;
+        signal miso3 : out std_logic) is
+    begin
+        --  wait until falling_edge(cs);
+        for i in size - 1 downto 0 loop
+            wait until rising_edge(sclk);
+            miso0 <= input(i);
+            miso1 <= '0';
+            miso2 <= '0';
+            miso3 <= '0';
+        end loop;
+
+    end procedure;
+
+    procedure two_miso_lines(
+        input        : in  std_logic_vector(DATA_SIZE - 1 downto 0);
+        size         : in  integer;
+        signal cs    : in  std_logic;
+        signal sclk  : in  std_logic;
+        signal miso0 : out std_logic;
+        signal miso1 : out std_logic;
+        signal miso2 : out std_logic;
+        signal miso3 : out std_logic) is
     begin
         wait until falling_edge(cs);
         for i in size - 1 downto 0 loop
             wait until rising_edge(sclk);
             miso0 <= input(2 * i + 1);
             miso1 <= input(2 * i);
+            miso2 <= '0';
+            miso3 <= '0';
         end loop;
 
     end procedure;
 
-    procedure FourMisoLines(
-        signal input : in  std_logic_vector(DATA_SIZE - 1 downto 0);
+    procedure four_miso_lines(
+        input        : in  std_logic_vector(DATA_SIZE - 1 downto 0);
         size         : in  integer;
         signal cs    : in  std_logic;
         signal sclk  : in  std_logic;
@@ -147,7 +162,4 @@ package body ad4030_pkg is
 
     end procedure;
 
-
-
-    
 end package body ad4030_pkg;
