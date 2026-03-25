@@ -1,2 +1,2 @@
 Breakpoint File Version 1.0
-499,true,"/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_spi.vhd"
+523,true,"/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd"

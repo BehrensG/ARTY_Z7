@@ -130,7 +130,7 @@ package body ad4030_pkg is
         signal miso2 : out std_logic;
         signal miso3 : out std_logic) is
     begin
-        wait until falling_edge(cs);
+        --wait until falling_edge(cs);
         for i in size - 1 downto 0 loop
             wait until rising_edge(sclk);
             miso0 <= input(2 * i + 1);
@@ -151,7 +151,7 @@ package body ad4030_pkg is
         signal miso2 : out std_logic;
         signal miso3 : out std_logic) is
     begin
-        wait until falling_edge(cs);
+        --wait until falling_edge(cs);
         for i in size - 1 downto 0 loop
             wait until rising_edge(sclk);
             miso0 <= input(4 * i + 3);

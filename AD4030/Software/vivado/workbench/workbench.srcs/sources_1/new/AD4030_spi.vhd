@@ -124,6 +124,7 @@ architecture ad4030_spi_arch of ad4030_spi is
     signal fifo_full                                                                      : std_logic;
     signal fifo_empty                                                                     : std_logic;
     signal fifo_dout                                                                      : std_logic_vector(CFG_DATA_SIZE - 1 downto 0);
+    signal mosi_data_update                                                               : std_logic;
 
     alias ad4030_cfg_addr_a    : std_logic_vector(15 downto 0) is ad4030_cfg(23 downto 8);
     -- alias ad4030_cfg_data_a    : std_logic_vector(7 downto 0) is ad4030_cfg(7 downto 0);
@@ -259,21 +260,6 @@ begin
 
     -- PROCESS START ----------------------------------------------------------------------------------------------------------
 
-    -- write_addr_proc : process(axi4l_awaddr_sig_in, axi4_rst_n_in, axi4l_awaddr_in, axi4l_wdata_sig_in, axi4l_wdata_in) is
-    -- begin
-    --     if (axi4_rst_n_in = '0') then
-    --         axi4l_awaddr <= (others => '0');
-    --         axi4l_wdata        <= (others => '0');
-    --     else
-    --         if (axi4l_awaddr_sig_in = '1') then
-    --             axi4l_awaddr <= axi4l_awaddr_in;
-    --         end if;
-    --         if (axi4l_wdata_sig_in = '1') then
-    --             axi4l_wdata <= axi4l_wdata_in;
-    --         end if;
-    --     end if;
-    -- end process write_addr_proc;
-
     write_data_proc : process(axi4_clk_in, axi4_rst_n_in, spi_cfg)
     begin
         if (axi4_rst_n_in = '0') then
@@ -339,7 +325,7 @@ begin
             if (ad4030_cfg = ADC_ENABLE_CFG_CMD) then
                 ad4030_cfg_enabled <= '1';
             elsif (ad4030_cfg = x"00" & ADC_EXIT_CFG_MD_ADDR & x"01") then
-                if (spi_end_pulse = '1' and ad4030_cfg_mode = '1') then
+                if (spi_end_pulse = '1' and ad4030_cfg_mode = '1' and fifo_empty = '1') then
                     ad4030_cfg_enabled <= '0';
                 end if;
             else
@@ -383,6 +369,7 @@ begin
             ad4030_cfg_mode     <= '0';
             ad4030_readout_mode <= '0';
             fifo_rd_en          <= '0';
+            mosi_data_update    <= '0';
 
         elsif rising_edge(axi4_clk_in) then
             case spi_state is
@@ -411,13 +398,14 @@ begin
                     ad4030_spi_busy_a  <= '1';
                     ad4030_spi_sprbf_a <= '0';
                     spi_end_pulse      <= '0';
-
-                    spi_state <= START2;
+                    fifo_rd_en         <= '0';
+                    spi_state          <= START2;
                 when START2 =>          -- Create a second clock for fifo readout
-                    fifo_rd_en  <= '0';
-                    ad4030_cs_n <= '0';
-                    spi_state   <= DATA;
+                    ad4030_cs_n      <= '0';
+                    spi_state        <= DATA;
+                    mosi_data_update <= '1'; -- Update MOSI data
                 when DATA =>
+                    mosi_data_update <= '0';
                     if (baud_clk_rising_edge = '1') then
                         if (spi_bit_count - 1 > 0) then
                             spi_bit_count      <= spi_bit_count - 1;
@@ -488,7 +476,7 @@ begin
         if (axi4_rst_n_in = '0') then
             ad4030_mosi_data <= (others => '0');
         elsif rising_edge(axi4_clk_in) then
-            if (fifo_rd_en = '1') then
+            if (mosi_data_update = '1') then
                 ad4030_mosi_data <= fifo_dout;
             elsif (ad4030_cfg_mode = '1' and spi_state = DATA) then
                 if (baud_clk_rising_edge = '1') then -- Need to check this 
@@ -522,8 +510,7 @@ begin
             if (spi_state = DATA and baud_clk_rising_edge = '1') then
                 if (ad4030_cfg_mode = '1') then
                     ad4030_cfg_readout_reg <= ad4030_cfg_readout_reg(DATA_SIZE - 2 downto 0) & ad4030_miso0_sync;
-                end if;
-                if (ad4030_readout_mode = '1') then
+                elsif (ad4030_readout_mode = '1') then
                     case ad4030_line_md is
                         when ONE_LINE =>
                             ad4030_readout_reg <= ad4030_readout_reg(DATA_SIZE - 2 downto 0) & ad4030_miso0_sync;
@@ -535,6 +522,8 @@ begin
                             null;
                     end case;
                 end if;
+            elsif (spi_state = START1) then
+                ad4030_readout_reg <= (others => '0');
             end if;
         end if;
     end process ad4030_miso_proc;

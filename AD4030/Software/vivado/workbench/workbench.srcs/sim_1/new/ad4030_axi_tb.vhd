@@ -18,42 +18,42 @@ architecture testbench of ad4030_axi_tb is
     signal rst_n : std_logic;
 
     -- AD4030 
-    signal cs_n                   : std_logic;
-    signal busy                   : std_logic;
-    signal miso0                  : std_logic;
-    signal miso1                  : std_logic;
-    signal miso2                  : std_logic;
-    signal miso3                  : std_logic;
-    signal sclk                   : std_logic;
-    signal mosi                   : std_logic;
-    signal conv                   : std_logic;
+    signal cs_n               : std_logic;
+    signal busy               : std_logic;
+    signal miso0              : std_logic;
+    signal miso1              : std_logic;
+    signal miso2              : std_logic;
+    signal miso3              : std_logic;
+    signal sclk               : std_logic;
+    signal mosi               : std_logic;
+    signal conv               : std_logic;
     -- AXI4 Lite interface
-    signal s_axi_awaddr           : std_logic_vector(ADDR_SIZE - 1 downto 0);
-    signal s_axi_awprot           : std_logic_vector(2 downto 0);
-    signal s_axi_awvalid          : std_logic;
-    signal s_axi_awready          : std_logic;
-    signal s_axi_wdata            : std_logic_vector(DATA_SIZE - 1 downto 0);
-    signal s_axi_wstrb            : std_logic_vector(3 downto 0);
-    signal s_axi_wvalid           : std_logic;
-    signal s_axi_wready           : std_logic;
-    signal s_axi_bresp            : std_logic_vector(1 downto 0);
-    signal s_axi_bvalid           : std_logic;
-    signal s_axi_bready           : std_logic;
-    signal s_axi_araddr           : std_logic_vector(ADDR_SIZE - 1 downto 0);
-    signal s_axi_arprot           : std_logic_vector(2 downto 0);
-    signal s_axi_arvalid          : std_logic;
-    signal s_axi_arready          : std_logic;
-    signal s_axi_rdata            : std_logic_vector(DATA_SIZE - 1 downto 0);
-    signal s_axi_rresp            : std_logic_vector(1 downto 0);
-    signal s_axi_rvalid           : std_logic;
-    signal s_axi_rready           : std_logic;
+    signal s_axi_awaddr       : std_logic_vector(ADDR_SIZE - 1 downto 0);
+    signal s_axi_awprot       : std_logic_vector(2 downto 0);
+    signal s_axi_awvalid      : std_logic;
+    signal s_axi_awready      : std_logic;
+    signal s_axi_wdata        : std_logic_vector(DATA_SIZE - 1 downto 0);
+    signal s_axi_wstrb        : std_logic_vector(3 downto 0);
+    signal s_axi_wvalid       : std_logic;
+    signal s_axi_wready       : std_logic;
+    signal s_axi_bresp        : std_logic_vector(1 downto 0);
+    signal s_axi_bvalid       : std_logic;
+    signal s_axi_bready       : std_logic;
+    signal s_axi_araddr       : std_logic_vector(ADDR_SIZE - 1 downto 0);
+    signal s_axi_arprot       : std_logic_vector(2 downto 0);
+    signal s_axi_arvalid      : std_logic;
+    signal s_axi_arready      : std_logic;
+    signal s_axi_rdata        : std_logic_vector(DATA_SIZE - 1 downto 0);
+    signal s_axi_rresp        : std_logic_vector(1 downto 0);
+    signal s_axi_rvalid       : std_logic;
+    signal s_axi_rready       : std_logic;
     -- Testbench support data
-    signal sine_hex               : std_logic_vector(DATA_SIZE - 1 downto 0);
-    signal m_axi_rdata            : std_logic_vector(DATA_SIZE - 1 downto 0);
+    signal sine_hex           : std_logic_vector(DATA_SIZE - 1 downto 0);
+    signal m_axi_rdata        : std_logic_vector(DATA_SIZE - 1 downto 0);
     --signal m_axi_awaddr           : std_logic_vector(ADDR_SIZE - 1 downto 0);
     --signal m_axi_wdata            : std_logic_vector(DATA_SIZE - 1 downto 0);
-    signal mode                   : std_logic_vector(1 downto 0);
-    signal restart_sine_generator : std_logic;
+    signal mode               : std_logic_vector(1 downto 0);
+    signal run_sine_generator : std_logic;
 
     component AD4030
         generic(
@@ -140,7 +140,7 @@ architecture testbench of ad4030_axi_tb is
         signal sine_hex_out : out std_logic_vector(31 downto 0);
         signal cs_n_in      : in  std_logic;
         signal mode_in      : in  std_logic_vector(1 downto 0);
-        signal restart      : in  std_logic) is
+        signal run          : in  std_logic) is
 
         constant SIZE       : integer := 24;
         file     input_file : text;
@@ -171,7 +171,7 @@ architecture testbench of ad4030_axi_tb is
                                   miso3 => miso3_out);
                 when TWO_LINES =>
                     two_miso_lines(input => sine_hex,
-                                   size  => SIZE,
+                                   size  => SIZE/2,
                                    cs    => cs_n_in,
                                    sclk  => spi_clk_in,
                                    miso0 => miso0_out,
@@ -180,7 +180,7 @@ architecture testbench of ad4030_axi_tb is
                                    miso3 => miso3_out);
                 when FOUR_LINES =>
                     four_miso_lines(input => sine_hex,
-                                    size  => SIZE,
+                                    size  => SIZE/4,
                                     cs    => cs_n_in,
                                     sclk  => spi_clk_in,
                                     miso0 => miso0_out,
@@ -198,7 +198,7 @@ architecture testbench of ad4030_axi_tb is
                                   miso3 => miso3_out);
             end case;
 
-            if (restart = '1') then
+            if (run /= '1') then
                 exit;
             end if;
 
@@ -348,11 +348,6 @@ begin
     begin
         wait until (rst_n = '1');
 
-        if (s_axi_awaddr = ADC_CFG_INDEX and s_axi_wdata(23 downto 8) = ADC_MODES_ADDR) then
-            mode <= s_axi_wdata(7 downto 6);
-        else
-            mode <= ONE_LINE;
-        end if;
         -- sine_gen(spi_clk_in   => sclk,
         --          sine_out     => miso0,
         --          sine_hex_out => sine_hex,
@@ -365,7 +360,7 @@ begin
                     sine_hex_out => sine_hex,
                     cs_n_in      => cs_n,
                     mode_in      => mode,
-                    restart      => restart_sine_generator);
+                    run          => run_sine_generator);
 
     end process sine_wave_proc;
 
@@ -375,22 +370,22 @@ begin
 
         rst_n <= '0';
 
-        s_axi_araddr           <= (others => '0');
-        s_axi_awaddr           <= (others => '0');
-        s_axi_wdata            <= (others => '0');
-        s_axi_wstrb            <= (others => '0');
-        s_axi_bready           <= '0';
-        s_axi_rready           <= '0';
-        s_axi_awprot           <= (others => '0');
-        s_axi_awvalid          <= '0';
-        s_axi_wvalid           <= '0';
-        s_axi_arprot           <= (others => '0');
-        s_axi_arvalid          <= '0';
-        m_axi_rdata            <= (others => '0');
-        mode                   <= ONE_LINE;
-        restart_sine_generator <= '0';
+        s_axi_araddr       <= (others => '0');
+        s_axi_awaddr       <= (others => '0');
+        s_axi_wdata        <= (others => '0');
+        s_axi_wstrb        <= (others => '0');
+        s_axi_bready       <= '0';
+        s_axi_rready       <= '0';
+        s_axi_awprot       <= (others => '0');
+        s_axi_awvalid      <= '0';
+        s_axi_wvalid       <= '0';
+        s_axi_arprot       <= (others => '0');
+        s_axi_arvalid      <= '0';
+        m_axi_rdata        <= (others => '0');
+        mode               <= ONE_LINE;
+        run_sine_generator <= '1';
         wait for 100 ns;
-        rst_n                  <= '1';
+        rst_n              <= '1';
         wait for 2.5 us;
 
         -- Readout test 
@@ -469,11 +464,10 @@ begin
 
         -- Write test : ADC_CFG_INDEX : Change MISO channel count 
 
-        restart_sine_generator <= '1';
         -- Enable ADC configuration mode        
-        s_axi_awaddr           <= ADC_CFG_INDEX;
-        s_axi_wdata            <= ADC_ENABLE_CFG_CMD;
-        s_axi_wstrb            <= "1111";
+        s_axi_awaddr <= ADC_CFG_INDEX;
+        s_axi_wdata  <= ADC_ENABLE_CFG_CMD;
+        s_axi_wstrb  <= "1111";
         wait for 10 ns;
         axi_write_control(clk_in  => clk,
                           awvalid => s_axi_awvalid,
@@ -485,7 +479,7 @@ begin
         -- Change LANE_MD 
 
         s_axi_awaddr <= ADC_CFG_INDEX;
-        s_axi_wdata  <= x"00" & ADC_MODES_ADDR & "01000000"; -- 31 downto 24 : always 0; 23 downto 8 : adc config address; 7 downto 0 : adc config data
+        s_axi_wdata  <= x"00" & ADC_MODES_ADDR & TWO_LINES & "000000"; -- 31 downto 24 : always 0; 23 downto 8 : adc config address; 7 downto 0 : adc config data
         s_axi_wstrb  <= "1111";
         wait for 10 ns;
         axi_write_control(clk_in  => clk,
@@ -508,8 +502,23 @@ begin
                           wvalid  => s_axi_wvalid,
                           bvalid  => s_axi_bvalid,
                           bready  => s_axi_bready);
-
-        restart_sine_generator <= '0';
+                          
+        wait until (conv = '1');
+        mode         <= TWO_LINES;
+        
+       -- wait until s_axi_rvalid = '1';
+        
+        wait for 3 us;
+        
+        s_axi_araddr <= ADC_READOUT_INDEX;
+        wait for 10 ns;
+        axi_read_control(clk_in    => clk,
+                         arvalid   => s_axi_arvalid,
+                         arready   => s_axi_arready,
+                         rvalid    => s_axi_rvalid,
+                         rready    => s_axi_rready,
+                         rdata_out => m_axi_rdata,
+                         rdata_in  => s_axi_rdata);
 
         wait;
 
