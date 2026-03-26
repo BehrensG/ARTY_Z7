@@ -1,7 +1,4 @@
-Running: xsim.dir/ad4030_axi_tb_behav/xsimk -simmode gui -wdb ad4030_axi_tb_behav.wdb -simrunnum 0 -socket 40347
+Running: xsim.dir/ad4030_axi_tb_behav/xsimk -simmode gui -wdb ad4030_axi_tb_behav.wdb -simrunnum 0 -socket 38867
 Design successfully loaded
-Design Loading Memory Usage: 20344 KB (Peak: 20896 KB)
-Design Loading CPU Usage: 20 ms
-Simulation completed
-Simulation Memory Usage: 110280 KB (Peak: 159612 KB)
-Simulation CPU Usage: 30 ms
+Design Loading Memory Usage: 20340 KB (Peak: 20896 KB)
+Design Loading CPU Usage: 10 ms

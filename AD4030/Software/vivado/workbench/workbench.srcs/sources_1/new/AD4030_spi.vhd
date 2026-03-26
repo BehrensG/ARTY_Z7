@@ -89,7 +89,7 @@ architecture ad4030_spi_arch of ad4030_spi is
     signal cnv_cfg                : std_logic_vector(DATA_SIZE - 1 downto 0); -- 31 downto 1 : free; 0 : enable/disable 
     signal cnv_period_cfg         : std_logic_vector(DATA_SIZE - 1 downto 0); -- 31 downto 0 : period size
     signal cnv_width_cfg          : std_logic_vector(DATA_SIZE - 1 downto 0); -- 31 downto 0 : pulse width size
-    signal ad4030_spi_status      : std_logic_vector(DATA_SIZE - 1 downto 0); --  31 downto 3 : free; 2: BUSY; 1 : SPRBF (SPI Receiver Buffer Full); 0 : SPTBE (SPI Transmit Buffer Empty)
+    signal ad4030_spi_status      : std_logic_vector(DATA_SIZE - 1 downto 0); -- 31 downto 3 : free; 2: BUSY; 1 : SPRBF (SPI Receiver Buffer Full); 0 : SPTBE (SPI Transmit Buffer Empty)
     signal ad4030_cfg_readout_reg : std_logic_vector(DATA_SIZE - 1 downto 0);
     signal ad4030_readout_reg     : std_logic_vector(DATA_SIZE - 1 downto 0);
     --signal ad4030_data_ready : std_logic;
@@ -105,7 +105,7 @@ architecture ad4030_spi_arch of ad4030_spi is
     signal ad4030_busy_reg1, ad4030_busy_reg2, ad4030_busy_reg3, ad4030_busy_falling_edge : std_logic;
     signal gen_load                                                                       : std_logic;
     signal spi_bit_count                                                                  : natural range 0 to 32;
-    signal spi_state, mosi_state                                                          : states_t;
+    signal spi_state                                                                      : states_t;
     signal ad4030_miso0_sync, ad4030_miso1_sync, ad4030_miso2_sync, ad4030_miso3_sync     : std_logic;
     signal baud_clk_falling_edge                                                          : std_logic;
     signal baud_clk_rising_edge                                                           : std_logic;
@@ -315,7 +315,7 @@ begin
         end if;
     end process write_data_proc;
 
-    ad4030_config_proc : process(ad4030_cfg, axi4_rst_n_in, spi_end_pulse, ad4030_cfg_mode)
+    ad4030_config_proc : process(ad4030_cfg, axi4_rst_n_in, spi_end_pulse, ad4030_cfg_mode, fifo_empty)
     begin
         if (axi4_rst_n_in = '0') then
             ad4030_line_md     <= (others => '0');
@@ -403,7 +403,7 @@ begin
                 when START2 =>          -- Create a second clock for fifo readout
                     ad4030_cs_n      <= '0';
                     spi_state        <= DATA;
-                    mosi_data_update <= '1'; -- Update MOSI data
+                    mosi_data_update <= '1'; -- Update MOSI data, one clock pulse
                 when DATA =>
                     mosi_data_update <= '0';
                     if (baud_clk_rising_edge = '1') then
@@ -427,7 +427,7 @@ begin
                         ad4030_cs_n         <= '1';
                         ad4030_spi_busy_a   <= '0';
                         ad4030_spi_sprbf_a  <= '1';
-                        ad4030_spi_sptbe_a  <= '0';
+                        ad4030_spi_sptbe_a  <= '1';
                         spi_end_pulse       <= '0';
                         ad4030_cfg_mode     <= '0';
                         ad4030_readout_mode <= '0';

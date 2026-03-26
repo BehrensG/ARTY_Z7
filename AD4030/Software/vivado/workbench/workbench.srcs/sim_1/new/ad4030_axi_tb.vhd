@@ -171,7 +171,7 @@ architecture testbench of ad4030_axi_tb is
                                   miso3 => miso3_out);
                 when TWO_LINES =>
                     two_miso_lines(input => sine_hex,
-                                   size  => SIZE/2,
+                                   size  => SIZE / 2,
                                    cs    => cs_n_in,
                                    sclk  => spi_clk_in,
                                    miso0 => miso0_out,
@@ -180,7 +180,7 @@ architecture testbench of ad4030_axi_tb is
                                    miso3 => miso3_out);
                 when FOUR_LINES =>
                     four_miso_lines(input => sine_hex,
-                                    size  => SIZE/4,
+                                    size  => SIZE / 4,
                                     cs    => cs_n_in,
                                     sclk  => spi_clk_in,
                                     miso0 => miso0_out,
@@ -479,7 +479,7 @@ begin
         -- Change LANE_MD 
 
         s_axi_awaddr <= ADC_CFG_INDEX;
-        s_axi_wdata  <= x"00" & ADC_MODES_ADDR & TWO_LINES & "000000"; -- 31 downto 24 : always 0; 23 downto 8 : adc config address; 7 downto 0 : adc config data
+        s_axi_wdata  <= x"00" & ADC_MODES_ADDR & FOUR_LINES & "000000"; -- 31 downto 24 : always 0; 23 downto 8 : adc config address; 7 downto 0 : adc config data
         s_axi_wstrb  <= "1111";
         wait for 10 ns;
         axi_write_control(clk_in  => clk,
@@ -502,14 +502,29 @@ begin
                           wvalid  => s_axi_wvalid,
                           bvalid  => s_axi_bvalid,
                           bready  => s_axi_bready);
-                          
+
         wait until (conv = '1');
-        mode         <= TWO_LINES;
-        
-       -- wait until s_axi_rvalid = '1';
-        
-        wait for 3 us;
-        
+        mode <= FOUR_LINES;
+
+        -- wait until s_axi_rvalid = '1';
+
+    --    wait for 3 us;
+
+        loop
+            s_axi_araddr <= SPI_STATUS_INDEX;
+            axi_read_control(clk_in    => clk,
+                             arvalid   => s_axi_arvalid,
+                             arready   => s_axi_arready,
+                             rvalid    => s_axi_rvalid,
+                             rready    => s_axi_rready,
+                             rdata_out => m_axi_rdata,
+                             rdata_in  => s_axi_rdata);
+            wait for clock_period;
+            if (m_axi_rdata = x"00_00_00_03") then
+                exit;
+            end if;
+        end loop;
+
         s_axi_araddr <= ADC_READOUT_INDEX;
         wait for 10 ns;
         axi_read_control(clk_in    => clk,
@@ -520,6 +535,30 @@ begin
                          rdata_out => m_axi_rdata,
                          rdata_in  => s_axi_rdata);
 
+        loop
+            s_axi_araddr <= SPI_STATUS_INDEX;
+            axi_read_control(clk_in    => clk,
+                             arvalid   => s_axi_arvalid,
+                             arready   => s_axi_arready,
+                             rvalid    => s_axi_rvalid,
+                             rready    => s_axi_rready,
+                             rdata_out => m_axi_rdata,
+                             rdata_in  => s_axi_rdata);
+            wait for clock_period;
+            if (m_axi_rdata = x"00_00_00_03") then
+                exit;
+            end if;
+        end loop;
+
+        s_axi_araddr <= ADC_READOUT_INDEX;
+        wait for 10 ns;
+        axi_read_control(clk_in    => clk,
+                         arvalid   => s_axi_arvalid,
+                         arready   => s_axi_arready,
+                         rvalid    => s_axi_rvalid,
+                         rready    => s_axi_rready,
+                         rdata_out => m_axi_rdata,
+                         rdata_in  => s_axi_rdata);
         wait;
 
     end process uut;

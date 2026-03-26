@@ -99,14 +99,14 @@ architecture arch_imp of AD4030_slave_lite_v1_0_S00_AXI is
 	signal axi_awaddr       : std_logic_vector(C_S_AXI_ADDR_WIDTH - 1 downto 0);
 	signal axi_wdata        : std_logic_vector(C_S_AXI_DATA_WIDTH - 1 downto 0);
 	signal axi_rdata        : std_logic_vector(C_S_AXI_DATA_WIDTH - 1 downto 0);
-	signal axi_wstrb        : std_logic_vector((C_S_AXI_DATA_WIDTH / 8) - 1 downto 0);
+	--signal axi_wstrb        : std_logic_vector((C_S_AXI_DATA_WIDTH / 8) - 1 downto 0);
 	signal axi_awready      : std_logic;
 	signal axi_wready       : std_logic;
 	signal axi_bresp        : std_logic_vector(1 downto 0);
 	signal axi_bvalid       : std_logic;
 	signal axi_araddr       : std_logic_vector(C_S_AXI_ADDR_WIDTH - 1 downto 0);
 	signal axi_arready      : std_logic;
-	signal axi_rresp        : std_logic_vector(1 downto 0);
+	--signal axi_rresp        : std_logic_vector(1 downto 0);
 	signal axi_rvalid       : std_logic;
 	signal axi4l_awaddr_sig : std_logic;
 	signal axi4l_wdata_sig  : std_logic;
@@ -125,10 +125,10 @@ begin
 
 	S_AXI_AWREADY        <= axi_awready;
 	S_AXI_WREADY         <= axi_wready;
-	S_AXI_BRESP          <= axi_bresp;
+	--S_AXI_BRESP          <= axi_bresp;
 	S_AXI_BVALID         <= axi_bvalid;
 	S_AXI_ARREADY        <= axi_arready;
-	S_AXI_RRESP          <= axi_rresp;
+	--S_AXI_RRESP          <= axi_rresp;
 	S_AXI_RVALID         <= axi_rvalid;
 	axi_bresp            <= axi4l_bresp_in;
 	axi4l_awaddr_sig_out <= axi4l_awaddr_sig;
@@ -139,6 +139,10 @@ begin
 	axi4l_wstrb_out      <= S_AXI_WSTRB;
 	axi4l_wdata_out      <= S_AXI_WDATA;
 	axi4l_awaddr_out     <= S_AXI_AWADDR;
+
+	S_AXI_RRESP <= (others => '0');
+	S_AXI_BRESP <= (others => '0');
+	
 
 	address_read_proc : process(S_AXI_ACLK) is
 	begin
@@ -207,6 +211,7 @@ begin
 
 					axi4l_wdata_sig  <= '0';
 					axi4l_awaddr_sig <= '0';
+
 				end if;
 			end if;
 		end if;
