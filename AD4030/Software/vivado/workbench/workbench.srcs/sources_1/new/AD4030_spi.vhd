@@ -125,6 +125,7 @@ architecture ad4030_spi_arch of ad4030_spi is
     signal fifo_empty                                                                     : std_logic;
     signal fifo_dout                                                                      : std_logic_vector(CFG_DATA_SIZE - 1 downto 0);
     signal mosi_data_update                                                               : std_logic;
+    signal axi4l_araddr                                                                   : std_logic_vector(ADRR_SIZE / 4 - 1 downto 0);
 
     alias ad4030_cfg_addr_a    : std_logic_vector(15 downto 0) is ad4030_cfg(23 downto 8);
     -- alias ad4030_cfg_data_a    : std_logic_vector(7 downto 0) is ad4030_cfg(7 downto 0);
@@ -200,16 +201,17 @@ begin
     ad4030_cs_n_out <= ad4030_cs_n;
 
     axi4l_busy_out <= axi4l_busy;
+    axi4l_araddr <= axi4l_araddr_in(ADRR_SIZE/4 -1 downto 0);
 
     -- ad4030_awaddr_sig <= axi4l_awaddr_sig_in;
 
-    axi4l_rdata_out <= ad4030_cfg when (axi4l_araddr_in = ADC_CFG_INDEX) else
-                       spi_cfg when (axi4l_araddr_in = SPI_CFG_INDEX) else
-                       cnv_cfg when (axi4l_araddr_in = CNV_CFG_INDEX) else
-                       cnv_period_cfg when (axi4l_araddr_in = CNV_PERIOD_INDEX) else
-                       cnv_width_cfg when (axi4l_araddr_in = CNV_WIDTH_INDEX) else
-                       ad4030_spi_status when (axi4l_araddr_in = SPI_STATUS_INDEX) else
-                       ad4030_readout_reg when (axi4l_araddr_in = ADC_READOUT_INDEX) else
+    axi4l_rdata_out <= ad4030_cfg when (axi4l_araddr = ADC_CFG_INDEX) else
+                       spi_cfg when (axi4l_araddr = SPI_CFG_INDEX) else
+                       cnv_cfg when (axi4l_araddr = CNV_CFG_INDEX) else
+                       cnv_period_cfg when (axi4l_araddr = CNV_PERIOD_INDEX) else
+                       cnv_width_cfg when (axi4l_araddr = CNV_WIDTH_INDEX) else
+                       ad4030_spi_status when (axi4l_araddr = SPI_STATUS_INDEX) else
+                       ad4030_readout_reg when (axi4l_araddr = ADC_READOUT_INDEX) else
                        (others => '0');
 
     cnv_enable <= '1' when (ad4030_cfg_enabled = '0') else '0';
@@ -272,7 +274,7 @@ begin
             cnv_cfg          <= (0 => '1', others => '0');
         else
             if rising_edge(axi4_clk_in) then
-                case axi4l_awaddr is
+                case axi4l_awaddr(7 downto 0) is
                     when ADC_CFG_INDEX =>
                         for i in 0 to 3 loop
                             if (axi4l_wstrb_in(i) = '1') then

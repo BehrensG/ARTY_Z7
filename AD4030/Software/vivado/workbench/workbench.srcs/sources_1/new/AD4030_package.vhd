@@ -39,13 +39,13 @@ package ad4030_pkg is
     constant ADC_ENABLE_CFG_CMD   : std_logic_vector(DATA_SIZE - 1 downto 0) := x"00_A0_00_00";
     constant ADC_EXIT_CFG_MD_ADDR : std_logic_vector(15 downto 0)            := x"00_14";
 
-    constant ADC_CFG_INDEX     : std_logic_vector(DATA_SIZE - 1 downto 0) := x"00000000"; -- DEC: 0
-    constant SPI_CFG_INDEX     : std_logic_vector(DATA_SIZE - 1 downto 0) := x"00000004"; -- DEC: 1
-    constant CNV_CFG_INDEX     : std_logic_vector(DATA_SIZE - 1 downto 0) := x"00000008"; -- DEC: 2  
-    constant CNV_PERIOD_INDEX  : std_logic_vector(DATA_SIZE - 1 downto 0) := x"0000000C"; -- DEC: 3  
-    constant CNV_WIDTH_INDEX   : std_logic_vector(DATA_SIZE - 1 downto 0) := x"00000010"; -- DEC: 4  
-    constant SPI_STATUS_INDEX  : std_logic_vector(DATA_SIZE - 1 downto 0) := x"00000014"; -- DEC: 5  
-    constant ADC_READOUT_INDEX : std_logic_vector(DATA_SIZE - 1 downto 0) := x"00000018"; -- DEC: 6  
+    constant ADC_CFG_INDEX     : std_logic_vector(DATA_SIZE/4 - 1 downto 0) := x"00"; -- DEC: 0
+    constant SPI_CFG_INDEX     : std_logic_vector(DATA_SIZE/4 - 1 downto 0) := x"04"; -- DEC: 1
+    constant CNV_CFG_INDEX     : std_logic_vector(DATA_SIZE/4 - 1 downto 0) := x"08"; -- DEC: 2  
+    constant CNV_PERIOD_INDEX  : std_logic_vector(DATA_SIZE/4 - 1 downto 0) := x"0C"; -- DEC: 3  
+    constant CNV_WIDTH_INDEX   : std_logic_vector(DATA_SIZE/4 - 1 downto 0) := x"10"; -- DEC: 4  
+    constant SPI_STATUS_INDEX  : std_logic_vector(DATA_SIZE/4 - 1 downto 0) := x"14"; -- DEC: 5  
+    constant ADC_READOUT_INDEX : std_logic_vector(DATA_SIZE/4 - 1 downto 0) := x"18"; -- DEC: 6  
 
     constant ONE_LINE   : std_logic_vector(1 downto 0) := "00";
     constant TWO_LINES  : std_logic_vector(1 downto 0) := "01";

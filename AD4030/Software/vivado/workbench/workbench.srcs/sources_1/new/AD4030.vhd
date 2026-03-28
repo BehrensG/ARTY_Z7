@@ -15,7 +15,10 @@ entity AD4030 is
 		C_S00_AXI_ADDR_WIDTH   : integer := 32;
 		-- Parameters of Axi Master Bus Interface M00_AXIS
 		C_M00_AXIS_TDATA_WIDTH : integer := 32;
-		C_M00_AXIS_START_COUNT : integer := 32
+		C_M00_AXIS_START_COUNT : integer := 32;
+		SPI_CLK_DIV            : natural := 10;
+		PULSE_WIDTH_SIZE       : natural := 40;
+		PULSE_PERIOD_SIZE      : natural := 800
 	);
 	port(
 		-- Users to add ports here
@@ -83,8 +86,8 @@ architecture arch_imp of AD4030 is
 	-- component declaration
 	component AD4030_slave_lite_v1_0_S00_AXI is
 		generic(
-			C_S_AXI_DATA_WIDTH : integer := 32;
-			C_S_AXI_ADDR_WIDTH : integer := 32
+			C_S_AXI_DATA_WIDTH : integer;
+			C_S_AXI_ADDR_WIDTH : integer
 		);
 		port(
 			axi4l_busy_in        : in  std_logic;
@@ -141,7 +144,9 @@ architecture arch_imp of AD4030 is
 
 	component ad4030_spi
 		generic(
-			SPI_CLK_DIV : natural := 2
+			SPI_CLK_DIV       : natural;
+			PULSE_WIDTH_SIZE  : natural;
+			PULSE_PERIOD_SIZE : natural
 		);
 		port(
 			axi4_clk_in         : in  std_logic;
@@ -229,7 +234,10 @@ begin
 	-- Add user logic here
 
 	AD4030_spi_inst : ad4030_spi
-		generic map(SPI_CLK_DIV => 2)
+		generic map(
+			SPI_CLK_DIV       => SPI_CLK_DIV,
+			PULSE_WIDTH_SIZE  => PULSE_WIDTH_SIZE,
+			PULSE_PERIOD_SIZE => PULSE_PERIOD_SIZE)
 		port map(
 			axi4_clk_in         => clk_in,
 			axi4_rst_n_in       => rst_n_in,

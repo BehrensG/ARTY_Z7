@@ -142,14 +142,13 @@ begin
 
 	S_AXI_RRESP <= (others => '0');
 	S_AXI_BRESP <= (others => '0');
-	
 
 	address_read_proc : process(S_AXI_ACLK) is
 	begin
 		if rising_edge(S_AXI_ACLK) then
 			if (S_AXI_ARESETN = '0') then
 				axi_araddr  <= (others => '0');
-				axi_arready <= '1';
+				axi_arready <= '0';
 			else
 				if (S_AXI_ARVALID = '1' and axi_arready = '0') then
 					axi_arready <= '1';
@@ -166,13 +165,15 @@ begin
 	begin
 		if rising_edge(S_AXI_ACLK) then
 			if (S_AXI_ARESETN = '0') then
-				axi_rvalid <= '1';
+				axi_rvalid <= '0';
 				axi_rdata  <= (others => '0');
 			else
-				if (S_AXI_RREADY = '1' and axi_rvalid = '0') then
+				-- TRIGGER: Address handshake just happened (ARVALID and ARREADY were both '1')
+				if (S_AXI_ARVALID = '1' and axi_arready = '1') then
 					axi_rvalid <= '1';
-					axi_rdata  <= axi4l_rdata_in;
+					axi_rdata  <= axi4l_rdata_in; -- Capture your internal register data
 
+				-- TERMINATE: Master accepted the data (RVALID and RREADY are both '1')
 				elsif (S_AXI_RREADY = '1' and axi_rvalid = '1') then
 					axi_rvalid <= '0';
 				end if;
