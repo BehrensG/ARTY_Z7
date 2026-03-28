@@ -1,0 +1,13 @@
+CONN_BUSY   JA1_N (2)   Y19     IO5     T15
+CONN_SD02   JA2_P (3)   Y16     IO3     V13
+CONN_SDO3   JA3_P (4)   U18     IO1     U12
+CONN_SDO0   JA3_N (8)   U19     IO4     V15
+CONN_SDO1   JA4_P (9)   W18     IO2     U13
+CONN_100MHz JA4_N (10)  W19     IO0     T14
+
+CONN_G10    JB1_N (2)   Y14     IO11    R17
+CONN_CS     JB2_P (3)   T11     IO9     V18
+CONN_SCK    JB3_P (4)   V16     IO7     U17
+CONN_G20    JB3_N (8)   W16     IO10    T16 
+CONN_SDI    JB4_P (9)   V12     IO8     V17
+CONN_CONV   JB4_N (10)  W13     IO6     R16
