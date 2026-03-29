@@ -24,7 +24,7 @@ use std.textio.all;
 
 package ad4030_pkg is
     -- Constants
-    constant ADRR_SIZE     : natural range 0 to 32 := 32;
+    constant ADRR_SIZE     : natural range 0 to 32 := 8;
     constant DATA_SIZE     : natural range 0 to 32 := 32;
     constant CFG_DATA_SIZE : natural range 0 to 24 := 24;
     constant MEM_SIZE      : natural range 0 to 8  := 8;

@@ -12,7 +12,7 @@ architecture testbench of ad4030_axi_tb is
 
     constant clock_period : time    := 10 ns; -- 100 MHz
     constant DATA_SIZE    : integer := 32;
-    constant ADDR_SIZE    : integer := 32;
+    constant ADDR_SIZE    : integer := 8;
 
     signal clk   : std_logic;
     signal rst_n : std_logic;
@@ -57,10 +57,11 @@ architecture testbench of ad4030_axi_tb is
 
     component AD4030
         generic(
-            C_S00_AXI_DATA_WIDTH   : integer := 32;
-            C_S00_AXI_ADDR_WIDTH   : integer := 32;
-            C_M00_AXIS_TDATA_WIDTH : integer := 32;
-            C_M00_AXIS_START_COUNT : integer := 32
+            DATA_SIZE         : integer;
+            ADRR_SIZE         : integer;
+            SPI_CLK_DIV       : natural;
+            PULSE_WIDTH_SIZE  : natural;
+            PULSE_PERIOD_SIZE : natural
         );
         port(
             clk_in          : in  std_logic;
@@ -76,22 +77,22 @@ architecture testbench of ad4030_axi_tb is
             conv_out        : out std_logic;
             s00_axi_aclk    : in  std_logic;
             s00_axi_aresetn : in  std_logic;
-            s00_axi_awaddr  : in  std_logic_vector(C_S00_AXI_ADDR_WIDTH - 1 downto 0);
+            s00_axi_awaddr  : in  std_logic_vector(ADRR_SIZE - 1 downto 0);
             s00_axi_awprot  : in  std_logic_vector(2 downto 0);
             s00_axi_awvalid : in  std_logic;
             s00_axi_awready : out std_logic;
-            s00_axi_wdata   : in  std_logic_vector(C_S00_AXI_DATA_WIDTH - 1 downto 0);
-            s00_axi_wstrb   : in  std_logic_vector((C_S00_AXI_DATA_WIDTH / 8) - 1 downto 0);
+            s00_axi_wdata   : in  std_logic_vector(DATA_SIZE - 1 downto 0);
+            s00_axi_wstrb   : in  std_logic_vector((DATA_SIZE / 8) - 1 downto 0);
             s00_axi_wvalid  : in  std_logic;
             s00_axi_wready  : out std_logic;
             s00_axi_bresp   : out std_logic_vector(1 downto 0);
             s00_axi_bvalid  : out std_logic;
             s00_axi_bready  : in  std_logic;
-            s00_axi_araddr  : in  std_logic_vector(C_S00_AXI_ADDR_WIDTH - 1 downto 0);
+            s00_axi_araddr  : in  std_logic_vector(ADRR_SIZE - 1 downto 0);
             s00_axi_arprot  : in  std_logic_vector(2 downto 0);
             s00_axi_arvalid : in  std_logic;
             s00_axi_arready : out std_logic;
-            s00_axi_rdata   : out std_logic_vector(C_S00_AXI_DATA_WIDTH - 1 downto 0);
+            s00_axi_rdata   : out std_logic_vector(DATA_SIZE - 1 downto 0);
             s00_axi_rresp   : out std_logic_vector(1 downto 0);
             s00_axi_rvalid  : out std_logic;
             s00_axi_rready  : in  std_logic
@@ -287,10 +288,11 @@ begin
 
     AD4030_inst : AD4030
         generic map(
-            C_S00_AXI_DATA_WIDTH   => 32,
-            C_S00_AXI_ADDR_WIDTH   => 32,
-            C_M00_AXIS_TDATA_WIDTH => 32,
-            C_M00_AXIS_START_COUNT => 32
+            DATA_SIZE         => 32,
+            ADRR_SIZE         => 8,
+            SPI_CLK_DIV       => 10,
+            PULSE_WIDTH_SIZE  => 40,
+            PULSE_PERIOD_SIZE => 800
         )
         port map(
             clk_in          => clk,
@@ -508,7 +510,7 @@ begin
 
         -- wait until s_axi_rvalid = '1';
 
-    --    wait for 3 us;
+        --    wait for 3 us;
 
         loop
             s_axi_araddr <= SPI_STATUS_INDEX;

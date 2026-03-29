@@ -34,6 +34,8 @@ use work.ad4030_pkg.all;
 
 entity ad4030_spi is
     generic(
+        DATA_SIZE         : integer := 32;
+        ADRR_SIZE         : integer := 8;
         SPI_CLK_DIV       : natural := 2;
         PULSE_WIDTH_SIZE  : natural := 10;
         PULSE_PERIOD_SIZE : natural := 200
@@ -125,7 +127,7 @@ architecture ad4030_spi_arch of ad4030_spi is
     signal fifo_empty                                                                     : std_logic;
     signal fifo_dout                                                                      : std_logic_vector(CFG_DATA_SIZE - 1 downto 0);
     signal mosi_data_update                                                               : std_logic;
-    signal axi4l_araddr                                                                   : std_logic_vector(ADRR_SIZE / 4 - 1 downto 0);
+    signal axi4l_araddr                                                                   : std_logic_vector(ADRR_SIZE - 1 downto 0);
 
     alias ad4030_cfg_addr_a    : std_logic_vector(15 downto 0) is ad4030_cfg(23 downto 8);
     -- alias ad4030_cfg_data_a    : std_logic_vector(7 downto 0) is ad4030_cfg(7 downto 0);
@@ -201,7 +203,7 @@ begin
     ad4030_cs_n_out <= ad4030_cs_n;
 
     axi4l_busy_out <= axi4l_busy;
-    axi4l_araddr <= axi4l_araddr_in(ADRR_SIZE/4 -1 downto 0);
+    axi4l_araddr   <= axi4l_araddr_in(ADRR_SIZE - 1 downto 0);
 
     -- ad4030_awaddr_sig <= axi4l_awaddr_sig_in;
 
@@ -212,7 +214,7 @@ begin
                        cnv_width_cfg when (axi4l_araddr = CNV_WIDTH_INDEX) else
                        ad4030_spi_status when (axi4l_araddr = SPI_STATUS_INDEX) else
                        ad4030_readout_reg when (axi4l_araddr = ADC_READOUT_INDEX) else
-                       (others => '0');
+                       x"00000000";
 
     cnv_enable <= '1' when (ad4030_cfg_enabled = '0') else '0';
 
@@ -266,9 +268,9 @@ begin
     begin
         if (axi4_rst_n_in = '0') then
             ad4030_cfg       <= (others => '0');
-            spi_cfg          <= std_logic_vector(TO_UNSIGNED(SPI_CLK_DIV, 32));
-            cnv_period_cfg   <= std_logic_vector(TO_UNSIGNED(PULSE_PERIOD_SIZE, 32));
-            cnv_width_cfg    <= std_logic_vector(TO_UNSIGNED(PULSE_WIDTH_SIZE, 32));
+            spi_cfg          <= std_logic_vector(TO_UNSIGNED(SPI_CLK_DIV, DATA_SIZE));
+            cnv_period_cfg   <= std_logic_vector(TO_UNSIGNED(PULSE_PERIOD_SIZE, DATA_SIZE));
+            cnv_width_cfg    <= std_logic_vector(TO_UNSIGNED(PULSE_WIDTH_SIZE, DATA_SIZE));
             gen_load         <= '0';
             baud_count_limit <= unsigned(spi_cfg(15 downto 0));
             cnv_cfg          <= (0 => '1', others => '0');

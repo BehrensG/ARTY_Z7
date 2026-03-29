@@ -11,14 +11,14 @@ entity AD4030 is
 		-- Do not modify the parameters beyond this line
 
 		-- Parameters of Axi Slave Bus Interface S00_AXI
-		C_S00_AXI_DATA_WIDTH   : integer := 32;
-		C_S00_AXI_ADDR_WIDTH   : integer := 32;
+		DATA_SIZE         : integer := 32;
+		ADRR_SIZE         : integer := 8;
 		-- Parameters of Axi Master Bus Interface M00_AXIS
-		C_M00_AXIS_TDATA_WIDTH : integer := 32;
-		C_M00_AXIS_START_COUNT : integer := 32;
-		SPI_CLK_DIV            : natural := 10;
-		PULSE_WIDTH_SIZE       : natural := 40;
-		PULSE_PERIOD_SIZE      : natural := 800
+		--	C_M00_AXIS_TDATA_WIDTH : integer := 32;
+		--	C_M00_AXIS_START_COUNT : integer := 32;
+		SPI_CLK_DIV       : natural := 10;
+		PULSE_WIDTH_SIZE  : natural := 40;
+		PULSE_PERIOD_SIZE : natural := 800
 	);
 	port(
 		-- Users to add ports here
@@ -39,22 +39,22 @@ entity AD4030 is
 		-- Ports of Axi Slave Bus Interface S00_AXI
 		s00_axi_aclk    : in  std_logic;
 		s00_axi_aresetn : in  std_logic;
-		s00_axi_awaddr  : in  std_logic_vector(C_S00_AXI_ADDR_WIDTH - 1 downto 0);
+		s00_axi_awaddr  : in  std_logic_vector(ADRR_SIZE - 1 downto 0);
 		s00_axi_awprot  : in  std_logic_vector(2 downto 0);
 		s00_axi_awvalid : in  std_logic;
 		s00_axi_awready : out std_logic;
-		s00_axi_wdata   : in  std_logic_vector(C_S00_AXI_DATA_WIDTH - 1 downto 0);
-		s00_axi_wstrb   : in  std_logic_vector((C_S00_AXI_DATA_WIDTH / 8) - 1 downto 0);
+		s00_axi_wdata   : in  std_logic_vector(DATA_SIZE - 1 downto 0);
+		s00_axi_wstrb   : in  std_logic_vector((DATA_SIZE / 8) - 1 downto 0);
 		s00_axi_wvalid  : in  std_logic;
 		s00_axi_wready  : out std_logic;
 		s00_axi_bresp   : out std_logic_vector(1 downto 0);
 		s00_axi_bvalid  : out std_logic;
 		s00_axi_bready  : in  std_logic;
-		s00_axi_araddr  : in  std_logic_vector(C_S00_AXI_ADDR_WIDTH - 1 downto 0);
+		s00_axi_araddr  : in  std_logic_vector(ADRR_SIZE - 1 downto 0);
 		s00_axi_arprot  : in  std_logic_vector(2 downto 0);
 		s00_axi_arvalid : in  std_logic;
 		s00_axi_arready : out std_logic;
-		s00_axi_rdata   : out std_logic_vector(C_S00_AXI_DATA_WIDTH - 1 downto 0);
+		s00_axi_rdata   : out std_logic_vector(DATA_SIZE - 1 downto 0);
 		s00_axi_rresp   : out std_logic_vector(1 downto 0);
 		s00_axi_rvalid  : out std_logic;
 		s00_axi_rready  : in  std_logic
@@ -144,6 +144,8 @@ architecture arch_imp of AD4030 is
 
 	component ad4030_spi
 		generic(
+			DATA_SIZE         : integer;
+			ADRR_SIZE         : integer;
 			SPI_CLK_DIV       : natural;
 			PULSE_WIDTH_SIZE  : natural;
 			PULSE_PERIOD_SIZE : natural
@@ -179,8 +181,8 @@ begin
 	-- Instantiation of Axi Bus Interface S00_AXI
 	AD4030_slave_lite_v1_0_S00_AXI_inst : AD4030_slave_lite_v1_0_S00_AXI
 		generic map(
-			C_S_AXI_DATA_WIDTH => C_S00_AXI_DATA_WIDTH,
-			C_S_AXI_ADDR_WIDTH => C_S00_AXI_ADDR_WIDTH
+			C_S_AXI_DATA_WIDTH => DATA_SIZE,
+			C_S_AXI_ADDR_WIDTH => ADRR_SIZE
 		)
 		port map(
 			axi4l_busy_in        => axi4l_busy,
@@ -235,6 +237,8 @@ begin
 
 	AD4030_spi_inst : ad4030_spi
 		generic map(
+			DATA_SIZE         => 32,
+			ADRR_SIZE         => 8,
 			SPI_CLK_DIV       => SPI_CLK_DIV,
 			PULSE_WIDTH_SIZE  => PULSE_WIDTH_SIZE,
 			PULSE_PERIOD_SIZE => PULSE_PERIOD_SIZE)
