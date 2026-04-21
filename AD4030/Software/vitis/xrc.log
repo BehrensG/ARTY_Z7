@@ -1,0 +1,12 @@
+Tue Apr 21 20:20:26 2026: Server was asked to start on port: '41805'
+Tue Apr 21 20:20:26 2026: Server is using token UUID: '1d223de5-eff2-4852-8880-3c6288b72157'
+Tue Apr 21 20:20:26 2026: Attempting to start server on port '41805'
+Tue Apr 21 20:20:26 2026: XRC main fifo: created main fifo '/tmp/xrcmain1d223de5-eff2-4852-8880-3c6288b72157', fd read = 11
+Tue Apr 21 20:20:26 2026: Running Rule Check Server
+Tue Apr 21 20:20:26 2026: Version 1.6.1
+Tue Apr 21 20:20:27 2026: Rule Check Server: Accepted socket connection from client
+Tue Apr 21 20:20:27 2026: EXCHANGE_TOKEN received, server token: 1d223de5-eff2-4852-8880-3c6288b72157, passed token: 1d223de5-eff2-4852-8880-3c6288b72157
+Tue Apr 21 22:16:34 2026: STOP_SERVER received, server token: 1d223de5-eff2-4852-8880-3c6288b72157, passed token: 1d223de5-eff2-4852-8880-3c6288b72157
+Tue Apr 21 22:16:34 2026: Socket received request to stop server.
+Tue Apr 21 22:16:34 2026: SERVER: destructor for server bound to port 41805
+Tue Apr 21 22:16:34 2026: XRC main fifo: Good unlink of /tmp/xrcmain1d223de5-eff2-4852-8880-3c6288b72157

@@ -1,0 +1,10 @@
+vhdl xil_defaultlib  \
+"../../../bd/AD4030_BD/ip/AD4030_BD_axi_gpio_0_0/sim/AD4030_BD_axi_gpio_0_0.vhd" \
+"../../../bd/AD4030_BD/ip/AD4030_BD_rst_ps7_0_100M_0/sim/AD4030_BD_rst_ps7_0_100M_0.vhd" \
+"../../../bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/bd_0/sim/bd_3210.vhd" \
+"../../../bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/bd_0/ip/ip_0/sim/bd_3210_ila_lib_0.vhd" \
+"../../../bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/sim/AD4030_BD_system_ila_0_0.vhd" \
+"../../../bd/AD4030_BD/sim/AD4030_BD.vhd" \
+
+# Do not sort compile order
+nosort

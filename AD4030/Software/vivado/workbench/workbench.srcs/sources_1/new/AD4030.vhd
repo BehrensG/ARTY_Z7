@@ -18,7 +18,10 @@ entity AD4030 is
 		--	C_M00_AXIS_START_COUNT : integer := 32;
 		SPI_CLK_DIV       : natural := 10;
 		PULSE_WIDTH_SIZE  : natural := 40;
-		PULSE_PERIOD_SIZE : natural := 800
+		PULSE_PERIOD_SIZE : natural := 800;
+		C_S_AXI_DATA_WIDTH : integer := 32;
+		-- Width of S_AXI address bus
+		C_S_AXI_ADDR_WIDTH : integer := 32
 	);
 	port(
 		-- Users to add ports here

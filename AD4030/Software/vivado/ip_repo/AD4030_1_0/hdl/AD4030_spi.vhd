@@ -382,7 +382,7 @@ begin
                         ad4030_cfg_mode <= '1';
                         fifo_rd_en      <= '1';
                         spi_state       <= START1;
-                    elsif (ad4030_busy_falling_edge = '1' and fifo_empty = '1') then
+                    elsif (ad4030_busy_rising_edge = '1' and fifo_empty = '1') then
                         spi_bit_count       <= count_cfg(output => ad4030_out_data_md, line => ad4030_line_md);
                         spi_state           <= START1;
                         ad4030_readout_mode <= '1';
