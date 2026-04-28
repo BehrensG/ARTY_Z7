@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="AD4030" location="/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030" platform="/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/AD4030_BD_wrapper.xpfm" platformUID="xilinx:arty-z7-10::0.0(custom)" systemProject="AD4030_system" sysConfig="AD4030_BD_wrapper" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="ccf8d1d51540686e2611db138c080be7">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.440935772" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.2037997118" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

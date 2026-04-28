@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Apr 21 20:34:20 2026
+# Process ID: 46316
+# Current directory: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis
+# Command line: vivado
+# Log file: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/vivado.log
+# Journal file: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/vivado.jou
+# Running On        :archlinux
+# Platform          :Arch
+# Operating System  :Arch Linux
+# Processor Detail  :Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz
+# CPU Frequency     :800.000 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :67062 MB
+# Swap memory       :4294 MB
+# Total Virtual     :71357 MB
+# Available Virtual :64339 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.PULSE_PERIOD_SIZE {100000} \
+  CONFIG.PULSE_WIDTH_SIZE {100} \
+  CONFIG.SPI_CLK_DIV {20} \
+] [get_bd_cells AD4030_0]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run AD4030_BD_AD4030_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa
+startgroup
+set_property CONFIG.SPI_CLK_DIV {50} [get_bd_cells AD4030_0]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run AD4030_BD_AD4030_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa

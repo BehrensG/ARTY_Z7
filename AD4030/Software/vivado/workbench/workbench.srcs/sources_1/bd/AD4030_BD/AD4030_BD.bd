@@ -2502,7 +2502,7 @@
       },
       "AD4030_0": {
         "vlnv": "GB:user:AD4030:1.0",
-        "ip_revision": "18",
+        "ip_revision": "24",
         "xci_name": "AD4030_BD_AD4030_0_0",
         "xci_path": "ip/AD4030_BD_AD4030_0_0/AD4030_BD_AD4030_0_0.xci",
         "inst_hier_path": "AD4030_0",

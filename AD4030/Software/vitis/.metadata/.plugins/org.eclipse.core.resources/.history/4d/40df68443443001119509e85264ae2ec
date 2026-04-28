@@ -1,0 +1,50 @@
+
+
+/***************************** Include Files *******************************/
+#include "AD4030.h"
+
+float ad4030_measure(float gain, float lsb)
+{
+	u32 raw_data = 0;
+	float meas = 0.0f;
+
+	do
+	{
+		raw_data = AD4030_mReadReg(XPAR_AD4030_0_S00_AXI_BASEADDR, AD4030_SPI_STATUS_INDEX);
+	}
+	while(raw_data != 0x00000003);
+
+	raw_data = AD4030_mReadReg(XPAR_AD4030_0_S00_AXI_BASEADDR, AD4030_ADC_READOUT_INDEX);
+
+	if (raw_data & 0x00800000)
+	{
+		raw_data = 0xFFFFFF - raw_data;
+		meas = -1*gain*raw_data*lsb;
+	}
+	else
+	{
+		meas = gain*raw_data*lsb;
+	}
+
+	return meas;
+}
+
+void ad4030_config(u32 cmd[], u32 size)
+{
+	u32 raw_data = 0;
+	for (u32 i = 0; i < size; i++)
+	{
+		AD4030_mWriteReg(XPAR_AD4030_0_S00_AXI_BASEADDR, AD4030_ADC_CFG_INDEX, cmd[i]);
+
+		do
+		{
+			raw_data = AD4030_mReadReg(XPAR_AD4030_0_S00_AXI_BASEADDR, AD4030_SPI_STATUS_INDEX);
+		}(raw_data != 0x00000001);
+
+	}
+
+}
+
+
+
+/************************** Function Definitions ***************************/

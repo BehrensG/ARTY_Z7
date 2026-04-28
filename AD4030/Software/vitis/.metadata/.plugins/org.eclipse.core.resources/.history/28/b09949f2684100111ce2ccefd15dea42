@@ -1,0 +1,14 @@
+
+
+/***************************** Include Files *******************************/
+#include "AD4030.h"
+#include "xparameters.h"
+
+float ad4030_measure(float gain, float lsb)
+{
+
+}
+
+
+
+/************************** Function Definitions ***************************/

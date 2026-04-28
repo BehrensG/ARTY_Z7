@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Apr 21 20:34:20 2026
-# Process ID: 46316
+# Start of session at: Tue Apr 28 20:27:03 2026
+# Process ID: 34209
 # Current directory: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis
 # Command line: vivado
 # Log file: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/vivado.log
@@ -13,37 +13,142 @@
 # Platform          :Arch
 # Operating System  :Arch Linux
 # Processor Detail  :Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz
-# CPU Frequency     :800.000 MHz
+# CPU Frequency     :3499.824 MHz
 # CPU Physical cores:6
 # CPU Logical cores :12
 # Host memory       :67062 MB
 # Swap memory       :4294 MB
 # Total Virtual     :71357 MB
-# Available Virtual :64339 MB
+# Available Virtual :68174 MB
 #-----------------------------------------------------------
 start_gui
 open_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.xpr
 update_compile_order -fileset sources_1
+ipx::edit_ip_in_project -upgrade true -name AD4030_v1_0_project -directory /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/component.xml
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+source ad4030_axi_tb.tcl
+run 10 us
+close_sim
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/sine_data.txt
+launch_simulation
+source ad4030_axi_tb.tcl
+run 10 us
+run 10 us
+run 10 us
+ipx::merge_project_changes files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 22 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project
+update_ip_catalog -rebuild -repo_path /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0
+ipx::edit_ip_in_project -upgrade true -name AD4030_v1_0_project -directory /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/component.xml
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+close_sim
+close_project
 open_bd_design {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd}
-startgroup
-set_property -dict [list \
-  CONFIG.PULSE_PERIOD_SIZE {100000} \
-  CONFIG.PULSE_WIDTH_SIZE {100} \
-  CONFIG.SPI_CLK_DIV {20} \
-] [get_bd_cells AD4030_0]
-endgroup
-save_bd_design
+report_ip_status -name ip_status 
+upgrade_ip -vlnv GB:user:AD4030:1.0 [get_ips  AD4030_BD_AD4030_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips AD4030_BD_AD4030_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
 reset_run synth_1
-reset_run AD4030_BD_AD4030_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name AD4030_v1_0_project -directory /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/component.xml
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_simulation
+source ad4030_axi_tb.tcl
+run all
+close_sim
+ipx::merge_project_changes files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 23 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project
+update_ip_catalog -rebuild -repo_path /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv GB:user:AD4030:1.0 [get_ips  AD4030_BD_AD4030_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips AD4030_BD_AD4030_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+report_ip_status -name ip_status 
+write_hw_platform -fixed -include_bit -force -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv GB:user:AD4030:1.0 [get_ips  AD4030_BD_AD4030_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips AD4030_BD_AD4030_0_0] -no_script -sync -force -quiet
+ipx::edit_ip_in_project -upgrade true -name AD4030_v1_0_project -directory /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/component.xml
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 24 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project
+update_ip_catalog -rebuild -repo_path /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv GB:user:AD4030:1.0 [get_ips  AD4030_BD_AD4030_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips AD4030_BD_AD4030_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv GB:user:AD4030:1.0 [get_ips  AD4030_BD_AD4030_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips AD4030_BD_AD4030_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 wait_on_run impl_1
 write_hw_platform -fixed -include_bit -force -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa
-startgroup
-set_property CONFIG.SPI_CLK_DIV {50} [get_bd_cells AD4030_0]
-endgroup
-save_bd_design
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/impl_1/AD4030_BD_wrapper.bit} [get_hw_devices xc7z010_1]
+set_property PROBES.FILE {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/impl_1/AD4030_BD_wrapper.ltx} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/impl_1/AD4030_BD_wrapper.ltx} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_arvalid -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_awready -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+close_hw_manager
 reset_run synth_1
-reset_run AD4030_BD_AD4030_0_0_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-wait_on_run impl_1
-write_hw_platform -fixed -include_bit -force -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa

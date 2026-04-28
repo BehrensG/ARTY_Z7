@@ -7,12 +7,12 @@
   **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Tue Apr 21 20:58:07 2026
+  **** Start of session at: Tue Apr 28 21:45:30 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source AD4030_BD_AD4030_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1438.941 ; gain = 61.836 ; free physical = 49457 ; free virtual = 58867
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1439.746 ; gain = 22.836 ; free physical = 50652 ; free virtual = 60301
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
@@ -25,9 +25,9 @@ INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Device 21-9227] Part: xc7z010clg400-1 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 94984
+INFO: [Synth 8-7075] Helper process launched with PID 150681
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2204.680 ; gain = 414.684 ; free physical = 48322 ; free virtual = 57732
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2202.516 ; gain = 412.715 ; free physical = 49525 ; free virtual = 59182
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'AD4030_BD_AD4030_0_0' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_AD4030_0_0/synth/AD4030_BD_AD4030_0_0.vhd:93]
 	Parameter DATA_SIZE bound to: 32 - type: integer 
@@ -35,31 +35,30 @@ INFO: [Synth 8-638] synthesizing module 'AD4030_BD_AD4030_0_0' [/home/grzegorz/g
 	Parameter SPI_CLK_DIV bound to: 50 - type: integer 
 	Parameter PULSE_WIDTH_SIZE bound to: 100 - type: integer 
 	Parameter PULSE_PERIOD_SIZE bound to: 100000 - type: integer 
-INFO: [Synth 8-3491] module 'AD4030' declared at '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030.vhd:6' bound to instance 'U0' of component 'AD4030' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_AD4030_0_0/synth/AD4030_BD_AD4030_0_0.vhd:171]
-INFO: [Synth 8-638] synthesizing module 'AD4030' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030.vhd:73]
+INFO: [Synth 8-3491] module 'AD4030' declared at '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030.vhd:6' bound to instance 'U0' of component 'AD4030' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_AD4030_0_0/synth/AD4030_BD_AD4030_0_0.vhd:171]
+INFO: [Synth 8-638] synthesizing module 'AD4030' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030.vhd:73]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'AD4030_slave_lite_v1_0_S00_AXI' declared at '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd:5' bound to instance 'AD4030_slave_lite_v1_0_S00_AXI_inst' of component 'AD4030_slave_lite_v1_0_S00_AXI' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030.vhd:183]
-INFO: [Synth 8-638] synthesizing module 'AD4030_slave_lite_v1_0_S00_AXI' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd:96]
-INFO: [Synth 8-256] done synthesizing module 'AD4030_slave_lite_v1_0_S00_AXI' (0#1) [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd:96]
+INFO: [Synth 8-3491] module 'AD4030_slave_lite_v1_0_S00_AXI' declared at '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd:5' bound to instance 'AD4030_slave_lite_v1_0_S00_AXI_inst' of component 'AD4030_slave_lite_v1_0_S00_AXI' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'AD4030_slave_lite_v1_0_S00_AXI' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd:96]
+INFO: [Synth 8-256] done synthesizing module 'AD4030_slave_lite_v1_0_S00_AXI' (0#1) [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd:96]
 	Parameter DATA_SIZE bound to: 32 - type: integer 
 	Parameter ADRR_SIZE bound to: 8 - type: integer 
 	Parameter SPI_CLK_DIV bound to: 50 - type: integer 
 	Parameter PULSE_WIDTH_SIZE bound to: 100 - type: integer 
 	Parameter PULSE_PERIOD_SIZE bound to: 100000 - type: integer 
-INFO: [Synth 8-3491] module 'ad4030_spi' declared at '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_spi.vhd:35' bound to instance 'AD4030_spi_inst' of component 'ad4030_spi' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030.vhd:239]
-INFO: [Synth 8-638] synthesizing module 'ad4030_spi' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_spi.vhd:75]
-INFO: [Synth 8-638] synthesizing module 'pulse_generator' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/pulse_generator.vhd:53]
-INFO: [Synth 8-256] done synthesizing module 'pulse_generator' (0#1) [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/pulse_generator.vhd:53]
-INFO: [Synth 8-638] synthesizing module 'AD4030_FIFO' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_fifo.vhdl:24]
-INFO: [Synth 8-256] done synthesizing module 'AD4030_FIFO' (0#1) [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_fifo.vhdl:24]
-WARNING: [Synth 8-614] signal 'spi_cfg' is read in the process but is not in the sensitivity list [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_spi.vhd:267]
-INFO: [Synth 8-256] done synthesizing module 'ad4030_spi' (0#1) [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_spi.vhd:75]
-INFO: [Synth 8-256] done synthesizing module 'AD4030' (0#1) [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030.vhd:73]
+INFO: [Synth 8-3491] module 'ad4030_spi' declared at '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_spi.vhd:35' bound to instance 'AD4030_spi_inst' of component 'ad4030_spi' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030.vhd:239]
+INFO: [Synth 8-638] synthesizing module 'ad4030_spi' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_spi.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'pulse_generator' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/pulse_generator.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'pulse_generator' (0#1) [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/pulse_generator.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'AD4030_FIFO' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_fifo.vhdl:24]
+INFO: [Synth 8-256] done synthesizing module 'AD4030_FIFO' (0#1) [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_fifo.vhdl:24]
+INFO: [Synth 8-256] done synthesizing module 'ad4030_spi' (0#1) [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_spi.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'AD4030' (0#1) [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030.vhd:73]
 INFO: [Synth 8-256] done synthesizing module 'AD4030_BD_AD4030_0_0' (0#1) [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_AD4030_0_0/synth/AD4030_BD_AD4030_0_0.vhd:93]
-WARNING: [Synth 8-6014] Unused sequential element axi_wready_reg was removed.  [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd:127]
-WARNING: [Synth 8-6014] Unused sequential element baud_clk_falling_edge_reg was removed.  [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_spi.vhd:447]
-WARNING: [Synth 8-6014] Unused sequential element ad4030_cfg_readout_reg_reg was removed.  [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_spi.vhd:509]
+WARNING: [Synth 8-6014] Unused sequential element axi_wready_reg was removed.  [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd:127]
+WARNING: [Synth 8-6014] Unused sequential element baud_clk_falling_edge_reg was removed.  [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_spi.vhd:453]
+WARNING: [Synth 8-6014] Unused sequential element ad4030_cfg_readout_reg_reg was removed.  [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_spi.vhd:515]
 WARNING: [Synth 8-7129] Port axi4l_awaddr_sig_in in module ad4030_spi is either unconnected or has no load
 WARNING: [Synth 8-7129] Port axi4l_bresp_in[1] in module AD4030_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port axi4l_bresp_in[0] in module AD4030_slave_lite_v1_0_S00_AXI is either unconnected or has no load
@@ -70,48 +69,48 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module AD4030_slave_lite_v1_0_S0
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module AD4030_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module AD4030_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2295.648 ; gain = 505.652 ; free physical = 48228 ; free virtual = 57639
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2295.484 ; gain = 505.684 ; free physical = 49426 ; free virtual = 59085
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2310.492 ; gain = 520.496 ; free physical = 48215 ; free virtual = 57627
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2310.328 ; gain = 520.527 ; free physical = 49414 ; free virtual = 59073
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2310.492 ; gain = 520.496 ; free physical = 48215 ; free virtual = 57627
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2310.328 ; gain = 520.527 ; free physical = 49414 ; free virtual = 59073
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2310.492 ; gain = 0.000 ; free physical = 48215 ; free virtual = 57627
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2310.328 ; gain = 0.000 ; free physical = 49414 ; free virtual = 59073
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2457.242 ; gain = 0.000 ; free physical = 48151 ; free virtual = 57562
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2460.078 ; gain = 0.000 ; free physical = 49373 ; free virtual = 59031
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2457.242 ; gain = 0.000 ; free physical = 48151 ; free virtual = 57562
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2460.078 ; gain = 0.000 ; free physical = 49369 ; free virtual = 59027
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2457.242 ; gain = 667.246 ; free physical = 48145 ; free virtual = 57556
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2460.078 ; gain = 670.277 ; free physical = 49364 ; free virtual = 59012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48145 ; free virtual = 57556
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49364 ; free virtual = 59012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48145 ; free virtual = 57556
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49364 ; free virtual = 59012
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'spi_state_reg' in module 'ad4030_spi'
-WARNING: [Synth 8-327] inferring latch for variable 'pulse_out_reg' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/pulse_generator.vhd:108]
+WARNING: [Synth 8-327] inferring latch for variable 'pulse_out_reg' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/pulse_generator.vhd:108]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -124,11 +123,11 @@ WARNING: [Synth 8-327] inferring latch for variable 'pulse_out_reg' [/home/grzeg
 *
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'spi_state_reg' using encoding 'sequential' in module 'ad4030_spi'
-WARNING: [Synth 8-327] inferring latch for variable 'ad4030_cfg_enabled_reg' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_spi.vhd:325]
-WARNING: [Synth 8-327] inferring latch for variable 'ad4030_line_md_reg' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_spi.vhd:323]
-WARNING: [Synth 8-327] inferring latch for variable 'ad4030_out_data_md_reg' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/72aa/hdl/AD4030_spi.vhd:324]
+WARNING: [Synth 8-327] inferring latch for variable 'ad4030_line_md_reg' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_spi.vhd:323]
+WARNING: [Synth 8-327] inferring latch for variable 'ad4030_out_data_md_reg' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_spi.vhd:324]
+WARNING: [Synth 8-327] inferring latch for variable 'ad4030_cfg_enabled_reg' [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ipshared/6851/hdl/AD4030_spi.vhd:325]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48140 ; free virtual = 57552
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49360 ; free virtual = 59009
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -137,18 +136,17 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   32 Bit       Adders := 1     
 	   2 Input   16 Bit       Adders := 1     
-	   2 Input    6 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 1     
-	   2 Input    3 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 4     
 +---Registers : 
 	               32 Bit    Registers := 12    
 	               24 Bit    Registers := 2     
 	               16 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
 	                1 Bit    Registers := 23    
 +---RAMs : 
-	              192 Bit	(8 X 24 bit)          RAMs := 1     
+	               1K Bit	(64 X 24 bit)          RAMs := 1     
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 7     
 	   7 Input   32 Bit        Muxes := 5     
@@ -163,9 +161,9 @@ Detailed RTL Component Info :
 	   2 Input    3 Bit        Muxes := 7     
 	   6 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 16    
+	   2 Input    1 Bit        Muxes := 15    
 	   7 Input    1 Bit        Muxes := 2     
-	   6 Input    1 Bit        Muxes := 14    
+	   6 Input    1 Bit        Muxes := 13    
 	   4 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -195,20 +193,20 @@ WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module AD4030_BD_AD4030_0_0 is
 WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module AD4030_BD_AD4030_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module AD4030_BD_AD4030_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48136 ; free virtual = 57548
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49386 ; free virtual = 59032
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-Distributed RAM: Preliminary Mapping Report (see note below)
-+---------------------+----------------------------------------+-----------+----------------------+-------------+
-|Module Name          | RTL Object                             | Inference | Size (Depth x Width) | Primitives  | 
-+---------------------+----------------------------------------+-----------+----------------------+-------------+
-|AD4030_BD_AD4030_0_0 | U0/AD4030_spi_inst/cfg_fifo/memory_reg | Implied   | 8 x 24               | RAM32M x 4  | 
-+---------------------+----------------------------------------+-----------+----------------------+-------------+
+Block RAM: Preliminary Mapping Report (see note below)
++---------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name          | RTL Object                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|AD4030_BD_AD4030_0_0 | U0/AD4030_spi_inst/cfg_fifo/memory_reg | 64 x 24(READ_FIRST)    | W |   | 64 x 24(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++---------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
-Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -216,24 +214,24 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48140 ; free virtual = 57552
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49398 ; free virtual = 59042
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48140 ; free virtual = 57552
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49398 ; free virtual = 59042
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-Distributed RAM: Final Mapping Report
-+---------------------+----------------------------------------+-----------+----------------------+-------------+
-|Module Name          | RTL Object                             | Inference | Size (Depth x Width) | Primitives  | 
-+---------------------+----------------------------------------+-----------+----------------------+-------------+
-|AD4030_BD_AD4030_0_0 | U0/AD4030_spi_inst/cfg_fifo/memory_reg | Implied   | 8 x 24               | RAM32M x 4  | 
-+---------------------+----------------------------------------+-----------+----------------------+-------------+
+Block RAM: Final Mapping Report
++---------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name          | RTL Object                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|AD4030_BD_AD4030_0_0 | U0/AD4030_spi_inst/cfg_fifo/memory_reg | 64 x 24(READ_FIRST)    | W |   | 64 x 24(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++---------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -241,8 +239,9 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance U0/AD4030_spi_inst/cfg_fifo/memory_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48140 ; free virtual = 57552
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49397 ; free virtual = 59041
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -260,37 +259,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48154 ; free virtual = 57564
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49374 ; free virtual = 59034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48154 ; free virtual = 57564
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49374 ; free virtual = 59034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48154 ; free virtual = 57564
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49374 ; free virtual = 59034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48154 ; free virtual = 57564
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49374 ; free virtual = 59034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48154 ; free virtual = 57564
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49374 ; free virtual = 59034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48154 ; free virtual = 57564
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49374 ; free virtual = 59034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -303,55 +302,54 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |CARRY4 |    21|
-|2     |LUT1   |     5|
-|3     |LUT2   |    75|
-|4     |LUT3   |    87|
-|5     |LUT4   |    27|
-|6     |LUT5   |    26|
-|7     |LUT6   |   263|
-|8     |RAM32M |     4|
-|9     |FDCE   |   293|
-|10    |FDPE   |    33|
-|11    |FDRE   |   153|
-|12    |FDSE   |    18|
-|13    |LDC    |    21|
-|14    |LDCP   |     2|
-+------+-------+------+
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    23|
+|2     |LUT1     |     7|
+|3     |LUT2     |    77|
+|4     |LUT3     |    89|
+|5     |LUT4     |    35|
+|6     |LUT5     |    31|
+|7     |LUT6     |   255|
+|8     |RAMB18E1 |     1|
+|9     |FDCE     |   293|
+|10    |FDPE     |    33|
+|11    |FDRE     |   141|
+|12    |FDSE     |    18|
+|13    |LDC      |    21|
+|14    |LDCP     |     2|
++------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2465.246 ; gain = 675.250 ; free physical = 48154 ; free virtual = 57564
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2468.082 ; gain = 678.281 ; free physical = 49374 ; free virtual = 59034
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2465.246 ; gain = 528.500 ; free physical = 48154 ; free virtual = 57564
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2465.254 ; gain = 675.250 ; free physical = 48154 ; free virtual = 57564
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2468.082 ; gain = 528.531 ; free physical = 49374 ; free virtual = 59034
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2468.090 ; gain = 678.281 ; free physical = 49374 ; free virtual = 59034
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2465.254 ; gain = 0.000 ; free physical = 48482 ; free virtual = 57892
-INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2468.090 ; gain = 0.000 ; free physical = 49700 ; free virtual = 59360
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2521.273 ; gain = 0.000 ; free physical = 48486 ; free virtual = 57896
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2524.109 ; gain = 0.000 ; free physical = 49652 ; free virtual = 59367
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 27 instances were transformed.
+  A total of 23 instances were transformed.
   LDC => LDCE: 21 instances
   LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 2 instances
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
 
-Synth Design complete | Checksum: 5922b1c4
+Synth Design complete | Checksum: 3cdf56d
 INFO: [Common 17-83] Releasing license: Synthesis
-41 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+42 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 2521.273 ; gain = 1061.520 ; free physical = 48486 ; free virtual = 57896
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2075.531; main = 1704.436; forked = 424.141
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3487.090; main = 2521.277; forked = 1021.840
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2545.285 ; gain = 0.000 ; free physical = 48486 ; free virtual = 57896
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 2524.109 ; gain = 1064.551 ; free physical = 49642 ; free virtual = 59363
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2198.489; main = 1827.896; forked = 488.763
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3490.418; main = 2524.113; forked = 1022.332
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2548.121 ; gain = 0.000 ; free physical = 49641 ; free virtual = 59363
 INFO: [Common 17-1381] The checkpoint '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/AD4030_BD_AD4030_0_0_synth_1/AD4030_BD_AD4030_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP AD4030_BD_AD4030_0_0, cache-ID = e0f63ea513235017
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP AD4030_BD_AD4030_0_0, cache-ID = a63f8d62b0a902a1
 INFO: [Coretcl 2-1174] Renamed 5 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2545.285 ; gain = 0.000 ; free physical = 48478 ; free virtual = 57889
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2548.121 ; gain = 0.000 ; free physical = 49620 ; free virtual = 59346
 INFO: [Common 17-1381] The checkpoint '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/AD4030_BD_AD4030_0_0_synth_1/AD4030_BD_AD4030_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file AD4030_BD_AD4030_0_0_utilization_synth.rpt -pb AD4030_BD_AD4030_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 21 20:58:47 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 21:46:09 2026...

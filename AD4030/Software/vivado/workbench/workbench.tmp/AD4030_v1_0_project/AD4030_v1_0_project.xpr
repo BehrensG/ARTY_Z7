@@ -7,7 +7,7 @@
 <Project Product="Vivado" Version="7" Minor="67" Path="/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="9585919c6ce94ce7a44715b71eb3348e"/>
+    <Option Name="Id" Val="50f4013475094c039bd2c4590568ce7d"/>
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -145,7 +145,55 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
-      <File Path="$PPRDIR/../../../ip_repo/AD4030_1_0/src/ad4030_axi_tb.vhd">
+      <File Path="$PPRDIR/../../../ip_repo/AD4030_1_0/hdl/AD4030_package.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="UsedIn" Val="testbench"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../ip_repo/AD4030_1_0/hdl/AD4030.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="UsedIn" Val="testbench"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../ip_repo/AD4030_1_0/hdl/AD4030_fifo.vhdl">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="UsedIn" Val="testbench"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../ip_repo/AD4030_1_0/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="UsedIn" Val="testbench"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../ip_repo/AD4030_1_0/hdl/pulse_generator.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="UsedIn" Val="testbench"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="UsedIn" Val="testbench"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd">
         <FileInfo>
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="simulation"/>

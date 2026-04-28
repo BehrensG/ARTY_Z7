@@ -1,0 +1,11 @@
+
+
+#include "AD4030.h"
+
+
+float ad4030_measure(float gain, float lsb)
+{
+	float measurement = 0.0f;
+
+	return measurement;
+}

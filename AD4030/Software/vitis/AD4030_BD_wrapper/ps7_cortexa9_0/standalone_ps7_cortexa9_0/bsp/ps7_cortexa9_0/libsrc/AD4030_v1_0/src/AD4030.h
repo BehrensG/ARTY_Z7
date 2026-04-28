@@ -6,24 +6,33 @@
 /****************** Include Files ********************/
 #include "xil_types.h"
 #include "xstatus.h"
+#include "xparameters.h"
+#include "xil_io.h"
 
-#define AD4030_S00_AXI_SLV_REG0_OFFSET 0
-#define AD4030_S00_AXI_SLV_REG1_OFFSET 4
-#define AD4030_S00_AXI_SLV_REG2_OFFSET 8
-#define AD4030_S00_AXI_SLV_REG3_OFFSET 12
-#define AD4030_S00_AXI_SLV_REG4_OFFSET 16
-#define AD4030_S00_AXI_SLV_REG5_OFFSET 20
-#define AD4030_S00_AXI_SLV_REG6_OFFSET 24
-#define AD4030_S00_AXI_SLV_REG7_OFFSET 28
-#define AD4030_S00_AXI_SLV_REG8_OFFSET 32
-#define AD4030_S00_AXI_SLV_REG9_OFFSET 36
-#define AD4030_S00_AXI_SLV_REG10_OFFSET 40
-#define AD4030_S00_AXI_SLV_REG11_OFFSET 44
-#define AD4030_S00_AXI_SLV_REG12_OFFSET 48
-#define AD4030_S00_AXI_SLV_REG13_OFFSET 52
-#define AD4030_S00_AXI_SLV_REG14_OFFSET 56
-#define AD4030_S00_AXI_SLV_REG15_OFFSET 60
+#define AD4030_ADC_CFG_INDEX 		0x00
+#define AD4030_SPI_CFG_INDEX 		0x04
+#define AD4030_CNV_CFG_INDEX 		0x08
+#define AD4030_CNV_PERIOD_INDEX 	0x0C
+#define AD4030_CNV_WIDTH_INDEX 		0x10
+#define AD4030_SPI_STATUS_INDEX 	0x14
+#define AD4030_ADC_READOUT_INDEX 	0x18
+#define AD4030_SLV_REG7_OFFSET 		0x1C
+#define AD4030_SLV_REG8_OFFSET 		0x20
+#define AD4030_SLV_REG9_OFFSET 		0x24
+#define AD4030_SLV_REG10_OFFSET 	0x28
+#define AD4030_SLV_REG11_OFFSET 	0x2C
+#define AD4030_SLV_REG12_OFFSET 	0x30
+#define AD4030_SLV_REG13_OFFSET 	0x34
+#define AD4030_SLV_REG14_OFFSET 	0x38
+#define AD4030_SLV_REG15_OFFSET 	0x3C
 
+#define AD4030_ENABLE_CFG_CMD		0x00A00000
+#define AD4030_DISABLE_CFG_CMD		0x00001401
+
+
+
+#define  LSB   4.096/8388608
+#define  GAIN  1.25f
 
 /**************************** Type Definitions *****************************/
 /**
@@ -87,5 +96,8 @@
  *
  */
 XStatus AD4030_Reg_SelfTest(void * baseaddr_p);
+
+float ad4030_measure(float gain, float lsb);
+void ad4030_config(u32 cmd[], u32 size);
 
 #endif // AD4030_H

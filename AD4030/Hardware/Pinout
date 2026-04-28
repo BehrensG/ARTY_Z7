@@ -11,3 +11,7 @@ CONN_SCK    JB3_P (4)   V16     IO7     U17
 CONN_G20    JB3_N (8)   W16     IO10    T16 
 CONN_SDI    JB4_P (9)   V12     IO8     V17
 CONN_CONV   JB4_N (10)  W13     IO6     R16
+
+
+set_property PACKAGE_PIN R17 [get_ports {gain[1]}]
+set_property PACKAGE_PIN T16 [get_ports {gain[0]}]

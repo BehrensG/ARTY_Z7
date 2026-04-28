@@ -584,11 +584,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 21 18:58:47 UTC 2026</spirit:value>
+            <spirit:value>Tue Apr 28 19:46:09 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c35cc2f0</spirit:value>
+            <spirit:value>9:ffe0f9a0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -602,11 +602,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 21 18:57:56 UTC 2026</spirit:value>
+            <spirit:value>Tue Apr 28 19:45:20 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c35cc2f0</spirit:value>
+            <spirit:value>9:ffe0f9a0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -617,7 +617,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c35cc2f0</spirit:value>
+            <spirit:value>9:ffe0f9a0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -633,11 +633,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 18 22:26:26 UTC 2026</spirit:value>
+            <spirit:value>Tue Apr 28 19:45:20 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c35cc2f0</spirit:value>
+            <spirit:value>9:ffe0f9a0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -653,11 +653,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 21 18:57:56 UTC 2026</spirit:value>
+            <spirit:value>Tue Apr 28 19:45:20 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c35cc2f0</spirit:value>
+            <spirit:value>9:ffe0f9a0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1186,27 +1186,27 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/72aa/hdl/AD4030_fifo.vhdl</spirit:name>
+        <spirit:name>../../ipshared/6851/hdl/AD4030_fifo.vhdl</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/72aa/hdl/pulse_generator.vhd</spirit:name>
+        <spirit:name>../../ipshared/6851/hdl/pulse_generator.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/72aa/hdl/AD4030_package.vhd</spirit:name>
+        <spirit:name>../../ipshared/6851/hdl/AD4030_package.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/72aa/hdl/AD4030_spi.vhd</spirit:name>
+        <spirit:name>../../ipshared/6851/hdl/AD4030_spi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/72aa/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/6851/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/72aa/hdl/AD4030.vhd</spirit:name>
+        <spirit:name>../../ipshared/6851/hdl/AD4030.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1278,7 +1278,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>AD4030_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>18</xilinx:coreRevision>
+      <xilinx:coreRevision>24</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
@@ -1327,7 +1327,7 @@
       <xilinx:xilinxVersion>2024.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="941fbeac"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ee4854b0"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b195173f"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="4fb43625"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="910cc73c"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="029e12e7"/>

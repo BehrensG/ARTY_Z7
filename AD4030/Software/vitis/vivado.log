@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Apr 21 20:34:20 2026
-# Process ID: 46316
+# Start of session at: Tue Apr 28 20:27:03 2026
+# Process ID: 34209
 # Current directory: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis
 # Command line: vivado
 # Log file: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/vivado.log
@@ -13,15 +13,16 @@
 # Platform          :Arch
 # Operating System  :Arch Linux
 # Processor Detail  :Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz
-# CPU Frequency     :800.000 MHz
+# CPU Frequency     :3499.824 MHz
 # CPU Physical cores:6
 # CPU Logical cores :12
 # Host memory       :67062 MB
 # Swap memory       :4294 MB
 # Total Virtual     :71357 MB
-# Available Virtual :64339 MB
+# Available Virtual :68174 MB
 #-----------------------------------------------------------
 start_gui
+open_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.xpr
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
@@ -31,13 +32,256 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 avai
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-open_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 8144.992 ; gain = 519.656 ; free physical = 55314 ; free virtual = 63556
 update_compile_order -fileset sources_1
+ipx::edit_ip_in_project -upgrade true -name AD4030_v1_0_project -directory /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'ad4030_axi_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/opt/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'ad4030_axi_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj ad4030_axi_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_package.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AD4030'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_fifo.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AD4030_FIFO'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AD4030_slave_lite_v1_0_S00_AXI'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/pulse_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pulse_generator'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ad4030_spi'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ad4030_axi_tb'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot ad4030_axi_tb_behav xil_defaultlib.ad4030_axi_tb -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot ad4030_axi_tb_behav xil_defaultlib.ad4030_axi_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling package xil_defaultlib.ad4030_pkg
+Compiling architecture arch_imp of entity xil_defaultlib.AD4030_slave_lite_v1_0_S00_AXI [ad4030_slave_lite_v1_0_s00_axi_d...]
+Compiling architecture pulse_generator_arch of entity xil_defaultlib.pulse_generator [\pulse_generator(pulse_width_siz...]
+Compiling architecture ad4030_fifo_arch of entity xil_defaultlib.AD4030_FIFO [\AD4030_FIFO(data_width=24,fifo_...]
+Compiling architecture ad4030_spi_arch of entity xil_defaultlib.ad4030_spi [\ad4030_spi(spi_clk_div=10,pulse...]
+Compiling architecture arch_imp of entity xil_defaultlib.AD4030 [ad4030_default]
+Compiling architecture testbench of entity xil_defaultlib.ad4030_axi_tb
+Built simulation snapshot ad4030_axi_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ad4030_axi_tb_behav -key {Behavioral:sim_1:Functional:ad4030_axi_tb} -tclbatch {ad4030_axi_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source ad4030_axi_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: File sine_data.txt is not open. Cannot call endfile on it
+Time: 100 ns  Iteration: 1  Process: /ad4030_axi_tb/sine_wave_proc
+  File: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd
+
+HDL Line: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:358
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ad4030_axi_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 8693.852 ; gain = 44.996 ; free physical = 54993 ; free virtual = 63507
+run 10 us
+ERROR: [Simulator 45-1] A fatal run-time error was detected.  Simulation cannot continue.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/sine_data.txt
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'ad4030_axi_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/opt/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'ad4030_axi_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim/sine_data.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj ad4030_axi_tb_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot ad4030_axi_tb_behav xil_defaultlib.ad4030_axi_tb -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot ad4030_axi_tb_behav xil_defaultlib.ad4030_axi_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ad4030_axi_tb_behav -key {Behavioral:sim_1:Functional:ad4030_axi_tb} -tclbatch {ad4030_axi_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source ad4030_axi_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ad4030_axi_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8702.855 ; gain = 9.004 ; free physical = 55033 ; free virtual = 63553
+run 10 us
+run 10 us
+run 10 us
+ipx::merge_project_changes files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 22 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+WARNING: [IP_Flow 19-11770] Clock interface 's00_axi_aclk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-2181] Payment is not required for this core.
+WARNING: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project
+update_ip_catalog -rebuild -repo_path /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0'
+ipx::edit_ip_in_project -upgrade true -name AD4030_v1_0_project -directory /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
 open_bd_design {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd}
 Reading block design file </home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd>...
 Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
@@ -49,19 +293,16 @@ Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_
 Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_0
 Adding component instance block -- GB:user:AD4030:1.0 - AD4030_0
 Successfully read diagram <AD4030_BD> from block design file </home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd>
-startgroup
-set_property -dict [list \
-  CONFIG.PULSE_PERIOD_SIZE {100000} \
-  CONFIG.PULSE_WIDTH_SIZE {100} \
-  CONFIG.SPI_CLK_DIV {20} \
-] [get_bd_cells AD4030_0]
-endgroup
-save_bd_design
+report_ip_status -name ip_status 
+upgrade_ip -vlnv GB:user:AD4030:1.0 [get_ips  AD4030_BD_AD4030_0_0] -log ip_upgrade.log
+Upgrading '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd'
+INFO: [IP_Flow 19-3422] Upgraded AD4030_BD_AD4030_0_0 (AD4030_v1.0 1.0) from revision 21 to revision 22
 Wrote  : </home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd> 
-Wrote  : </home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/ui/bd_c467aea5.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips AD4030_BD_AD4030_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/utils_1/imports/synth_1/ad4030_spi.dcp with file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/synth_1/AD4030_BD_wrapper.dcp
-reset_run AD4030_BD_AD4030_0_0_synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
 Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
@@ -98,7 +339,7 @@ INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/A
 INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_stub.vhdl
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/9/c/9c5faa24eda63c5c/AD4030_BD_auto_pc_0.dcp to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0.dcp.
 INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0.dcp
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP AD4030_BD_auto_pc_0, cache-ID = 9c5faa24eda63c5c; cache size = 51.612 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP AD4030_BD_auto_pc_0, cache-ID = 9c5faa24eda63c5c; cache size = 54.750 MB.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: AD4030_BD_system_ila_0_0
 INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry db7e3f7f119fb275 to dir: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0_sim_netlist.v to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_sim_netlist.v.
@@ -111,29 +352,392 @@ INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/A
 INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_sim_netlist.vhdl
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0_stub.v to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_stub.v.
 INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_stub.v
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP AD4030_BD_system_ila_0_0, cache-ID = db7e3f7f119fb275; cache size = 51.612 MB.
-[Tue Apr 21 20:49:31 2026] Launched AD4030_BD_AD4030_0_0_synth_1, synth_1...
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP AD4030_BD_system_ila_0_0, cache-ID = db7e3f7f119fb275; cache size = 54.750 MB.
+[Tue Apr 28 20:46:10 2026] Launched AD4030_BD_AD4030_0_0_synth_1, synth_1...
 Run output will be captured here:
 AD4030_BD_AD4030_0_0_synth_1: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/AD4030_BD_AD4030_0_0_synth_1/runme.log
 synth_1: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/synth_1/runme.log
-[Tue Apr 21 20:49:31 2026] Launched impl_1...
+[Tue Apr 28 20:46:10 2026] Launched impl_1...
 Run output will be captured here: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 9026.887 ; gain = 526.004 ; free physical = 50500 ; free virtual = 59709
+launch_runs: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 9234.828 ; gain = 531.973 ; free physical = 54387 ; free virtual = 62957
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name AD4030_v1_0_project -directory /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'ad4030_axi_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/opt/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'ad4030_axi_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj ad4030_axi_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_package.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AD4030'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_fifo.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AD4030_FIFO'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_slave_lite_v1_0_S00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AD4030_slave_lite_v1_0_S00_AXI'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/pulse_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pulse_generator'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_spi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ad4030_spi'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ad4030_axi_tb'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot ad4030_axi_tb_behav xil_defaultlib.ad4030_axi_tb -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot ad4030_axi_tb_behav xil_defaultlib.ad4030_axi_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling package xil_defaultlib.ad4030_pkg
+Compiling architecture arch_imp of entity xil_defaultlib.AD4030_slave_lite_v1_0_S00_AXI [ad4030_slave_lite_v1_0_s00_axi_d...]
+Compiling architecture pulse_generator_arch of entity xil_defaultlib.pulse_generator [\pulse_generator(pulse_width_siz...]
+Compiling architecture ad4030_fifo_arch of entity xil_defaultlib.AD4030_FIFO [\AD4030_FIFO(data_width=24,fifo_...]
+Compiling architecture ad4030_spi_arch of entity xil_defaultlib.ad4030_spi [\ad4030_spi(spi_clk_div=10,pulse...]
+Compiling architecture arch_imp of entity xil_defaultlib.AD4030 [ad4030_default]
+Compiling architecture testbench of entity xil_defaultlib.ad4030_axi_tb
+Built simulation snapshot ad4030_axi_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ad4030_axi_tb_behav -key {Behavioral:sim_1:Functional:ad4030_axi_tb} -tclbatch {ad4030_axi_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source ad4030_axi_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: File sine_data.txt is not open. Cannot call endfile on it
+Time: 100 ns  Iteration: 1  Process: /ad4030_axi_tb/sine_wave_proc
+  File: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd
+
+HDL Line: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:358
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ad4030_axi_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 9525.887 ; gain = 51.801 ; free physical = 52162 ; free virtual = 61310
+run all
+ERROR: [Simulator 45-1] A fatal run-time error was detected.  Simulation cannot continue.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/hdl/ad4030_axi_tb.vhd:]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 23 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+WARNING: [IP_Flow 19-11770] Clock interface 's00_axi_aclk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-2181] Payment is not required for this core.
+WARNING: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project
+update_ip_catalog -rebuild -repo_path /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0'
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+report_ip_status -name ip_status 
+upgrade_ip -vlnv GB:user:AD4030:1.0 [get_ips  AD4030_BD_AD4030_0_0] -log ip_upgrade.log
+Upgrading '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd'
+INFO: [IP_Flow 19-3422] Upgraded AD4030_BD_AD4030_0_0 (AD4030_v1.0 1.0) from revision 22 to revision 23
+Wrote  : </home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips AD4030_BD_AD4030_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/utils_1/imports/synth_1/ad4030_spi.dcp with file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/synth_1/AD4030_BD_wrapper.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : </home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd> 
+VHDL Output written to : /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/synth/AD4030_BD.vhd
+VHDL Output written to : /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/sim/AD4030_BD.vhd
+VHDL Output written to : /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/hdl/AD4030_BD_wrapper.vhd
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_ooc.xdc'
+Exporting to file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/bd_0/hw_handoff/AD4030_BD_system_ila_0_0.hwh
+Generated Hardware Definition File /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/bd_0/synth/AD4030_BD_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AD4030_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/hw_handoff/AD4030_BD.hwh
+Generated Hardware Definition File /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/synth/AD4030_BD.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP AD4030_BD_AD4030_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP AD4030_BD_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP AD4030_BD_system_ila_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: AD4030_BD_AD4030_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: AD4030_BD_auto_pc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 9c5faa24eda63c5c to dir: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/9/c/9c5faa24eda63c5c/AD4030_BD_auto_pc_0_stub.v to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/9/c/9c5faa24eda63c5c/AD4030_BD_auto_pc_0_sim_netlist.vhdl to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/9/c/9c5faa24eda63c5c/AD4030_BD_auto_pc_0_sim_netlist.v to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/9/c/9c5faa24eda63c5c/AD4030_BD_auto_pc_0_stub.vhdl to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/9/c/9c5faa24eda63c5c/AD4030_BD_auto_pc_0.dcp to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0.dcp
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP AD4030_BD_auto_pc_0, cache-ID = 9c5faa24eda63c5c; cache size = 55.542 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: AD4030_BD_system_ila_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry db7e3f7f119fb275 to dir: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0_sim_netlist.v to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0.dcp to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0_stub.vhdl to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0_sim_netlist.vhdl to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0_stub.v to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_stub.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP AD4030_BD_system_ila_0_0, cache-ID = db7e3f7f119fb275; cache size = 55.542 MB.
+[Tue Apr 28 21:34:47 2026] Launched AD4030_BD_AD4030_0_0_synth_1, synth_1...
+Run output will be captured here:
+AD4030_BD_AD4030_0_0_synth_1: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/AD4030_BD_AD4030_0_0_synth_1/runme.log
+synth_1: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/synth_1/runme.log
+[Tue Apr 28 21:34:47 2026] Launched impl_1...
+Run output will be captured here: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 9750.320 ; gain = 206.250 ; free physical = 51429 ; free virtual = 61019
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+report_ip_status -name ip_status 
 write_hw_platform -fixed -include_bit -force -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa
 INFO: [Project 1-1918] Creating Hardware Platform: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa ...
 WARNING: [Project 1-645] Board images not set in Hardware Platform.
 INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
 INFO: [Project 1-1941] Successfully created Hardware Platform: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa
 INFO: [Hsi 55-2053] elapsed time for repository (/opt/Xilinx/Vivado/2024.1/data/embeddedsw) loading 0 seconds
-write_hw_platform: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 9030.461 ; gain = 3.574 ; free physical = 50068 ; free virtual = 59557
-startgroup
-set_property CONFIG.SPI_CLK_DIV {50} [get_bd_cells AD4030_0]
-endgroup
-save_bd_design
+write_hw_platform: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 9750.320 ; gain = 0.000 ; free physical = 51482 ; free virtual = 61109
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv GB:user:AD4030:1.0 [get_ips  AD4030_BD_AD4030_0_0] -log ip_upgrade.log
+Upgrading '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd'
+INFO: [IP_Flow 19-3420] Updated AD4030_BD_AD4030_0_0 to use current project options
 Wrote  : </home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips AD4030_BD_AD4030_0_0] -no_script -sync -force -quiet
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+ipx::edit_ip_in_project -upgrade true -name AD4030_v1_0_project -directory /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 24 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+WARNING: [IP_Flow 19-11770] Clock interface 's00_axi_aclk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-2181] Payment is not required for this core.
+WARNING: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project
+update_ip_catalog -rebuild -repo_path /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv GB:user:AD4030:1.0 [get_ips  AD4030_BD_AD4030_0_0] -log ip_upgrade.log
+Upgrading '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd'
+INFO: [IP_Flow 19-3422] Upgraded AD4030_BD_AD4030_0_0 (AD4030_v1.0 1.0) from revision 23 to revision 24
+Wrote  : </home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips AD4030_BD_AD4030_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/utils_1/imports/synth_1/ad4030_spi.dcp with file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/synth_1/AD4030_BD_wrapper.dcp
-reset_run AD4030_BD_AD4030_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : </home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd> 
+VHDL Output written to : /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/synth/AD4030_BD.vhd
+VHDL Output written to : /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/sim/AD4030_BD.vhd
+VHDL Output written to : /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/hdl/AD4030_BD_wrapper.vhd
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_ooc.xdc'
+Exporting to file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/bd_0/hw_handoff/AD4030_BD_system_ila_0_0.hwh
+Generated Hardware Definition File /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/bd_0/synth/AD4030_BD_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AD4030_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/hw_handoff/AD4030_BD.hwh
+Generated Hardware Definition File /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/synth/AD4030_BD.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP AD4030_BD_AD4030_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP AD4030_BD_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP AD4030_BD_system_ila_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: AD4030_BD_AD4030_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: AD4030_BD_auto_pc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 9c5faa24eda63c5c to dir: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/9/c/9c5faa24eda63c5c/AD4030_BD_auto_pc_0_stub.v to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/9/c/9c5faa24eda63c5c/AD4030_BD_auto_pc_0_sim_netlist.vhdl to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/9/c/9c5faa24eda63c5c/AD4030_BD_auto_pc_0_sim_netlist.v to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/9/c/9c5faa24eda63c5c/AD4030_BD_auto_pc_0_stub.vhdl to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/9/c/9c5faa24eda63c5c/AD4030_BD_auto_pc_0.dcp to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0.dcp
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP AD4030_BD_auto_pc_0, cache-ID = 9c5faa24eda63c5c; cache size = 55.542 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: AD4030_BD_system_ila_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry db7e3f7f119fb275 to dir: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0_sim_netlist.v to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0.dcp to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0_stub.vhdl to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0_sim_netlist.vhdl to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0_stub.v to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_stub.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP AD4030_BD_system_ila_0_0, cache-ID = db7e3f7f119fb275; cache size = 55.542 MB.
+[Tue Apr 28 21:43:38 2026] Launched AD4030_BD_AD4030_0_0_synth_1, synth_1...
+Run output will be captured here:
+AD4030_BD_AD4030_0_0_synth_1: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/AD4030_BD_AD4030_0_0_synth_1/runme.log
+synth_1: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/synth_1/runme.log
+[Tue Apr 28 21:43:38 2026] Launched impl_1...
+Run output will be captured here: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 10066.188 ; gain = 278.180 ; free physical = 51005 ; free virtual = 60688
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/ip_repo/AD4030_1_0'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv GB:user:AD4030:1.0 [get_ips  AD4030_BD_AD4030_0_0] -log ip_upgrade.log
+Upgrading '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd'
+INFO: [IP_Flow 19-3420] Updated AD4030_BD_AD4030_0_0 to use current project options
+Wrote  : </home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/bd/AD4030_BD/AD4030_BD.bd> 
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips AD4030_BD_AD4030_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
 Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
@@ -170,7 +774,7 @@ INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/A
 INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0_stub.vhdl
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/9/c/9c5faa24eda63c5c/AD4030_BD_auto_pc_0.dcp to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0.dcp.
 INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_auto_pc_0/AD4030_BD_auto_pc_0.dcp
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP AD4030_BD_auto_pc_0, cache-ID = 9c5faa24eda63c5c; cache size = 52.398 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP AD4030_BD_auto_pc_0, cache-ID = 9c5faa24eda63c5c; cache size = 55.542 MB.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: AD4030_BD_system_ila_0_0
 INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry db7e3f7f119fb275 to dir: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0_sim_netlist.v to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_sim_netlist.v.
@@ -183,19 +787,130 @@ INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/A
 INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_sim_netlist.vhdl
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.cache/ip/2024.1/d/b/db7e3f7f119fb275/AD4030_BD_system_ila_0_0_stub.v to /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_stub.v.
 INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_system_ila_0_0/AD4030_BD_system_ila_0_0_stub.v
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP AD4030_BD_system_ila_0_0, cache-ID = db7e3f7f119fb275; cache size = 52.398 MB.
-[Tue Apr 21 20:58:04 2026] Launched AD4030_BD_AD4030_0_0_synth_1, synth_1...
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP AD4030_BD_system_ila_0_0, cache-ID = db7e3f7f119fb275; cache size = 55.542 MB.
+[Tue Apr 28 21:45:28 2026] Launched AD4030_BD_AD4030_0_0_synth_1, synth_1...
 Run output will be captured here:
 AD4030_BD_AD4030_0_0_synth_1: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/AD4030_BD_AD4030_0_0_synth_1/runme.log
 synth_1: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/synth_1/runme.log
-[Tue Apr 21 20:58:04 2026] Launched impl_1...
+[Tue Apr 28 21:45:28 2026] Launched impl_1...
 Run output will be captured here: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 9516.789 ; gain = 274.219 ; free physical = 49814 ; free virtual = 59225
+launch_runs: Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 10237.336 ; gain = 171.148 ; free physical = 51121 ; free virtual = 60765
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
 write_hw_platform -fixed -include_bit -force -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa
 INFO: [Project 1-1918] Creating Hardware Platform: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa ...
 WARNING: [Project 1-645] Board images not set in Hardware Platform.
 INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
 INFO: [Project 1-1941] Successfully created Hardware Platform: /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa
-write_hw_platform: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 9516.789 ; gain = 0.000 ; free physical = 49735 ; free virtual = 59329
-exit
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 21 22:16:33 2026...
+write_hw_platform: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 10237.336 ; gain = 0.000 ; free physical = 50865 ; free virtual = 60641
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2024.1
+  **** Build date : May 22 2024 at 19:19:01
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.1.0
+  ****** Build date   : Apr 27 2024-03:40:49
+    **** Build number : 2024.1.1714182049
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/003017B7ED73A
+set_property PROGRAM.FILE {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/impl_1/AD4030_BD_wrapper.bit} [get_hw_devices xc7z010_1]
+set_property PROBES.FILE {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/impl_1/AD4030_BD_wrapper.ltx} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/impl_1/AD4030_BD_wrapper.ltx} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+Processed interface ps7_0_axi_periph_M01_AXI_ila1_slot0
+Processed interface ps7_0_axi_periph_M00_AXI_ila1_slot1
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_arvalid -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_awready -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Apr-28 22:07:20
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/003017B7ED73A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/003017B7ED73A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+Processed interface ps7_0_axi_periph_M01_AXI_ila1_slot0
+Processed interface ps7_0_axi_periph_M00_AXI_ila1_slot1
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Apr-28 22:08:40
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Apr-28 22:08:46
+Processed interface ps7_0_axi_periph_M01_AXI_ila1_slot0
+Processed interface ps7_0_axi_periph_M00_AXI_ila1_slot1
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/003017B7ED73A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/003017B7ED73A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+Processed interface ps7_0_axi_periph_M01_AXI_ila1_slot0
+Processed interface ps7_0_axi_periph_M00_AXI_ila1_slot1
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Apr-28 22:21:40
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"AD4030_BD_i/system_ila_0/U0/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Apr-28 22:21:44
+Processed interface ps7_0_axi_periph_M01_AXI_ila1_slot0
+Processed interface ps7_0_axi_periph_M00_AXI_ila1_slot1
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/003017B7ED73A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/003017B7ED73A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/003017B7ED73A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/003017B7ED73A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-695] HW Server shut down, disconnecting from server: localhost:3121
+close_hw_manager
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/utils_1/imports/synth_1/ad4030_spi.dcp with file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/synth_1/AD4030_BD_wrapper.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sources_1/new/AD4030_package.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/sim_1/new/ad4030_axi_tb.vhd:]

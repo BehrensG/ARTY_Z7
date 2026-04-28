@@ -23,6 +23,7 @@
 #include "xil_io.h"
 #include "xgpio.h"
 #include "sleep.h"
+#include "AD4030.h"
 
 
 #define GPIO_DEVICE_ID		XPAR_GPIO_0_DEVICE_ID
@@ -32,10 +33,9 @@ XGpio Gpio;
 int main()
 {
 	s32 Status = 0;
-	u32 raw_hex = 0;
-	float lsb = 4.096/8388608;
 	float meas = 0.0;
-	float gain = 1.25;
+	u32 cmd[1] = {0x00002040};
+
 
     init_platform();
 
@@ -45,29 +45,18 @@ int main()
     }
 
     while(1){
-    	/*
+/*
     	XGpio_DiscreteWrite(&Gpio,1,0x01);
 
     	usleep(300000);
     	XGpio_DiscreteWrite(&Gpio,1,0x00);
     	usleep(300000);
 */
-    	raw_hex = Xil_In32(XPAR_AD4030_0_S00_AXI_BASEADDR + 0x14);
-    	while(raw_hex != 0x00000003)
-    	{
-    		raw_hex = Xil_In32(XPAR_AD4030_0_S00_AXI_BASEADDR + 0x14);
-    	}
-
-    	raw_hex = Xil_In32(XPAR_AD4030_0_S00_AXI_BASEADDR + 0x18);
-
-    	if (raw_hex & 0x00800000){
-    		raw_hex = 0xFFFFFF - raw_hex;
-    		meas = -1*gain*raw_hex*lsb;
-    	}
-    	else{
-    		meas = gain*raw_hex*lsb;
-    	}
+    	meas = ad4030_measure(GAIN, LSB);
     	usleep(300000);
+//    	ad4030_config(cmd, 1);
+//    	usleep(300000);
+
     }
     cleanup_platform();
     return 0;

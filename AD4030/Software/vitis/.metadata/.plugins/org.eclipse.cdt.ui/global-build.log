@@ -1,18 +1,19 @@
+make -C ps7_cortexa9_0/libsrc/standalone_v9_1/src -s clean 
 
-22:08:04 Build Finished (took 4s.923ms)
+make -C ps7_cortexa9_0/libsrc/uartps_v3_14/src -s clean 
 
-22:08:04 **** Clean-only build of configuration Debug for project AD4030 ****
-make clean 
-rm -rf ./src/helloworld.o ./src/platform.o ./src/helloworld.d ./src/platform.d AD4030.elf.size  AD4030.elf
- 
-22:08:04 **** Clean-only build of configuration Debug for project AD4030_system ****
-make clean 
-rm -rf ./_sds
-rm -rf package
-rm -f system.bif
-22:08:04 **** Clean-only build of project AD4030_BD_wrapper ****
-buildplatform.sh 40759 AD4030_BD_wrapper clean 
-XSDB Server Channel: tcfchan#44
+make -C ps7_cortexa9_0/libsrc/usbps_v2_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_7/src -s clean 
+
+rm -f ps7_cortexa9_0/lib/libxil.a
+
+
+22:31:51 Build Finished (took 5s.402ms)
+
+22:31:51 **** Clean-only build of project AD4030_BD_wrapper ****
+buildplatform.sh 36403 AD4030_BD_wrapper clean 
+XSDB Server Channel: tcfchan#38
 Cleaning the zynq_fsbl application.
 rm -rf  fsbl_hooks.o  image_mover.o  main.o  md5.o  nand.o  nor.o  pcap.o  ps7_init.o  qspi.o  rsa.o  sd.o  fsbl_handoff.o zynq
 _fsbl_bsp/ps7_cortexa9_0/lib/libxil.a fsbl.elf *.o
@@ -99,3 +100,12 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_7/src -s clean
 
 rm -f ps7_cortexa9_0/lib/libxil.a
 
+22:31:56 **** Clean-only build of configuration Debug for project AD4030 ****
+make clean 
+rm -rf ./src/helloworld.o ./src/platform.o ./src/helloworld.d ./src/platform.d AD4030.elf.size  AD4030.elf
+ 
+22:31:56 **** Clean-only build of configuration Debug for project AD4030_system ****
+make clean 
+rm -rf ./_sds
+rm -rf package
+rm -f system.bif

@@ -128,3 +128,68 @@ timestamp=[2026-04-21 22:08:04], mode=PLATFORM_GENERATION, duration=0:00:04.939,
 timestamp=[2026-04-21 22:08:04], mode=BUILD, duration=0:00:00.117, duration_ms=117, data={name=AD4030, configuration=Debug, clean_build=true}
 timestamp=[2026-04-21 22:08:04], mode=BUILD, duration=0:00:00.117, duration_ms=117, data={name=AD4030_system, configuration=Debug, clean_build=true}
 timestamp=[2026-04-21 22:08:09], mode=PLATFORM_GENERATION, duration=0:00:04.937, duration_ms=4937, data={name=AD4030_BD_wrapper}
+timestamp=[2026-04-26 12:18:15], mode=WORKBENCH_START, duration=0:00:06.997, duration_ms=6997, data={}
+timestamp=[2026-04-26 12:18:16], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.707, duration_ms=707, data={}
+timestamp=[2026-04-26 12:18:16], mode=WORKBENCH_UI_INIT, duration=0:00:00.853, duration_ms=853, data={editors_count=7, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=AD4030,AD4030_BD_wrapper,AD4030_system,RemoteSystemsTempFiles}
+timestamp=[2026-04-26 12:19:17], mode=PLATFORM_GENERATION, duration=0:00:26.657, duration_ms=26657, data={name=AD4030_BD_wrapper}
+timestamp=[2026-04-26 12:19:29], mode=BUILD, duration=0:00:00.278, duration_ms=278, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-26 12:19:36], mode=BUILD, duration=0:00:06.480, duration_ms=6480, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-26 13:01:02], mode=BUILD, duration=0:00:00.181, duration_ms=181, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-26 13:01:23], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-26 13:01:30], mode=BUILD, duration=0:00:06.434, duration_ms=6434, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-27 20:10:57], mode=WORKBENCH_START, duration=0:00:06.455, duration_ms=6455, data={}
+timestamp=[2026-04-27 20:10:58], mode=WORKBENCH_UI_INIT, duration=0:00:00.708, duration_ms=708, data={editors_count=11, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=AD4030,AD4030_BD_wrapper,AD4030_system,RemoteSystemsTempFiles}
+timestamp=[2026-04-27 20:10:58], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.717, duration_ms=717, data={}
+timestamp=[2026-04-27 20:12:28], mode=BUILD, duration=0:00:00.250, duration_ms=250, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-27 20:12:39], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-27 20:13:07], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-27 20:14:48], mode=BUILD, duration=0:00:00.272, duration_ms=272, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-27 20:15:09], mode=BUILD, duration=0:00:00.169, duration_ms=169, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-27 20:15:43], mode=BUILD, duration=0:00:00.270, duration_ms=270, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-27 20:16:12], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-27 20:16:25], mode=BUILD, duration=0:00:00.274, duration_ms=274, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-27 20:16:32], mode=BUILD, duration=0:00:07.038, duration_ms=7038, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 20:19:26], mode=WORKBENCH_START, duration=0:00:07.181, duration_ms=7181, data={}
+timestamp=[2026-04-28 20:19:26], mode=WORKBENCH_UI_INIT, duration=0:00:00.749, duration_ms=749, data={editors_count=11, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=AD4030,AD4030_BD_wrapper,AD4030_system,RemoteSystemsTempFiles}
+timestamp=[2026-04-28 20:19:27], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.702, duration_ms=702, data={}
+timestamp=[2026-04-28 20:58:18], mode=BUILD, duration=0:00:00.246, duration_ms=246, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 20:58:40], mode=BUILD, duration=0:00:00.319, duration_ms=319, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 20:58:47], mode=BUILD, duration=0:00:07.134, duration_ms=7134, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:05:19], mode=BUILD, duration=0:00:00.168, duration_ms=168, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:05:30], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:05:37], mode=BUILD, duration=0:00:06.280, duration_ms=6280, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:26:51], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:26:58], mode=BUILD, duration=0:00:06.232, duration_ms=6232, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:27:28], mode=BUILD, duration=0:00:00.174, duration_ms=174, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:27:48], mode=BUILD, duration=0:00:00.219, duration_ms=219, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:27:54], mode=BUILD, duration=0:00:06.288, duration_ms=6288, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:30:11], mode=PLATFORM_GENERATION, duration=0:00:07.197, duration_ms=7197, data={name=AD4030_BD_wrapper}
+timestamp=[2026-04-28 21:30:19], mode=BUILD, duration=0:00:00.321, duration_ms=321, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:30:30], mode=BUILD, duration=0:00:06.330, duration_ms=6330, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:30:30], mode=BUILD, duration=0:00:00.121, duration_ms=121, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:30:37], mode=BUILD, duration=0:00:06.433, duration_ms=6433, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:39:51], mode=PLATFORM_GENERATION, duration=0:00:05.205, duration_ms=5205, data={name=AD4030_BD_wrapper}
+timestamp=[2026-04-28 21:39:51], mode=BUILD, duration=0:00:00.174, duration_ms=174, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:40:29], mode=PLATFORM_GENERATION, duration=0:00:11.720, duration_ms=11720, data={name=AD4030_BD_wrapper}
+timestamp=[2026-04-28 21:50:34], mode=PLATFORM_GENERATION, duration=0:00:16.235, duration_ms=16235, data={name=AD4030_BD_wrapper}
+timestamp=[2026-04-28 21:50:38], mode=BUILD, duration=0:00:00.123, duration_ms=123, data={name=AD4030, configuration=Debug, clean_build=true}
+timestamp=[2026-04-28 21:50:39], mode=BUILD, duration=0:00:00.272, duration_ms=272, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:50:50], mode=BUILD, duration=0:00:06.231, duration_ms=6231, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:51:47], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:51:54], mode=BUILD, duration=0:00:06.285, duration_ms=6285, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:53:08], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:53:14], mode=BUILD, duration=0:00:06.235, duration_ms=6235, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:55:29], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 21:55:35], mode=BUILD, duration=0:00:06.286, duration_ms=6286, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 22:03:59], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 22:04:06], mode=BUILD, duration=0:00:06.334, duration_ms=6334, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 22:06:03], mode=BUILD, duration=0:00:00.277, duration_ms=277, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 22:06:10], mode=BUILD, duration=0:00:06.384, duration_ms=6384, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 22:07:29], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 22:07:36], mode=BUILD, duration=0:00:06.283, duration_ms=6283, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 22:30:21], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=AD4030, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 22:30:28], mode=BUILD, duration=0:00:06.230, duration_ms=6230, data={name=AD4030_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-28 22:31:51], mode=PLATFORM_GENERATION, duration=0:00:05.428, duration_ms=5428, data={name=AD4030_BD_wrapper}
+timestamp=[2026-04-28 22:31:56], mode=PLATFORM_GENERATION, duration=0:00:04.897, duration_ms=4897, data={name=AD4030_BD_wrapper}
+timestamp=[2026-04-28 22:31:56], mode=BUILD, duration=0:00:00.122, duration_ms=122, data={name=AD4030, configuration=Debug, clean_build=true}
+timestamp=[2026-04-28 22:31:56], mode=BUILD, duration=0:00:00.120, duration_ms=120, data={name=AD4030_system, configuration=Debug, clean_build=true}

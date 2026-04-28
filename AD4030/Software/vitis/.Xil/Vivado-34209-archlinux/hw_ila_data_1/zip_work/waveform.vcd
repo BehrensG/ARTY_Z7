@@ -1,0 +1,230 @@
+$date
+        2026-Apr-28 22:21:44
+$end
+$version
+        Vivado v2024.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 2 " AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_ar_cnt [1:0] $end
+$var reg 8 $ AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_araddr [7:0] $end
+$var reg 3 , AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_arprot [2:0] $end
+$var reg 2 / AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_aw_cnt [1:0] $end
+$var reg 8 1 AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_awaddr [7:0] $end
+$var reg 3 9 AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_awprot [2:0] $end
+$var reg 2 < AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_b_cnt [1:0] $end
+$var reg 2 > AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_bresp [1:0] $end
+$var reg 2 @ AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_r_cnt [1:0] $end
+$var reg 32 B AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_rdata [31:0] $end
+$var reg 2 b AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_rresp [1:0] $end
+$var reg 32 d AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_wdata [31:0] $end
+$var reg 4 &" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_wstrb [3:0] $end
+$var reg 1 *" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_awvalid $end
+$var reg 2 +" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_aw_ctrl [1:0] $end
+$var reg 1 -" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_awready $end
+$var reg 1 ." AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_wvalid $end
+$var reg 2 /" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_w_ctrl [1:0] $end
+$var reg 1 1" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_wready $end
+$var reg 2 2" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_b_ctrl [1:0] $end
+$var reg 1 4" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_bvalid $end
+$var reg 1 5" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_bready $end
+$var reg 1 6" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_arvalid $end
+$var reg 2 7" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_ar_ctrl [1:0] $end
+$var reg 1 9" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_arready $end
+$var reg 1 :" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_rvalid $end
+$var reg 2 ;" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_r_ctrl [1:0] $end
+$var reg 1 =" AD4030_BD_i/system_ila_0/U0/net_slot_0_axi_rready $end
+$var reg 2 >" AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_ar_cnt [1:0] $end
+$var reg 9 @" AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_araddr [8:0] $end
+$var reg 3 I" AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_arprot [2:0] $end
+$var reg 2 L" AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_aw_cnt [1:0] $end
+$var reg 9 N" AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_awaddr [8:0] $end
+$var reg 3 W" AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_awprot [2:0] $end
+$var reg 2 Z" AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_b_cnt [1:0] $end
+$var reg 2 \" AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_bresp [1:0] $end
+$var reg 2 ^" AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_r_cnt [1:0] $end
+$var reg 32 `" AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_rdata [31:0] $end
+$var reg 2 "# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_rresp [1:0] $end
+$var reg 32 $# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_wdata [31:0] $end
+$var reg 4 D# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_wstrb [3:0] $end
+$var reg 2 H# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_aw_ctrl [1:0] $end
+$var reg 1 J# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_awvalid $end
+$var reg 1 K# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_awready $end
+$var reg 1 L# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_wvalid $end
+$var reg 2 M# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_w_ctrl [1:0] $end
+$var reg 1 O# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_wready $end
+$var reg 1 P# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_bvalid $end
+$var reg 2 Q# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_b_ctrl [1:0] $end
+$var reg 1 S# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_bready $end
+$var reg 1 T# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_arvalid $end
+$var reg 2 U# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_ar_ctrl [1:0] $end
+$var reg 1 W# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_arready $end
+$var reg 2 X# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_r_ctrl [1:0] $end
+$var reg 1 Z# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_rvalid $end
+$var reg 1 [# AD4030_BD_i/system_ila_0/U0/net_slot_1_axi_rready $end
+$var reg 3 \# AR_Channel__i1_s0___ps7_0_axi_periph_M01_AXI_ [2:0] $end
+$var reg 3 _# AR_Channel__i1_s1___ps7_0_axi_periph_M00_AXI_ [2:0] $end
+$var reg 3 b# AW_Channel__i1_s0___ps7_0_axi_periph_M01_AXI_ [2:0] $end
+$var reg 3 e# AW_Channel__i1_s1___ps7_0_axi_periph_M00_AXI_ [2:0] $end
+$var reg 3 h# B_Channel__i1_s0___ps7_0_axi_periph_M01_AXI_ [2:0] $end
+$var reg 3 k# B_Channel__i1_s1___ps7_0_axi_periph_M00_AXI_ [2:0] $end
+$var reg 3 n# Interface__i1_s0___ps7_0_axi_periph_M01_AXI_ [2:0] $end
+$var reg 3 q# Interface__i1_s1___ps7_0_axi_periph_M00_AXI_ [2:0] $end
+$var reg 3 t# R_Channel__i1_s0___ps7_0_axi_periph_M01_AXI_ [2:0] $end
+$var reg 3 w# R_Channel__i1_s1___ps7_0_axi_periph_M00_AXI_ [2:0] $end
+$var reg 3 z# W_Channel__i1_s0___ps7_0_axi_periph_M01_AXI_ [2:0] $end
+$var reg 3 }# W_Channel__i1_s1___ps7_0_axi_periph_M00_AXI_ [2:0] $end
+$var reg 16 "$ ila_1___slot_0___ps7_0_axi_periph_M01_AXI___Write_Transactions_0 [15:0] $end
+$var reg 16 2$ ila_1___slot_0___ps7_0_axi_periph_M01_AXI___Write_Transactions_1 [15:0] $end
+$var reg 1 B$ _TRIGGER $end
+$var reg 1 C$ _WINDOW $end
+$var reg 1 D$ _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 "
+b11011111 $
+b110 ,
+b0 /
+b11011111 1
+b110 9
+b0 <
+b0 >
+b0 @
+b11111111111111111111111111111111 B
+b0 b
+b1111111111111011101111010111111 d
+b1011 &"
+0*"
+b0 +"
+0-"
+0."
+b0 /"
+01"
+b1 2"
+14"
+05"
+06"
+b0 7"
+09"
+0:"
+b0 ;"
+0="
+b0 >"
+b111011111 @"
+b110 I"
+b0 L"
+b111011111 N"
+b110 W"
+b0 Z"
+b0 \"
+b0 ^"
+b0 `"
+b0 "#
+b1111111111111011101111010111111 $#
+b1011 D#
+b0 H#
+0J#
+0K#
+0L#
+b0 M#
+0O#
+0P#
+b0 Q#
+0S#
+0T#
+b0 U#
+0W#
+b0 X#
+0Z#
+0[#
+b11 \#
+b11 _#
+b0 b#
+b11 e#
+b0 h#
+b11 k#
+b0 n#
+b11 q#
+b100 t#
+b100 w#
+b0 z#
+b100 }#
+b0 "$
+b0 2$
+0B$
+1C$
+0D$
+$end
+#508
+b101000000000000000000000 d
+b1111 &"
+b101000000000000000000000 $#
+b1111 D#
+#509
+b0 $
+b1 ,
+b0 1
+b1 9
+b1111111000000001101111010111111 B
+b0 @"
+b1 I"
+b0 N"
+b1 W"
+#510
+b101000000000000000000000 B
+#511
+1*"
+b1 +"
+1."
+b1 /"
+b11 2"
+15"
+b10 ;"
+1="
+b10 h#
+b1 n#
+b1 "$
+#512
+b11 /
+b11 <
+b11 +"
+1-"
+b11 /"
+11"
+b0 2"
+04"
+05"
+b10 b#
+b0 h#
+b1 z#
+b0 "$
+b1 2$
+1B$
+#513
+b0 /
+b0 <
+0*"
+b0 +"
+0-"
+0."
+b0 /"
+01"
+b1 2"
+14"
+b0 b#
+b0 n#
+b0 z#
+#514
+b100 $
+b100 1
+b110010 B
+b0 ;"
+0="
+b100 @"
+b100 N"
+#515
+b101000000000000000000000 B

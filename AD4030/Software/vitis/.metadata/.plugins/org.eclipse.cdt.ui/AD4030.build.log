@@ -1,7 +1,7 @@
-22:08:04 **** Clean-only build of configuration Debug for project AD4030 ****
+22:31:56 **** Clean-only build of configuration Debug for project AD4030 ****
 make clean 
 rm -rf ./src/helloworld.o ./src/platform.o ./src/helloworld.d ./src/platform.d AD4030.elf.size  AD4030.elf
  
 
-22:08:04 Build Finished (took 114ms)
+22:31:56 Build Finished (took 118ms)
 

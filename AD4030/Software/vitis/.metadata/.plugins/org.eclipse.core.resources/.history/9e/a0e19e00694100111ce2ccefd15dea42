@@ -1,0 +1,31 @@
+
+
+/***************************** Include Files *******************************/
+#include "AD4030.h"
+#include "xparameters.h"
+
+float ad4030_measure(float gain, float lsb)
+{
+	u32 raw_data = 0;
+	float meas = 0.0f;
+
+	raw_data = Xil_In32(XPAR_AD4030_0_S00_AXI_BASEADDR + 0x14);
+	while(raw_data != 0x00000003)
+	{
+		raw_data = Xil_In32(XPAR_AD4030_0_S00_AXI_BASEADDR + 0x14);
+	}
+
+	raw_data = Xil_In32(XPAR_AD4030_0_S00_AXI_BASEADDR + 0x18);
+
+	if (raw_data & 0x00800000){
+		raw_data = 0xFFFFFF - raw_hex;
+		meas = -1*gain*raw_hex*lsb;
+	}
+	else{
+		meas = gain*raw_hex*lsb;
+	}
+}
+
+
+
+/************************** Function Definitions ***************************/
