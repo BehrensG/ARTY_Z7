@@ -1,8 +1,8 @@
-22:31:56 **** Clean-only build of configuration Debug for project AD4030_system ****
+00:47:12 **** Clean-only build of configuration Debug for project AD4030_system ****
 make clean 
 rm -rf ./_sds
 rm -rf package
 rm -f system.bif
 
-22:31:56 Build Finished (took 117ms)
+00:47:12 Build Finished (took 181ms)
 

@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "ad4030_axi_tb_behav" "xil_defaultlib.ad4030_axi_tb" -log "elaborate.log" 

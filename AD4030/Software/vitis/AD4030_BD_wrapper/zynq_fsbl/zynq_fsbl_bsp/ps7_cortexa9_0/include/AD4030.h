@@ -98,6 +98,7 @@
 XStatus AD4030_Reg_SelfTest(void * baseaddr_p);
 
 float ad4030_measure(float gain, float lsb);
-void ad4030_config(u32 cmd[], u32 size);
+void ad4030_adc_config(u32 cmd[], u32 size);
+void ad4030_conv_config(u32 period, u32 width);
 
 #endif // AD4030_H

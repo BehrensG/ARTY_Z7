@@ -62,3 +62,40 @@ platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/wor
 platform generate
 platform clean
 platform clean
+platform generate
+platform active {AD4030_BD_wrapper}
+platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa}
+platform generate -domains 
+platform clean
+platform generate
+platform clean
+platform generate
+platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa}
+platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa}
+platform generate -domains 
+platform generate -domains 
+platform clean
+platform generate
+platform generate -domains zynq_fsbl 
+platform clean
+platform generate
+platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa}
+platform generate -domains 
+platform clean
+platform generate
+platform clean
+platform clean
+platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa}
+platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa}
+platform clean
+platform generate
+platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa}
+platform generate -domains 
+platform clean
+platform clean

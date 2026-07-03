@@ -466,7 +466,7 @@ begin
                          rdata_in  => s_axi_rdata);
 
         -- Write test : ADC_CFG_INDEX : Change MISO channel count 
-
+        wait for 1us;
         -- Enable ADC configuration mode        
         s_axi_awaddr <= ADC_CFG_INDEX;
         s_axi_wdata  <= ADC_ENABLE_CFG_CMD;

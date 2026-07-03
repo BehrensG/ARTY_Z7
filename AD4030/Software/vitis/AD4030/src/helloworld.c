@@ -54,8 +54,10 @@ int main()
 */
     	meas = ad4030_measure(GAIN, LSB);
     	usleep(300000);
-//    	ad4030_config(cmd, 1);
-//    	usleep(300000);
+    	ad4030_adc_config(cmd, 1);
+    	ad4030_conv_config(50000,200);
+//    	ad4030_adc_config(cmd, 1);
+    	usleep(300000);
 
     }
     cleanup_platform();

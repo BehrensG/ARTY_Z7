@@ -262,7 +262,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>cb1ab99b</spirit:value>
+            <spirit:value>cda9ddb0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -276,7 +276,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>05b5c06e</spirit:value>
+            <spirit:value>efd4a385</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -318,7 +318,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>da417dd8</spirit:value>
+            <spirit:value>95e00487</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -977,14 +977,14 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>AD4030_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>24</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-04-28T19:43:04Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>34</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-07-03T22:27:57Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2024.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="941fbeac"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b195173f"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="73f47039"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="4fb43625"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="910cc73c"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="029e12e7"/>

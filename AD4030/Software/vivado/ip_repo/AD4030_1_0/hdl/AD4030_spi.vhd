@@ -224,6 +224,8 @@ begin
     axi4l_wdata  <= axi4l_wdata_in;
     fifo_wr_en   <= '1' when (axi4l_wdata_sig_in = '1' and axi4l_awaddr = ADC_CFG_INDEX) else '0';
 
+    baud_count_limit <= unsigned(TO_UNSIGNED(SPI_CLK_DIV, DATA_SIZE/2));
+
     -- ASSIGNMENT STOP ----------------------------------------------------------------------------------------------------------
 
     -- ENTITY START -------------------------------------------------------------------------------------------------------------
@@ -272,7 +274,6 @@ begin
             cnv_period_cfg   <= std_logic_vector(TO_UNSIGNED(PULSE_PERIOD_SIZE, DATA_SIZE));
             cnv_width_cfg    <= std_logic_vector(TO_UNSIGNED(PULSE_WIDTH_SIZE, DATA_SIZE));
             gen_load         <= '0';
-            baud_count_limit <= unsigned(spi_cfg(15 downto 0));
             cnv_cfg          <= (0 => '1', others => '0');
         elsif rising_edge(axi4_clk_in) then
                 case axi4l_awaddr is
@@ -288,7 +289,6 @@ begin
                                 spi_cfg((i * 8 + 7) downto (i * 8)) <= axi4l_wdata((i * 8 + 7) downto (i * 8));
                             end if;
                         end loop;
-                        baud_count_limit <= unsigned(spi_baud_div_a);
                     when CNV_CFG_INDEX =>
                         for i in 0 to 3 loop
                             if (axi4l_wstrb_in(i) = '1') then
@@ -317,13 +317,13 @@ begin
         end if;
     end process write_data_proc;
 
-    ad4030_config_proc : process(ad4030_cfg, axi4_rst_n_in, spi_end_pulse, ad4030_cfg_mode, fifo_empty)
+    ad4030_config_proc : process( axi4_rst_n_in, axi4_clk_in)
     begin
         if (axi4_rst_n_in = '0') then
             ad4030_line_md     <= (others => '0');
             ad4030_out_data_md <= (others => '0');
             ad4030_cfg_enabled <= '0';
-        else
+        elsif(rising_edge(axi4_clk_in)) then
             if (ad4030_cfg = ADC_ENABLE_CFG_CMD) then
                 ad4030_cfg_enabled <= '1';
             elsif (ad4030_cfg = x"00" & ADC_EXIT_CFG_MD_ADDR & x"01") then
@@ -377,7 +377,7 @@ begin
             case spi_state is
                 when IDLE =>
                     ad4030_cs_n        <= '1';
-                    if (fifo_empty = '0') then
+                    if (ad4030_cfg_enabled = '1' and fifo_empty = '0') then
                         spi_bit_count   <= 24;
                         ad4030_cfg_mode <= '1';
                         ad4030_readout_mode <= '0';
@@ -415,7 +415,7 @@ begin
                             spi_bit_count      <= spi_bit_count - 1;
                             ad4030_spi_busy_a  <= '1';
                             ad4030_spi_sprbf_a <= '0';
-                            if (ad4030_cfg_enabled = '1') then
+                            if (ad4030_cfg_mode = '1') then
                                 ad4030_spi_sptbe_a <= '0';
                             else
                                 ad4030_spi_sptbe_a <= '1';
@@ -430,7 +430,7 @@ begin
                     if (baud_clk = '0') then
                         ad4030_cs_n         <= '1';
                         ad4030_spi_busy_a   <= '0';
-                        if (ad4030_cfg_enabled = '1') then
+                        if (ad4030_cfg_mode = '1') then
                             ad4030_spi_sprbf_a  <= '0';
                         else
                             ad4030_spi_sprbf_a  <= '1';
@@ -484,10 +484,10 @@ begin
         if (axi4_rst_n_in = '0') then
             ad4030_mosi_data <= (others => '0');
         elsif rising_edge(axi4_clk_in) then
-            if (mosi_data_update = '1') then
+            if (mosi_data_update = '1' and ad4030_cfg_enabled = '1') then
                 ad4030_mosi_data <= fifo_dout;
             elsif (ad4030_cfg_mode = '1' and spi_state = DATA) then
-                if (baud_clk_rising_edge = '1') then -- Need to check this 
+                if (baud_clk_falling_edge = '1') then -- Need to check this 
                     ad4030_mosi_data <= ad4030_mosi_data(22 downto 0) & '0';
                 end if;
             end if;

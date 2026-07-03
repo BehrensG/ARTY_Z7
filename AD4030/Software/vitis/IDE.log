@@ -3876,3 +3876,1384 @@ con
 22:31:36 INFO  : Disconnected from the channel tcfchan#36.
 22:31:48 INFO  : Result from executing command 'removePlatformRepo': 
 22:31:53 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+07:12:58 DEBUG : Logs will be stored at '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/IDE.log'.
+07:12:59 INFO  : Launching XSCT server: xsct -n  -interactive /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/temp_xsdb_launch_script.tcl
+07:13:01 INFO  : XSCT server has started successfully.
+07:13:01 INFO  : Successfully done setting XSCT server connection channel  
+07:13:01 INFO  : plnx-install-location is set to ''
+07:13:01 INFO  : Successfully done setting workspace for the tool. 
+07:13:01 INFO  : Registering command handlers for Vitis TCF services
+07:13:02 INFO  : Successfully done query RDI_DATADIR 
+07:13:02 INFO  : Platform repository initialization has completed.
+07:15:36 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+07:15:36 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+07:15:56 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+07:16:15 INFO  : XRT server has started successfully on port '4351'
+07:16:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:16:15 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+07:16:15 INFO  : 'jtag frequency' command is executed.
+07:16:15 INFO  : Context for 'APU' is selected.
+07:16:15 INFO  : System reset is completed.
+07:16:18 INFO  : 'after 3000' command is executed.
+07:16:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+07:16:20 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+07:16:20 INFO  : Context for 'APU' is selected.
+07:16:20 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+07:16:20 INFO  : 'configparams force-mem-access 1' command is executed.
+07:16:20 INFO  : Context for 'APU' is selected.
+07:16:20 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+07:16:20 INFO  : 'ps7_init' command is executed.
+07:16:20 INFO  : 'ps7_post_config' command is executed.
+07:16:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:16:20 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+07:16:20 INFO  : 'configparams force-mem-access 0' command is executed.
+07:16:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+07:16:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:16:20 INFO  : 'con' command is executed.
+07:16:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+07:16:20 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+07:23:16 INFO  : Disconnected from the channel tcfchan#3.
+07:29:17 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+07:29:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:29:33 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+07:29:33 INFO  : 'jtag frequency' command is executed.
+07:29:33 INFO  : Context for 'APU' is selected.
+07:29:33 INFO  : System reset is completed.
+07:29:36 INFO  : 'after 3000' command is executed.
+07:29:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+07:29:38 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+07:29:38 INFO  : Context for 'APU' is selected.
+07:29:38 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+07:29:38 INFO  : 'configparams force-mem-access 1' command is executed.
+07:29:38 INFO  : Context for 'APU' is selected.
+07:29:38 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+07:29:38 INFO  : 'ps7_init' command is executed.
+07:29:38 INFO  : 'ps7_post_config' command is executed.
+07:29:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:29:38 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+07:29:38 INFO  : 'configparams force-mem-access 0' command is executed.
+07:29:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+07:29:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:29:38 INFO  : 'con' command is executed.
+07:29:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+07:29:38 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+07:30:21 INFO  : Disconnected from the channel tcfchan#5.
+07:30:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:30:31 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+07:30:31 INFO  : 'jtag frequency' command is executed.
+07:30:31 INFO  : Context for 'APU' is selected.
+07:30:31 INFO  : System reset is completed.
+07:30:34 INFO  : 'after 3000' command is executed.
+07:30:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+07:30:35 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+07:30:35 INFO  : Context for 'APU' is selected.
+07:30:35 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+07:30:35 INFO  : 'configparams force-mem-access 1' command is executed.
+07:30:35 INFO  : Context for 'APU' is selected.
+07:30:35 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+07:30:35 INFO  : 'ps7_init' command is executed.
+07:30:35 INFO  : 'ps7_post_config' command is executed.
+07:30:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:30:36 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+07:30:36 INFO  : 'configparams force-mem-access 0' command is executed.
+07:30:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+07:30:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:30:36 INFO  : 'con' command is executed.
+07:30:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+07:30:36 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+07:31:14 INFO  : Disconnected from the channel tcfchan#6.
+07:31:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:31:23 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+07:31:23 INFO  : 'jtag frequency' command is executed.
+07:31:23 INFO  : Context for 'APU' is selected.
+07:31:23 INFO  : System reset is completed.
+07:31:26 INFO  : 'after 3000' command is executed.
+07:31:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+07:31:27 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+07:31:27 INFO  : Context for 'APU' is selected.
+07:31:27 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+07:31:27 INFO  : 'configparams force-mem-access 1' command is executed.
+07:31:27 INFO  : Context for 'APU' is selected.
+07:31:27 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+07:31:27 INFO  : 'ps7_init' command is executed.
+07:31:27 INFO  : 'ps7_post_config' command is executed.
+07:31:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:31:27 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+07:31:27 INFO  : 'configparams force-mem-access 0' command is executed.
+07:31:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+07:31:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:31:27 INFO  : 'con' command is executed.
+07:31:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+07:31:27 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+07:32:49 INFO  : Disconnected from the channel tcfchan#7.
+07:32:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:32:59 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+07:32:59 INFO  : 'jtag frequency' command is executed.
+07:32:59 INFO  : Context for 'APU' is selected.
+07:32:59 INFO  : System reset is completed.
+07:33:02 INFO  : 'after 3000' command is executed.
+07:33:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+07:33:04 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+07:33:04 INFO  : Context for 'APU' is selected.
+07:33:04 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+07:33:04 INFO  : 'configparams force-mem-access 1' command is executed.
+07:33:04 INFO  : Context for 'APU' is selected.
+07:33:04 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+07:33:04 INFO  : 'ps7_init' command is executed.
+07:33:04 INFO  : 'ps7_post_config' command is executed.
+07:33:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:33:04 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+07:33:04 INFO  : 'configparams force-mem-access 0' command is executed.
+07:33:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+07:33:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:33:04 INFO  : 'con' command is executed.
+07:33:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+07:33:04 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+08:33:54 INFO  : Disconnected from the channel tcfchan#8.
+21:09:00 DEBUG : Logs will be stored at '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/IDE.log'.
+21:09:01 INFO  : Launching XSCT server: xsct -n  -interactive /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/temp_xsdb_launch_script.tcl
+21:09:03 INFO  : XSCT server has started successfully.
+21:09:03 INFO  : Successfully done setting XSCT server connection channel  
+21:09:03 INFO  : plnx-install-location is set to ''
+21:09:03 INFO  : Successfully done setting workspace for the tool. 
+21:09:04 INFO  : Successfully done query RDI_DATADIR 
+21:09:04 INFO  : Registering command handlers for Vitis TCF services
+21:09:04 INFO  : Platform repository initialization has completed.
+21:09:51 INFO  : Hardware specification for platform project 'AD4030_BD_wrapper' is updated.
+21:10:02 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+21:10:02 INFO  : Result from executing command 'getPlatforms': AD4030_BD_wrapper|/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/AD4030_BD_wrapper.xpfm;xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+21:10:14 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:17:16 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:17:29 INFO  : XRT server has started successfully on port '4354'
+21:17:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:17:29 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+21:17:29 INFO  : 'jtag frequency' command is executed.
+21:17:29 INFO  : Context for 'APU' is selected.
+21:17:29 INFO  : System reset is completed.
+21:17:32 INFO  : 'after 3000' command is executed.
+21:17:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+21:17:34 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+21:17:34 INFO  : Context for 'APU' is selected.
+21:17:34 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+21:17:34 INFO  : 'configparams force-mem-access 1' command is executed.
+21:17:34 INFO  : Context for 'APU' is selected.
+21:17:34 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+21:17:34 INFO  : 'ps7_init' command is executed.
+21:17:34 INFO  : 'ps7_post_config' command is executed.
+21:17:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:17:34 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:17:34 INFO  : 'configparams force-mem-access 0' command is executed.
+21:17:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:17:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:17:34 INFO  : 'con' command is executed.
+21:17:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:17:34 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+21:18:33 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:19:08 INFO  : Result from executing command 'removePlatformRepo': 
+21:19:26 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+21:19:26 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+21:19:29 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:21:25 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:23:04 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:23:22 INFO  : Result from executing command 'removePlatformRepo': 
+21:23:34 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+21:23:34 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+21:23:37 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:24:42 INFO  : Hardware specification for platform project 'AD4030_BD_wrapper' is updated.
+21:26:22 INFO  : Hardware specification for platform project 'AD4030_BD_wrapper' is updated.
+21:26:43 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+21:26:43 INFO  : Result from executing command 'getPlatforms': AD4030_BD_wrapper|/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/AD4030_BD_wrapper.xpfm;xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+21:27:53 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+21:27:53 INFO  : Result from executing command 'getPlatforms': AD4030_BD_wrapper|/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/AD4030_BD_wrapper.xpfm;xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+21:28:17 INFO  : Result from executing command 'removePlatformRepo': 
+21:28:40 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+21:28:40 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+21:30:07 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:30:15 INFO  : The hardware specification used by project 'AD4030' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:30:15 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit' stored in project is removed.
+21:30:15 INFO  : The updated bitstream files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream' in project 'AD4030'.
+21:30:15 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' stored in project is removed.
+21:30:20 INFO  : The updated ps init files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit' in project 'AD4030'.
+21:31:40 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+21:31:40 INFO  : Result from executing command 'getPlatforms': AD4030_BD_wrapper|/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/AD4030_BD_wrapper.xpfm;xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+21:31:43 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:32:53 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:33:02 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:34:07 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:34:32 INFO  : Result from executing command 'removePlatformRepo': 
+21:34:43 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+21:34:43 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+21:34:47 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:43:40 INFO  : Hardware specification for platform project 'AD4030_BD_wrapper' is updated.
+21:43:59 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+21:43:59 INFO  : Result from executing command 'getPlatforms': AD4030_BD_wrapper|/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/AD4030_BD_wrapper.xpfm;xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+21:44:13 INFO  : Result from executing command 'removePlatformRepo': 
+21:44:33 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+21:44:33 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+21:44:36 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:44:44 INFO  : The hardware specification used by project 'AD4030' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:44:44 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit' stored in project is removed.
+21:44:44 INFO  : The updated bitstream files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream' in project 'AD4030'.
+21:44:44 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' stored in project is removed.
+21:44:50 INFO  : The updated ps init files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit' in project 'AD4030'.
+21:46:46 INFO  : Result from executing command 'removePlatformRepo': 
+21:46:52 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+21:47:45 INFO  : Hardware specification for platform project 'AD4030_BD_wrapper' is updated.
+21:56:21 INFO  : Hardware specification for platform project 'AD4030_BD_wrapper' is updated.
+21:56:34 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+21:56:54 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+21:56:54 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+21:57:07 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:57:16 INFO  : The hardware specification used by project 'AD4030' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:57:16 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit' stored in project is removed.
+21:57:16 INFO  : The updated bitstream files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream' in project 'AD4030'.
+21:57:16 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' stored in project is removed.
+21:57:21 INFO  : The updated ps init files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit' in project 'AD4030'.
+21:57:40 INFO  : Disconnected from the channel tcfchan#4.
+21:57:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:57:41 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+21:57:41 INFO  : 'jtag frequency' command is executed.
+21:57:41 INFO  : Context for 'APU' is selected.
+21:57:41 INFO  : System reset is completed.
+21:57:44 INFO  : 'after 3000' command is executed.
+21:57:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+21:57:45 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+21:57:45 INFO  : Context for 'APU' is selected.
+21:57:45 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+21:57:45 INFO  : 'configparams force-mem-access 1' command is executed.
+21:57:45 INFO  : Context for 'APU' is selected.
+21:57:45 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+21:57:45 INFO  : 'ps7_init' command is executed.
+21:57:45 INFO  : 'ps7_post_config' command is executed.
+21:57:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:57:45 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:57:45 INFO  : 'configparams force-mem-access 0' command is executed.
+21:57:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:57:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:57:46 INFO  : 'con' command is executed.
+21:57:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:57:46 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+21:58:36 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+21:58:45 INFO  : Disconnected from the channel tcfchan#24.
+21:58:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:58:57 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+21:58:57 INFO  : 'jtag frequency' command is executed.
+21:58:57 INFO  : Context for 'APU' is selected.
+21:58:57 INFO  : System reset is completed.
+21:59:00 INFO  : 'after 3000' command is executed.
+21:59:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+21:59:01 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+21:59:01 INFO  : Context for 'APU' is selected.
+21:59:01 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+21:59:01 INFO  : 'configparams force-mem-access 1' command is executed.
+21:59:01 INFO  : Context for 'APU' is selected.
+21:59:01 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+21:59:01 INFO  : 'ps7_init' command is executed.
+21:59:01 INFO  : 'ps7_post_config' command is executed.
+21:59:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:59:01 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:59:01 INFO  : 'configparams force-mem-access 0' command is executed.
+21:59:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:59:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:59:01 INFO  : 'con' command is executed.
+21:59:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:59:01 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+22:00:20 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+22:00:35 INFO  : Disconnected from the channel tcfchan#26.
+22:00:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:00:39 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+22:00:39 INFO  : 'jtag frequency' command is executed.
+22:00:39 INFO  : Context for 'APU' is selected.
+22:00:39 INFO  : System reset is completed.
+22:00:42 INFO  : 'after 3000' command is executed.
+22:00:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+22:00:43 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+22:00:43 INFO  : Context for 'APU' is selected.
+22:00:43 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+22:00:43 INFO  : 'configparams force-mem-access 1' command is executed.
+22:00:43 INFO  : Context for 'APU' is selected.
+22:00:43 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+22:00:43 INFO  : 'ps7_init' command is executed.
+22:00:43 INFO  : 'ps7_post_config' command is executed.
+22:00:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:00:44 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:00:44 INFO  : 'configparams force-mem-access 0' command is executed.
+22:00:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:00:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:00:44 INFO  : 'con' command is executed.
+22:00:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:00:44 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+22:01:05 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+22:01:10 INFO  : Disconnected from the channel tcfchan#28.
+22:01:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:01:15 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+22:01:15 INFO  : 'jtag frequency' command is executed.
+22:01:15 INFO  : Context for 'APU' is selected.
+22:01:15 INFO  : System reset is completed.
+22:01:18 INFO  : 'after 3000' command is executed.
+22:01:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+22:01:20 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+22:01:20 INFO  : Context for 'APU' is selected.
+22:01:20 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+22:01:20 INFO  : 'configparams force-mem-access 1' command is executed.
+22:01:20 INFO  : Context for 'APU' is selected.
+22:01:20 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+22:01:20 INFO  : 'ps7_init' command is executed.
+22:01:20 INFO  : 'ps7_post_config' command is executed.
+22:01:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:01:20 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:01:20 INFO  : 'configparams force-mem-access 0' command is executed.
+22:01:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:01:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:01:20 INFO  : 'con' command is executed.
+22:01:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:01:20 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+22:01:54 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+22:02:26 INFO  : Disconnected from the channel tcfchan#30.
+22:02:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:02:28 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+22:02:28 INFO  : 'jtag frequency' command is executed.
+22:02:28 INFO  : Context for 'APU' is selected.
+22:02:28 INFO  : System reset is completed.
+22:02:31 INFO  : 'after 3000' command is executed.
+22:02:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+22:02:32 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+22:02:32 INFO  : Context for 'APU' is selected.
+22:02:32 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+22:02:32 INFO  : 'configparams force-mem-access 1' command is executed.
+22:02:32 INFO  : Context for 'APU' is selected.
+22:02:32 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+22:02:32 INFO  : 'ps7_init' command is executed.
+22:02:32 INFO  : 'ps7_post_config' command is executed.
+22:02:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:02:32 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:02:32 INFO  : 'configparams force-mem-access 0' command is executed.
+22:02:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:02:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:02:32 INFO  : 'con' command is executed.
+22:02:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:02:32 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+22:03:48 INFO  : Disconnected from the channel tcfchan#32.
+22:03:49 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+22:04:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:04:01 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+22:04:01 INFO  : 'jtag frequency' command is executed.
+22:04:01 INFO  : Context for 'APU' is selected.
+22:04:01 INFO  : System reset is completed.
+22:04:04 INFO  : 'after 3000' command is executed.
+22:04:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+22:04:06 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+22:04:06 INFO  : Context for 'APU' is selected.
+22:04:06 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+22:04:06 INFO  : 'configparams force-mem-access 1' command is executed.
+22:04:06 INFO  : Context for 'APU' is selected.
+22:04:06 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+22:04:06 INFO  : 'ps7_init' command is executed.
+22:04:06 INFO  : 'ps7_post_config' command is executed.
+22:04:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:04:06 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:04:06 INFO  : 'configparams force-mem-access 0' command is executed.
+22:04:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:04:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:04:06 INFO  : 'con' command is executed.
+22:04:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:04:06 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+22:04:41 INFO  : Disconnected from the channel tcfchan#34.
+22:04:58 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+22:05:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:05:09 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+22:05:09 INFO  : 'jtag frequency' command is executed.
+22:05:09 INFO  : Context for 'APU' is selected.
+22:05:10 INFO  : System reset is completed.
+22:05:13 INFO  : 'after 3000' command is executed.
+22:05:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+22:05:14 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+22:05:14 INFO  : Context for 'APU' is selected.
+22:05:14 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+22:05:14 INFO  : 'configparams force-mem-access 1' command is executed.
+22:05:14 INFO  : Context for 'APU' is selected.
+22:05:14 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+22:05:14 INFO  : 'ps7_init' command is executed.
+22:05:14 INFO  : 'ps7_post_config' command is executed.
+22:05:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:05:14 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:05:14 INFO  : 'configparams force-mem-access 0' command is executed.
+22:05:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:05:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:05:14 INFO  : 'con' command is executed.
+22:05:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:05:14 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+22:05:33 INFO  : Disconnected from the channel tcfchan#36.
+22:05:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:05:48 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+22:05:48 INFO  : 'jtag frequency' command is executed.
+22:05:48 INFO  : Context for 'APU' is selected.
+22:05:48 INFO  : System reset is completed.
+22:05:51 INFO  : 'after 3000' command is executed.
+22:05:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+22:05:52 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+22:05:52 INFO  : Context for 'APU' is selected.
+22:05:52 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+22:05:52 INFO  : 'configparams force-mem-access 1' command is executed.
+22:05:52 INFO  : Context for 'APU' is selected.
+22:05:52 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+22:05:52 INFO  : 'ps7_init' command is executed.
+22:05:52 INFO  : 'ps7_post_config' command is executed.
+22:05:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:05:52 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:05:52 INFO  : 'configparams force-mem-access 0' command is executed.
+22:05:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:05:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:05:53 INFO  : 'con' command is executed.
+22:05:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:05:53 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+22:06:15 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+22:06:23 INFO  : Disconnected from the channel tcfchan#37.
+22:06:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:06:26 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+22:06:26 INFO  : 'jtag frequency' command is executed.
+22:06:26 INFO  : Context for 'APU' is selected.
+22:06:26 INFO  : System reset is completed.
+22:06:29 INFO  : 'after 3000' command is executed.
+22:06:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+22:06:30 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+22:06:30 INFO  : Context for 'APU' is selected.
+22:06:30 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+22:06:30 INFO  : 'configparams force-mem-access 1' command is executed.
+22:06:30 INFO  : Context for 'APU' is selected.
+22:06:30 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+22:06:30 INFO  : 'ps7_init' command is executed.
+22:06:30 INFO  : 'ps7_post_config' command is executed.
+22:06:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:06:31 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:06:31 INFO  : 'configparams force-mem-access 0' command is executed.
+22:06:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:06:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:06:31 INFO  : 'con' command is executed.
+22:06:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:06:31 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+22:08:12 INFO  : Disconnected from the channel tcfchan#39.
+22:09:01 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+22:09:09 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+22:09:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:09:24 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+22:09:24 INFO  : 'jtag frequency' command is executed.
+22:09:24 INFO  : Context for 'APU' is selected.
+22:09:24 INFO  : System reset is completed.
+22:09:27 INFO  : 'after 3000' command is executed.
+22:09:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+22:09:28 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+22:09:28 INFO  : Context for 'APU' is selected.
+22:09:28 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+22:09:28 INFO  : 'configparams force-mem-access 1' command is executed.
+22:09:28 INFO  : Context for 'APU' is selected.
+22:09:28 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+22:09:29 INFO  : 'ps7_init' command is executed.
+22:09:29 INFO  : 'ps7_post_config' command is executed.
+22:09:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:29 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:09:29 INFO  : 'configparams force-mem-access 0' command is executed.
+22:09:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:09:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:29 INFO  : 'con' command is executed.
+22:09:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:09:29 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+22:09:49 INFO  : Disconnected from the channel tcfchan#41.
+23:15:55 INFO  : Hardware specification for platform project 'AD4030_BD_wrapper' is updated.
+23:16:07 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+23:16:07 INFO  : Result from executing command 'getPlatforms': AD4030_BD_wrapper|/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/AD4030_BD_wrapper.xpfm;xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+23:16:22 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+23:16:30 INFO  : The hardware specification used by project 'AD4030' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:16:30 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit' stored in project is removed.
+23:16:30 INFO  : The updated bitstream files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream' in project 'AD4030'.
+23:16:30 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' stored in project is removed.
+23:16:36 INFO  : The updated ps init files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit' in project 'AD4030'.
+23:16:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:16:56 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+23:16:56 INFO  : 'jtag frequency' command is executed.
+23:16:56 INFO  : Context for 'APU' is selected.
+23:16:56 INFO  : System reset is completed.
+23:16:59 INFO  : 'after 3000' command is executed.
+23:16:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+23:17:00 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+23:17:00 INFO  : Context for 'APU' is selected.
+23:17:00 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+23:17:00 INFO  : 'configparams force-mem-access 1' command is executed.
+23:17:00 INFO  : Context for 'APU' is selected.
+23:17:00 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+23:17:01 INFO  : 'ps7_init' command is executed.
+23:17:01 INFO  : 'ps7_post_config' command is executed.
+23:17:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:17:01 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:17:01 INFO  : 'configparams force-mem-access 0' command is executed.
+23:17:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:17:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:17:01 INFO  : 'con' command is executed.
+23:17:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:17:01 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+23:18:20 INFO  : Disconnected from the channel tcfchan#44.
+23:18:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:18:35 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+23:18:35 INFO  : 'jtag frequency' command is executed.
+23:18:35 INFO  : Context for 'APU' is selected.
+23:18:35 INFO  : System reset is completed.
+23:18:38 INFO  : 'after 3000' command is executed.
+23:18:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+23:18:39 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+23:18:39 INFO  : Context for 'APU' is selected.
+23:18:39 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+23:18:39 INFO  : 'configparams force-mem-access 1' command is executed.
+23:18:39 INFO  : Context for 'APU' is selected.
+23:18:39 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+23:18:39 INFO  : 'ps7_init' command is executed.
+23:18:39 INFO  : 'ps7_post_config' command is executed.
+23:18:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:18:39 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:18:39 INFO  : 'configparams force-mem-access 0' command is executed.
+23:18:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:18:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:18:39 INFO  : 'con' command is executed.
+23:18:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:18:39 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+23:40:28 INFO  : Disconnected from the channel tcfchan#45.
+23:40:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:40:30 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+23:40:30 INFO  : 'jtag frequency' command is executed.
+23:40:30 INFO  : Context for 'APU' is selected.
+23:40:30 INFO  : System reset is completed.
+23:40:33 INFO  : 'after 3000' command is executed.
+23:40:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+23:40:35 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+23:40:35 INFO  : Context for 'APU' is selected.
+23:40:35 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+23:40:35 INFO  : 'configparams force-mem-access 1' command is executed.
+23:40:35 INFO  : Context for 'APU' is selected.
+23:40:35 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+23:40:35 INFO  : 'ps7_init' command is executed.
+23:40:35 INFO  : 'ps7_post_config' command is executed.
+23:40:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:40:35 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:40:35 INFO  : 'configparams force-mem-access 0' command is executed.
+23:40:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:40:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:40:35 INFO  : 'con' command is executed.
+23:40:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:40:35 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+23:43:58 INFO  : Disconnected from the channel tcfchan#46.
+23:44:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:44:10 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+23:44:10 INFO  : 'jtag frequency' command is executed.
+23:44:10 INFO  : Context for 'APU' is selected.
+23:44:10 INFO  : System reset is completed.
+23:44:13 INFO  : 'after 3000' command is executed.
+23:44:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+23:44:14 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+23:44:14 INFO  : Context for 'APU' is selected.
+23:44:14 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+23:44:14 INFO  : 'configparams force-mem-access 1' command is executed.
+23:44:14 INFO  : Context for 'APU' is selected.
+23:44:14 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+23:44:15 INFO  : 'ps7_init' command is executed.
+23:44:15 INFO  : 'ps7_post_config' command is executed.
+23:44:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:44:15 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:44:15 INFO  : 'configparams force-mem-access 0' command is executed.
+23:44:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:44:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:44:15 INFO  : 'con' command is executed.
+23:44:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:44:15 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+23:44:28 INFO  : Disconnected from the channel tcfchan#47.
+23:44:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:44:40 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+23:44:40 INFO  : 'jtag frequency' command is executed.
+23:44:40 INFO  : Context for 'APU' is selected.
+23:44:40 INFO  : System reset is completed.
+23:44:43 INFO  : 'after 3000' command is executed.
+23:44:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+23:44:44 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+23:44:44 INFO  : Context for 'APU' is selected.
+23:44:44 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+23:44:44 INFO  : 'configparams force-mem-access 1' command is executed.
+23:44:44 INFO  : Context for 'APU' is selected.
+23:44:44 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+23:44:45 INFO  : 'ps7_init' command is executed.
+23:44:45 INFO  : 'ps7_post_config' command is executed.
+23:44:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:44:45 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:44:45 INFO  : 'configparams force-mem-access 0' command is executed.
+23:44:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:44:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:44:45 INFO  : 'con' command is executed.
+23:44:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:44:45 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+23:45:24 INFO  : Disconnected from the channel tcfchan#48.
+23:58:04 INFO  : Hardware specification for platform project 'AD4030_BD_wrapper' is updated.
+23:58:14 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+23:58:14 INFO  : Result from executing command 'getPlatforms': AD4030_BD_wrapper|/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/AD4030_BD_wrapper.xpfm;xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+23:58:32 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+23:58:40 INFO  : The hardware specification used by project 'AD4030' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:58:40 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit' stored in project is removed.
+23:58:40 INFO  : The updated bitstream files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream' in project 'AD4030'.
+23:58:40 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' stored in project is removed.
+23:58:46 INFO  : The updated ps init files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit' in project 'AD4030'.
+23:59:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:59:03 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+23:59:03 INFO  : 'jtag frequency' command is executed.
+23:59:03 INFO  : Context for 'APU' is selected.
+23:59:03 INFO  : System reset is completed.
+23:59:06 INFO  : 'after 3000' command is executed.
+23:59:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+23:59:08 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+23:59:08 INFO  : Context for 'APU' is selected.
+23:59:08 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+23:59:08 INFO  : 'configparams force-mem-access 1' command is executed.
+23:59:08 INFO  : Context for 'APU' is selected.
+23:59:08 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+23:59:08 INFO  : 'ps7_init' command is executed.
+23:59:08 INFO  : 'ps7_post_config' command is executed.
+23:59:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:59:08 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:59:08 INFO  : 'configparams force-mem-access 0' command is executed.
+23:59:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:59:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:59:08 INFO  : 'con' command is executed.
+23:59:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:59:08 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+00:15:43 INFO  : Disconnected from the channel tcfchan#51.
+00:16:17 INFO  : Hardware specification for platform project 'AD4030_BD_wrapper' is updated.
+00:16:28 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+00:16:28 INFO  : Result from executing command 'getPlatforms': AD4030_BD_wrapper|/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/AD4030_BD_wrapper.xpfm;xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+00:17:16 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+00:17:25 INFO  : The hardware specification used by project 'AD4030' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+00:17:25 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit' stored in project is removed.
+00:17:25 INFO  : The updated bitstream files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream' in project 'AD4030'.
+00:17:25 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' stored in project is removed.
+00:17:31 INFO  : The updated ps init files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit' in project 'AD4030'.
+00:17:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:17:38 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+00:17:38 INFO  : 'jtag frequency' command is executed.
+00:17:38 INFO  : Context for 'APU' is selected.
+00:17:38 INFO  : System reset is completed.
+00:17:41 INFO  : 'after 3000' command is executed.
+00:17:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+00:17:43 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+00:17:43 INFO  : Context for 'APU' is selected.
+00:17:43 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+00:17:43 INFO  : 'configparams force-mem-access 1' command is executed.
+00:17:43 INFO  : Context for 'APU' is selected.
+00:17:43 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+00:17:43 INFO  : 'ps7_init' command is executed.
+00:17:43 INFO  : 'ps7_post_config' command is executed.
+00:17:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:17:43 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:17:43 INFO  : 'configparams force-mem-access 0' command is executed.
+00:17:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:17:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:17:43 INFO  : 'con' command is executed.
+00:17:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:17:43 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+00:33:17 INFO  : Hardware specification for platform project 'AD4030_BD_wrapper' is updated.
+00:33:28 INFO  : Result from executing command 'getProjects': AD4030_BD_wrapper
+00:33:28 INFO  : Result from executing command 'getPlatforms': AD4030_BD_wrapper|/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/AD4030_BD_wrapper.xpfm;xilinx_vck190_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm;xilinx_vck190_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vck190_base_dfx_202410_1/xilinx_vck190_base_dfx_202410_1.xpfm;xilinx_vek280_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_202410_1/xilinx_vek280_base_202410_1.xpfm;xilinx_vek280_base_bdc_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vek280_base_bdc_202410_1/xilinx_vek280_base_bdc_202410_1.xpfm;xilinx_vmk180_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_vmk180_base_202410_1/xilinx_vmk180_base_202410_1.xpfm;xilinx_zcu102_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|/opt/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+00:33:37 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+00:33:46 INFO  : The hardware specification used by project 'AD4030' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+00:33:46 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit' stored in project is removed.
+00:33:46 INFO  : The updated bitstream files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream' in project 'AD4030'.
+00:33:46 INFO  : The file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' stored in project is removed.
+00:33:52 INFO  : The updated ps init files are copied from platform to folder '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit' in project 'AD4030'.
+00:33:59 INFO  : Disconnected from the channel tcfchan#54.
+00:33:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:33:59 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+00:33:59 INFO  : 'jtag frequency' command is executed.
+00:33:59 INFO  : Context for 'APU' is selected.
+00:33:59 INFO  : System reset is completed.
+00:34:02 INFO  : 'after 3000' command is executed.
+00:34:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+00:34:03 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+00:34:03 INFO  : Context for 'APU' is selected.
+00:34:04 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+00:34:04 INFO  : 'configparams force-mem-access 1' command is executed.
+00:34:04 INFO  : Context for 'APU' is selected.
+00:34:04 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+00:34:04 INFO  : 'ps7_init' command is executed.
+00:34:04 INFO  : 'ps7_post_config' command is executed.
+00:34:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:34:04 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:34:04 INFO  : 'configparams force-mem-access 0' command is executed.
+00:34:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:34:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:34:04 INFO  : 'con' command is executed.
+00:34:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:34:04 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+00:34:48 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+00:35:01 INFO  : Disconnected from the channel tcfchan#57.
+00:35:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:35:18 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+00:35:18 INFO  : 'jtag frequency' command is executed.
+00:35:18 INFO  : Context for 'APU' is selected.
+00:35:18 INFO  : System reset is completed.
+00:35:21 INFO  : 'after 3000' command is executed.
+00:35:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+00:35:22 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+00:35:22 INFO  : Context for 'APU' is selected.
+00:35:22 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+00:35:22 INFO  : 'configparams force-mem-access 1' command is executed.
+00:35:22 INFO  : Context for 'APU' is selected.
+00:35:22 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+00:35:23 INFO  : 'ps7_init' command is executed.
+00:35:23 INFO  : 'ps7_post_config' command is executed.
+00:35:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:35:23 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:35:23 INFO  : 'configparams force-mem-access 0' command is executed.
+00:35:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:35:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:35:23 INFO  : 'con' command is executed.
+00:35:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:35:23 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+00:35:31 INFO  : Disconnected from the channel tcfchan#59.
+00:35:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:35:43 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+00:35:43 INFO  : 'jtag frequency' command is executed.
+00:35:43 INFO  : Context for 'APU' is selected.
+00:35:43 INFO  : System reset is completed.
+00:35:46 INFO  : 'after 3000' command is executed.
+00:35:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+00:35:47 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+00:35:47 INFO  : Context for 'APU' is selected.
+00:35:47 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+00:35:47 INFO  : 'configparams force-mem-access 1' command is executed.
+00:35:47 INFO  : Context for 'APU' is selected.
+00:35:47 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+00:35:48 INFO  : 'ps7_init' command is executed.
+00:35:48 INFO  : 'ps7_post_config' command is executed.
+00:35:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:35:48 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:35:48 INFO  : 'configparams force-mem-access 0' command is executed.
+00:35:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:35:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:35:48 INFO  : 'con' command is executed.
+00:35:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:35:48 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+00:37:52 INFO  : Disconnected from the channel tcfchan#60.
+00:38:02 INFO  : Checking for BSP changes to sync application flags for project 'AD4030'...
+00:38:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:38:27 INFO  : Jtag cable 'Digilent Arty Z7 003017B7ED73A' is selected.
+00:38:27 INFO  : 'jtag frequency' command is executed.
+00:38:27 INFO  : Context for 'APU' is selected.
+00:38:27 INFO  : System reset is completed.
+00:38:30 INFO  : 'after 3000' command is executed.
+00:38:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}' command is executed.
+00:38:32 INFO  : Device configured successfully with "/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit"
+00:38:32 INFO  : Context for 'APU' is selected.
+00:38:32 INFO  : Hardware design and registers information is loaded from '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa'.
+00:38:32 INFO  : 'configparams force-mem-access 1' command is executed.
+00:38:32 INFO  : Context for 'APU' is selected.
+00:38:32 INFO  : Sourcing of '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl' is done.
+00:38:32 INFO  : 'ps7_init' command is executed.
+00:38:32 INFO  : 'ps7_post_config' command is executed.
+00:38:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:38:32 INFO  : The application '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:38:32 INFO  : 'configparams force-mem-access 0' command is executed.
+00:38:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}
+fpga -file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/bitstream/AD4030_BD_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_BD_wrapper/export/AD4030_BD_wrapper/hw/AD4030_BD_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030/Debug/AD4030.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:38:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:38:32 INFO  : 'con' command is executed.
+00:38:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:38:32 INFO  : Launch script is exported to file '/home/grzegorz/git/ARTY_Z7/AD4030/Software/vitis/AD4030_system/_ide/scripts/systemdebugger_ad4030_system_standalone.tcl'
+00:38:47 INFO  : Disconnected from the channel tcfchan#62.
+00:47:00 INFO  : Result from executing command 'removePlatformRepo': 
+00:47:09 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.

@@ -1,8 +1,0 @@
-
-
-
-
-
-#define LSB float(4.096/8388608)
-
-float ad4030_measure(float gain, float lsb);

@@ -1,8 +1,8 @@
-Tue Apr 28 20:19:27 2026: Server was asked to start on port: '46797'
-Tue Apr 28 20:19:27 2026: Server is using token UUID: '7f057ae9-ea78-4db5-861c-8b6c62b1fd2a'
-Tue Apr 28 20:19:27 2026: Attempting to start server on port '46797'
-Tue Apr 28 20:19:27 2026: XRC main fifo: created main fifo '/tmp/xrcmain7f057ae9-ea78-4db5-861c-8b6c62b1fd2a', fd read = 11
-Tue Apr 28 20:19:27 2026: Running Rule Check Server
-Tue Apr 28 20:19:27 2026: Version 1.6.1
-Tue Apr 28 20:19:28 2026: Rule Check Server: Accepted socket connection from client
-Tue Apr 28 20:19:28 2026: EXCHANGE_TOKEN received, server token: 7f057ae9-ea78-4db5-861c-8b6c62b1fd2a, passed token: 7f057ae9-ea78-4db5-861c-8b6c62b1fd2a
+Fri Jul  3 21:09:05 2026: Server was asked to start on port: '33241'
+Fri Jul  3 21:09:05 2026: Server is using token UUID: '2e7c0bc5-bba1-498d-9cab-f488b4ae6114'
+Fri Jul  3 21:09:05 2026: Attempting to start server on port '33241'
+Fri Jul  3 21:09:05 2026: XRC main fifo: created main fifo '/tmp/xrcmain2e7c0bc5-bba1-498d-9cab-f488b4ae6114', fd read = 11
+Fri Jul  3 21:09:05 2026: Running Rule Check Server
+Fri Jul  3 21:09:05 2026: Version 1.6.1
+Fri Jul  3 21:09:06 2026: Rule Check Server: Accepted socket connection from client
+Fri Jul  3 21:09:06 2026: EXCHANGE_TOKEN received, server token: 2e7c0bc5-bba1-498d-9cab-f488b4ae6114, passed token: 2e7c0bc5-bba1-498d-9cab-f488b4ae6114
