@@ -3,7 +3,7 @@
 	<section name="org.eclipse.tcf.internal.cdt.ui.hover.ExpressionInformationControlCreator$ExpressionInformationControl">
 		<item key="WIDTH" value="606"/>
 		<item key="HEIGHT" value="206"/>
-		<item key="SashWeightTree" value="200"/>
-		<item key="SashWeightDetails" value="200"/>
+		<item key="SashWeightTree" value="500"/>
+		<item key="SashWeightDetails" value="500"/>
 	</section>
 </section>

@@ -242,3 +242,5 @@ INFO: [Hsi 55-2053] elapsed time for repository (/opt/Xilinx/Vivado/2024.1/data/
 write_hw_platform: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 9260.496 ; gain = 101.652 ; free physical = 52183 ; free virtual = 61409
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.srcs/utils_1/imports/synth_1/ad4030_spi.dcp with file /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.runs/synth_1/AD4030_BD_wrapper.dcp
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jul  5 21:02:02 2026...
