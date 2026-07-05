@@ -1,6 +1,6 @@
-00:47:07 **** Clean-only build of project AD4030_BD_wrapper ****
-buildplatform.sh 44503 AD4030_BD_wrapper clean 
-XSDB Server Channel: tcfchan#64
+20:58:37 **** Clean-only build of project AD4030_BD_wrapper ****
+buildplatform.sh 39851 AD4030_BD_wrapper clean 
+XSDB Server Channel: tcfchan#20
 Cleaning the zynq_fsbl application.
 rm -rf  fsbl_hooks.o  image_mover.o  main.o  md5.o  nand.o  nor.o  pcap.o  ps7_init.o  qspi.o  rsa.o  sd.o  fsbl_handoff.o zynq
 _fsbl_bsp/ps7_cortexa9_0/lib/libxil.a fsbl.elf *.o
@@ -87,11 +87,11 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_7/src -s clean
 
 rm -f ps7_cortexa9_0/lib/libxil.a
 
-00:47:12 **** Clean-only build of configuration Debug for project AD4030 ****
+20:58:42 **** Clean-only build of configuration Debug for project AD4030 ****
 make clean 
-rm -rf ./src/helloworld.o ./src/platform.o ./src/helloworld.d ./src/platform.d AD4030.elf.size  AD4030.elf
+rm -rf ./src/main.o ./src/platform.o ./src/main.d ./src/platform.d AD4030.elf.size  AD4030.elf
  
-00:47:12 **** Clean-only build of configuration Debug for project AD4030_system ****
+20:58:42 **** Clean-only build of configuration Debug for project AD4030_system ****
 make clean 
 rm -rf ./_sds
 rm -rf package

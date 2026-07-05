@@ -29,10 +29,41 @@
 #define AD4030_ENABLE_CFG_CMD		0x00A00000
 #define AD4030_DISABLE_CFG_CMD		0x00001401
 
-
-
-#define  LSB   4.096/8388608
-#define  GAIN  1.25f
+#define AD4030_REG_INTERFACE_CONFIG_A			0x00000000
+#define AD4030_REG_INTERFACE_CONFIG_B			0x00000100
+#define AD4030_REG_DEVICE_CONFIG			    0x00000200
+#define AD4030_REG_CHIP_TYPE				    0x00000300
+#define AD4030_REG_PRODUCT_ID_L				    0x00000400
+#define AD4030_REG_PRODUCT_ID_H				    0x00000500
+#define AD4030_REG_CHIP_GRADE				    0x00000600
+#define AD4030_REG_SCRATCH_PAD			        0x00000A00
+#define AD4030_REG_SPI_REVISION			        0x00000B00
+#define AD4030_REG_VENDOR_L			            0x00000C00
+#define AD4030_REG_VENDOR_H			            0x00000D00
+#define AD4030_REG_STREAM_MODE			        0x00000E00
+#define AD4030_REG_INTERFACE_CONFIG_C		    0x00001000
+#define AD4030_REG_INTERFACE_STATUS_A		    0x00001100
+#define AD4030_REG_EXIT_CFG_MODE		        0x00001400
+#define AD4030_REG_AVG				            0x00001500
+#define AD4030_REG_OFFSET_X0_0			        0x00001600
+#define AD4030_REG_OFFSET_X0_1			        0x00001700
+#define AD4030_REG_OFFSET_X0_2			        0x00001800
+#define AD4030_REG_OFFSET_X1_0			        0x00001900
+#define AD4030_REG_OFFSET_X1_1			        0x00001A00
+#define AD4030_REG_OFFSET_X1_2			        0x00001B00
+#define AD4030_REG_GAIN_X0_LSB			        0x00001C00
+#define AD4030_REG_GAIN_X0_MSB			        0x00001D00
+#define AD4030_REG_GAIN_X1_LSB			        0x00001E00
+#define AD4030_REG_GAIN_X1_MSB			        0x00001F00
+#define AD4030_REG_MODES			            0x00002000
+#define AD4030_REG_OSCILATOR			        0x00002100
+#define AD4030_REG_IO				            0x00002200
+#define AD4030_REG_PAT0				            0x00002300
+#define AD4030_REG_PAT1				            0x00002400
+#define AD4030_REG_PAT2				            0x00002500
+#define AD4030_REG_PAT3				            0x00002600
+#define AD4030_REG_DIG_DIAG			            0x00003400
+#define AD4030_REG_DIG_ERR			            0x00003500
 
 /**************************** Type Definitions *****************************/
 /**

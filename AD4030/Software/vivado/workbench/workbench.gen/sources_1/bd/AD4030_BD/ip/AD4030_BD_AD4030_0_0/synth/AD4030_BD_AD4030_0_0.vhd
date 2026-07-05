@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: GB:user:AD4030:1.0
--- IP Revision: 34
+-- IP Revision: 35
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

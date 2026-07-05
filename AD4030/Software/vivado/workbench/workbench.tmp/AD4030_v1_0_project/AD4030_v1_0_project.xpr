@@ -7,7 +7,7 @@
 <Project Product="Vivado" Version="7" Minor="67" Path="/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.tmp/AD4030_v1_0_project/AD4030_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="9601546e26ee458381968767616b59e0"/>
+    <Option Name="Id" Val="a4e5ddcc7f484dc4a73a5a2848824054"/>
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -200,7 +200,7 @@
           <Attr Name="UsedIn" Val="testbench"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../workbench.srcs/sim_1/new/sine_data.txt"/>
+      <File Path="$PPRDIR/../../../ip_repo/edit_AD4030_v1_0.sim/sine_data.txt"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="ad4030_axi_tb"/>

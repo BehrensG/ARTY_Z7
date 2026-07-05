@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Sat Jul  4 00:29:17 2026
+| Date         : Sun Jul  5 20:36:17 2026
 | Host         : archlinux running 64-bit Arch Linux
 | Command      : report_utilization -file AD4030_BD_AD4030_0_0_utilization_synth.rpt -pb AD4030_BD_AD4030_0_0_utilization_synth.pb
 | Design       : AD4030_BD_AD4030_0_0

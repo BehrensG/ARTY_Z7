@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="scw_hwspec" value="/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench"/>
+	<item key="scw_hwspec_file_selection" value="/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench"/>
 </section>

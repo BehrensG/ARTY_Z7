@@ -33,3 +33,8 @@
     <Process Command="vivado" Owner="grzegorz" Host="archlinux" Pid="405717" HostCore="12" HostMemory="65489504">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="grzegorz" Host="archlinux" Pid="117355" HostCore="12" HostMemory="65489508">
+    </Process>
+</ProcessHandle>

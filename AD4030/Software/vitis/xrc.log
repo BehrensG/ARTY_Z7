@@ -1,8 +1,18 @@
-Fri Jul  3 21:09:05 2026: Server was asked to start on port: '33241'
-Fri Jul  3 21:09:05 2026: Server is using token UUID: '2e7c0bc5-bba1-498d-9cab-f488b4ae6114'
-Fri Jul  3 21:09:05 2026: Attempting to start server on port '33241'
-Fri Jul  3 21:09:05 2026: XRC main fifo: created main fifo '/tmp/xrcmain2e7c0bc5-bba1-498d-9cab-f488b4ae6114', fd read = 11
-Fri Jul  3 21:09:05 2026: Running Rule Check Server
-Fri Jul  3 21:09:05 2026: Version 1.6.1
-Fri Jul  3 21:09:06 2026: Rule Check Server: Accepted socket connection from client
-Fri Jul  3 21:09:06 2026: EXCHANGE_TOKEN received, server token: 2e7c0bc5-bba1-498d-9cab-f488b4ae6114, passed token: 2e7c0bc5-bba1-498d-9cab-f488b4ae6114
+Sun Jul  5 18:22:11 2026: Server was asked to start on port: '33417'
+Sun Jul  5 18:22:11 2026: Server is using token UUID: '28caf9c3-f960-4d3b-977e-6e768b25d768'
+Sun Jul  5 18:22:11 2026: Attempting to start server on port '33417'
+Sun Jul  5 18:22:11 2026: XRC main fifo: created main fifo '/tmp/xrcmain28caf9c3-f960-4d3b-977e-6e768b25d768', fd read = 11
+Sun Jul  5 18:22:11 2026: Running Rule Check Server
+Sun Jul  5 18:22:11 2026: Version 1.6.1
+Sun Jul  5 18:22:12 2026: Rule Check Server: Accepted socket connection from client
+Sun Jul  5 18:22:12 2026: EXCHANGE_TOKEN received, server token: 28caf9c3-f960-4d3b-977e-6e768b25d768, passed token: 28caf9c3-f960-4d3b-977e-6e768b25d768
+Sun Jul  5 19:06:00 2026: Rule Check Server timeout; shutting down.
+Sun Jul  5 19:06:00 2026: Rule Check Server: do_await_stop
+Sun Jul  5 19:06:00 2026: Rule Check Server: stopping mainFifo_
+Sun Jul  5 19:06:00 2026: On server, in MainFifo::stop() 
+Sun Jul  5 19:06:00 2026: XRC main fifo: do_read error code: Operation canceled
+XRC main fifo: bytes_transferred: 0
+Sun Jul  5 19:06:00 2026: SERVER: destructor for server bound to port 42997
+Sun Jul  5 19:06:00 2026: XRC main fifo: Good unlink of /tmp/xrcmain037ea2a0-ec3c-4a7b-8a0b-80b74a68bc1c
+Sun Jul  5 19:06:00 2026: Server exiting with status 0.
+Sun Jul  5 19:06:00 2026: Closing log file.

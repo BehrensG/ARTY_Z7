@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
--- Date        : Sat Jul  4 00:29:17 2026
+-- Date        : Sun Jul  5 20:36:17 2026
 -- Host        : archlinux running 64-bit Arch Linux
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_AD4030_0_0/AD4030_BD_AD4030_0_0_sim_netlist.vhdl
@@ -6645,7 +6645,7 @@ ad4030_readout_mode_reg: unisim.vcomponents.FDCE
       INIT => X"7F777F7F70777070"
     )
         port map (
-      I0 => ad4030_cfg_enabled_reg_n_0,
+      I0 => ad4030_cfg_mode_reg_n_0,
       I1 => spi_state(1),
       I2 => \ad4030_spi_status[0]_i_2_n_0\,
       I3 => \FSM_sequential_spi_state[2]_i_2_n_0\,
@@ -6681,7 +6681,7 @@ ad4030_readout_mode_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => spi_state(2),
-      I1 => ad4030_cfg_enabled_reg_n_0,
+      I1 => ad4030_cfg_mode_reg_n_0,
       I2 => \ad4030_spi_status[2]_i_2_n_0\,
       I3 => \s00_axi_rdata[31]_INST_0_i_3_n_0\,
       I4 => \ad4030_spi_status[1]_i_2_n_0\,

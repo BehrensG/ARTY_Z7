@@ -4,7 +4,7 @@
     "xci_name": "AD4030_BD_AD4030_0_0",
     "cell_name": "AD4030_0",
     "component_reference": "GB:user:AD4030:1.0",
-    "ip_revision": "34",
+    "ip_revision": "35",
     "gen_directory": "../../../../../../workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_AD4030_0_0",
     "parameters": {
       "component_parameters": {
@@ -40,7 +40,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "34" } ],
+        "IPREVISION": [ { "value": "35" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../workbench.gen/sources_1/bd/AD4030_BD/ip/AD4030_BD_AD4030_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

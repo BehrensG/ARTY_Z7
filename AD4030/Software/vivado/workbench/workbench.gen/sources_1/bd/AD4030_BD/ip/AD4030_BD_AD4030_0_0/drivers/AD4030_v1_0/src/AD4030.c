@@ -55,7 +55,7 @@ void ad4030_adc_config(u32 cmd[], u32 size)
 
 	// Disable configuration mode
 	AD4030_mWriteReg(XPAR_AD4030_0_S00_AXI_BASEADDR, AD4030_ADC_CFG_INDEX, AD4030_DISABLE_CFG_CMD);
-	ad4030_wait(0x00000001);
+	ad4030_wait(0x00000003);
 
 }
 

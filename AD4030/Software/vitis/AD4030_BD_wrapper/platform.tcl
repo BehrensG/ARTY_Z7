@@ -99,3 +99,16 @@ platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/wor
 platform generate -domains 
 platform clean
 platform clean
+platform generate
+platform generate -domains standalone_ps7_cortexa9_0 
+platform generate
+platform active {AD4030_BD_wrapper}
+platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa}
+platform clean
+platform clean
+platform clean
+platform clean
+platform config -updatehw {/home/grzegorz/git/ARTY_Z7/AD4030/Software/vivado/workbench/AD4030_BD_wrapper.xsa}
+platform generate
+platform clean
+platform clean
